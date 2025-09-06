@@ -22,72 +22,112 @@
             </div>
         </div>
         <div class="main-content">
-            <form id="prompt-form">
-                <div class="prompt-card">
-                    <div class="card-header">
-                        <h2 data-i18n="styleSection">🎨 Стиль Изображения</h2>
-                        <span class="tooltip-icon">i<span class="tooltip-text" data-i18n="styleTooltip"></span></span>
+            <div class="form-column">
+                <div class="tabs">
+                    <button class="tab-link active" data-tab="main">🖼️ <span data-i18n="tabMain">Основа</span></button>
+                    <button class="tab-link" data-tab="nsfw">🔞 <span data-i18n="tabNsfw">NSFW (18+)</span></button>
+                </div>
+                <form id="prompt-form">
+                    <div id="main" class="tab-content active">
+                        <div class="prompt-card">
+                            <div class="card-header">
+                                <h2 data-i18n="styleSection">Стиль Изображения</h2>
+                                <span class="tooltip-icon">i<span class="tooltip-text" data-i18n="styleTooltip"></span></span>
+                                <button type="button" class="tag-browser-btn" data-target-id="style" data-library="tags-style.json">📖</button>
+                            </div>
+                            <section class="form-section">
+                                <div class="input-group">
+                                    <textarea class="prompt-part savable-field" id="style" data-i18n-placeholder="stylePlaceholder"></textarea>
+                                    <div class="weight-controls"><button type="button" class="weight-btn" data-action="increase">▲</button><button type="button" class="weight-btn" data-action="decrease">▼</button></div>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="prompt-card">
+                            <h2 data-i18n="subjectSection">Субъект и Персонаж</h2>
+                            <section class="form-section">
+                                <div class="card-header">
+                                    <h3 data-i18n="subjectActionHeader">Основа и Действие</h3>
+                                    <span class="tooltip-icon">i<span class="tooltip-text" data-i18n="subjectActionTooltip"></span></span>
+                                    <button type="button" class="tag-browser-btn" data-target-id="subject_action" data-library="tags-subject.json">📖</button>
+                                </div>
+                                <div class="input-group"><textarea class="prompt-part savable-field" id="subject_action" data-i18n-placeholder="subjectActionPlaceholder"></textarea><div class="weight-controls"><button type="button" class="weight-btn" data-action="increase">▲</button><button type="button" class="weight-btn" data-action="decrease">▼</button></div></div>
+                            </section>
+                            <section class="form-section">
+                                 <div class="card-header">
+                                    <h3 data-i18n="appearanceHeader">Внешность и Детали</h3>
+                                    <span class="tooltip-icon">i<span class="tooltip-text" data-i18n="appearanceTooltip"></span></span>
+                                    <button type="button" class="tag-browser-btn" data-target-id="appearance_details" data-library="tags-appearance.json">📖</button>
+                                </div>
+                                <div class="input-group"><textarea class="prompt-part savable-field" id="appearance_details" data-i18n-placeholder="appearancePlaceholder"></textarea><div class="weight-controls"><button type="button" class="weight-btn" data-action="increase">▲</button><button type="button" class="weight-btn" data-action="decrease">▼</button></div></div>
+                            </section>
+                            <section class="form-section">
+                                <div class="card-header">
+                                    <h3 data-i18n="clothingHeader">Одежда и Снаряжение</h3>
+                                    <span class="tooltip-icon">i<span class="tooltip-text" data-i18n="clothingTooltip"></span></span>
+                                    <button type="button" class="tag-browser-btn" data-target-id="clothing_gear" data-library="tags-clothing.json">📖</button>
+                                </div>
+                                <div class="input-group"><textarea class="prompt-part savable-field" id="clothing_gear" data-i18n-placeholder="clothingPlaceholder"></textarea><div class="weight-controls"><button type="button" class="weight-btn" data-action="increase">▲</button><button type="button" class="weight-btn" data-action="decrease">▼</button></div></div>
+                            </section>
+                        </div>
+                        <div class="prompt-card">
+                            <h2 data-i18n="sceneSection">Сцена и Композиция</h2>
+                            <section class="form-section">
+                                 <div class="card-header">
+                                    <h3 data-i18n="locationHeader">Локация и Окружение</h3>
+                                     <span class="tooltip-icon">i<span class="tooltip-text" data-i18n="locationTooltip"></span></span>
+                                    <button type="button" class="tag-browser-btn" data-target-id="location_env" data-library="tags-location.json">📖</button>
+                                </div>
+                                <div class="input-group"><textarea class="prompt-part savable-field" id="location_env" data-i18n-placeholder="locationPlaceholder"></textarea><div class="weight-controls"><button type="button" class="weight-btn" data-action="increase">▲</button><button type="button" class="weight-btn" data-action="decrease">▼</button></div></div>
+                            </section>
+                            <section class="form-section">
+                                <div class="card-header">
+                                    <h3 data-i18n="lightingHeader">Освещение и Атмосфера</h3>
+                                    <span class="tooltip-icon">i<span class="tooltip-text" data-i18n="lightingTooltip"></span></span>
+                                    <button type="button" class="tag-browser-btn" data-target-id="lighting_atmosphere" data-library="tags-lighting.json">📖</button>
+                                </div>
+                                <div class="input-group"><textarea class="prompt-part savable-field" id="lighting_atmosphere" data-i18n-placeholder="lightingPlaceholder"></textarea><div class="weight-controls"><button type="button" class="weight-btn" data-action="increase">▲</button><button type="button" class="weight-btn" data-action="decrease">▼</button></div></div>
+                            </section>
+                            <section class="form-section">
+                                <div class="card-header">
+                                    <h3 data-i18n="cameraHeader">Камера и Ракурс</h3>
+                                    <span class="tooltip-icon">i<span class="tooltip-text" data-i18n="cameraTooltip"></span></span>
+                                    <button type="button" class="tag-browser-btn" data-target-id="camera_composition" data-library="tags-camera.json">📖</button>
+                                </div>
+                                <div class="input-group"><textarea class="prompt-part savable-field" id="camera_composition" data-i18n-placeholder="cameraPlaceholder"></textarea><div class="weight-controls"><button type="button" class="weight-btn" data-action="increase">▲</button><button type="button" class="weight-btn" data-action="decrease">▼</button></div></div>
+                            </section>
+                        </div>
                     </div>
-                    <section class="form-section">
-                        <div class="input-group">
-                            <textarea class="prompt-part savable-field" id="style" data-i18n-placeholder="stylePlaceholder"></textarea>
-                            <div class="weight-controls"><button type="button" class="weight-btn" data-action="increase">▲</button><button type="button" class="weight-btn" data-action="decrease">▼</button></div>
+                    <div id="nsfw" class="tab-content">
+                        <div class="prompt-card">
+                            <h2 data-i18n="nsfwSection">NSFW (18+)</h2>
+                            <section class="form-section">
+                                <div class="card-header">
+                                    <h3 data-i18n="eroticaHeader">Эротика</h3>
+                                     <span class="tooltip-icon">i<span class="tooltip-text" data-i18n="eroticaTooltip"></span></span>
+                                    <button type="button" class="tag-browser-btn" data-target-id="nsfw_erotica" data-library="tags-erotica.json">📖</button>
+                                </div>
+                                <div class="input-group"><textarea class="prompt-part savable-field" id="nsfw_erotica" data-i18n-placeholder="eroticaPlaceholder"></textarea><div class="weight-controls"><button type="button" class="weight-btn" data-action="increase">▲</button><button type="button" class="weight-btn" data-action="decrease">▼</button></div></div>
+                            </section>
+                            <section class="form-section">
+                                <div class="card-header">
+                                    <h3 data-i18n="ecchiHeader">Этти</h3>
+                                    <span class="tooltip-icon">i<span class="tooltip-text" data-i18n="ecchiTooltip"></span></span>
+                                    <button type="button" class="tag-browser-btn" data-target-id="nsfw_ecchi" data-library="tags-ecchi.json">📖</button>
+                                </div>
+                                <div class="input-group"><textarea class="prompt-part savable-field" id="nsfw_ecchi" data-i18n-placeholder="ecchiPlaceholder"></textarea><div class="weight-controls"><button type="button" class="weight-btn" data-action="increase">▲</button><button type="button" class="weight-btn" data-action="decrease">▼</button></div></div>
+                            </section>
+                            <section class="form-section">
+                                <div class="card-header">
+                                    <h3 data-i18n="hentaiHeader">Хентай (Explicit)</h3>
+                                    <span class="tooltip-icon">i<span class="tooltip-text" data-i18n="hentaiTooltip"></span></span>
+                                    <button type="button" class="tag-browser-btn" data-target-id="nsfw_hentai" data-library="tags-hentai.json">📖</button>
+                                </div>
+                                <div class="input-group"><textarea class="prompt-part savable-field" id="nsfw_hentai" data-i18n-placeholder="hentaiPlaceholder"></textarea><div class="weight-controls"><button type="button" class="weight-btn" data-action="increase">▲</button><button type="button" class="weight-btn" data-action="decrease">▼</button></div></div>
+                            </section>
                         </div>
-                    </section>
-                </div>
-
-                <div class="prompt-card">
-                    <h2 data-i18n="subjectSection">👤 Субъект и Персонаж</h2>
-                    <section class="form-section">
-                        <div class="card-header">
-                            <h3 data-i18n="subjectActionHeader">Основа и Действие</h3>
-                            <span class="tooltip-icon">i<span class="tooltip-text" data-i18n="subjectActionTooltip"></span></span>
-                        </div>
-                        <div class="input-group"><textarea class="prompt-part savable-field" id="subject_action" data-i18n-placeholder="subjectActionPlaceholder"></textarea><div class="weight-controls"><button type="button" class="weight-btn" data-action="increase">▲</button><button type="button" class="weight-btn" data-action="decrease">▼</button></div></div>
-                    </section>
-                    <section class="form-section">
-                         <div class="card-header">
-                            <h3 data-i18n="appearanceHeader">Внешность и Детали</h3>
-                            <span class="tooltip-icon">i<span class="tooltip-text" data-i18n="appearanceTooltip"></span></span>
-                        </div>
-                        <div class="input-group"><textarea class="prompt-part savable-field" id="appearance_details" data-i18n-placeholder="appearancePlaceholder"></textarea><div class="weight-controls"><button type="button" class="weight-btn" data-action="increase">▲</button><button type="button" class="weight-btn" data-action="decrease">▼</button></div></div>
-                    </section>
-                    <section class="form-section">
-                        <div class="card-header">
-                            <h3 data-i18n="clothingHeader">Одежда и Снаряжение</h3>
-                            <span class="tooltip-icon">i<span class="tooltip-text" data-i18n="clothingTooltip"></span></span>
-                        </div>
-                        <div class="input-group"><textarea class="prompt-part savable-field" id="clothing_gear" data-i18n-placeholder="clothingPlaceholder"></textarea><div class="weight-controls"><button type="button" class="weight-btn" data-action="increase">▲</button><button type="button" class="weight-btn" data-action="decrease">▼</button></div></div>
-                    </section>
-                </div>
-
-                <div class="prompt-card">
-                    <h2 data-i18n="sceneSection">🏞️ Сцена и Композиция</h2>
-                    <section class="form-section">
-                         <div class="card-header">
-                            <h3 data-i18n="locationHeader">Локация и Окружение</h3>
-                             <span class="tooltip-icon">i<span class="tooltip-text" data-i18n="locationTooltip"></span></span>
-                        </div>
-                        <div class="input-group"><textarea class="prompt-part savable-field" id="location_env" data-i18n-placeholder="locationPlaceholder"></textarea><div class="weight-controls"><button type="button" class="weight-btn" data-action="increase">▲</button><button type="button" class="weight-btn" data-action="decrease">▼</button></div></div>
-                    </section>
-                    <section class="form-section">
-                        <div class="card-header">
-                            <h3 data-i18n="lightingHeader">Освещение и Атмосфера</h3>
-                            <span class="tooltip-icon">i<span class="tooltip-text" data-i18n="lightingTooltip"></span></span>
-                            <button type="button" class="tag-browser-btn" data-target-id="lighting_atmosphere" data-library="tags-lighting.json">📖</button>
-                        </div>
-                        <div class="input-group"><textarea class="prompt-part savable-field" id="lighting_atmosphere" data-i18n-placeholder="lightingPlaceholder"></textarea><div class="weight-controls"><button type="button" class="weight-btn" data-action="increase">▲</button><button type="button" class="weight-btn" data-action="decrease">▼</button></div></div>
-                    </section>
-                    <section class="form-section">
-                        <div class="card-header">
-                            <h3 data-i18n="cameraHeader">Камера и Ракурс</h3>
-                            <span class="tooltip-icon">i<span class="tooltip-text" data-i18n="cameraTooltip"></span></span>
-                            <button type="button" class="tag-browser-btn" data-target-id="camera_composition" data-library="tags-camera.json">📖</button>
-                        </div>
-                        <div class="input-group"><textarea class="prompt-part savable-field" id="camera_composition" data-i18n-placeholder="cameraPlaceholder"></textarea><div class="weight-controls"><button type="button" class="weight-btn" data-action="increase">▲</button><button type="button" class="weight-btn" data-action="decrease">▼</button></div></div>
-                    </section>
-                </div>
-            </form>
+                    </div>
+                </form>
+            </div>
 
             <aside class="sidebar">
                  <div class="prompt-card">

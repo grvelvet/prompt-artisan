@@ -2,7 +2,7 @@
     'use strict';
 
     const config = {
-        APP_VERSION: '3.2.0',
+        APP_VERSION: '3.3.0',
         LANG_KEY: 'promptArtisanLang_v1',
         POSITIVE_QUALITY_TAGS: ['masterpiece', 'best quality', 'highres', 'ultra-detailed'],
         NEGATIVE_QUALITY_TAGS: ['worst quality', 'low quality', 'normal quality'],
@@ -12,6 +12,8 @@
     const i18n = {
         ru: {
             appTitle: "Prompt Artisan", helpTitle: "Помощь",
+            tabMain: "Основа",
+            tabNsfw: "NSFW (18+)",
 
             styleSection: "🎨 Стиль Изображения",
             stylePlaceholder: "Например: photograph, oil painting, anime style...",
@@ -39,6 +41,17 @@
             cameraPlaceholder: "Например: full body shot, from below, close-up...",
             cameraTooltip: "С какой точки мы смотрим на сцену? Используйте: full body shot (в полный рост), close-up (крупный план), from below (вид снизу).",
             
+            nsfwSection: "🔞 NSFW (18+)",
+            eroticaHeader: "Эротика",
+            eroticaPlaceholder: "Например: sensual, intimate, boudoir photography...",
+            eroticaTooltip: "Теги для чувственности, настроения и художественной наготы.",
+            ecchiHeader: "Этти",
+            ecchiPlaceholder: "Например: panty shot, cleavage, see-through...",
+            ecchiTooltip: "Теги для игривых, провокационных сцен и 'фансервиса'.",
+            hentaiHeader: "Хентай (Explicit)",
+            hentaiPlaceholder: "Например: explicit, uncensored, sex...",
+            hentaiTooltip: "Теги для откровенных, явных сцен. Максимальный уровень NSFW.",
+
             finalPromptHeader: "Итоговый промпт и Управление", copyBtn: "Копировать",
             rebuildBtn: "Пересобрать промпт", clearBtn: "Очистить форму", qualityToggle: "Добавлять теги качества",
             presetsHeader: "Управление Пресетами", importBtn: "Импорт (.json)", exportBtn: "Экспорт (.json)",
@@ -52,9 +65,13 @@
         },
         en: {
             appTitle: "Prompt Artisan", helpTitle: "Help",
+            tabMain: "Main",
+            tabNsfw: "NSFW (18+)",
+
             styleSection: "🎨 Image Style",
             stylePlaceholder: "E.g., photograph, oil painting, anime style...",
             styleTooltip: "Describe the final look. Is it a photograph, an oil painting, an anime style, or something else?",
+
             subjectSection: "👤 Subject & Character",
             subjectActionHeader: "Core & Action",
             subjectActionPlaceholder: "E.g., a knight riding a horse, 2 cats playing...",
@@ -65,6 +82,7 @@
             clothingHeader: "Clothing & Gear",
             clothingPlaceholder: "E.g., wearing heavy armor, elegant silk dress...",
             clothingTooltip: "What is the subject wearing and holding? Be specific with materials and types.",
+
             sceneSection: "🏞️ Scene & Composition",
             locationHeader: "Location & Environment",
             locationPlaceholder: "E.g., enchanted forest at night, on a spaceship bridge...",
@@ -75,6 +93,18 @@
             cameraHeader: "Camera & Angle",
             cameraPlaceholder: "E.g., full body shot, from below, close-up...",
             cameraTooltip: "From what point of view are we seeing the scene? Use: full body shot, close-up, from below.",
+
+            nsfwSection: "🔞 NSFW (18+)",
+            eroticaHeader: "Erotica",
+            eroticaPlaceholder: "E.g., sensual, intimate, boudoir photography...",
+            eroticaTooltip: "Tags for sensuality, mood, and artistic nudity.",
+            ecchiHeader: "Ecchi",
+            ecchiPlaceholder: "E.g., panty shot, cleavage, see-through...",
+            ecchiTooltip: "Tags for playful, provocative scenes, and 'fanservice'.",
+            hentaiHeader: "Hentai (Explicit)",
+            hentaiPlaceholder: "E.g., explicit, uncensored, sex...",
+            hentaiTooltip: "Tags for explicit, uncensored scenes. Maximum NSFW level.",
+
             finalPromptHeader: "Final Prompt & Controls", copyBtn: "Copy",
             rebuildBtn: "Rebuild Prompt", clearBtn: "Clear Form", qualityToggle: "Add quality tags",
             presetsHeader: "Preset Management", importBtn: "Import (.json)", exportBtn: "Export (.json)",
@@ -133,7 +163,9 @@
         tagBrowserSearch: document.getElementById('tag-browser-search'),
         tagBrowserTagsList: document.getElementById('tag-browser-tags-list'),
         tagBrowserSelectionPreview: document.getElementById('tag-browser-selection-preview'),
-        addSelectedTagsBtn: document.getElementById('add-selected-tags-btn')
+        addSelectedTagsBtn: document.getElementById('add-selected-tags-btn'),
+        tabs: document.querySelectorAll('.tab-link'),
+        tabContents: document.querySelectorAll('.tab-content')
     };
 
     const utils = {
@@ -170,7 +202,6 @@
             dom.positiveOutput.value = utils.getUniqueTags(finalTags).join(', ');
             utils.autoResizeTextarea(dom.positiveOutput);
         },
-
         updateNegativeOutput: () => {
             let userNegativeTags = utils.splitTags(dom.negativeOutput.value);
             userNegativeTags = userNegativeTags.filter(tag => !config.NEGATIVE_QUALITY_TAGS.includes(tag));
@@ -178,7 +209,6 @@
             dom.negativeOutput.value = utils.getUniqueTags(finalNegativeTags).join(', ');
             utils.autoResizeTextarea(dom.negativeOutput);
         },
-
         resetToDefaultState: () => {
             handlers.setManualEditMode(false);
             dom.form.reset();
@@ -187,13 +217,12 @@
             handlers.generatePositiveOutput();
             handlers.updateNegativeOutput();
             dom.allTextareas.forEach(utils.autoResizeTextarea);
+            handlers.renderPresetPreview();
         },
-
         setManualEditMode: (isManual) => {
             state.isManualEditMode = isManual;
             dom.positiveOutput.classList.toggle('manual-edit', isManual);
         },
-        
         handleWeightControl: (e) => {
             const button = e.target.closest('.weight-btn');
             if (!button) return;
@@ -226,7 +255,6 @@
             textarea.focus();
             handlers.generatePositiveOutput();
         },
-        
         handleSavePreset: () => {
             const name = dom.presetNameInput.value.trim();
             if (!name) { alert(i18n[state.currentLang].presetNamePlaceholder); return; }
@@ -238,10 +266,12 @@
             handlers.renderPresetPreview();
             dom.presetNameInput.value = '';
         },
-
         handleLoadPreset: () => {
             const name = dom.presetSelect.value;
-            if (!state.savedPresets[name]) return;
+            if (!name || !state.savedPresets[name]) {
+                handlers.resetToDefaultState();
+                return;
+            }
             const presetData = state.savedPresets[name];
             dom.savableFields.forEach(el => {
                 el.value = presetData[el.id] || (el.id === 'output-negative' ? config.DEFAULT_NEGATIVE_PROMPT : '');
@@ -251,7 +281,6 @@
             handlers.generatePositiveOutput();
             handlers.updateNegativeOutput();
         },
-        
         handleDeletePreset: () => {
             const name = dom.presetSelect.value;
             if (!name || !state.savedPresets[name]) return;
@@ -260,7 +289,6 @@
                 handlers.populatePresetDropdown();
             }
         },
-
         populatePresetDropdown: () => {
             const defaultOptionText = i18n[state.currentLang].presetSelectDefault;
             dom.presetSelect.innerHTML = `<option value="">${defaultOptionText}</option>`;
@@ -272,27 +300,20 @@
             });
             handlers.renderPresetPreview();
         },
-
         renderPresetPreview: () => {
             const name = dom.presetSelect.value;
             const presetData = state.savedPresets[name];
-            
-            if (!presetData) {
+            if (!name || !presetData) {
                 dom.presetPreview.dataset.hidden = 'true';
-                const placeholder = dom.presetPreview.querySelector('.placeholder');
-                if(placeholder) placeholder.textContent = i18n[state.currentLang].presetPreviewPlaceholder;
                 return;
             }
-
             dom.presetPreview.dataset.hidden = 'false';
             dom.presetPreview.innerHTML = ''; 
-            
             const ul = document.createElement('ul');
             for (const [key, value] of Object.entries(presetData)) {
                 if (value.trim()) {
-                    const i18nKey = document.querySelector(`#${key}`)?.closest('.prompt-card')?.querySelector('[data-i18n]')?.dataset.i18n;
-                    const labelEl = document.querySelector(`[data-i18n="${i18nKey}"]`);
-                    const label = labelEl ? labelEl.textContent.replace(/🎨|👤|🏞️/g, '').trim() : key;
+                    const header = document.querySelector(`label[for="${key}"], [data-i18n-placeholder="${key}Placeholder"]`)?.closest('.prompt-card')?.querySelector('h2, h3');
+                    const label = header ? header.textContent.replace(/🎨|👤|🏞️|🔞/g, '').trim() : key;
                     const li = document.createElement('li');
                     const strong = document.createElement('strong');
                     strong.textContent = `${label}: `;
@@ -303,7 +324,6 @@
             }
             dom.presetPreview.appendChild(ul);
         },
-
         handleExportPresets: () => {
             if (Object.keys(state.savedPresets).length === 0) {
                 alert(i18n[state.currentLang].alertNoPresets);
@@ -320,7 +340,6 @@
             document.body.removeChild(link);
             URL.revokeObjectURL(url);
         },
-
         handleImportPresets: () => {
             const input = document.createElement('input');
             input.type = 'file';
@@ -345,20 +364,17 @@
             };
             input.click();
         },
-
         showManual: async () => {
             dom.manualModal.dataset.visible = 'true';
             if (state.isManualLoaded) return;
+            dom.manualBody.innerHTML = '<div class="spinner"></div>';
             const manualFile = state.currentLang === 'ru' ? 'manual-content.html' : 'manual-content-en.html';
             try {
                 const response = await fetch(manualFile);
                 if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
                 const contentHTML = await response.text();
                 setTimeout(() => {
-                    dom.manualBody.innerHTML = '';
-                    const template = document.createElement('template');
-                    template.innerHTML = contentHTML;
-                    dom.manualBody.appendChild(template.content);
+                    dom.manualBody.innerHTML = contentHTML;
                     state.isManualLoaded = true;
                 }, 300);
             } catch (error) {
@@ -367,9 +383,7 @@
                 state.isManualLoaded = false;
             }
         },
-
         hideManual: () => { dom.manualModal.dataset.visible = 'false'; },
-        
         setLanguage: (lang) => {
             state.currentLang = lang;
             if (utils.isLocalStorageAvailable()) { localStorage.setItem(config.LANG_KEY, lang); }
@@ -378,7 +392,6 @@
             const translations = i18n[lang];
             
             dom.appTitle.textContent = `${translations.appTitle} v${config.APP_VERSION}`;
-
             document.querySelectorAll('[data-i18n]').forEach(el => {
                 if (el.id !== 'app-title' && translations[el.dataset.i18n]) { el.textContent = translations[el.dataset.i18n]; }
             });
@@ -395,12 +408,9 @@
             handlers.populatePresetDropdown();
             state.isManualLoaded = false;
         },
-
         openTagBrowser: async (targetId, libraryFile) => {
             state.tagBrowserState = {
-                isOpen: true,
-                targetId: targetId,
-                library: null,
+                isOpen: true, targetId: targetId, library: null,
                 selectedTags: new Set(utils.splitTags(document.getElementById(targetId).value)),
                 currentSubcategoryId: null
             };
@@ -412,7 +422,7 @@
 
             try {
                 const response = await fetch(`./data/${libraryFile}`);
-                if (!response.ok) throw new Error('Network response was not ok');
+                if (!response.ok) throw new Error(`Network response was not ok`);
                 const libraryData = await response.json();
                 state.tagBrowserState.library = libraryData;
                 handlers.renderTagBrowser();
@@ -421,21 +431,17 @@
                 dom.tagBrowserTagsList.innerHTML = 'Error loading tags.';
             }
         },
-
         closeTagBrowser: () => {
             dom.tagBrowserModal.dataset.visible = 'false';
             state.tagBrowserState.isOpen = false;
         },
-
         renderTagBrowser: () => {
             const { library } = state.tagBrowserState;
             if (!library) return;
-            
             const lang = state.currentLang;
             dom.tagBrowserTitle.textContent = library[`name_${lang}`] || library.name_ru;
             dom.tagBrowserSearch.placeholder = i18n[lang].tagBrowserSearchPlaceholder;
             dom.addSelectedTagsBtn.textContent = i18n[lang].addSelectedBtn;
-            
             dom.tagBrowserSubcategories.innerHTML = '';
             library.subcategories.forEach(subcat => {
                 const btn = document.createElement('button');
@@ -444,33 +450,28 @@
                 btn.onclick = () => handlers.handleSubcategoryClick(subcat.id);
                 dom.tagBrowserSubcategories.appendChild(btn);
             });
-            
             if (library.subcategories.length > 0) {
                 handlers.handleSubcategoryClick(library.subcategories[0].id);
             }
             handlers.updateTagBrowserFooter();
         },
-
         handleSubcategoryClick: (subcatId) => {
             state.tagBrowserState.currentSubcategoryId = subcatId;
             const allBtns = dom.tagBrowserSubcategories.querySelectorAll('button');
             allBtns.forEach(btn => btn.classList.toggle('active', btn.dataset.subcatId === subcatId));
             handlers.renderTagsForSubcategory(dom.tagBrowserSearch.value);
         },
-
         renderTagsForSubcategory: (searchTerm = '') => {
             const { library, currentSubcategoryId, selectedTags } = state.tagBrowserState;
             const lang = state.currentLang;
             const subcategory = library.subcategories.find(s => s.id === currentSubcategoryId);
             if (!subcategory) return;
-            
             dom.tagBrowserTagsList.innerHTML = '';
             const normalizedSearchTerm = searchTerm.toLowerCase();
             const filteredTags = subcategory.tags.filter(tag => 
                 (tag[`name_${lang}`] || tag.name_ru).toLowerCase().includes(normalizedSearchTerm) ||
                 tag.tag.toLowerCase().includes(normalizedSearchTerm)
             );
-
             filteredTags.forEach(tag => {
                 const item = document.createElement('div');
                 item.className = 'tag-item';
@@ -481,7 +482,6 @@
                 dom.tagBrowserTagsList.appendChild(item);
             });
         },
-
         handleTagClick: (tag) => {
             const { selectedTags } = state.tagBrowserState;
             if (selectedTags.has(tag)) {
@@ -493,24 +493,28 @@
             if (item) { item.classList.toggle('selected'); }
             handlers.updateTagBrowserFooter();
         },
-        
         updateTagBrowserFooter: () => {
             const { selectedTags } = state.tagBrowserState;
             dom.addSelectedTagsBtn.disabled = selectedTags.size === 0;
             dom.tagBrowserSelectionPreview.textContent = Array.from(selectedTags).join(', ');
         },
-
         addSelectedTagsToTextarea: () => {
             const { targetId, selectedTags } = state.tagBrowserState;
             const textarea = document.getElementById(targetId);
             if (!textarea) return;
             const existingTags = new Set(utils.splitTags(textarea.value));
             selectedTags.forEach(tag => existingTags.add(tag));
-            
             textarea.value = Array.from(existingTags).join(', ');
             utils.autoResizeTextarea(textarea);
             handlers.generatePositiveOutput();
             handlers.closeTagBrowser();
+        },
+        handleTabClick: (e) => {
+            const tab = e.currentTarget;
+            dom.tabs.forEach(t => t.classList.remove('active'));
+            dom.tabContents.forEach(c => c.classList.remove('active'));
+            tab.classList.add('active');
+            document.getElementById(tab.dataset.tab).classList.add('active');
         }
     };
 
@@ -518,6 +522,7 @@
         const savedLang = utils.isLocalStorageAvailable() ? localStorage.getItem(config.LANG_KEY) : 'ru';
         handlers.setLanguage(savedLang || 'ru');
 
+        dom.tabs.forEach(tab => tab.addEventListener('click', handlers.handleTabClick));
         dom.form.addEventListener('input', handlers.generatePositiveOutput);
         dom.form.addEventListener('mousedown', handlers.handleWeightControl);
         dom.qualityToggle.addEventListener('change', () => {
