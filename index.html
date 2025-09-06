@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt Artisan</title>
+    <!-- Подключение шрифтов -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Fira+Code:wght@500&display=swap" rel="stylesheet">
+    <!-- Подключение стилей -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header-main">
+            <h1 id="app-title">Prompt Artisan</h1>
+            <div class="header-controls">
+                <button id="show-manual-btn" title="Помощь">?</button>
+            </div>
+        </div>
+        <div class="main-content">
+            <form id="prompt-form">
+                <!-- Блок "Субъект и действие" -->
+                <div class="prompt-card">
+                    <h2>Субъект и действие</h2>
+                    <section class="form-section">
+                        <h3>Внешность</h3>
+                        <div class="input-group"><textarea class="prompt-part savable-field" id="appearance" placeholder="1girl, long hair, blue eyes..."></textarea><div class="weight-controls"><button type="button" class="weight-btn" data-action="increase">▲</button><button type="button" class="weight-btn" data-action="decrease">▼</button></div></div>
+                    </section>
+                    <section class="form-section">
+                        <h3>Одежда и аксессуары</h3>
+                        <div class="input-group"><textarea class="prompt-part savable-field" id="clothing" placeholder="elegant dress, red shoes..."></textarea><div class="weight-controls"><button type="button" class="weight-btn" data-action="increase">▲</button><button type="button" class="weight-btn" data-action="decrease">▼</button></div></div>
+                    </section>
+                    <section class="form-section">
+                        <h3>Поза и действие</h3>
+                        <div class="input-group"><textarea class="prompt-part savable-field" id="pose" placeholder="standing, looking at viewer..."></textarea><div class="weight-controls"><button type="button" class="weight-btn" data-action="increase">▲</button><button type="button" class="weight-btn" data-action="decrease">▼</button></div></div>
+                    </section>
+                </div>
+
+                <!-- Блок "Композиция, сцена, стиль, качество" -->
+                <div class="prompt-card">
+                    <h2>Композиция, сцена, стиль</h2>
+                    <section class="form-section">
+                        <h3>Окружение (Локация)</h3>
+                        <div class="input-group"><textarea class="prompt-part savable-field" id="location" placeholder="in a forest, city background..."></textarea><div class="weight-controls"><button type="button" class="weight-btn" data-action="increase">▲</button><button type="button" class="weight-btn" data-action="decrease">▼</button></div></div>
+                    </section>
+                    <section class="form-section">
+                        <h3>Освещение и атмосфера</h3>
+                        <div class="input-group"><textarea class="prompt-part savable-field" id="lighting" placeholder="cinematic lighting, dark background..."></textarea><div class="weight-controls"><button type="button" class="weight-btn" data-action="increase">▲</button><button type="button" class="weight-btn" data-action="decrease">▼</button></div></div>
+                    </section>
+                    <section class="form-section">
+                        <h3>Камера и композиция</h3>
+                        <div class="input-group"><textarea class="prompt-part savable-field" id="camera" placeholder="medium shot, bokeh, blurry background..."></textarea><div class="weight-controls"><button type="button" class="weight-btn" data-action="increase">▲</button><button type="button" class="weight-btn" data-action="decrease">▼</button></div></div>
+                    </section>
+                    <section class="form-section">
+                        <h3>Стиль и качество арта</h3>
+                        <div class="input-group"><textarea class="prompt-part savable-field" id="style-quality" placeholder="photorealistic, masterpiece, detailed bg..."></textarea><div class="weight-controls"><button type="button" class="weight-btn" data-action="increase">▲</button><button type="button" class="weight-btn" data-action="decrease">▼</button></div></div>
+                    </section>
+                </div>
+                
+                <!-- Блок "Продвинутые настройки" -->
+                <div class="prompt-card">
+                    <h2>Продвинутые настройки</h2>
+                    <section class="form-section">
+                        <h3>LoRA / Trigger Words</h3>
+                        <div class="input-group">
+                            <textarea class="prompt-part savable-field" id="loras" placeholder="<lora:имя:сила> или триггерные слова"></textarea>
+                        </div>
+                    </section>
+                </div>
+            </form>
+
+            <!-- Боковая панель -->
+            <aside class="sidebar">
+                <div class="prompt-card">
+                    <h2>Итоговый промпт</h2>
+                    <section class="form-section">
+                        <label for="output-positive">Positive Prompt:</label>
+                        <textarea id="output-positive"></textarea>
+                        <button type="button" id="copy-positive">Копировать</button>
+                    </section>
+                    <section class="form-section">
+                        <label for="output-negative">Negative Prompt:</label>
+                        <textarea class="savable-field" id="output-negative"></textarea>
+                        <button type="button" id="copy-negative">Копировать</button>
+                    </section>
+                </div>
+
+                <div class="prompt-card">
+                    <h2>Управление формой</h2>
+                    <section class="form-section actions">
+                        <button type="button" id="rebuild-prompt">Пересобрать промпт</button>
+                        <button type="reset" id="clear-form" form="prompt-form">Очистить форму</button>
+                    </section>
+                    <section class="form-section quality-toggle-wrapper">
+                        <input type="checkbox" id="quality-toggle" checked>
+                        <label for="quality-toggle">Добавлять теги качества</label>
+                    </section>
+                </div>
+
+                <div class="prompt-card">
+                    <h2>Инспектор Пресетов</h2>
+                    <section class="form-section">
+                        <div class="preset-controls">
+                            <input type="text" id="preset-name" placeholder="Имя нового пресета">
+                            <button type="button" id="save-preset-btn">Сохранить</button>
+                        </div>
+                    </section>
+                    <hr class="divider">
+                    <section class="form-section">
+                        <div class="preset-controls">
+                            <select id="preset-select"><option>--- Выберите пресет ---</option></select>
+                        </div>
+                        <div id="preset-preview">
+                            <span class="placeholder">Выберите пресет для предпросмотра</span>
+                        </div>
+                        <div class="actions">
+                             <button type="button" id="load-preset-btn">Загрузить</button>
+                             <button type="button" id="delete-preset-btn">Удалить</button>
+                        </div>
+                    </section>
+                </div>
+            </aside>
+        </div>
+        <footer>
+            &copy; 2025 Created by grvelvet
+        </footer>
+    </div>
+
+    <!-- Модальное окно мануала -->
+    <div id="manual-modal" class="modal-overlay" data-visible="false">
+        <div class="modal-content">
+            <button id="close-manual-btn" class="modal-close-btn" title="Закрыть">&times;</button>
+            <div class="manual-body"><div class="spinner"></div></div>
+        </div>
+    </div>
+
+    <!-- Подключение скрипта -->
+    <script src="script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,346 @@
+:root {
+    --bg-color: #1a1a2e; 
+    --container-bg: #16213e; 
+    --input-bg: #0f3460;
+    --text-color: #e94560; 
+    --light-text: #dcdcdc; 
+    --border-color: #e94560;
+    --card-bg: rgba(15, 52, 96, 0.3);
+    --button-bg: #e94560; 
+    --button-hover: #c43751; 
+    --manual-edit-border: #f9d71c;
+    --delete-bg: #a83232; 
+    --delete-hover: #802626;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color); 
+    color: var(--light-text); 
+    margin: 0; 
+    padding: 20px;
+    font-size: 14px;
+}
+
+h1 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    color: var(--text-color); 
+    text-align: center; 
+    margin: 0;
+}
+
+h2 { 
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    text-align: left; 
+    border: none; 
+    padding-bottom: 10px; 
+    margin-top: 0; 
+    font-size: 1.3em; 
+    color: var(--text-color);
+    border-bottom: 1px solid var(--input-bg);
+    margin-bottom: 20px;
+}
+
+h3 { 
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    color: var(--light-text); 
+    margin: 24px 0 8px; 
+    font-size: 1em; 
+    opacity: 0.85; 
+}
+
+.prompt-card .form-section:first-of-type h3 {
+    margin-top: 0;
+}
+
+textarea, input[type="text"], select, button {
+    font-family: 'Inter', sans-serif;
+}
+
+#output-positive, #output-negative { 
+    font-family: 'Fira Code', monospace;
+    font-weight: 500;
+    margin-bottom: 10px;
+    min-height: 80px;
+    resize: none;
+    overflow-y: hidden;
+    transition: height 0.1s ease-out;
+}
+
+.container {
+    max-width: 1600px;
+    margin: 0 auto; 
+    background-color: var(--container-bg);
+    padding: 25px; 
+    border-radius: 10px; 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.header-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-bottom: 2px solid var(--border-color);
+    margin-bottom: 25px;
+    padding-bottom: 10px; 
+}
+
+.header-controls {
+    position: absolute;
+    right: 0;
+}
+
+#show-manual-btn {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 0;
+    line-height: 1;
+    background-color: var(--input-bg);
+    border: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.prompt-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--input-bg);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.main-content > * > .prompt-card:last-child {
+    margin-bottom: 0;
+}
+
+.form-section { 
+    margin-bottom: 0; 
+}
+
+.sidebar .prompt-card .form-section:not(:first-of-type) {
+    margin-top: 20px;
+}
+
+.sidebar .form-section > label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.input-group {
+    display: flex;
+    align-items: stretch;
+    gap: 5px;
+}
+
+textarea, input[type="text"], select {
+    width: 100%; 
+    background-color: var(--input-bg);
+    border: 1px solid var(--border-color); 
+    border-radius: 5px; 
+    color: var(--light-text);
+    padding: 10px 12px;
+    font-size: 1em; 
+    box-sizing: border-box;
+    line-height: 1.5;
+}
+
+textarea::placeholder, input::placeholder {
+    color: var(--light-text);
+    opacity: 0.5;
+}
+
+.input-group textarea {
+    flex: 1;
+    min-height: 42px;
+    resize: none;
+    overflow-y: hidden;
+    transition: height 0.1s ease-out;
+}
+
+.weight-controls {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3px;
+}
+
+.weight-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--light-text);
+    width: 24px;
+    height: 100%;
+    flex: 1;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8em;
+    font-weight: bold;
+    line-height: 1;
+    transition: background-color 0.2s;
+    user-select: none;
+}
+
+.weight-btn:hover { background-color: var(--button-bg); }
+textarea.manual-edit { border-color: var(--manual-edit-border); }
+textarea.manual-edit:focus { box-shadow: 0 0 10px var(--manual-edit-border); }
+
+.actions { 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+.actions button { width: 100%; }
+
+.quality-toggle-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 15px;
+    padding: 10px;
+    background-color: var(--input-bg);
+    border-radius: 5px;
+}
+
+.quality-toggle-wrapper label {
+    cursor: pointer;
+    font-size: 0.95em;
+    opacity: 0.9;
+}
+
+button {
+    padding: 10px 15px; 
+    border: none; 
+    border-radius: 5px; 
+    background-color: var(--button-bg);
+    color: white; 
+    font-size: 1em; 
+    cursor: pointer; 
+    transition: background-color 0.2s;
+}
+button:hover { background-color: var(--button-hover); }
+button#rebuild-prompt, button#clear-form { background-color: #555; }
+button#rebuild-prompt:hover, button#clear-form:hover { background-color: #777; }
+button#delete-preset-btn { background-color: var(--delete-bg); }
+button#delete-preset-btn:hover { background-color: var(--delete-hover); }
+
+.preset-controls { 
+    display: flex; 
+    flex-direction: column;
+    gap: 10px; 
+}
+.preset-controls button, .preset-controls input, .preset-controls select {
+    width: 100%;
+}
+
+.divider {
+    border: none;
+    height: 1px;
+    background-color: var(--input-bg);
+    margin: 20px 0;
+}
+
+#preset-preview {
+    background-color: var(--input-bg);
+    border: 1px dashed var(--border-color);
+    border-radius: 5px;
+    padding: 15px;
+    margin: 20px 0;
+    min-height: 100px;
+    font-size: 0.9em;
+    color: var(--light-text);
+}
+#preset-preview .placeholder {
+    color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+#preset-preview ul {
+    margin: 0;
+    padding-left: 20px;
+    list-style-type: disc;
+}
+#preset-preview li { margin-bottom: 5px; }
+
+footer {
+    text-align: center; 
+    margin-top: 40px; 
+    padding-top: 20px;
+    border-top: 1px solid var(--input-bg); 
+    color: var(--light-text);
+    opacity: 0.6; 
+    font-size: 0.9em;
+}
+
+.main-content { 
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+@media (min-width: 992px) {
+    .main-content {
+        grid-template-columns: 3fr 2fr;
+        align-items: start;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    .container {
+        padding: 15px;
+    }
+    h1 {
+        font-size: 1.9em;
+    }
+    .prompt-card {
+        padding: 14px;
+    }
+}
+
+/* Modal Window Styles */
+.modal-overlay {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); display: flex;
+    justify-content: center; align-items: center; z-index: 1000;
+    opacity: 0; pointer-events: none; transition: opacity 0.3s ease;
+}
+.modal-overlay[data-visible="true"] { opacity: 1; pointer-events: auto; }
+.modal-content {
+    background-color: var(--container-bg); padding: 30px;
+    border-radius: 10px; border: 1px solid var(--border-color);
+    width: 90%; max-width: 800px; max-height: 85vh;
+    overflow-y: auto; position: relative; transform: scale(0.95);
+    transition: transform 0.3s ease;
+}
+.modal-overlay[data-visible="true"] .modal-content { transform: scale(1); }
+.modal-close-btn {
+    position: absolute; top: 10px; right: 15px; background: none;
+    border: none; font-size: 2em; color: var(--light-text);
+    cursor: pointer; padding: 0; line-height: 1;
+}
+.manual-body { line-height: 1.6; }
+.manual-body h3 { font-size: 1.5em; color: var(--text-color); }
+.manual-body h4 { font-size: 1.2em; margin-top: 20px; border-bottom: 1px solid var(--input-bg); padding-bottom: 5px;}
+.manual-body code { background-color: var(--input-bg); padding: 2px 5px; border-radius: 4px; font-family: 'Fira Code', monospace; }
+.manual-body li { margin-bottom: 10px; }
+.spinner {
+    width: 40px; height: 40px; border: 4px solid var(--input-bg);
+    border-top-color: var(--text-color); border-radius: 50%;
+    animation: spin 1s linear infinite; margin: 40px auto;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
