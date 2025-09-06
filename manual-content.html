@@ -1,42 +1,113 @@
-<h3>Руководство по Prompt Artisan</h3>
-
-<h4>Часть 1: Как пользоваться конструктором</h4>
-<ol>
-    <li><strong>Секции ввода:</strong> Интерфейс разделен на логические блоки (Субъект, Сцена, Продвинутые), чтобы направлять ваш творческий процесс от основной идеи к деталям. Заполняйте их, перечисляя теги через запятую.</li>
-    
-    <!-- === НАЧАЛО ИЗМЕНЕНИЙ v2.9.1: Обновленное объяснение весов === -->
-    <li><strong>Продвинутое управление весом:</strong>
-        <ul>
-            <li>Чтобы точно настроить влияние тега или группы тегов, выделите их мышкой.</li>
-            <li>Нажимайте кнопку <strong>▲</strong>, чтобы увеличить вес тега с шагом 0.1 (например, <code>(tag:1.1)</code>, <code>(tag:1.2)</code> и т.д.).</li>
-            <li>Нажимайте кнопку <strong>▼</strong>, чтобы уменьшить вес (например, <code>(tag:0.9)</code>, <code>(tag:0.8)</code>).</li>
-            <li>Вес <code>1.0</code> является стандартным и не требует форматирования. Если вы вернете вес тега к 1.0, скобки и число автоматически уберутся. Эта система дает вам полный и предсказуемый контроль над композицией.</li>
-        </ul>
-    </li>
-    <!-- === КОНЕЦ ИЗМЕНЕНИЙ v2.9.1 === -->
-
-    <li><strong>Итоговый промпт:</strong> В правой панели вы видите два поля:
-        <ul>
-            <li><strong>Positive Prompt:</strong> Здесь автоматически собираются все ваши теги. Вы можете в любой момент кликнуть на это поле и отредактировать промпт вручную. Чтобы вернуться к автоматической сборке, нажмите "Пересобрать промпт".</li>
-            <li><strong>Negative Prompt:</strong> Здесь находятся теги, описывающие то, чего вы <strong>не хотите</strong> видеть на изображении.</li>
-        </ul>
-    </li>
-    <li><strong>Инспектор Пресетов:</strong> Если вы создали удачную комбинацию, введите имя и нажмите "Сохранить". Чтобы загрузить пресет, сначала выберите его из списка для предпросмотра, а затем нажмите "Загрузить выбранный".</li>
-</ol>
-
-<h4>Часть 2: Основы промптинга для SDXL</h4>
+<h3>Полное руководство по Prompt Artisan</h3>
+<p>Добро пожаловать! Этот инструмент создан, чтобы превратить хаос случайных тегов в предсказуемый и управляемый творческий процесс. Это руководство научит вас не только пользоваться интерфейсом, но и понимать саму логику создания мощных промптов.</p>
+<hr>
+<h3>Часть 1: Быстрый старт и интерфейс</h3>
+<h4>Как вводить теги (Главное правило)</h4>
+<p>Разделяйте теги <strong>запятой</strong>. Это стандартный и самый надежный способ, который позволяет использовать многословные теги.</p>
 <ul>
-    <li><strong>Что такое тег?</strong> Это слово или фраза, описывающая один конкретный элемент изображения (например, <code>1girl</code>, <code>blue eyes</code>, <code>forest</code>). Теги разделяются запятыми.</li>
-    
-    <li><strong>Окружение (Локация):</strong> Описывайте, *где* происходит действие. Примеры: <code>in a magical forest</code>, <code>on a spaceship bridge</code>, <code>city background</code>.</li>
-    
-    <li><strong>Освещение и Атмосфера:</strong> Описывайте, *как* сцена освещена и какое в ней настроение. Примеры: <code>cinematic lighting</code>, <code>volumetric lighting</code>, <code>moody</code>, <code>dark background</code>.</li>
-
-    <li><strong>Камера и Композиция:</strong> Управляйте сценой как режиссер, используя кинематографические термины. Примеры: <code>medium shot</code>, <code>low-angle shot</code>, <code>dutch angle</code>, <code>bokeh</code>, <code>blurry background</code>.</li>
-
-    <li><strong>Стиль и Качество:</strong> Определите художественный стиль и уровень детализации. Примеры: <code>photorealistic</code>, <code>anime style</code>, <code>masterpiece</code>, <code>high resolution</code>, <code>detailed background</code>.</li>
-    
-    <li><strong>LoRA / Триггерные слова:</strong> Это поле для продвинутых пользователей. Сюда можно вставлять специальные модели (LoRA) в формате <code>&lt;lora:name:1&gt;</code> или уникальные "триггерные" слова для вызова определенного стиля или персонажа.</li>
+    <li><strong>Пример:</strong> <code>1girl, long hair, blue eyes</code> — это три отдельных тега.</li>
+    <li>Приложение автоматически уберет лишние пробелы.</li>
 </ul>
-
-<p><strong>Профессиональный совет:</strong> Комбинируйте теги из разных секций для создания сложных сцен. Пример: <code>(full body shot:1.2), from a low-angle, a woman is running through a neon-lit city street at night, (cinematic lighting:1.3), looking back at viewer</code>. Вы не просто перечисляете объекты, вы режиссируете историю.</p>
+<h4>Управление весом тегов</h4>
+<p>Это ключевая функция для управления акцентами. Чтобы изменить вес:</p>
+<ol>
+    <li>Поставьте курсор <strong>сразу после</strong> нужного тега (или выделите его).</li>
+    <li>Нажмите кнопку <strong>▲</strong> для увеличения веса (например, <code>(tag:1.1)</code>) или <strong>▼</strong> для уменьшения (<code>(tag:0.9)</code>).</li>
+</ol>
+<p><strong>Профессиональный совет:</strong> Используйте вес, чтобы усилить важные детали (<code>(masterpiece:1.2)</code>) или ослабить проблемные (<code>(blurry background:0.8)</code>).</p>
+<h4>Автоматические теги качества</h4>
+<p>По умолчанию включена опция <strong>"Добавлять теги качества"</strong>. Она автоматически добавляет в начало ваших промптов "золотой стандарт" тегов для максимального качества (<code>masterpiece, best quality...</code>) и убирает мусорные теги в негативе (<code>worst quality...</code>). <strong>Рекомендуется всегда держать ее включенной.</strong></p>
+<h4>Управление Пресетами: Импорт и Экспорт</h4>
+<p>В этой версии ваши пресеты больше не хранятся в браузере. Вы управляете ими с помощью файлов <code>.json</code>, что обеспечивает надежность и возможность делиться своими коллекциями.</p>
+<ol>
+    <li><strong>Сохранение в сессию:</strong> Когда вы создали удачный промпт, введите для него имя и нажмите <strong>"Сохранить в сессию"</strong>. Пресет появится в выпадающем списке и будет доступен, пока вы не закроете вкладку.</li>
+    <li><strong>Экспорт (Сохранение навсегда):</strong> Чтобы сохранить все пресеты из текущей сессии в файл, нажмите <strong>"Экспорт (.json)"</strong>. Браузер предложит вам сохранить файл <code>prompt-artisan-presets.json</code>. <strong>Это ваша личная, постоянная коллекция.</strong></li>
+    <li><strong>Импорт:</strong> Чтобы загрузить пресеты из файла, нажмите <strong>"Импорт (.json)"</strong> и выберите ваш ранее сохраненный файл. Все пресеты из него появятся в выпадающем списке.</li>
+</ol>
+<p><strong>Профессиональный совет:</strong> Регулярно экспортируйте вашу коллекцию, особенно после создания новых удачных пресетов!</p>
+<hr>
+<h3>Часть 2: Искусство промптинга — от идеи до шедевра</h3>
+<p>Этот раздел научит вас думать как художник и режиссер, заполняя каждый блок осмысленно.</p>
+<h4>Раздел 1: Субъект и действие</h4>
+<p>Здесь мы описываем, <strong>КТО</strong> или <strong>ЧТО</strong> является главным в сцене и <strong>ЧТО</strong> он делает.</p>
+<ul>
+    <li><strong>Внешность:</strong> Начните с количества (<code>1girl, 2boys</code>), затем ключевые черты.
+        <ul>
+            <li><strong>Простой пример:</strong> <code>1girl, smile</code></li>
+            <li><strong>Сложный пример:</strong> <code>a beautiful goddess, long flowing silver hair, glowing ethereal eyes</code></li>
+        </ul>
+    </li>
+    <li><strong>Одежда и аксессуары:</strong> Описывайте стиль, цвет и материал.
+        <ul>
+            <li><strong>Простой пример:</strong> <code>red dress</code></li>
+            <li><strong>Сложный пример:</strong> <code>wearing intricate futuristic armor, glowing blue circuits, holding a plasma sword</code></li>
+        </ul>
+    </li>
+    <li><strong>Поза и действие:</strong> Глаголы — ваши лучшие друзья. Сцена должна быть живой.
+        <ul>
+            <li><strong>Статичная поза:</strong> <code>standing, sitting, looking at viewer</code></li>
+            <li><strong>Динамичное действие:</strong> <code>running through a street, jumping between rooftops, casting a spell</code></li>
+        </ul>
+    </li>
+</ul>
+<h4>Раздел 2: Композиция, сцена, стиль</h4>
+<p>Здесь мы создаем окружение и настроение, превращая просто картинку в историю.</p>
+<ul>
+    <li><strong>Окружение (Локация):</strong> Где происходит действие? Будьте конкретны.
+        <ul>
+            <li><strong>Простой пример:</strong> <code>in a forest</code></li>
+            <li><strong>Сложный пример:</strong> <code>on the bridge of a massive starship, overlooking a swirling nebula through the main viewport</code></li>
+            <li><strong>Профессиональный совет:</strong> Добавляйте время суток и погоду: <code>cyberpunk city street at night, heavy rain, neon reflections on wet pavement</code>.</li>
+        </ul>
+    </li>
+    <li><strong>Освещение и атмосфера:</strong> Свет — это 90% настроения.
+        <ul>
+            <li><strong>Ключевые слова:</strong> <code>cinematic lighting</code>, <code>volumetric lighting</code>, <code>rim lighting</code>, <code>dramatic lighting</code>.</li>
+            <li><strong>Атмосфера:</strong> <code>moody, ethereal, grim dark, cheerful, epic</code>.</li>
+            <li><strong>Сложный пример:</strong> <code>god rays shining through the canopy of an ancient forest, morning mist, ethereal atmosphere</code></li>
+        </ul>
+    </li>
+    <li><strong>Камера и композиция:</strong> Вы — режиссер! Управляйте камерой.
+        <h4><strong>Основные ракурсы и планы:</strong></h4>
+        <ul>
+            <li><strong>План:</strong> <code>close-up shot</code>, <code>medium shot</code>, <code>full body shot</code>, <code>cowboy shot</code>.</li>
+            <li><strong>Угол:</strong> <code>from above</code>, <code>from below</code>, <code>dutch angle</code>, <code>eye-level shot</code>.</li>
+            <li><strong>Эффекты объектива:</strong> <code>depth of field</code>, <code>bokeh</code>, <code>blurry background</code>, <code>lens flare</code>.</li>
+        </ul>
+        <ul>
+            <li><strong>Сложный пример:</strong> <code>dynamic low-angle shot, from behind, capturing the hero looking up at a giant monster, cinematic depth of field</code></li>
+        </ul>
+    </li>
+     <li><strong>Стиль и качество арта:</strong> В каком стиле будет ваша работа?
+        <ul>
+            <li><strong>Фотография:</strong> <code>photorealistic, photograph, 8k uhd</code></li>
+            <li><strong>Живопись:</strong> <code>oil painting, watercolor, concept art, matte painting</code></li>
+            <li><strong>Аниме:</strong> <code>anime style, key visual, studio ghibli style</code></li>
+            <li><strong>Иллюстрация:</strong> <code>comic book style, flat illustration, vector art</code></li>
+        </ul>
+    </li>
+</ul>
+<hr>
+<h3>Часть 3: Профессиональные техники</h3>
+<h4>Порядок тегов имеет значение!</h4>
+<p>Нейросеть уделяет больше всего внимания первым тегам. Поэтому профессиональный промпт строится в таком порядке:</p>
+<ol>
+    <li><strong>Качество:</strong> <code>masterpiece, best quality...</code> (Приложение делает это за вас!)</li>
+    <li><strong>Стиль:</strong> <code>concept art, by greg rutkowski...</code></li>
+    <li><strong>Главный объект и его ключевые черты:</strong> <code>1girl, long hair...</code></li>
+    <li><strong>Окружение и второстепенные детали:</strong> <code>in a forest...</code></li>
+    <li><strong>Композиция и свет:</strong> <code>cinematic lighting, from below...</code></li>
+</ol>
+<h4>Разбор сложного промпта</h4>
+<p><strong>Задача:</strong> "Нарисовать эпический концепт-арт воительницы под дождем в киберпанк-городе, вид снизу."</p>
+<p><strong>Собираем в Artisan:</strong></p>
+<ul>
+    <li><strong>Стиль:</strong> <code>concept art, photorealistic</code></li>
+    <li><strong>Внешность:</strong> <code>1girl, strong female warrior, determined expression</code></li>
+    <li><strong>Одежда:</strong> <code>wearing futuristic tactical suit, glowing neon details</code></li>
+    <li><strong>Действие:</strong> <code>standing in the middle of a street</code></li>
+    <li><strong>Локация:</strong> <code>cyberpunk city at night, heavy rain</code></li>
+    <li><strong>Атмосфера:</strong> <code>cinematic lighting, neon reflections on wet pavement, dramatic atmosphere</code></li>
+    <li><strong>Камера:</strong> <code>(full body shot:1.1), (from below:1.2)</code></li>
+</ul>
+<p><strong>Экспериментируйте! Теперь у вас есть все знания, чтобы создавать настоящие шедевры.</strong></p>

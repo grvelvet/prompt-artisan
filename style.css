@@ -92,6 +92,79 @@ textarea, input[type="text"], select, button {
 .header-controls {
     position: absolute;
     right: 0;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.lang-switch {
+    display: flex;
+    align-items: center;
+}
+
+#lang-toggle-checkbox {
+    display: none;
+}
+
+.lang-switch-label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    width: 60px;
+    height: 28px;
+    background: var(--input-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 100px;
+    position: relative;
+    transition: background-color .2s;
+}
+
+.lang-switch-label .lang-switch-knob {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    transition: 0.3s;
+    background: var(--text-color);
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.5);
+}
+
+#lang-toggle-checkbox:checked + .lang-switch-label .lang-switch-knob {
+    left: calc(100% - 2px);
+    transform: translateX(-100%);
+}
+
+.lang-switch-label::before, .lang-switch-label::after {
+    font-size: 0.8em;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: opacity 0.2s;
+}
+
+.lang-switch-label::before {
+    content: 'RU';
+    right: 8px;
+    opacity: 1;
+}
+
+.lang-switch-label::after {
+    content: 'EN';
+    left: 8px;
+    opacity: 0;
+}
+
+#lang-toggle-checkbox:checked + .lang-switch-label::before {
+    opacity: 0;
+}
+
+#lang-toggle-checkbox:checked + .lang-switch-label::after {
+    opacity: 1;
 }
 
 #show-manual-btn {
@@ -136,7 +209,7 @@ textarea, input[type="text"], select, button {
 
 .input-group {
     display: flex;
-    align-items: stretch;
+    align-items: center;
     gap: 5px;
 }
 
@@ -179,12 +252,12 @@ textarea::placeholder, input::placeholder {
     background-color: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.2);
     color: var(--light-text);
-    width: 24px;
-    height: 100%;
-    flex: 1;
+    width: 22px;
+    height: 20px;
+    flex: none;
     border-radius: 4px;
     cursor: pointer;
-    font-size: 0.8em;
+    font-size: 0.7em;
     font-weight: bold;
     line-height: 1;
     transition: background-color 0.2s;
@@ -243,6 +316,18 @@ button#delete-preset-btn:hover { background-color: var(--delete-hover); }
     width: 100%;
 }
 
+.save-group {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 10px;
+}
+
+.preset-actions {
+    margin-top: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
 .divider {
     border: none;
     height: 1px;
@@ -255,7 +340,7 @@ button#delete-preset-btn:hover { background-color: var(--delete-hover); }
     border: 1px dashed var(--border-color);
     border-radius: 5px;
     padding: 15px;
-    margin: 20px 0;
+    margin-top: 10px;
     min-height: 100px;
     font-size: 0.9em;
     color: var(--light-text);

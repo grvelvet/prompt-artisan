@@ -1,11 +1,100 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // --- КОНСТАНТЫ ---
-    const PRESETS_KEY = 'promptArtisanPresets_v2_9_0';
-    const APP_VERSION = '2.9.5';
+    // --- КОНСТАНТЫ И СЛОВАРИ ---
+    const LANG_KEY = 'promptArtisanLang_v1';
+    const APP_VERSION = '2.9.6';
     const POSITIVE_QUALITY_TAGS = ['masterpiece', 'best quality', 'highres', 'ultra-detailed'];
     const NEGATIVE_QUALITY_TAGS = ['worst quality', 'low quality', 'normal quality'];
     const DEFAULT_NEGATIVE_PROMPT = "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, cropped, jpeg artifacts, signature, watermark, username, blurry, artist name, bad feet, deformed, disfigured";
+
+    const i18n = {
+        ru: {
+            appTitle: "Prompt Artisan",
+            helpTitle: "Помощь",
+            subjectHeader: "Субъект и действие",
+            appearanceHeader: "Внешность",
+            appearancePlaceholder: "девушка, long hair, blue eyes...",
+            clothingHeader: "Одежда и аксессуары",
+            clothingPlaceholder: "elegant dress, red shoes...",
+            poseHeader: "Поза и действие",
+            posePlaceholder: "standing, looking at viewer...",
+            compositionHeader: "Композиция, сцена, стиль",
+            locationHeader: "Окружение (Локация)",
+            locationPlaceholder: "in a forest, city background...",
+            lightingHeader: "Освещение и атмосфера",
+            lightingPlaceholder: "cinematic lighting, dark background...",
+            cameraHeader: "Камера и композиция",
+            cameraPlaceholder: "medium shot, bokeh, blurry background...",
+            styleHeader: "Стиль и качество арта",
+            stylePlaceholder: "photorealistic, masterpiece, detailed bg...",
+            advancedHeader: "Продвинутые настройки",
+            loraHeader: "LoRA / Trigger Words",
+            loraPlaceholder: "<lora:имя:сила> или триггерные слова",
+            finalPromptHeader: "Итоговый промпт",
+            copyBtn: "Копировать",
+            formManagementHeader: "Управление формой",
+            rebuildBtn: "Пересобрать промпт",
+            clearBtn: "Очистить форму",
+            qualityToggle: "Добавлять теги качества",
+            presetsHeader: "Управление Пресетами",
+            importBtn: "Импорт (.json)",
+            exportBtn: "Экспорт (.json)",
+            presetNamePlaceholder: "Имя нового пресета",
+            savePresetBtn: "Сохранить в сессию",
+            presetSelectDefault: "--- Выберите пресет ---",
+            presetPreviewPlaceholder: "Импортируйте файл или сохраните пресет",
+            loadPresetBtn: "Загрузить",
+            deletePresetBtn: "Удалить",
+            footerText: "© 2025 Created by grvelvet",
+            closeBtnTitle: "Закрыть",
+            copiedAlert: "Скопировано!",
+            alertNoPresets: "Нет пресетов для экспорта.",
+            alertImportError: "Ошибка: не удалось прочитать файл. Убедитесь, что это корректный JSON."
+        },
+        en: {
+            appTitle: "Prompt Artisan",
+            helpTitle: "Help",
+            subjectHeader: "Subject & Action",
+            appearanceHeader: "Appearance",
+            appearancePlaceholder: "1girl, long hair, blue eyes...",
+            clothingHeader: "Clothing & Accessories",
+            clothingPlaceholder: "elegant dress, red shoes...",
+            poseHeader: "Pose & Action",
+            posePlaceholder: "standing, looking at viewer...",
+            compositionHeader: "Composition, Scene, Style",
+            locationHeader: "Environment (Location)",
+            locationPlaceholder: "in a forest, city background...",
+            lightingHeader: "Lighting & Atmosphere",
+            lightingPlaceholder: "cinematic lighting, dark background...",
+            cameraHeader: "Camera & Composition",
+            cameraPlaceholder: "medium shot, bokeh, blurry background...",
+            styleHeader: "Art Style & Quality",
+            stylePlaceholder: "photorealistic, masterpiece, detailed bg...",
+            advancedHeader: "Advanced Settings",
+            loraHeader: "LoRA / Trigger Words",
+            loraPlaceholder: "<lora:name:strength> or trigger words",
+            finalPromptHeader: "Final Prompt",
+            copyBtn: "Copy",
+            formManagementHeader: "Form Management",
+            rebuildBtn: "Rebuild Prompt",
+            clearBtn: "Clear Form",
+            qualityToggle: "Add quality tags",
+            presetsHeader: "Preset Management",
+            importBtn: "Import (.json)",
+            exportBtn: "Export (.json)",
+            presetNamePlaceholder: "New preset name",
+            savePresetBtn: "Save to Session",
+            presetSelectDefault: "--- Select a preset ---",
+            presetPreviewPlaceholder: "Import a file or save a preset to the session",
+            loadPresetBtn: "Load",
+            deletePresetBtn: "Delete",
+            footerText: "© 2025 Created by grvelvet",
+            closeBtnTitle: "Close",
+            copiedAlert: "Copied!",
+            alertNoPresets: "No presets to export.",
+            alertImportError: "Error: Could not read the file. Ensure it's a valid JSON."
+        }
+    };
 
     // --- DOM-ЭЛЕМЕНТЫ ---
     const form = document.getElementById('prompt-form');
@@ -27,11 +116,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const manualModal = document.getElementById('manual-modal');
     const closeManualBtn = document.getElementById('close-manual-btn');
     const manualBody = manualModal.querySelector('.manual-body');
+    const langToggleCheckbox = document.getElementById('lang-toggle-checkbox');
+    const importPresetsBtn = document.getElementById('import-presets-btn');
+    const exportPresetsBtn = document.getElementById('export-presets-btn');
 
     // --- СОСТОЯНИЕ ПРИЛОЖЕНИЯ ---
     let isManualEditMode = false;
     let isManualLoaded = false;
     let savedPresets = {};
+    let currentLang = localStorage.getItem(LANG_KEY) || 'ru';
 
     // --- УТИЛИТЫ ---
     const splitTags = (value) => value.split(',').map(s => s.trim()).filter(Boolean);
@@ -44,7 +137,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const copyText = (element, button) => {
         navigator.clipboard.writeText(element.value).then(() => {
             const originalText = button.textContent;
-            button.textContent = 'Скопировано!';
+            button.textContent = i18n[currentLang].copiedAlert;
             setTimeout(() => { button.textContent = originalText; }, 1500);
         });
     };
@@ -95,7 +188,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const { selectionStart, selectionEnd } = textarea;
         const action = button.dataset.action;
         let startIndex, endIndex, textToModify;
-
         if (selectionStart !== selectionEnd) {
             startIndex = selectionStart;
             endIndex = selectionEnd;
@@ -107,49 +199,36 @@ document.addEventListener('DOMContentLoaded', () => {
             endIndex = selectionEnd;
             textToModify = textarea.value.substring(startIndex, endIndex);
         }
-        
-        const trimmedText = textToModify.trim();
-        if (!trimmedText) return;
-
-        // --- ГЛАВНЫЙ ФИКС ---
+        if (!textToModify.trim()) return;
         const weightRegex = /^\((.*):(-?[\d.]+)\)$/;
-        const match = trimmedText.match(weightRegex);
-        
-        const cleanText = match ? match[1].trim() : trimmedText;
+        const match = textToModify.trim().match(weightRegex);
+        const cleanText = match ? match[1].trim() : textToModify.trim();
         const currentWeight = match ? parseFloat(match[2]) : 1.0;
-        
         let newWeight = parseFloat((action === 'increase' ? currentWeight + 0.1 : currentWeight - 0.1).toFixed(1));
-        
-        // Ограничиваем вес снизу нулем
         newWeight = Math.max(0, newWeight);
-        
         const newText = (newWeight === 1.0) ? cleanText : `(${cleanText}:${newWeight})`;
-        
-        // Находим правильные границы для замены, включая пробелы
         const replacementStartIndex = textarea.value.indexOf(textToModify, startIndex);
         const replacementEndIndex = replacementStartIndex + textToModify.length;
-
         textarea.setRangeText(newText, replacementStartIndex, replacementEndIndex, 'select');
         textarea.focus();
         generatePositiveOutput();
     };
-    
-    // --- ЛОГИКА ПРЕСЕТОВ И МАНУАЛА (полные версии) ---
+
+    // --- ЛОГИКА ПРЕСЕТОВ И МАНУАЛА ---
     const handleSavePreset = () => {
         const name = presetNameInput.value.trim();
-        if (!name) { alert('Введите имя пресета.'); return; }
+        if (!name) { alert(i18n[currentLang].presetNamePlaceholder); return; }
         const presetData = {};
         savableFields.forEach(el => { presetData[el.id] = el.value; });
         savedPresets[name] = presetData;
-        savePresetsToStorage();
         populatePresetDropdown();
         presetSelect.value = name;
         renderPresetPreview();
-        alert(`Пресет "${name}" сохранен!`);
+        presetNameInput.value = '';
     };
     const handleLoadPreset = () => {
         const name = presetSelect.value;
-        if (!savedPresets[name]) { alert('Пожалуйста, выберите пресет из списка для загрузки.'); return; }
+        if (!savedPresets[name]) { return; }
         const presetData = savedPresets[name];
         savableFields.forEach(el => {
             el.value = presetData[el.id] || (el.id === 'output-negative' ? DEFAULT_NEGATIVE_PROMPT : '');
@@ -161,17 +240,15 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     const handleDeletePreset = () => {
         const name = presetSelect.value;
-        if (!savedPresets[name]) { alert('Выберите пресет для удаления.'); return; }
-        if (confirm(`Удалить пресет "${name}"?`)) {
+        if (!savedPresets[name]) { return; }
+        if (confirm(`Delete preset "${name}" from this session?`)) {
             delete savedPresets[name];
-            savePresetsToStorage();
             populatePresetDropdown();
-            presetNameInput.value = '';
-            alert(`Пресет "${name}" удален.`);
         }
     };
     const populatePresetDropdown = () => {
-        presetSelect.innerHTML = '<option value="">--- Выберите пресет ---</option>';
+        const defaultOptionText = i18n[currentLang].presetSelectDefault;
+        presetSelect.innerHTML = `<option value="">${defaultOptionText}</option>`;
         Object.keys(savedPresets).sort().forEach(name => {
             const option = document.createElement('option');
             option.value = name;
@@ -183,30 +260,72 @@ document.addEventListener('DOMContentLoaded', () => {
     const renderPresetPreview = () => {
         const name = presetSelect.value;
         const presetData = savedPresets[name];
+        const placeholder = presetPreview.querySelector('.placeholder');
         if (!presetData) {
-            presetPreview.innerHTML = '<span class="placeholder">Выберите пресет для предпросмотра</span>';
+            if(placeholder) placeholder.textContent = i18n[currentLang].presetPreviewPlaceholder;
+            const ul = presetPreview.querySelector('ul');
+            if(ul) ul.remove();
+            if(!placeholder && !ul) presetPreview.innerHTML = `<span class="placeholder">${i18n[currentLang].presetPreviewPlaceholder}</span>`;
             return;
         }
         let previewHtml = '<ul>';
         for (const [key, value] of Object.entries(presetData)) {
             if (value.trim()) {
-                const label = document.querySelector(`label[for="${key}"]`)?.textContent || key;
+                const h3 = document.querySelector(`h3[data-i18n="${key}Header"]`);
+                const label = h3 ? h3.textContent : key;
                 previewHtml += `<li><strong>${label}:</strong> ${value}</li>`;
             }
         }
         previewHtml += '</ul>';
         presetPreview.innerHTML = previewHtml;
     };
-    const loadPresetsFromStorage = () => {
-        savedPresets = JSON.parse(localStorage.getItem(PRESETS_KEY)) || {};
-        populatePresetDropdown();
+    const handleExportPresets = () => {
+        if (Object.keys(savedPresets).length === 0) {
+            alert(i18n[currentLang].alertNoPresets);
+            return;
+        }
+        const dataStr = JSON.stringify(savedPresets, null, 2);
+        const dataBlob = new Blob([dataStr], {type: "application/json"});
+        const url = URL.createObjectURL(dataBlob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = `prompt-artisan-presets.json`;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        URL.revokeObjectURL(url);
     };
-    const savePresetsToStorage = () => localStorage.setItem(PRESETS_KEY, JSON.stringify(savedPresets));
+    const handleImportPresets = () => {
+        const input = document.createElement('input');
+        input.type = 'file';
+        input.accept = '.json';
+        input.onchange = e => {
+            const file = e.target.files[0];
+            const reader = new FileReader();
+            reader.onload = event => {
+                try {
+                    const importedPresets = JSON.parse(event.target.result);
+                    if (typeof importedPresets === 'object' && importedPresets !== null) {
+                        savedPresets = importedPresets;
+                        populatePresetDropdown();
+                    } else {
+                        throw new Error('Invalid JSON structure');
+                    }
+                } catch (error) {
+                    alert(i18n[currentLang].alertImportError);
+                    console.error("Import error:", error);
+                }
+            };
+            reader.readAsText(file);
+        };
+        input.click();
+    };
     const showManual = async () => {
         manualModal.dataset.visible = 'true';
         if (isManualLoaded) return;
+        const manualFile = currentLang === 'ru' ? 'manual-content.html' : 'manual-content-en.html';
         try {
-            const response = await fetch('manual-content.html');
+            const response = await fetch(manualFile);
             if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
             const content = await response.text();
             setTimeout(() => {
@@ -215,12 +334,30 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 300);
         } catch (error) {
             console.error("Failed to load manual:", error);
-            manualBody.innerHTML = `<p style="color: var(--text-color);">Не удалось загрузить руководство.</p>`;
+            manualBody.innerHTML = `<p style="color: var(--text-color);">Could not load the manual.</p>`;
             isManualLoaded = false;
         }
     };
     const hideManual = () => {
         manualModal.dataset.visible = 'false';
+    };
+    const setLanguage = (lang) => {
+        currentLang = lang;
+        localStorage.setItem(LANG_KEY, lang);
+        document.documentElement.lang = lang;
+        langToggleCheckbox.checked = lang === 'en';
+        const translations = i18n[lang];
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+            el.textContent = translations[el.dataset.i18n];
+        });
+        document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+            el.placeholder = translations[el.dataset.i18nPlaceholder];
+        });
+        document.querySelectorAll('[data-i18n-title]').forEach(el => {
+            el.title = translations[el.dataset.i18nTitle];
+        });
+        populatePresetDropdown();
+        isManualLoaded = false;
     };
 
     // --- ОБРАБОТЧИКИ СОБЫТИЙ ---
@@ -234,7 +371,7 @@ document.addEventListener('DOMContentLoaded', () => {
         setManualEditMode(true);
         autoResizeTextarea(positiveOutput);
     });
-    negativeOutput.addEventListener('input', () => autoResizeTextarea(negativeOutput));
+    negativeOutput.addEventListener('input', autoResizeTextarea);
     rebuildBtn.addEventListener('click', () => {
         setManualEditMode(false);
         generatePositiveOutput();
@@ -243,6 +380,12 @@ document.addEventListener('DOMContentLoaded', () => {
         e.preventDefault();
         resetToDefaultState();
     });
+    langToggleCheckbox.addEventListener('change', () => {
+        const newLang = langToggleCheckbox.checked ? 'en' : 'ru';
+        setLanguage(newLang);
+    });
+    importPresetsBtn.addEventListener('click', handleImportPresets);
+    exportPresetsBtn.addEventListener('click', handleExportPresets);
     document.getElementById('copy-positive').addEventListener('click', (e) => copyText(positiveOutput, e.target));
     document.getElementById('copy-negative').addEventListener('click', (e) => copyText(negativeOutput, e.target));
     savePresetBtn.addEventListener('click', handleSavePreset);
@@ -255,8 +398,8 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && manualModal.dataset.visible === 'true') hideManual(); });
 
     // --- ИНИЦИАЛИЗАЦИЯ ПРИЛОЖЕНИЯ ---
+    setLanguage(currentLang);
     document.getElementById('app-title').textContent += ` v${APP_VERSION}`;
-    loadPresetsFromStorage();
     setTimeout(resetToDefaultState, 0);
     allTextareas.forEach(textarea => {
         textarea.addEventListener('input', () => autoResizeTextarea(textarea));
