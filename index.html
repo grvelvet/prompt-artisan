@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-i18n="appTitle">Prompt Artisan</title>
-    <!-- Подключение шрифтов -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Fira+Code:wght@500&display=swap" rel="stylesheet">
-    <!-- Подключение стилей -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -26,55 +24,74 @@
         <div class="main-content">
             <form id="prompt-form">
                 <div class="prompt-card">
-                    <h2 data-i18n="subjectHeader">Субъект и действие</h2>
+                    <div class="card-header">
+                        <h2 data-i18n="styleSection">🎨 Стиль Изображения</h2>
+                        <span class="tooltip-icon">i<span class="tooltip-text" data-i18n="styleTooltip"></span></span>
+                    </div>
                     <section class="form-section">
-                        <h3 data-i18n="appearanceHeader">Внешность</h3>
-                        <div class="input-group"><textarea class="prompt-part savable-field" id="appearance" data-i18n-placeholder="appearancePlaceholder" placeholder="девушка, long hair, blue eyes..."></textarea><div class="weight-controls"><button type="button" class="weight-btn" data-action="increase">▲</button><button type="button" class="weight-btn" data-action="decrease">▼</button></div></div>
-                    </section>
-                    <section class="form-section">
-                        <h3 data-i18n="clothingHeader">Одежда и аксессуары</h3>
-                        <div class="input-group"><textarea class="prompt-part savable-field" id="clothing" data-i18n-placeholder="clothingPlaceholder" placeholder="elegant dress, red shoes..."></textarea><div class="weight-controls"><button type="button" class="weight-btn" data-action="increase">▲</button><button type="button" class="weight-btn" data-action="decrease">▼</button></div></div>
-                    </section>
-                    <section class="form-section">
-                        <h3 data-i18n="poseHeader">Поза и действие</h3>
-                        <div class="input-group"><textarea class="prompt-part savable-field" id="pose" data-i18n-placeholder="posePlaceholder" placeholder="standing, looking at viewer..."></textarea><div class="weight-controls"><button type="button" class="weight-btn" data-action="increase">▲</button><button type="button" class="weight-btn" data-action="decrease">▼</button></div></div>
+                        <div class="input-group">
+                            <textarea class="prompt-part savable-field" id="style" data-i18n-placeholder="stylePlaceholder"></textarea>
+                            <div class="weight-controls"><button type="button" class="weight-btn" data-action="increase">▲</button><button type="button" class="weight-btn" data-action="decrease">▼</button></div>
+                        </div>
                     </section>
                 </div>
 
                 <div class="prompt-card">
-                    <h2 data-i18n="compositionHeader">Композиция, сцена, стиль</h2>
+                    <h2 data-i18n="subjectSection">👤 Субъект и Персонаж</h2>
                     <section class="form-section">
-                        <h3 data-i18n="locationHeader">Окружение (Локация)</h3>
-                        <div class="input-group"><textarea class="prompt-part savable-field" id="location" data-i18n-placeholder="locationPlaceholder" placeholder="in a forest, city background..."></textarea><div class="weight-controls"><button type="button" class="weight-btn" data-action="increase">▲</button><button type="button" class="weight-btn" data-action="decrease">▼</button></div></div>
+                        <div class="card-header">
+                            <h3 data-i18n="subjectActionHeader">Основа и Действие</h3>
+                            <span class="tooltip-icon">i<span class="tooltip-text" data-i18n="subjectActionTooltip"></span></span>
+                        </div>
+                        <div class="input-group"><textarea class="prompt-part savable-field" id="subject_action" data-i18n-placeholder="subjectActionPlaceholder"></textarea><div class="weight-controls"><button type="button" class="weight-btn" data-action="increase">▲</button><button type="button" class="weight-btn" data-action="decrease">▼</button></div></div>
                     </section>
                     <section class="form-section">
-                        <h3 data-i18n="lightingHeader">Освещение и атмосфера</h3>
-                        <div class="input-group"><textarea class="prompt-part savable-field" id="lighting" data-i18n-placeholder="lightingPlaceholder" placeholder="cinematic lighting, dark background..."></textarea><div class="weight-controls"><button type="button" class="weight-btn" data-action="increase">▲</button><button type="button" class="weight-btn" data-action="decrease">▼</button></div></div>
+                         <div class="card-header">
+                            <h3 data-i18n="appearanceHeader">Внешность и Детали</h3>
+                            <span class="tooltip-icon">i<span class="tooltip-text" data-i18n="appearanceTooltip"></span></span>
+                        </div>
+                        <div class="input-group"><textarea class="prompt-part savable-field" id="appearance_details" data-i18n-placeholder="appearancePlaceholder"></textarea><div class="weight-controls"><button type="button" class="weight-btn" data-action="increase">▲</button><button type="button" class="weight-btn" data-action="decrease">▼</button></div></div>
                     </section>
                     <section class="form-section">
-                        <h3 data-i18n="cameraHeader">Камера и композиция</h3>
-                        <div class="input-group"><textarea class="prompt-part savable-field" id="camera" data-i18n-placeholder="cameraPlaceholder" placeholder="medium shot, bokeh, blurry background..."></textarea><div class="weight-controls"><button type="button" class="weight-btn" data-action="increase">▲</button><button type="button" class="weight-btn" data-action="decrease">▼</button></div></div>
-                    </section>
-                    <section class="form-section">
-                        <h3 data-i18n="styleHeader">Стиль и качество арта</h3>
-                        <div class="input-group"><textarea class="prompt-part savable-field" id="style-quality" data-i18n-placeholder="stylePlaceholder" placeholder="photorealistic, masterpiece, detailed bg..."></textarea><div class="weight-controls"><button type="button" class="weight-btn" data-action="increase">▲</button><button type="button" class="weight-btn" data-action="decrease">▼</button></div></div>
+                        <div class="card-header">
+                            <h3 data-i18n="clothingHeader">Одежда и Снаряжение</h3>
+                            <span class="tooltip-icon">i<span class="tooltip-text" data-i18n="clothingTooltip"></span></span>
+                        </div>
+                        <div class="input-group"><textarea class="prompt-part savable-field" id="clothing_gear" data-i18n-placeholder="clothingPlaceholder"></textarea><div class="weight-controls"><button type="button" class="weight-btn" data-action="increase">▲</button><button type="button" class="weight-btn" data-action="decrease">▼</button></div></div>
                     </section>
                 </div>
-                
+
                 <div class="prompt-card">
-                    <h2 data-i18n="advancedHeader">Продвинутые настройки</h2>
+                    <h2 data-i18n="sceneSection">🏞️ Сцена и Композиция</h2>
                     <section class="form-section">
-                        <h3 data-i18n="loraHeader">LoRA / Trigger Words</h3>
-                        <div class="input-group">
-                            <textarea class="prompt-part savable-field" id="loras" data-i18n-placeholder="loraPlaceholder" placeholder="<lora:имя:сила> или триггерные слова"></textarea>
+                         <div class="card-header">
+                            <h3 data-i18n="locationHeader">Локация и Окружение</h3>
+                             <span class="tooltip-icon">i<span class="tooltip-text" data-i18n="locationTooltip"></span></span>
                         </div>
+                        <div class="input-group"><textarea class="prompt-part savable-field" id="location_env" data-i18n-placeholder="locationPlaceholder"></textarea><div class="weight-controls"><button type="button" class="weight-btn" data-action="increase">▲</button><button type="button" class="weight-btn" data-action="decrease">▼</button></div></div>
+                    </section>
+                    <section class="form-section">
+                        <div class="card-header">
+                            <h3 data-i18n="lightingHeader">Освещение и Атмосфера</h3>
+                            <span class="tooltip-icon">i<span class="tooltip-text" data-i18n="lightingTooltip"></span></span>
+                            <button type="button" class="tag-browser-btn" data-target-id="lighting_atmosphere" data-library="tags-lighting.json">📖</button>
+                        </div>
+                        <div class="input-group"><textarea class="prompt-part savable-field" id="lighting_atmosphere" data-i18n-placeholder="lightingPlaceholder"></textarea><div class="weight-controls"><button type="button" class="weight-btn" data-action="increase">▲</button><button type="button" class="weight-btn" data-action="decrease">▼</button></div></div>
+                    </section>
+                    <section class="form-section">
+                        <div class="card-header">
+                            <h3 data-i18n="cameraHeader">Камера и Ракурс</h3>
+                            <span class="tooltip-icon">i<span class="tooltip-text" data-i18n="cameraTooltip"></span></span>
+                            <button type="button" class="tag-browser-btn" data-target-id="camera_composition" data-library="tags-camera.json">📖</button>
+                        </div>
+                        <div class="input-group"><textarea class="prompt-part savable-field" id="camera_composition" data-i18n-placeholder="cameraPlaceholder"></textarea><div class="weight-controls"><button type="button" class="weight-btn" data-action="increase">▲</button><button type="button" class="weight-btn" data-action="decrease">▼</button></div></div>
                     </section>
                 </div>
             </form>
 
             <aside class="sidebar">
-                <div class="prompt-card">
-                    <h2 data-i18n="finalPromptHeader">Итоговый промпт</h2>
+                 <div class="prompt-card">
+                    <h2 data-i18n="finalPromptHeader">Итоговый промпт и Управление</h2>
                     <section class="form-section">
                         <label for="output-positive">Positive Prompt:</label>
                         <textarea id="output-positive"></textarea>
@@ -85,43 +102,35 @@
                         <textarea class="savable-field" id="output-negative"></textarea>
                         <button type="button" id="copy-negative" data-i18n="copyBtn">Копировать</button>
                     </section>
-                </div>
-
-                <div class="prompt-card">
-                    <h2 data-i18n="formManagementHeader">Управление формой</h2>
-                    <section class="form-section actions">
-                        <button type="button" id="rebuild-prompt" data-i18n="rebuildBtn" data-i18n-title="rebuildBtnTitle" title="Сбросить ручные правки и сгенерировать промпт заново">Пересобрать промпт</button>
-                        <button type="reset" id="clear-form" form="prompt-form" data-i18n="clearBtn">Очистить форму</button>
-                    </section>
+                    <hr class="divider">
                     <section class="form-section quality-toggle-wrapper">
                         <input type="checkbox" id="quality-toggle" checked>
                         <label for="quality-toggle" data-i18n="qualityToggle">Добавлять теги качества</label>
+                    </section>
+                    <section class="form-section actions">
+                        <button type="button" id="rebuild-prompt" data-i18n="rebuildBtn" data-i18n-title="rebuildBtnTitle" title="Сбросить ручные правки и сгенерировать промпт заново">Пересобрать промпт</button>
+                        <button type="reset" id="clear-form" form="prompt-form" data-i18n="clearBtn">Очистить форму</button>
                     </section>
                 </div>
 
                 <div class="prompt-card">
                     <h2 data-i18n="presetsHeader">Управление Пресетами</h2>
-                    
                     <section class="form-section preset-selection-group">
                         <select id="preset-select"></select>
                         <button type="button" id="delete-preset-btn" data-i18n="deletePresetBtn">Удалить</button>
                     </section>
-
                     <section class="form-section">
-                        <div id="preset-preview">
-                            <span class="placeholder" data-i18n="presetPreviewPlaceholder">Импортируйте файл или сохраните пресет</span>
+                        <div id="preset-preview" data-hidden="true">
+                            <span class="placeholder" data-i18n="presetPreviewPlaceholder"></span>
                         </div>
                     </section>
-
                     <hr class="divider">
-
                     <section class="form-section">
                         <div class="preset-controls save-group">
                             <input type="text" id="preset-name" data-i18n-placeholder="presetNamePlaceholder" placeholder="Имя нового пресета">
                             <button type="button" id="save-preset-btn" data-i18n="savePresetBtn">Сохранить</button>
                         </div>
                     </section>
-                    
                     <section class="form-section actions preset-actions">
                         <button type="button" id="import-presets-btn" data-i18n="importBtn">Импорт</button>
                         <button type="button" id="export-presets-btn" data-i18n="exportBtn">Экспорт</button>
@@ -138,6 +147,24 @@
         <div class="modal-content">
             <button id="close-manual-btn" class="modal-close-btn" data-i18n-title="closeBtnTitle" title="Закрыть">&times;</button>
             <div class="manual-body"><div class="spinner"></div></div>
+        </div>
+    </div>
+    
+    <div id="tag-browser-modal" class="modal-overlay" data-visible="false">
+        <div class="modal-content tag-browser-content">
+            <button id="close-tag-browser-btn" class="modal-close-btn" data-i18n-title="closeBtnTitle" title="Закрыть">&times;</button>
+            <h2 id="tag-browser-title"></h2>
+            <div class="tag-browser-body">
+                <aside id="tag-browser-subcategories"></aside>
+                <main id="tag-browser-tags">
+                    <input type="search" id="tag-browser-search">
+                    <div id="tag-browser-tags-list"></div>
+                </main>
+            </div>
+            <footer class="tag-browser-footer">
+                <div id="tag-browser-selection-preview"></div>
+                <button type="button" id="add-selected-tags-btn" disabled></button>
+            </footer>
         </div>
     </div>
 

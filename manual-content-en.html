@@ -1,113 +1,63 @@
+### 📖 `manual-content-en.html` (English Help, final version)
+
+```html
 <h3>The Complete Guide to Prompt Artisan</h3>
-<p>Welcome! This tool was created to turn the chaos of random tags into a predictable and manageable creative process. This guide will teach you not only how to use the interface but also how to understand the logic of crafting powerful prompts.</p>
+<p>Welcome! This tool has been redesigned to be your intelligent assistant in prompt creation. It will help you turn a simple idea into an artistic and technically rich description that the neural network will understand.</p>
 <hr>
 <h3>Part 1: Quick Start and Interface</h3>
 <h4>How to Enter Tags (The Main Rule)</h4>
-<p>Separate your tags with a <strong>comma</strong>. This is the standard and most reliable method, allowing for multi-word tags.</p>
-<ul>
-<li><strong>Example:</strong> <code>1girl, long hair, blue eyes</code> — these are three separate tags.</li>
-<li>The application will automatically trim any extra spaces.</li>
-</ul>
-<h4>Managing Tag Weights</h4>
-<p>This is a key feature for controlling emphasis. To change a weight:</p>
-<ol>
-<li>Place your cursor <strong>right after</strong> the desired tag (or select it).</li>
-<li>Press the <strong>▲</strong> button to increase the weight (e.g., <code>(tag:1.1)</code>) or <strong>▼</strong> to decrease it (<code>(tag:0.9)</code>).</li>
-</ol>
-<p><strong>Pro Tip:</strong> Use weights to enhance important details (<code>(masterpiece:1.2)</code>) or weaken problematic ones (<code>(blurry background:0.8)</code>).</p>
+<p>Separate your tags with a <strong>comma</strong>. The application will automatically trim extra spaces. For example: <code>1girl, long hair, blue eyes</code>.</p>
+<h4>Managing Tag Weights (▲ / ▼)</h4>
+<p>This is a key feature for controlling emphasis. Place your cursor <strong>right after</strong> the desired tag (or select it) and use the buttons to increase (<code>(tag:1.1)</code>) or decrease (<code>(tag:0.9)</code>) its impact.</p>
 <h4>Automatic Quality Tags</h4>
-<p>The <strong>"Add quality tags"</strong> option is enabled by default. It automatically adds the "gold standard" of tags to the beginning of your prompts for maximum quality (<code>masterpiece, best quality...</code>) and adds boilerplate tags to the negative prompt (<code>worst quality...</code>). <strong>It is highly recommended to always keep this enabled.</strong></p>
+<p>The <strong>"Add quality tags"</strong> option is enabled by default and automatically adds proven tags (<code>masterpiece, best quality...</code>) to the beginning of your prompt for maximum results. It is recommended to always keep this enabled.</p>
+<h4>Contextual Help (i)</h4>
+<p>Next to each section header, you will find an <strong>(i)</strong> icon. Hover over it to get a brief tip on what kind of information is best to enter in that field.</p>
 <h4>Preset Management: Import & Export</h4>
-<p>In this version, your presets are no longer stored in the browser. You manage them using <code>.json</code> files, which ensures reliability and allows you to share your collections.</p>
+<p>You manage your presets using <code>.json</code> files. Save successful combinations to the session, then export them to a file for permanent storage and sharing.</p>
+<hr>
+<h3>Part 2: From Idea to Masterpiece: The New Workflow</h3>
+<p>The new interface is built around the natural creative process. Think in concepts, not just tags.</p>
+<h4>Step 1: 🎨 Image Style — The Foundation</h4>
+<p>This is the most important field. Here, you decide what the final image will look like. Is it a <strong>photograph</strong>, a <strong>painting</strong>, <strong>anime</strong>, or something else?
+<ul>
+    <li><strong>Photography:</strong> <code>photograph, photorealistic, polaroid photo</code></li>
+    <li><strong>Painting:</strong> <code>oil painting, watercolor, sketch</code></li>
+    <li><strong>Anime:</strong> <code>anime style, key visual, manga</code></li>
+    <li><strong>3D:</strong> <code>3d render, octane render, unreal engine</code></li>
+</ul>
+</p>
+<h4>Step 2: 👤 Subject & Character — The Protagonist</h4>
+<p>In this block, we describe <strong>WHO</strong> or <strong>WHAT</strong> is the main focus of the scene.</p>
+<ul>
+    <li><strong>Core & Action:</strong> The key information. <code>1girl, sitting on a throne</code>, <code>a dragon breathing fire</code>.</li>
+    <li><strong>Appearance & Details:</strong> Describe facial features, hair, and build. <code>long silver hair, green eyes, muscular build</code>.</li>
+    <li><strong>Clothing & Gear:</strong> What they wear and what they hold. <code>wearing intricate golden armor, holding a glowing sword</code>.</li>
+</ul>
+<h4>Step 3: 🏞️ Scene & Composition — The World Around</h4>
+<p>Here, we create the environment and define how the viewer will see the scene.</p>
+<ul>
+    <li><strong>Location & Environment:</strong> Where does it all happen? <code>in a dark fantasy castle, on a neon-lit street at night</code>.</li>
+    <li><strong>Lighting & Atmosphere:</strong> The most powerful tool for creating a mood.</li>
+    <li><strong>Camera & Angle:</strong> How the scene is "photographed."</li>
+</ul>
+<hr>
+<h3>Part 3: Professional Tools</h3>
+<h4>Using the Tag Browser (📖)</h4>
+<p>For technical fields like "Lighting" and "Camera," a special tool is available: the <strong>Tag Browser</strong>. Click the <code>📖</code> icon to open it.</p>
 <ol>
-<li><strong>Saving to Session:</strong> When you've created a great prompt, give it a name and click <strong>"Save to Session"</strong>. The preset will appear in the dropdown list and will be available until you close the tab.</li>
-<li><strong>Export (Permanent Save):</strong> To save all presets from the current session to a file, click <strong>"Export (.json)"</strong>. The browser will prompt you to save a <code>prompt-artisan-presets.json</code> file. <strong>This is your personal, permanent collection.</strong></li>
-<li><strong>Import:</strong> To load presets from a file, click <strong>"Import (.json)"</strong> and select your previously saved file. All presets from it will appear in the dropdown list.</li>
+    <li><strong>Select a subcategory</strong> on the left (e.g., "Shot Type" or "Light Source").</li>
+    <li><strong>Use the search bar</strong> for quick filtering.</li>
+    <li><strong>Click on tags</strong> on the right to select one or more (multi-select).</li>
+    <li>Click <strong>"Add Selected"</strong> to add them to the text field.</li>
 </ol>
-<p><strong>Pro Tip:</strong> Regularly export your collection, especially after creating new successful presets!</p>
-<hr>
-<h3>Part 2: The Art of Prompting — From Idea to Masterpiece</h3>
-<p>This section will teach you to think like an artist and a director, filling each block with purpose.</p>
-<h4>Section 1: Subject and Action</h4>
-<p>Here, we describe <strong>WHO</strong> or <strong>WHAT</strong> is the main focus of the scene and <strong>WHAT</strong> they are doing.</p>
-<ul>
-<li><strong>Appearance:</strong> Start with the count (<code>1girl, 2boys</code>), then key features.
-<ul>
-<li><strong>Simple Example:</strong> <code>1girl, smile</code></li>
-<li><strong>Complex Example:</strong> <code>a beautiful goddess, long flowing silver hair, glowing ethereal eyes</code></li>
-</ul>
-</li>
-<li><strong>Clothing & Accessories:</strong> Describe the style, color, and material.
-<ul>
-<li><strong>Simple Example:</strong> <code>red dress</code></li>
-<li><strong>Complex Example:</strong> <code>wearing intricate futuristic armor, glowing blue circuits, holding a plasma sword</code></li>
-</ul>
-</li>
-<li><strong>Pose & Action:</strong> Verbs are your best friends. Make the scene feel alive.
-<ul>
-<li><strong>Static Poses:</strong> <code>standing, sitting, looking at viewer</code></li>
-<li><strong>Dynamic Actions:</strong> <code>running through a street, jumping between rooftops, casting a spell</code></li>
-</ul>
-</li>
-</ul>
-<h4>Section 2: Composition, Scene, and Style</h4>
-<p>Here, we create the environment and mood, turning a simple picture into a story.</p>
-<ul>
-<li><strong>Environment (Location):</strong> Where is the action taking place? Be specific.
-<ul>
-<li><strong>Simple Example:</strong> <code>in a forest</code></li>
-<li><strong>Complex Example:</strong> <code>on the bridge of a massive starship, overlooking a swirling nebula through the main viewport</code></li>
-<li><strong>Pro Tip:</strong> Add time of day and weather: <code>cyberpunk city street at night, heavy rain, neon reflections on wet pavement</code>.</li>
-</ul>
-</li>
-<li><strong>Lighting & Atmosphere:</strong> Light is 90% of the mood.
-<ul>
-<li><strong>Keywords:</strong> <code>cinematic lighting</code>, <code>volumetric lighting</code>, <code>rim lighting</code>, <code>dramatic lighting</code>.</li>
-<li><strong>Atmosphere:</strong> <code>moody, ethereal, grim dark, cheerful, epic</code>.</li>
-<li><strong>Complex Example:</strong> <code>god rays shining through the canopy of an ancient forest, morning mist, ethereal atmosphere</code></li>
-</ul>
-</li>
-<li><strong>Camera & Composition:</strong> You are the director! Control the camera.
-<h4><strong>Common Shots and Angles:</strong></h4>
-<ul>
-<li><strong>Shot Type:</strong> <code>close-up shot</code>, <code>medium shot</code>, <code>full body shot</code>, <code>cowboy shot</code>.</li>
-<li><strong>Angle:</strong> <code>from above</code>, <code>from below</code>, <code>dutch angle</code>, <code>eye-level shot</code>.</li>
-<li><strong>Lens Effects:</strong> <code>depth of field</code>, <code>bokeh</code>, <code>blurry background</code>, <code>lens flare</code>.</li>
-</ul>
-<ul>
-<li><strong>Complex Example:</strong> <code>dynamic low-angle shot, from behind, capturing the hero looking up at a giant monster, cinematic depth of field</code></li>
-</ul>
-</li>
-<li><strong>Art Style & Quality:</strong> What style will your work be in?
-<ul>
-<li><strong>Photography:</strong> <code>photorealistic, photograph, 8k uhd</code></li>
-<li><strong>Painting:</strong> <code>oil painting, watercolor, concept art, matte painting</code></li>
-<li><strong>Anime:</strong> <code>anime style, key visual, studio ghibli style</code></li>
-<li><strong>Illustration:</strong> <code>comic book style, flat illustration, vector art</code></li>
-</ul>
-</li>
-</ul>
-<hr>
-<h3>Part 3: Professional Techniques</h3>
+<p><strong>Pro Tip:</strong> The Browser is the best way to discover new, powerful tags and understand how they work.</p>
 <h4>Tag Order Matters!</h4>
-<p>The neural network pays the most attention to the first tags. A professional prompt is structured in this order:</p>
+<p>The neural network pays more attention to the first tags. A professional prompt is structured like this:</p>
 <ol>
-<li><strong>Quality:</strong> <code>masterpiece, best quality...</code> (The app does this for you!)</li>
-<li><strong>Style:</strong> <code>concept art, by greg rutkowski...</code></li>
-<li><strong>Main Subject & Key Features:</strong> <code>1girl, long hair...</code></li>
-<li><strong>Environment & Secondary Details:</strong> <code>in a forest...</code></li>
-<li><strong>Composition & Light:</strong> <code>cinematic lighting, from below...</code></li>
+    <li><strong>Quality:</strong> <code>masterpiece, best quality...</code> (The app does this for you!)</li>
+    <li><strong>Technical Parameters:</strong> Light and camera. <code>cinematic lighting, full body shot...</code></li>
+    <li><strong>Style:</strong> <code>concept art, by greg rutkowski...</code></li>
+    <li><strong>Main Subject & Description:</strong> <code>1girl, long hair, in a forest...</code></li>
 </ol>
-<h4>Deconstructing a Complex Prompt</h4>
-<p><strong>Goal:</strong> "An epic concept art of a female warrior in the rain in a cyberpunk city, shot from below."</p>
-<p><strong>Assembling in Artisan:</strong></p>
-<ul>
-<li><strong>Style:</strong> <code>concept art, photorealistic</code></li>
-<li><strong>Appearance:</strong> <code>1girl, strong female warrior, determined expression</code></li>
-<li><strong>Clothing:</strong> <code>wearing futuristic tactical suit, glowing neon details</code></li>
-<li><strong>Action:</strong> <code>standing in the middle of a street</code></li>
-<li><strong>Location:</strong> <code>cyberpunk city at night, heavy rain</code></li>
-<li><strong>Atmosphere:</strong> <code>cinematic lighting, neon reflections on wet pavement, dramatic atmosphere</code></li>
-<li><strong>Camera:</strong> <code>(full body shot:1.1), (from below:1.2)</code></li>
-</ul>
 <p><strong>Experiment! You now have all the knowledge needed to create true masterpieces.</strong></p>
