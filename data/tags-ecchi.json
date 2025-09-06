@@ -1,0 +1,42 @@
+{
+  "id": "ecchi",
+  "name_ru": "Этти (18+)",
+  "name_en": "Ecchi (18+)",
+  "subcategories": [
+    {
+      "id": "clothing",
+      "name_ru": "Одежда и ракурсы",
+      "name_en": "Clothing & Angles",
+      "tags": [
+        { "tag": "panty shot", "name_ru": "Панцушот", "name_en": "Panty Shot" },
+        { "tag": "cleavage", "name_ru": "Декольте", "name_en": "Cleavage" },
+        { "tag": "sideboob", "name_ru": "Грудь сбоку", "name_en": "Sideboob" },
+        { "tag": "underboob", "name_ru": "Грудь снизу", "name_en": "Underboob" },
+        { "tag": "see-through", "name_ru": "Просвечивающая одежда", "name_en": "See-through" },
+        { "tag": "wet clothes", "name_ru": "Мокрая одежда", "name_en": "Wet Clothes" }
+      ]
+    },
+    {
+      "id": "poses",
+      "name_ru": "Провокационные позы",
+      "name_en": "Provocative Poses",
+      "tags": [
+        { "tag": "lewd pose", "name_ru": "Пошлая поза", "name_en": "Lewd Pose" },
+        { "tag": "suggestive pose", "name_ru": "Провокационная поза", "name_en": "Suggestive Pose" },
+        { "tag": "bent over", "name_ru": "Наклонившись", "name_en": "Bent Over" },
+        { "tag": "thighhighs", "name_ru": "Чулки", "name_en": "Thighhighs" }
+      ]
+    },
+    {
+      "id": "expressions",
+      "name_ru": "Выражения лица",
+      "name_en": "Expressions",
+      "tags": [
+        { "tag": "blushing", "name_ru": "Румянец", "name_en": "Blushing" },
+        { "tag": "embarrassed", "name_ru": "Смущенный", "name_en": "Embarrassed" },
+        { "tag": "seductive smile", "name_ru": "Соблазнительная улыбка", "name_en": "Seductive Smile" },
+        { "tag": "tongue out", "name_ru": "Высунутый язык", "name_en": "Tongue Out" }
+      ]
+    }
+  ]
+}

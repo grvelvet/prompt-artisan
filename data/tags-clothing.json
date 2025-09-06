@@ -1,0 +1,57 @@
+{
+  "id": "clothing_gear",
+  "name_ru": "Одежда и Снаряжение",
+  "name_en": "Clothing & Gear",
+  "subcategories": [
+    {
+      "id": "full_outfits",
+      "name_ru": "Костюмы",
+      "name_en": "Outfits",
+      "tags": [
+        { "tag": "fantasy armor", "name_ru": "Фэнтезийная броня", "name_en": "Fantasy Armor" },
+        { "tag": "sci-fi suit", "name_ru": "Научно-фантастический костюм", "name_en": "Sci-fi Suit" },
+        { "tag": "school uniform", "name_ru": "Школьная форма", "name_en": "School Uniform" },
+        { "tag": "wedding dress", "name_ru": "Свадебное платье", "name_en": "Wedding Dress" },
+        { "tag": "business suit", "name_ru": "Деловой костюм", "name_en": "Business Suit" },
+        { "tag": "kimono", "name_ru": "Кимоно", "name_en": "Kimono" }
+      ]
+    },
+    {
+      "id": "upper_body",
+      "name_ru": "Верхняя одежда",
+      "name_en": "Upper Body",
+      "tags": [
+        { "tag": "hoodie", "name_ru": "Толстовка (худи)", "name_en": "Hoodie" },
+        { "tag": "t-shirt", "name_ru": "Футболка", "name_en": "T-shirt" },
+        { "tag": "jacket", "name_ru": "Куртка", "name_en": "Jacket" },
+        { "tag": "leather jacket", "name_ru": "Кожаная куртка", "name_en": "Leather Jacket" },
+        { "tag": "blouse", "name_ru": "Блузка", "name_en": "Blouse" }
+      ]
+    },
+    {
+      "id": "accessories",
+      "name_ru": "Аксессуары",
+      "name_en": "Accessories",
+      "tags": [
+        { "tag": "glasses", "name_ru": "Очки", "name_en": "Glasses" },
+        { "tag": "sunglasses", "name_ru": "Солнечные очки", "name_en": "Sunglasses" },
+        { "tag": "necklace", "name_ru": "Ожерелье", "name_en": "Necklace" },
+        { "tag": "choker", "name_ru": "Чокер", "name_en": "Choker" },
+        { "tag": "earrings", "name_ru": "Серьги", "name_en": "Earrings" },
+        { "tag": "headphones", "name_ru": "Наушники", "name_en": "Headphones" }
+      ]
+    },
+    {
+      "id": "gear",
+      "name_ru": "Снаряжение и Оружие",
+      "name_en": "Gear & Weapons",
+      "tags": [
+        { "tag": "sword", "name_ru": "Меч", "name_en": "Sword" },
+        { "tag": "shield", "name_ru": "Щит", "name_en": "Shield" },
+        { "tag": "magic staff", "name_ru": "Магический посох", "name_en": "Magic Staff" },
+        { "tag": "bow", "name_ru": "Лук", "name_en": "Bow" },
+        { "tag": "gun", "name_ru": "Пистолет / Оружие", "name_en": "Gun" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "id": "style",
+  "name_ru": "Стиль Изображения",
+  "name_en": "Image Style",
+  "subcategories": [
+    {
+      "id": "mediums",
+      "name_ru": "Материалы и Техники",
+      "name_en": "Mediums & Techniques",
+      "tags": [
+        { "tag": "photograph", "name_ru": "Фотография", "name_en": "Photograph" },
+        { "tag": "oil painting", "name_ru": "Картина маслом", "name_en": "Oil Painting" },
+        { "tag": "watercolor", "name_ru": "Акварель", "name_en": "Watercolor" },
+        { "tag": "sketch", "name_ru": "Набросок (скетч)", "name_en": "Sketch" },
+        { "tag": "illustration", "name_ru": "Иллюстрация", "name_en": "Illustration" },
+        { "tag": "3d render", "name_ru": "3D-рендер", "name_en": "3D Render" }
+      ]
+    },
+    {
+      "id": "art_styles",
+      "name_ru": "Художественные стили",
+      "name_en": "Art Styles",
+      "tags": [
+        { "tag": "concept art", "name_ru": "Концепт-арт", "name_en": "Concept Art" },
+        { "tag": "photorealistic", "name_ru": "Фотореализм", "name_en": "Photorealistic" },
+        { "tag": "anime style", "name_ru": "В стиле аниме", "name_en": "Anime Style" },
+        { "tag": "manga", "name_ru": "Манга", "name_en": "Manga" },
+        { "tag": "comic book style", "name_ru": "В стиле комиксов", "name_en": "Comic Book Style" },
+        { "tag": "impressionism", "name_ru": "Импрессионизм", "name_en": "Impressionism" },
+        { "tag": "surrealism", "name_ru": "Сюрреализм", "name_en": "Surrealism" }
+      ]
+    },
+    {
+      "id": "aesthetics",
+      "name_ru": "Эстетика и Темы",
+      "name_en": "Aesthetics & Themes",
+      "tags": [
+        { "tag": "cyberpunk", "name_ru": "Киберпанк", "name_en": "Cyberpunk" },
+        { "tag": "steampunk", "name_ru": "Стимпанк", "name_en": "Steampunk" },
+        { "tag": "fantasy", "name_ru": "Фэнтези", "name_en": "Fantasy" },
+        { "tag": "sci-fi", "name_ru": "Научная фантастика", "name_en": "Sci-fi" },
+        { "tag": "gothic", "name_ru": "Готика", "name_en": "Gothic" },
+        { "tag": "vaporwave", "name_ru": "Вейпорвейв", "name_en": "Vaporwave" }
+      ]
+    }
+  ]
+}

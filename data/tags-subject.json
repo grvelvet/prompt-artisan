@@ -1,0 +1,60 @@
+{
+  "id": "subject_action",
+  "name_ru": "Основа и Действие",
+  "name_en": "Core & Action",
+  "subcategories": [
+    {
+      "id": "char_type",
+      "name_ru": "Типы субъектов",
+      "name_en": "Subject Types",
+      "tags": [
+        { "tag": "1girl", "name_ru": "Девушка", "name_en": "Girl" },
+        { "tag": "1boy", "name_ru": "Парень", "name_en": "Boy" },
+        { "tag": "man", "name_ru": "Мужчина", "name_en": "Man" },
+        { "tag": "woman", "name_ru": "Женщина", "name_en": "Woman" },
+        { "tag": "elf", "name_ru": "Эльф", "name_en": "Elf" },
+        { "tag": "cyborg", "name_ru": "Киборг", "name_en": "Cyborg" },
+        { "tag": "robot", "name_ru": "Робот", "name_en": "Robot" },
+        { "tag": "cat", "name_ru": "Кошка", "name_en": "Cat" },
+        { "tag": "dog", "name_ru": "Собака", "name_en": "Dog" }
+      ]
+    },
+    {
+      "id": "char_count",
+      "name_ru": "Количество",
+      "name_en": "Count",
+      "tags": [
+        { "tag": "solo", "name_ru": "Соло (один)", "name_en": "Solo" },
+        { "tag": "duo", "name_ru": "Дуэт (двое)", "name_en": "Duo" },
+        { "tag": "trio", "name_ru": "Трио (трое)", "name_en": "Trio" },
+        { "tag": "group", "name_ru": "Группа", "name_en": "Group" }
+      ]
+    },
+    {
+      "id": "actions",
+      "name_ru": "Действия",
+      "name_en": "Actions",
+      "tags": [
+        { "tag": "standing", "name_ru": "Стоит", "name_en": "Standing" },
+        { "tag": "sitting", "name_ru": "Сидит", "name_en": "Sitting" },
+        { "tag": "lying", "name_ru": "Лежит", "name_en": "Lying" },
+        { "tag": "running", "name_ru": "Бежит", "name_en": "Running" },
+        { "tag": "jumping", "name_ru": "Прыгает", "name_en": "Jumping" },
+        { "tag": "fighting", "name_ru": "Сражается", "name_en": "Fighting" },
+        { "tag": "looking at viewer", "name_ru": "Смотрит на зрителя", "name_en": "Looking at viewer" }
+      ]
+    },
+    {
+      "id": "emotions",
+      "name_ru": "Эмоции",
+      "name_en": "Emotions",
+      "tags": [
+        { "tag": "smile", "name_ru": "Улыбка", "name_en": "Smile" },
+        { "tag": "sad", "name_ru": "Грусть", "name_en": "Sad" },
+        { "tag": "angry", "name_ru": "Злость", "name_en": "Angry" },
+        { "tag": "surprised", "name_ru": "Удивление", "name_en": "Surprised" },
+        { "tag": "happy", "name_ru": "Счастье", "name_en": "Happy" }
+      ]
+    }
+  ]
+}

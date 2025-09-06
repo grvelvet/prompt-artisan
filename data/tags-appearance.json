@@ -1,0 +1,56 @@
+{
+  "id": "appearance_details",
+  "name_ru": "Внешность и Детали",
+  "name_en": "Appearance & Details",
+  "subcategories": [
+    {
+      "id": "hair_style",
+      "name_ru": "Стиль волос",
+      "name_en": "Hair Style",
+      "tags": [
+        { "tag": "long hair", "name_ru": "Длинные волосы", "name_en": "Long Hair" },
+        { "tag": "short hair", "name_ru": "Короткие волосы", "name_en": "Short Hair" },
+        { "tag": "wavy hair", "name_ru": "Волнистые волосы", "name_en": "Wavy Hair" },
+        { "tag": "braid", "name_ru": "Коса", "name_en": "Braid" },
+        { "tag": "ponytail", "name_ru": "Конский хвост", "name_en": "Ponytail" },
+        { "tag": "messy hair", "name_ru": "Небрежные волосы", "name_en": "Messy Hair" }
+      ]
+    },
+    {
+      "id": "hair_color",
+      "name_ru": "Цвет волос",
+      "name_en": "Hair Color",
+      "tags": [
+        { "tag": "blonde hair", "name_ru": "Блонд", "name_en": "Blonde Hair" },
+        { "tag": "brown hair", "name_ru": "Каштановые", "name_en": "Brown Hair" },
+        { "tag": "black hair", "name_ru": "Черные", "name_en": "Black Hair" },
+        { "tag": "red hair", "name_ru": "Рыжие", "name_en": "Red Hair" },
+        { "tag": "silver hair", "name_ru": "Серебряные", "name_en": "Silver Hair" },
+        { "tag": "pink hair", "name_ru": "Розовые", "name_en": "Pink Hair" }
+      ]
+    },
+    {
+      "id": "eyes",
+      "name_ru": "Глаза",
+      "name_en": "Eyes",
+      "tags": [
+        { "tag": "blue eyes", "name_ru": "Голубые глаза", "name_en": "Blue Eyes" },
+        { "tag": "green eyes", "name_ru": "Зеленые глаза", "name_en": "Green Eyes" },
+        { "tag": "brown eyes", "name_ru": "Карие глаза", "name_en": "Brown Eyes" },
+        { "tag": "glowing eyes", "name_ru": "Светящиеся глаза", "name_en": "Glowing Eyes" },
+        { "tag": "closed eyes", "name_ru": "Закрытые глаза", "name_en": "Closed Eyes" }
+      ]
+    },
+    {
+      "id": "face",
+      "name_ru": "Черты лица",
+      "name_en": "Facial Features",
+      "tags": [
+        { "tag": "smile", "name_ru": "Улыбка", "name_en": "Smile" },
+        { "tag": "freckles", "name_ru": "Веснушки", "name_en": "Freckles" },
+        { "tag": "tattoos", "name_ru": "Татуировки", "name_en": "Tattoos" },
+        { "tag": "scar", "name_ru": "Шрам", "name_en": "Scar" }
+      ]
+    }
+  ]
+}
