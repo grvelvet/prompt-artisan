@@ -90,7 +90,7 @@
                 <div class="prompt-card">
                     <h2 data-i18n="formManagementHeader">Управление формой</h2>
                     <section class="form-section actions">
-                        <button type="button" id="rebuild-prompt" data-i18n="rebuildBtn">Пересобрать промпт</button>
+                        <button type="button" id="rebuild-prompt" data-i18n="rebuildBtn" data-i18n-title="rebuildBtnTitle" title="Сбросить ручные правки и сгенерировать промпт заново">Пересобрать промпт</button>
                         <button type="reset" id="clear-form" form="prompt-form" data-i18n="clearBtn">Очистить форму</button>
                     </section>
                     <section class="form-section quality-toggle-wrapper">
@@ -102,8 +102,9 @@
                 <div class="prompt-card">
                     <h2 data-i18n="presetsHeader">Управление Пресетами</h2>
                     
-                    <section class="form-section">
+                    <section class="form-section preset-selection-group">
                         <select id="preset-select"></select>
+                        <button type="button" id="delete-preset-btn" data-i18n="deletePresetBtn">Удалить</button>
                     </section>
 
                     <section class="form-section">
@@ -122,8 +123,6 @@
                     </section>
                     
                     <section class="form-section actions preset-actions">
-                        <button type="button" id="load-preset-btn" data-i18n="loadPresetBtn">Загрузить</button>
-                        <button type="button" id="delete-preset-btn" data-i18n="deletePresetBtn">Удалить</button>
                         <button type="button" id="import-presets-btn" data-i18n="importBtn">Импорт</button>
                         <button type="button" id="export-presets-btn" data-i18n="exportBtn">Экспорт</button>
                     </section>

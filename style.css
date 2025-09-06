@@ -182,9 +182,10 @@ textarea, input[type="text"], select, button {
     justify-content: center;
 }
 
+/* --- ВОССТАНОВЛЕНИЕ СТИЛЕЙ КАРТОЧЕК --- */
 .prompt-card {
-    background-color: var(--card-bg);
-    border: 1px solid var(--input-bg);
+    background-color: var(--card-bg); /* Возвращаем фон */
+    border: 1px solid var(--input-bg); /* Возвращаем рамку */
     border-radius: 8px;
     padding: 20px;
     margin-bottom: 20px;
@@ -307,6 +308,13 @@ button#rebuild-prompt:hover, button#clear-form:hover { background-color: #777; }
 button#delete-preset-btn { background-color: var(--delete-bg); }
 button#delete-preset-btn:hover { background-color: var(--delete-hover); }
 
+.preset-selection-group {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 10px;
+    align-items: center;
+}
+
 .preset-controls { 
     display: flex; 
     flex-direction: column;
@@ -324,8 +332,6 @@ button#delete-preset-btn:hover { background-color: var(--delete-hover); }
 
 .preset-actions {
     margin-top: 10px;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
 }
 
 .divider {
