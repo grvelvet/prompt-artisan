@@ -4,43 +4,59 @@
   "name_en": "Image Style",
   "subcategories": [
     {
-      "id": "mediums",
-      "name_ru": "Материалы и Техники",
-      "name_en": "Mediums & Techniques",
-      "tags": [
+      "id": "mediums", "name_ru": "Материалы и Техники", "name_en": "Mediums & Techniques", "tags": [
         { "tag": "photograph", "name_ru": "Фотография", "name_en": "Photograph" },
-        { "tag": "oil painting", "name_ru": "Картина маслом", "name_en": "Oil Painting" },
+        { "tag": "oil painting", "name_ru": "Живопись маслом", "name_en": "Oil Painting" },
         { "tag": "watercolor", "name_ru": "Акварель", "name_en": "Watercolor" },
         { "tag": "sketch", "name_ru": "Набросок (скетч)", "name_en": "Sketch" },
+        { "tag": "pencil drawing", "name_ru": "Карандашный рисунок", "name_en": "Pencil Drawing" },
+        { "tag": "charcoal drawing", "name_ru": "Рисунок углем", "name_en": "Charcoal Drawing" },
         { "tag": "illustration", "name_ru": "Иллюстрация", "name_en": "Illustration" },
-        { "tag": "3d render", "name_ru": "3D-рендер", "name_en": "3D Render" }
+        { "tag": "3d render", "name_ru": "3D-рендер", "name_en": "3D Render" },
+        { "tag": "vector art", "name_ru": "Векторная графика", "name_en": "Vector Art" },
+        { "tag": "sculpture", "name_ru": "Скульптура", "name_en": "Sculpture" }
       ]
     },
     {
-      "id": "art_styles",
-      "name_ru": "Художественные стили",
-      "name_en": "Art Styles",
-      "tags": [
-        { "tag": "concept art", "name_ru": "Концепт-арт", "name_en": "Concept Art" },
+      "id": "photo_types", "name_ru": "Типы Фотографии", "name_en": "Photography Types", "tags": [
         { "tag": "photorealistic", "name_ru": "Фотореализм", "name_en": "Photorealistic" },
+        { "tag": "macro photography", "name_ru": "Макросъемка", "name_en": "Macro Photography" },
+        { "tag": "long exposure", "name_ru": "Длинная выдержка", "name_en": "Long Exposure" },
+        { "tag": "black and white", "name_ru": "Черно-белое", "name_en": "Black and White" },
+        { "tag": "polaroid", "name_ru": "Полароид", "name_en": "Polaroid" },
+        { "tag": "lomography", "name_ru": "Ломография", "name_en": "Lomography" }
+      ]
+    },
+    {
+      "id": "art_styles", "name_ru": "Художественные стили", "name_en": "Art Styles", "tags": [
+        { "tag": "concept art", "name_ru": "Концепт-арт", "name_en": "Concept Art" },
         { "tag": "anime style", "name_ru": "В стиле аниме", "name_en": "Anime Style" },
         { "tag": "manga", "name_ru": "Манга", "name_en": "Manga" },
         { "tag": "comic book style", "name_ru": "В стиле комиксов", "name_en": "Comic Book Style" },
         { "tag": "impressionism", "name_ru": "Импрессионизм", "name_en": "Impressionism" },
-        { "tag": "surrealism", "name_ru": "Сюрреализм", "name_en": "Surrealism" }
+        { "tag": "surrealism", "name_ru": "Сюрреализм", "name_en": "Surrealism" },
+        { "tag": "pop art", "name_ru": "Поп-арт", "name_en": "Pop Art" },
+        { "tag": "art nouveau", "name_ru": "Ар-нуво", "name_en": "Art Nouveau" }
       ]
     },
     {
-      "id": "aesthetics",
-      "name_ru": "Эстетика и Темы",
-      "name_en": "Aesthetics & Themes",
-      "tags": [
+      "id": "aesthetics", "name_ru": "Эстетика и Темы", "name_en": "Aesthetics & Themes", "tags": [
         { "tag": "cyberpunk", "name_ru": "Киберпанк", "name_en": "Cyberpunk" },
         { "tag": "steampunk", "name_ru": "Стимпанк", "name_en": "Steampunk" },
         { "tag": "fantasy", "name_ru": "Фэнтези", "name_en": "Fantasy" },
+        { "tag": "dark fantasy", "name_ru": "Темное фэнтези", "name_en": "Dark Fantasy" },
         { "tag": "sci-fi", "name_ru": "Научная фантастика", "name_en": "Sci-fi" },
         { "tag": "gothic", "name_ru": "Готика", "name_en": "Gothic" },
+        { "tag": "post-apocalyptic", "name_ru": "Постапокалипсис", "name_en": "Post-apocalyptic" },
         { "tag": "vaporwave", "name_ru": "Вейпорвейв", "name_en": "Vaporwave" }
+      ]
+    },
+    {
+        "id": "nsfw_styles", "name_ru": "Стили (18+)", "name_en": "Styles (18+)", "tags": [
+          { "tag": "hentai", "name_ru": "Хентай", "name_en": "Hentai" },
+          { "tag": "ecchi", "name_ru": "Этти", "name_en": "Ecchi" },
+          { "tag": "erotic art", "name_ru": "Эротическое искусство", "name_en": "Erotic Art" },
+          { "tag": "boudoir photography", "name_ru": "Будуарная фотография", "name_en": "Boudoir Photography" }
       ]
     }
   ]

@@ -4,37 +4,28 @@
   "name_en": "Clothing & Gear",
   "subcategories": [
     {
-      "id": "full_outfits",
-      "name_ru": "Костюмы",
-      "name_en": "Outfits",
-      "tags": [
+      "id": "full_outfits", "name_ru": "Костюмы", "name_en": "Outfits", "tags": [
         { "tag": "fantasy armor", "name_ru": "Фэнтезийная броня", "name_en": "Fantasy Armor" },
-        { "tag": "sci-fi suit", "name_ru": "Научно-фантастический костюм", "name_en": "Sci-fi Suit" },
+        { "tag": "sci-fi suit", "name_ru": "НФ-костюм", "name_en": "Sci-fi Suit" },
         { "tag": "school uniform", "name_ru": "Школьная форма", "name_en": "School Uniform" },
         { "tag": "wedding dress", "name_ru": "Свадебное платье", "name_en": "Wedding Dress" },
         { "tag": "business suit", "name_ru": "Деловой костюм", "name_en": "Business Suit" },
-        { "tag": "kimono", "name_ru": "Кимоно", "name_en": "Kimono" }
+        { "tag": "kimono", "name_ru": "Кимоно", "name_en": "Kimono" },
+        { "tag": "gothic lolita", "name_ru": "Готическая лолита", "name_en": "Gothic Lolita" }
       ]
     },
     {
-      "id": "upper_body",
-      "name_ru": "Верхняя одежда",
-      "name_en": "Upper Body",
-      "tags": [
+      "id": "clothing_items", "name_ru": "Предметы одежды", "name_en": "Clothing Items", "tags": [
         { "tag": "hoodie", "name_ru": "Толстовка (худи)", "name_en": "Hoodie" },
-        { "tag": "t-shirt", "name_ru": "Футболка", "name_en": "T-shirt" },
         { "tag": "jacket", "name_ru": "Куртка", "name_en": "Jacket" },
-        { "tag": "leather jacket", "name_ru": "Кожаная куртка", "name_en": "Leather Jacket" },
-        { "tag": "blouse", "name_ru": "Блузка", "name_en": "Blouse" }
+        { "tag": "jeans", "name_ru": "Джинсы", "name_en": "Jeans" },
+        { "tag": "skirt", "name_ru": "Юбка", "name_en": "Skirt" },
+        { "tag": "dress", "name_ru": "Платье", "name_en": "Dress" }
       ]
     },
     {
-      "id": "accessories",
-      "name_ru": "Аксессуары",
-      "name_en": "Accessories",
-      "tags": [
+      "id": "accessories", "name_ru": "Аксессуары", "name_en": "Accessories", "tags": [
         { "tag": "glasses", "name_ru": "Очки", "name_en": "Glasses" },
-        { "tag": "sunglasses", "name_ru": "Солнечные очки", "name_en": "Sunglasses" },
         { "tag": "necklace", "name_ru": "Ожерелье", "name_en": "Necklace" },
         { "tag": "choker", "name_ru": "Чокер", "name_en": "Choker" },
         { "tag": "earrings", "name_ru": "Серьги", "name_en": "Earrings" },
@@ -42,15 +33,22 @@
       ]
     },
     {
-      "id": "gear",
-      "name_ru": "Снаряжение и Оружие",
-      "name_en": "Gear & Weapons",
-      "tags": [
-        { "tag": "sword", "name_ru": "Меч", "name_en": "Sword" },
-        { "tag": "shield", "name_ru": "Щит", "name_en": "Shield" },
-        { "tag": "magic staff", "name_ru": "Магический посох", "name_en": "Magic Staff" },
-        { "tag": "bow", "name_ru": "Лук", "name_en": "Bow" },
-        { "tag": "gun", "name_ru": "Пистолет / Оружие", "name_en": "Gun" }
+      "id": "clothing_nsfw", "name_ru": "Одежда (18+)", "name_en": "Clothing (18+)", "tags": [
+        { "tag": "lingerie", "name_ru": "Нижнее белье", "name_en": "Lingerie" },
+        { "tag": "thighhighs", "name_ru": "Чулки", "name_en": "Thighhighs" },
+        { "tag": "pantyhose", "name_ru": "Колготки", "name_en": "Pantyhose" },
+        { "tag": "see-through clothes", "name_ru": "Просвечивающая одежда", "name_en": "See-through Clothes" },
+        { "tag": "wet clothes", "name_ru": "Мокрая одежда", "name_en": "Wet Clothes" },
+        { "tag": "panty shot", "name_ru": "Панцушот", "name_en": "Panty Shot" }
+      ]
+    },
+    {
+      "id": "fetish_nsfw", "name_ru": "Фетиши (18+)", "name_en": "Fetishes (18+)", "tags": [
+        { "tag": "bondage", "name_ru": "Бондаж", "name_en": "Bondage" },
+        { "tag": "shibari", "name_ru": "Сибари", "name_en": "Shibari" },
+        { "tag": "gagged", "name_ru": "С кляпом", "name_en": "Gagged" },
+        { "tag": "tentacles", "name_ru": "Тентакли", "name_en": "Tentacles" },
+        { "tag": "bondage harness", "name_ru": "Портупея", "name_en": "Bondage Harness" }
       ]
     }
   ]

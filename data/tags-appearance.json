@@ -4,52 +4,62 @@
   "name_en": "Appearance & Details",
   "subcategories": [
     {
-      "id": "hair_style",
-      "name_ru": "Стиль волос",
-      "name_en": "Hair Style",
-      "tags": [
+      "id": "hair_style", "name_ru": "Стиль волос", "name_en": "Hair Style", "tags": [
         { "tag": "long hair", "name_ru": "Длинные волосы", "name_en": "Long Hair" },
         { "tag": "short hair", "name_ru": "Короткие волосы", "name_en": "Short Hair" },
+        { "tag": "messy hair", "name_ru": "Небрежные волосы", "name_en": "Messy Hair" },
         { "tag": "wavy hair", "name_ru": "Волнистые волосы", "name_en": "Wavy Hair" },
         { "tag": "braid", "name_ru": "Коса", "name_en": "Braid" },
         { "tag": "ponytail", "name_ru": "Конский хвост", "name_en": "Ponytail" },
-        { "tag": "messy hair", "name_ru": "Небрежные волосы", "name_en": "Messy Hair" }
+        { "tag": "twintails", "name_ru": "Два хвостика", "name_en": "Twintails" }
       ]
     },
     {
-      "id": "hair_color",
-      "name_ru": "Цвет волос",
-      "name_en": "Hair Color",
-      "tags": [
-        { "tag": "blonde hair", "name_ru": "Блонд", "name_en": "Blonde Hair" },
-        { "tag": "brown hair", "name_ru": "Каштановые", "name_en": "Brown Hair" },
-        { "tag": "black hair", "name_ru": "Черные", "name_en": "Black Hair" },
-        { "tag": "red hair", "name_ru": "Рыжие", "name_en": "Red Hair" },
-        { "tag": "silver hair", "name_ru": "Серебряные", "name_en": "Silver Hair" },
-        { "tag": "pink hair", "name_ru": "Розовые", "name_en": "Pink Hair" }
+      "id": "body_type", "name_ru": "Телосложение", "name_en": "Body Type", "tags": [
+        { "tag": "muscular", "name_ru": "Мускулистый", "name_en": "Muscular" },
+        { "tag": "curvy", "name_ru": "Пышный", "name_en": "Curvy" },
+        { "tag": "petite", "name_ru": "Миниатюрный", "name_en": "Petite" },
+        { "tag": "slim", "name_ru": "Стройный", "name_en": "Slim" },
+        { "tag": "athletic", "name_ru": "Атлетичный", "name_en": "Athletic" }
       ]
     },
     {
-      "id": "eyes",
-      "name_ru": "Глаза",
-      "name_en": "Eyes",
-      "tags": [
+      "id": "face", "name_ru": "Лицо", "name_en": "Face", "tags": [
+        { "tag": "beautiful face", "name_ru": "Красивое лицо", "name_en": "Beautiful Face" },
         { "tag": "blue eyes", "name_ru": "Голубые глаза", "name_en": "Blue Eyes" },
         { "tag": "green eyes", "name_ru": "Зеленые глаза", "name_en": "Green Eyes" },
-        { "tag": "brown eyes", "name_ru": "Карие глаза", "name_en": "Brown Eyes" },
         { "tag": "glowing eyes", "name_ru": "Светящиеся глаза", "name_en": "Glowing Eyes" },
-        { "tag": "closed eyes", "name_ru": "Закрытые глаза", "name_en": "Closed Eyes" }
+        { "tag": "heterochromia", "name_ru": "Гетерохромия", "name_en": "Heterochromia" },
+        { "tag": "freckles", "name_ru": "Веснушки", "name_en": "Freckles" },
+        { "tag": "scar", "name_ru": "Шрам", "name_en": "Scar" }
       ]
     },
     {
-      "id": "face",
-      "name_ru": "Черты лица",
-      "name_en": "Facial Features",
-      "tags": [
-        { "tag": "smile", "name_ru": "Улыбка", "name_en": "Smile" },
-        { "tag": "freckles", "name_ru": "Веснушки", "name_en": "Freckles" },
-        { "tag": "tattoos", "name_ru": "Татуировки", "name_en": "Tattoos" },
-        { "tag": "scar", "name_ru": "Шрам", "name_en": "Scar" }
+      "id": "nudity_nsfw", "name_ru": "Нагота (18+)", "name_en": "Nudity (18+)", "tags": [
+        { "tag": "nude", "name_ru": "Обнаженный(-ая)", "name_en": "Nude" },
+        { "tag": "artistic nudity", "name_ru": "Художественная нагота", "name_en": "Artistic Nudity" },
+        { "tag": "topless", "name_ru": "Топлесс", "name_en": "Topless" },
+        { "tag": "bottomless", "name_ru": "Без низа", "name_en": "Bottomless" },
+        { "tag": "implied nudity", "name_ru": "Подразумеваемая нагота", "name_en": "Implied Nudity" }
+      ]
+    },
+    {
+      "id": "anatomy_nsfw", "name_ru": "Анатомия (Explicit 18+)", "name_en": "Anatomy (Explicit 18+)", "tags": [
+        { "tag": "breasts", "name_ru": "Грудь", "name_en": "Breasts" },
+        { "tag": "large breasts", "name_ru": "Большая грудь", "name_en": "Large Breasts" },
+        { "tag": "small breasts", "name_ru": "Маленькая грудь", "name_en": "Small Breasts" },
+        { "tag": "nipples", "name_ru": "Соски", "name_en": "Nipples" },
+        { "tag": "ass", "name_ru": "Ягодицы", "name_en": "Ass" },
+        { "tag": "pussy", "name_ru": "Вагина", "name_en": "Pussy" },
+        { "tag": "penis", "name_ru": "Пенис", "name_en": "Penis" },
+        { "tag": "cleavage", "name_ru": "Декольте", "name_en": "Cleavage" }
+      ]
+    },
+    {
+      "id": "fluids_nsfw", "name_ru": "Жидкости (Explicit 18+)", "name_en": "Fluids (Explicit 18+)", "tags": [
+        { "tag": "semen", "name_ru": "Сперма", "name_en": "Semen" },
+        { "tag": "pussy juice", "name_ru": "Вагинальная смазка", "name_en": "Pussy Juice" },
+        { "tag": "cum on body", "name_ru": "Сперма на теле", "name_en": "Cum on body" }
       ]
     }
   ]
