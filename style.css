@@ -98,7 +98,7 @@ h3 {
    ========================================================================== */
 .header-main {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     position: relative;
     border-bottom: 2px solid var(--border-color);
@@ -106,12 +106,25 @@ h3 {
     padding-bottom: 10px;
 }
 
-.header-controls {
+.header-main h1 {
     position: absolute;
-    right: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: calc(100% - 240px);
+    padding: 0 20px;
+    box-sizing: border-box;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.header-controls {
     display: flex;
     align-items: center;
     gap: 15px;
+    margin-left: auto;
+    /* Прижимает блок к правому краю */
 }
 
 .lang-switch {
@@ -427,12 +440,21 @@ button#delete-preset-btn:hover {
     z-index: 1001;
     bottom: 135%;
     left: 50%;
-    margin-left: -125px;
+    transform: translateX(-50%);
+    /* --- ИСПРАВЛЕНИЕ 2: Используем transform для центрирования --- */
     transition: opacity 0.3s;
     font-weight: 400;
     font-size: 0.95em;
     line-height: 1.4;
     border: 1px solid var(--border-color);
+}
+
+/* --- ИСПРАВЛЕНИЕ 2: Сдвигаем тултип влево, если он у правого края экрана --- */
+.sidebar .tooltip-icon .tooltip-text,
+.header-controls .tooltip-icon .tooltip-text {
+    left: auto;
+    right: 0;
+    transform: translateX(0);
 }
 
 .tooltip-icon:hover .tooltip-text {
@@ -703,7 +725,7 @@ button#delete-preset-btn:hover {
 /* ==========================================================================
    9. RESPONSIVE DESIGN
    ========================================================================== */
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
     .main-content {
         grid-template-columns: 3fr 2fr;
         align-items: start;
@@ -735,13 +757,11 @@ button#delete-preset-btn:hover {
 /* ==========================================================================
    10. CUSTOM SCROLLBARS
    ========================================================================== */
-/* Стилизация для Firefox */
 * {
     scrollbar-width: thin;
     scrollbar-color: var(--button-bg) var(--input-bg);
 }
 
-/* Стилизация для WebKit-браузеров (Chrome, Safari, Edge) */
 ::-webkit-scrollbar {
     width: 10px;
     height: 10px;
