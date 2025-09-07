@@ -84,6 +84,8 @@
         }
     };
 
+    const DEBOUNCE_DELAY = 300;
+
     const state = {
         isManualEditMode: false,
         isManualLoaded: false,
@@ -136,16 +138,31 @@
         splitTags: (value) => value.split(',').map(s => s.trim()).filter(Boolean),
         getUniqueTags: (tags) => [...new Set(tags)],
         autoResizeTextarea: (element) => {
-            if (!element || !element.style) return;
-            element.style.height = 'auto';
-            element.style.height = `${element.scrollHeight}px`;
+            if (!element || !element.style || !element.scrollHeight) return;
+            requestAnimationFrame(() => {
+                element.style.height = 'auto';
+                element.style.height = `${element.scrollHeight}px`;
+            });
         },
-        copyText: (element, button) => {
-            navigator.clipboard.writeText(element.value).then(() => {
+        copyText: async (element, button) => {
+            if (!element || !button) return;
+            try {
+                if (navigator.clipboard && window.isSecureContext) {
+                    await navigator.clipboard.writeText(element.value);
+                } else {
+                    element.select();
+                    document.execCommand('copy');
+                }
                 const originalText = button.textContent;
                 button.textContent = i18n[state.currentLang].copiedAlert;
-                setTimeout(() => { button.textContent = originalText; }, 1500);
-            });
+                button.disabled = true;
+                setTimeout(() => {
+                    button.textContent = originalText;
+                    button.disabled = false;
+                }, 1500);
+            } catch (err) {
+                console.error('Failed to copy:', err);
+            }
         },
         isLocalStorageAvailable: () => {
             try {
@@ -206,7 +223,7 @@
                 textToModify = textarea.value.substring(startIndex, selectionEnd);
             }
             if (!textToModify.trim()) return;
-            const weightRegex = /^\((.*):(-?[\d.]+)\)$/;
+            const weightRegex = /^KATEX_INLINE_OPEN(.*):(-?[\d.]+)KATEX_INLINE_CLOSE$/;
             const match = textToModify.trim().match(weightRegex);
             const cleanText = match ? match[1].trim() : textToModify.trim();
             const currentWeight = match ? parseFloat(match[2]) : 1.0;
@@ -269,15 +286,15 @@
             const presetData = state.savedPresets[name];
             if (!name || !presetData) {
                 dom.presetPreview.dataset.hidden = 'true';
+                dom.presetPreview.innerHTML = '';
                 return;
             }
             dom.presetPreview.dataset.hidden = 'false';
             dom.presetPreview.innerHTML = '';
-            const ul = document.createElement('ul');
+            const ul = document.createDocumentFragment();
             for (const [key, value] of Object.entries(presetData)) {
                 if (value.trim()) {
-                    const i18nKey = document.querySelector(`#${key}`)?.closest('.prompt-card')?.querySelector('[data-i18n]')?.dataset.i18n;
-                    const labelEl = document.querySelector(`[data-i18n="${i18nKey}"]`);
+                    const labelEl = document.querySelector(`#${key}`)?.closest('.prompt-card')?.querySelector('[data-i18n]');
                     const label = labelEl ? labelEl.textContent.replace(/🎨|👤|🏞️|🔞/g, '').trim() : key;
                     const li = document.createElement('li');
                     const strong = document.createElement('strong');
@@ -339,12 +356,14 @@
                 if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
                 const contentHTML = await response.text();
                 setTimeout(() => {
+                    dom.manualBody.textContent = ''; // Очистка перед вставкой
+                    // Безопасная вставка (если нужно, можно использовать DOMPurify)
                     dom.manualBody.innerHTML = contentHTML;
                     state.isManualLoaded = true;
                 }, 300);
             } catch (error) {
                 console.error("Failed to load manual:", error);
-                dom.manualBody.innerHTML = `<p style="color: var(--text-color);">Could not load the manual.</p>`;
+                dom.manualBody.textContent = i18n[state.currentLang].alertImportError;
                 state.isManualLoaded = false;
             }
         },
@@ -353,10 +372,10 @@
             state.currentLang = lang;
             if (utils.isLocalStorageAvailable()) { localStorage.setItem(config.LANG_KEY, lang); }
             document.documentElement.lang = lang;
-            dom.langToggleCheckbox.checked = lang === 'en';
+            if (dom.langToggleCheckbox) dom.langToggleCheckbox.checked = lang === 'en';
             const translations = i18n[lang];
 
-            dom.appTitle.textContent = `${translations.appTitle} v${config.APP_VERSION}`;
+            if (dom.appTitle) dom.appTitle.textContent = `${translations.appTitle} v${config.APP_VERSION}`;
             document.querySelectorAll('[data-i18n]').forEach(el => {
                 if (el.id !== 'app-title' && translations[el.dataset.i18n]) { el.textContent = translations[el.dataset.i18n]; }
             });
@@ -376,7 +395,7 @@
         openTagBrowser: async (targetId, libraryFile) => {
             state.tagBrowserState = {
                 isOpen: true, targetId: targetId, library: null,
-                selectedTags: new Set(utils.splitTags(document.getElementById(targetId).value)),
+                selectedTags: new Set(utils.splitTags(document.getElementById(targetId)?.value || '')),
                 currentSubcategoryId: null
             };
             dom.tagBrowserSearch.value = '';
@@ -393,7 +412,7 @@
                 handlers.renderTagBrowser();
             } catch (error) {
                 console.error('Failed to load tag library:', error);
-                dom.tagBrowserTagsList.innerHTML = 'Error loading tags.';
+                dom.tagBrowserTagsList.textContent = 'Error loading tags.';
             }
         },
         closeTagBrowser: () => {
@@ -412,7 +431,7 @@
                 const btn = document.createElement('button');
                 btn.textContent = subcat[`name_${lang}`] || subcat.name_ru;
                 btn.dataset.subcatId = subcat.id;
-                btn.onclick = () => handlers.handleSubcategoryClick(subcat.id);
+                btn.addEventListener('click', () => handlers.handleSubcategoryClick(subcat.id));
                 dom.tagBrowserSubcategories.appendChild(btn);
             });
             if (library.subcategories.length > 0) {
@@ -437,15 +456,17 @@
                 (tag[`name_${lang}`] || tag.name_ru).toLowerCase().includes(normalizedSearchTerm) ||
                 tag.tag.toLowerCase().includes(normalizedSearchTerm)
             );
+            const fragment = document.createDocumentFragment();
             filteredTags.forEach(tag => {
                 const item = document.createElement('div');
                 item.className = 'tag-item';
                 item.textContent = tag[`name_${lang}`] || tag.name_ru;
                 item.dataset.tag = tag.tag;
                 if (selectedTags.has(tag.tag)) { item.classList.add('selected'); }
-                item.onclick = () => handlers.handleTagClick(tag.tag);
-                dom.tagBrowserTagsList.appendChild(item);
+                item.addEventListener('click', () => handlers.handleTagClick(tag.tag));
+                fragment.appendChild(item);
             });
+            dom.tagBrowserTagsList.appendChild(fragment);
         },
         handleTagClick: (tag) => {
             const { selectedTags } = state.tagBrowserState;
@@ -476,7 +497,23 @@
         }
     };
 
+    function debounce(fn, delay) {
+        let timeoutId;
+        return (...args) => {
+            clearTimeout(timeoutId);
+            timeoutId = setTimeout(() => fn(...args), delay);
+        };
+    }
+
     function init() {
+        // Проверка критических элементов
+        const criticalElements = ['prompt-form', 'output-positive', 'output-negative'];
+        const missingElements = criticalElements.filter(id => !document.getElementById(id));
+        if (missingElements.length > 0) {
+            console.error('Missing critical elements:', missingElements);
+            return;
+        }
+
         const savedLang = utils.isLocalStorageAvailable() ? localStorage.getItem(config.LANG_KEY) : 'ru';
         handlers.setLanguage(savedLang || 'ru');
 
@@ -517,7 +554,10 @@
             });
         });
         dom.closeTagBrowserBtn.addEventListener('click', handlers.closeTagBrowser);
-        dom.tagBrowserSearch.addEventListener('input', (e) => handlers.renderTagsForSubcategory(e.target.value));
+
+        // Добавляем debounce для поиска
+        dom.tagBrowserSearch.addEventListener('input', debounce((e) => handlers.renderTagsForSubcategory(e.target.value), DEBOUNCE_DELAY));
+
         dom.addSelectedTagsBtn.addEventListener('click', handlers.addSelectedTagsToTextarea);
 
         dom.manualModal.addEventListener('click', (e) => { if (e.target === dom.manualModal) handlers.hideManual(); });
