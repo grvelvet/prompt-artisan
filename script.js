@@ -83,7 +83,7 @@
             addSelectedBtn: "Add"
         }
     };
-    
+
     const state = {
         isManualEditMode: false,
         isManualLoaded: false,
@@ -272,7 +272,7 @@
                 return;
             }
             dom.presetPreview.dataset.hidden = 'false';
-            dom.presetPreview.innerHTML = ''; 
+            dom.presetPreview.innerHTML = '';
             const ul = document.createElement('ul');
             for (const [key, value] of Object.entries(presetData)) {
                 if (value.trim()) {
@@ -295,7 +295,7 @@
                 return;
             }
             const dataStr = JSON.stringify(state.savedPresets, null, 2);
-            const dataBlob = new Blob([dataStr], {type: "application/json"});
+            const dataBlob = new Blob([dataStr], { type: "application/json" });
             const url = URL.createObjectURL(dataBlob);
             const link = document.createElement('a');
             link.href = url;
@@ -355,21 +355,21 @@
             document.documentElement.lang = lang;
             dom.langToggleCheckbox.checked = lang === 'en';
             const translations = i18n[lang];
-            
+
             dom.appTitle.textContent = `${translations.appTitle} v${config.APP_VERSION}`;
             document.querySelectorAll('[data-i18n]').forEach(el => {
                 if (el.id !== 'app-title' && translations[el.dataset.i18n]) { el.textContent = translations[el.dataset.i18n]; }
             });
             document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
-                 if (translations[el.dataset.i18nPlaceholder]) { el.placeholder = translations[el.dataset.i18nPlaceholder]; }
+                if (translations[el.dataset.i18nPlaceholder]) { el.placeholder = translations[el.dataset.i18nPlaceholder]; }
             });
             document.querySelectorAll('[data-i18n-title]').forEach(el => {
-                 if (translations[el.dataset.i18nTitle]) { el.title = translations[el.dataset.i18nTitle]; }
+                if (translations[el.dataset.i18nTitle]) { el.title = translations[el.dataset.i18nTitle]; }
             });
             document.querySelectorAll('.tooltip-text[data-i18n]').forEach(el => {
-                 if (translations[el.dataset.i18n]) { el.textContent = translations[el.dataset.i18n]; }
+                if (translations[el.dataset.i18n]) { el.textContent = translations[el.dataset.i18n]; }
             });
-            
+
             handlers.populatePresetDropdown();
             state.isManualLoaded = false;
         },
@@ -433,7 +433,7 @@
             if (!subcategory) return;
             dom.tagBrowserTagsList.innerHTML = '';
             const normalizedSearchTerm = searchTerm.toLowerCase();
-            const filteredTags = subcategory.tags.filter(tag => 
+            const filteredTags = subcategory.tags.filter(tag =>
                 (tag[`name_${lang}`] || tag.name_ru).toLowerCase().includes(normalizedSearchTerm) ||
                 tag.tag.toLowerCase().includes(normalizedSearchTerm)
             );
@@ -482,7 +482,7 @@
 
         dom.form.addEventListener('input', handlers.generatePositiveOutput);
         dom.form.addEventListener('mousedown', handlers.handleWeightControl);
-        
+
         dom.positiveOutput.addEventListener('input', () => {
             handlers.setManualEditMode(true);
             utils.autoResizeTextarea(dom.positiveOutput);
@@ -509,7 +509,7 @@
         dom.deletePresetBtn.addEventListener('click', handlers.handleDeletePreset);
         dom.showManualBtn.addEventListener('click', handlers.showManual);
         dom.closeManualBtn.addEventListener('click', handlers.hideManual);
-        
+
         document.querySelectorAll('.tag-browser-btn').forEach(btn => {
             btn.addEventListener('click', () => {
                 const { targetId, library } = btn.dataset;
@@ -522,14 +522,14 @@
 
         dom.manualModal.addEventListener('click', (e) => { if (e.target === dom.manualModal) handlers.hideManual(); });
         dom.tagBrowserModal.addEventListener('click', (e) => { if (e.target === dom.tagBrowserModal) handlers.closeTagBrowser(); });
-        
-        document.addEventListener('keydown', (e) => { 
+
+        document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') {
                 if (dom.manualModal.dataset.visible === 'true') handlers.hideManual();
                 if (dom.tagBrowserModal.dataset.visible === 'true') handlers.closeTagBrowser();
             }
         });
-        
+
         dom.allTextareas.forEach(textarea => {
             textarea.addEventListener('input', () => utils.autoResizeTextarea(textarea));
         });
