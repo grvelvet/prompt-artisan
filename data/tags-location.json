@@ -8,12 +8,36 @@
       "name_ru": "Природа",
       "name_en": "Nature",
       "tags": [
-        { "tag": "forest", "name_ru": "Лес", "name_en": "Forest" },
-        { "tag": "mountains", "name_ru": "Горы", "name_en": "Mountains" },
-        { "tag": "beach", "name_ru": "Пляж", "name_en": "Beach" },
-        { "tag": "ocean", "name_ru": "Океан", "name_en": "Ocean" },
-        { "tag": "desert", "name_ru": "Пустыня", "name_en": "Desert" },
-        { "tag": "jungle", "name_ru": "Джунгли", "name_en": "Jungle" }
+        {
+          "tag": "forest",
+          "name_ru": "Лес",
+          "name_en": "Forest"
+        },
+        {
+          "tag": "mountains",
+          "name_ru": "Горы",
+          "name_en": "Mountains"
+        },
+        {
+          "tag": "beach",
+          "name_ru": "Пляж",
+          "name_en": "Beach"
+        },
+        {
+          "tag": "ocean",
+          "name_ru": "Океан",
+          "name_en": "Ocean"
+        },
+        {
+          "tag": "desert",
+          "name_ru": "Пустыня",
+          "name_en": "Desert"
+        },
+        {
+          "tag": "jungle",
+          "name_ru": "Джунгли",
+          "name_en": "Jungle"
+        }
       ]
     },
     {
@@ -21,13 +45,41 @@
       "name_ru": "Город и здания",
       "name_en": "City & Buildings",
       "tags": [
-        { "tag": "cityscape", "name_ru": "Городской пейзаж", "name_en": "Cityscape" },
-        { "tag": "rooftop", "name_ru": "На крыше", "name_en": "Rooftop" },
-        { "tag": "street", "name_ru": "На улице", "name_en": "Street" },
-        { "tag": "cafe", "name_ru": "В кафе", "name_en": "Cafe" },
-        { "tag": "library", "name_ru": "В библиотеке", "name_en": "Library" },
-        { "tag": "spaceship interior", "name_ru": "Интерьер звездолета", "name_en": "Spaceship Interior" },
-        { "tag": "castle", "name_ru": "Замок", "name_en": "Castle" }
+        {
+          "tag": "cityscape",
+          "name_ru": "Городской пейзаж",
+          "name_en": "Cityscape"
+        },
+        {
+          "tag": "rooftop",
+          "name_ru": "На крыше",
+          "name_en": "Rooftop"
+        },
+        {
+          "tag": "street",
+          "name_ru": "На улице",
+          "name_en": "Street"
+        },
+        {
+          "tag": "cafe",
+          "name_ru": "В кафе",
+          "name_en": "Cafe"
+        },
+        {
+          "tag": "library",
+          "name_ru": "В библиотеке",
+          "name_en": "Library"
+        },
+        {
+          "tag": "spaceship interior",
+          "name_ru": "Интерьер звездолета",
+          "name_en": "Spaceship Interior"
+        },
+        {
+          "tag": "castle",
+          "name_ru": "Замок",
+          "name_en": "Castle"
+        }
       ]
     },
     {
@@ -35,13 +87,41 @@
       "name_ru": "Время и Погода",
       "name_en": "Time & Weather",
       "tags": [
-        { "tag": "day", "name_ru": "День", "name_en": "Day" },
-        { "tag": "night", "name_ru": "Ночь", "name_en": "Night" },
-        { "tag": "golden hour", "name_ru": "Золотой час", "name_en": "Golden Hour" },
-        { "tag": "rain", "name_ru": "Дождь", "name_en": "Rain" },
-        { "tag": "snow", "name_ru": "Снег", "name_en": "Snow" },
-        { "tag": "storm", "name_ru": "Шторм", "name_en": "Storm" },
-        { "tag": "sunny", "name_ru": "Солнечно", "name_en": "Sunny" }
+        {
+          "tag": "day",
+          "name_ru": "День",
+          "name_en": "Day"
+        },
+        {
+          "tag": "night",
+          "name_ru": "Ночь",
+          "name_en": "Night"
+        },
+        {
+          "tag": "golden hour",
+          "name_ru": "Золотой час",
+          "name_en": "Golden Hour"
+        },
+        {
+          "tag": "rain",
+          "name_ru": "Дождь",
+          "name_en": "Rain"
+        },
+        {
+          "tag": "snow",
+          "name_ru": "Снег",
+          "name_en": "Snow"
+        },
+        {
+          "tag": "storm",
+          "name_ru": "Шторм",
+          "name_en": "Storm"
+        },
+        {
+          "tag": "sunny",
+          "name_ru": "Солнечно",
+          "name_en": "Sunny"
+        }
       ]
     },
     {
@@ -49,10 +129,26 @@
       "name_ru": "Детали фона",
       "name_en": "Background Details",
       "tags": [
-        { "tag": "blurry background", "name_ru": "Размытый фон", "name_en": "Blurry Background" },
-        { "tag": "simple background", "name_ru": "Простой фон", "name_en": "Simple Background" },
-        { "tag": "detailed background", "name_ru": "Детализированный фон", "name_en": "Detailed Background" },
-        { "tag": "out of focus", "name_ru": "Не в фокусе", "name_en": "Out of Focus" }
+        {
+          "tag": "blurry background",
+          "name_ru": "Размытый фон",
+          "name_en": "Blurry Background"
+        },
+        {
+          "tag": "simple background",
+          "name_ru": "Простой фон",
+          "name_en": "Simple Background"
+        },
+        {
+          "tag": "detailed background",
+          "name_ru": "Детализированный фон",
+          "name_en": "Detailed Background"
+        },
+        {
+          "tag": "out of focus",
+          "name_ru": "Не в фокусе",
+          "name_en": "Out of Focus"
+        }
       ]
     }
   ]

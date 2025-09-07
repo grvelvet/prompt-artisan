@@ -8,12 +8,36 @@
       "name_ru": "Тип кадра",
       "name_en": "Shot Type",
       "tags": [
-        { "tag": "full body shot", "name_ru": "В полный рост", "name_en": "Full Body Shot" },
-        { "tag": "medium shot", "name_ru": "Средний план", "name_en": "Medium Shot" },
-        { "tag": "close-up shot", "name_ru": "Крупный план", "name_en": "Close-up Shot" },
-        { "tag": "extreme close-up", "name_ru": "Сверхкрупный план", "name_en": "Extreme Close-up" },
-        { "tag": "cowboy shot", "name_ru": "Ковбойский план", "name_en": "Cowboy Shot" },
-        { "tag": "wide shot", "name_ru": "Широкий план", "name_en": "Wide Shot" }
+        {
+          "tag": "full body shot",
+          "name_ru": "В полный рост",
+          "name_en": "Full Body Shot"
+        },
+        {
+          "tag": "medium shot",
+          "name_ru": "Средний план",
+          "name_en": "Medium Shot"
+        },
+        {
+          "tag": "close-up shot",
+          "name_ru": "Крупный план",
+          "name_en": "Close-up Shot"
+        },
+        {
+          "tag": "extreme close-up",
+          "name_ru": "Сверхкрупный план",
+          "name_en": "Extreme Close-up"
+        },
+        {
+          "tag": "cowboy shot",
+          "name_ru": "Ковбойский план",
+          "name_en": "Cowboy Shot"
+        },
+        {
+          "tag": "wide shot",
+          "name_ru": "Широкий план",
+          "name_en": "Wide Shot"
+        }
       ]
     },
     {
@@ -21,11 +45,31 @@
       "name_ru": "Угол камеры (Ракурс)",
       "name_en": "Camera Angle",
       "tags": [
-        { "tag": "from below", "name_ru": "Вид снизу", "name_en": "From Below" },
-        { "tag": "from above", "name_ru": "Вид сверху", "name_en": "From Above" },
-        { "tag": "eye-level shot", "name_ru": "На уровне глаз", "name_en": "Eye-level Shot" },
-        { "tag": "dutch angle", "name_ru": "Голландский угол", "name_en": "Dutch Angle" },
-        { "tag": "bird's-eye view", "name_ru": "С высоты птичьего полета", "name_en": "Bird's-eye View" }
+        {
+          "tag": "from below",
+          "name_ru": "Вид снизу",
+          "name_en": "From Below"
+        },
+        {
+          "tag": "from above",
+          "name_ru": "Вид сверху",
+          "name_en": "From Above"
+        },
+        {
+          "tag": "eye-level shot",
+          "name_ru": "На уровне глаз",
+          "name_en": "Eye-level Shot"
+        },
+        {
+          "tag": "dutch angle",
+          "name_ru": "Голландский угол",
+          "name_en": "Dutch Angle"
+        },
+        {
+          "tag": "bird's-eye view",
+          "name_ru": "С высоты птичьего полета",
+          "name_en": "Bird's-eye View"
+        }
       ]
     },
     {
@@ -33,12 +77,36 @@
       "name_ru": "Объектив и Эффекты",
       "name_en": "Lens & Effects",
       "tags": [
-        { "tag": "depth of field", "name_ru": "Глубина резкости", "name_en": "Depth of Field" },
-        { "tag": "bokeh", "name_ru": "Боке", "name_en": "Bokeh" },
-        { "tag": "blurry background", "name_ru": "Размытый фон", "name_en": "Blurry Background" },
-        { "tag": "lens flare", "name_ru": "Блик объектива", "name_en": "Lens Flare" },
-        { "tag": "fisheye lens", "name_ru": "Рыбий глаз", "name_en": "Fisheye Lens" },
-        { "tag": "sharp focus", "name_ru": "Резкий фокус", "name_en": "Sharp Focus" }
+        {
+          "tag": "depth of field",
+          "name_ru": "Глубина резкости",
+          "name_en": "Depth of Field"
+        },
+        {
+          "tag": "bokeh",
+          "name_ru": "Боке",
+          "name_en": "Bokeh"
+        },
+        {
+          "tag": "blurry background",
+          "name_ru": "Размытый фон",
+          "name_en": "Blurry Background"
+        },
+        {
+          "tag": "lens flare",
+          "name_ru": "Блик объектива",
+          "name_en": "Lens Flare"
+        },
+        {
+          "tag": "fisheye lens",
+          "name_ru": "Рыбий глаз",
+          "name_en": "Fisheye Lens"
+        },
+        {
+          "tag": "sharp focus",
+          "name_ru": "Резкий фокус",
+          "name_en": "Sharp Focus"
+        }
       ]
     }
   ]

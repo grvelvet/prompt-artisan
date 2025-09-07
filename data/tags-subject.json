@@ -4,71 +4,265 @@
   "name_en": "Core & Action",
   "subcategories": [
     {
-      "id": "char_type", "name_ru": "Типы субъектов", "name_en": "Subject Types", "tags": [
-        { "tag": "1girl", "name_ru": "Девушка", "name_en": "Girl" },
-        { "tag": "1boy", "name_ru": "Парень", "name_en": "Boy" },
-        { "tag": "man", "name_ru": "Мужчина", "name_en": "Man" },
-        { "tag": "woman", "name_ru": "Женщина", "name_en": "Woman" },
-        { "tag": "elf", "name_ru": "Эльф", "name_en": "Elf" },
-        { "tag": "orc", "name_ru": "Орк", "name_en": "Orc" },
-        { "tag": "cyborg", "name_ru": "Киборг", "name_en": "Cyborg" },
-        { "tag": "robot", "name_ru": "Робот", "name_en": "Robot" },
-        { "tag": "zombie", "name_ru": "Зомби", "name_en": "Zombie" },
-        { "tag": "dragon", "name_ru": "Дракон", "name_en": "Dragon" }
+      "id": "char_type",
+      "name_ru": "Типы субъектов",
+      "name_en": "Subject Types",
+      "tags": [
+        {
+          "tag": "1girl",
+          "name_ru": "Девушка",
+          "name_en": "Girl"
+        },
+        {
+          "tag": "1boy",
+          "name_ru": "Парень",
+          "name_en": "Boy"
+        },
+        {
+          "tag": "man",
+          "name_ru": "Мужчина",
+          "name_en": "Man"
+        },
+        {
+          "tag": "woman",
+          "name_ru": "Женщина",
+          "name_en": "Woman"
+        },
+        {
+          "tag": "elf",
+          "name_ru": "Эльф",
+          "name_en": "Elf"
+        },
+        {
+          "tag": "orc",
+          "name_ru": "Орк",
+          "name_en": "Orc"
+        },
+        {
+          "tag": "cyborg",
+          "name_ru": "Киборг",
+          "name_en": "Cyborg"
+        },
+        {
+          "tag": "robot",
+          "name_ru": "Робот",
+          "name_en": "Robot"
+        },
+        {
+          "tag": "zombie",
+          "name_ru": "Зомби",
+          "name_en": "Zombie"
+        },
+        {
+          "tag": "dragon",
+          "name_ru": "Дракон",
+          "name_en": "Dragon"
+        }
       ]
     },
     {
-      "id": "actions", "name_ru": "Действия (SFW)", "name_en": "Actions (SFW)", "tags": [
-        { "tag": "standing", "name_ru": "Стоит", "name_en": "Standing" },
-        { "tag": "sitting", "name_ru": "Сидит", "name_en": "Sitting" },
-        { "tag": "lying", "name_ru": "Лежит", "name_en": "Lying" },
-        { "tag": "running", "name_ru": "Бежит", "name_en": "Running" },
-        { "tag": "jumping", "name_ru": "Прыгает", "name_en": "Jumping" },
-        { "tag": "fighting", "name_ru": "Сражается", "name_en": "Fighting" },
-        { "tag": "casting spell", "name_ru": "Колдует", "name_en": "Casting Spell" },
-        { "tag": "looking at viewer", "name_ru": "Смотрит на зрителя", "name_en": "Looking at viewer" },
-        { "tag": "holding weapon", "name_ru": "Держит оружие", "name_en": "Holding Weapon" }
+      "id": "actions",
+      "name_ru": "Действия (SFW)",
+      "name_en": "Actions (SFW)",
+      "tags": [
+        {
+          "tag": "standing",
+          "name_ru": "Стоит",
+          "name_en": "Standing"
+        },
+        {
+          "tag": "sitting",
+          "name_ru": "Сидит",
+          "name_en": "Sitting"
+        },
+        {
+          "tag": "lying",
+          "name_ru": "Лежит",
+          "name_en": "Lying"
+        },
+        {
+          "tag": "running",
+          "name_ru": "Бежит",
+          "name_en": "Running"
+        },
+        {
+          "tag": "jumping",
+          "name_ru": "Прыгает",
+          "name_en": "Jumping"
+        },
+        {
+          "tag": "fighting",
+          "name_ru": "Сражается",
+          "name_en": "Fighting"
+        },
+        {
+          "tag": "casting spell",
+          "name_ru": "Колдует",
+          "name_en": "Casting Spell"
+        },
+        {
+          "tag": "looking at viewer",
+          "name_ru": "Смотрит на зрителя",
+          "name_en": "Looking at viewer"
+        },
+        {
+          "tag": "holding weapon",
+          "name_ru": "Держит оружие",
+          "name_en": "Holding Weapon"
+        }
       ]
     },
     {
-      "id": "emotions", "name_ru": "Эмоции", "name_en": "Emotions", "tags": [
-        { "tag": "smile", "name_ru": "Улыбка", "name_en": "Smile" },
-        { "tag": "sad", "name_ru": "Грусть", "name_en": "Sad" },
-        { "tag": "angry", "name_ru": "Злость", "name_en": "Angry" },
-        { "tag": "surprised", "name_ru": "Удивление", "name_en": "Surprised" },
-        { "tag": "happy", "name_ru": "Счастье", "name_en": "Happy" },
-        { "tag": "determined expression", "name_ru": "Решительное выражение", "name_en": "Determined Expression" },
-        { "tag": "blushing", "name_ru": "Румянец", "name_en": "Blushing" },
-        { "tag": "crying", "name_ru": "Плачет", "name_en": "Crying" }
+      "id": "emotions",
+      "name_ru": "Эмоции",
+      "name_en": "Emotions",
+      "tags": [
+        {
+          "tag": "smile",
+          "name_ru": "Улыбка",
+          "name_en": "Smile"
+        },
+        {
+          "tag": "sad",
+          "name_ru": "Грусть",
+          "name_en": "Sad"
+        },
+        {
+          "tag": "angry",
+          "name_ru": "Злость",
+          "name_en": "Angry"
+        },
+        {
+          "tag": "surprised",
+          "name_ru": "Удивление",
+          "name_en": "Surprised"
+        },
+        {
+          "tag": "happy",
+          "name_ru": "Счастье",
+          "name_en": "Happy"
+        },
+        {
+          "tag": "determined expression",
+          "name_ru": "Решительное выражение",
+          "name_en": "Determined Expression"
+        },
+        {
+          "tag": "blushing",
+          "name_ru": "Румянец",
+          "name_en": "Blushing"
+        },
+        {
+          "tag": "crying",
+          "name_ru": "Плачет",
+          "name_en": "Crying"
+        }
       ]
     },
     {
-      "id": "poses_nsfw", "name_ru": "Позы (18+)", "name_en": "Poses (18+)", "tags": [
-        { "tag": "seductive pose", "name_ru": "Соблазнительная поза", "name_en": "Seductive Pose" },
-        { "tag": "lewd pose", "name_ru": "Пошлая поза", "name_en": "Lewd Pose" },
-        { "tag": "lying on bed", "name_ru": "Лежит на кровати", "name_en": "Lying on Bed" },
-        { "tag": "bent over", "name_ru": "Наклонившись", "name_en": "Bent Over" },
-        { "tag": "arched back", "name_ru": "Прогнутая спина", "name_en": "Arched Back" },
-        { "tag": "on stomach", "name_ru": "На животе", "name_en": "On Stomach" }
+      "id": "poses_nsfw",
+      "name_ru": "Позы (18+)",
+      "name_en": "Poses (18+)",
+      "tags": [
+        {
+          "tag": "seductive pose",
+          "name_ru": "Соблазнительная поза",
+          "name_en": "Seductive Pose"
+        },
+        {
+          "tag": "lewd pose",
+          "name_ru": "Пошлая поза",
+          "name_en": "Lewd Pose"
+        },
+        {
+          "tag": "lying on bed",
+          "name_ru": "Лежит на кровати",
+          "name_en": "Lying on Bed"
+        },
+        {
+          "tag": "bent over",
+          "name_ru": "Наклонившись",
+          "name_en": "Bent Over"
+        },
+        {
+          "tag": "arched back",
+          "name_ru": "Прогнутая спина",
+          "name_en": "Arched Back"
+        },
+        {
+          "tag": "on stomach",
+          "name_ru": "На животе",
+          "name_en": "On Stomach"
+        }
       ]
     },
     {
-      "id": "emotions_nsfw", "name_ru": "Эмоции (18+)", "name_en": "Emotions (18+)", "tags": [
-        { "tag": "lustful expression", "name_ru": "Похотливое выражение", "name_en": "Lustful Expression" },
-        { "tag": "seductive smile", "name_ru": "Соблазнительная улыбка", "name_en": "Seductive Smile" },
-        { "tag": "tongue out", "name_ru": "Высунутый язык", "name_en": "Tongue Out" },
-        { "tag": "ahegao", "name_ru": "Ахегао", "name_en": "Ahegao" },
-        { "tag": "orgasm", "name_ru": "Оргазм", "name_en": "Orgasm" }
+      "id": "emotions_nsfw",
+      "name_ru": "Эмоции (18+)",
+      "name_en": "Emotions (18+)",
+      "tags": [
+        {
+          "tag": "lustful expression",
+          "name_ru": "Похотливое выражение",
+          "name_en": "Lustful Expression"
+        },
+        {
+          "tag": "seductive smile",
+          "name_ru": "Соблазнительная улыбка",
+          "name_en": "Seductive Smile"
+        },
+        {
+          "tag": "tongue out",
+          "name_ru": "Высунутый язык",
+          "name_en": "Tongue Out"
+        },
+        {
+          "tag": "ahegao",
+          "name_ru": "Ахегао",
+          "name_en": "Ahegao"
+        },
+        {
+          "tag": "orgasm",
+          "name_ru": "Оргазм",
+          "name_en": "Orgasm"
+        }
       ]
     },
     {
-      "id": "acts_nsfw", "name_ru": "Действия (Explicit 18+)", "name_en": "Acts (Explicit 18+)", "tags": [
-        { "tag": "sex", "name_ru": "Секс", "name_en": "Sex" },
-        { "tag": "masturbation", "name_ru": "Мастурбация", "name_en": "Masturbation" },
-        { "tag": "vaginal sex", "name_ru": "Вагинальный секс", "name_en": "Vaginal Sex" },
-        { "tag": "oral sex", "name_ru": "Оральный секс", "name_en": "Oral Sex" },
-        { "tag": "anal sex", "name_ru": "Анальный секс", "name_en": "Anal Sex" },
-        { "tag": "group sex", "name_ru": "Групповой секс", "name_en": "Group Sex" }
+      "id": "acts_nsfw",
+      "name_ru": "Действия (Explicit 18+)",
+      "name_en": "Acts (Explicit 18+)",
+      "tags": [
+        {
+          "tag": "sex",
+          "name_ru": "Секс",
+          "name_en": "Sex"
+        },
+        {
+          "tag": "masturbation",
+          "name_ru": "Мастурбация",
+          "name_en": "Masturbation"
+        },
+        {
+          "tag": "vaginal sex",
+          "name_ru": "Вагинальный секс",
+          "name_en": "Vaginal Sex"
+        },
+        {
+          "tag": "oral sex",
+          "name_ru": "Оральный секс",
+          "name_en": "Oral Sex"
+        },
+        {
+          "tag": "anal sex",
+          "name_ru": "Анальный секс",
+          "name_en": "Anal Sex"
+        },
+        {
+          "tag": "group sex",
+          "name_ru": "Групповой секс",
+          "name_en": "Group Sex"
+        }
       ]
     }
   ]

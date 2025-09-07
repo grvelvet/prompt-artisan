@@ -8,12 +8,36 @@
       "name_ru": "Типы освещения",
       "name_en": "Lighting Types",
       "tags": [
-        { "tag": "cinematic lighting", "name_ru": "Кинематографическое", "name_en": "Cinematic" },
-        { "tag": "studio lighting", "name_ru": "Студийное", "name_en": "Studio" },
-        { "tag": "dramatic lighting", "name_ru": "Драматическое", "name_en": "Dramatic" },
-        { "tag": "volumetric lighting", "name_ru": "Объемный свет", "name_en": "Volumetric" },
-        { "tag": "soft lighting", "name_ru": "Мягкий свет", "name_en": "Soft" },
-        { "tag": "hard lighting", "name_ru": "Жесткий свет", "name_en": "Hard" }
+        {
+          "tag": "cinematic lighting",
+          "name_ru": "Кинематографическое",
+          "name_en": "Cinematic"
+        },
+        {
+          "tag": "studio lighting",
+          "name_ru": "Студийное",
+          "name_en": "Studio"
+        },
+        {
+          "tag": "dramatic lighting",
+          "name_ru": "Драматическое",
+          "name_en": "Dramatic"
+        },
+        {
+          "tag": "volumetric lighting",
+          "name_ru": "Объемный свет",
+          "name_en": "Volumetric"
+        },
+        {
+          "tag": "soft lighting",
+          "name_ru": "Мягкий свет",
+          "name_en": "Soft"
+        },
+        {
+          "tag": "hard lighting",
+          "name_ru": "Жесткий свет",
+          "name_en": "Hard"
+        }
       ]
     },
     {
@@ -21,12 +45,36 @@
       "name_ru": "Источник и направление",
       "name_en": "Source & Direction",
       "tags": [
-        { "tag": "backlight", "name_ru": "Контровой свет (сзади)", "name_en": "Backlight" },
-        { "tag": "rim light", "name_ru": "Ореольный свет", "name_en": "Rim Light" },
-        { "tag": "side light", "name_ru": "Боковой свет", "name_en": "Side Light" },
-        { "tag": "top light", "name_ru": "Верхний свет", "name_en": "Top Light" },
-        { "tag": "god rays", "name_ru": "Божественные лучи", "name_en": "God Rays" },
-        { "tag": "caustics", "name_ru": "Каустика", "name_en": "Caustics" }
+        {
+          "tag": "backlight",
+          "name_ru": "Контровой свет (сзади)",
+          "name_en": "Backlight"
+        },
+        {
+          "tag": "rim light",
+          "name_ru": "Ореольный свет",
+          "name_en": "Rim Light"
+        },
+        {
+          "tag": "side light",
+          "name_ru": "Боковой свет",
+          "name_en": "Side Light"
+        },
+        {
+          "tag": "top light",
+          "name_ru": "Верхний свет",
+          "name_en": "Top Light"
+        },
+        {
+          "tag": "god rays",
+          "name_ru": "Божественные лучи",
+          "name_en": "God Rays"
+        },
+        {
+          "tag": "caustics",
+          "name_ru": "Каустика",
+          "name_en": "Caustics"
+        }
       ]
     },
     {
@@ -34,11 +82,31 @@
       "name_ru": "Цвет и температура",
       "name_en": "Color & Temperature",
       "tags": [
-        { "tag": "golden hour", "name_ru": "Золотой час", "name_en": "Golden Hour" },
-        { "tag": "blue hour", "name_ru": "Синий час", "name_en": "Blue Hour" },
-        { "tag": "warm light", "name_ru": "Теплый свет", "name_en": "Warm Light" },
-        { "tag": "cool light", "name_ru": "Холодный свет", "name_en": "Cool Light" },
-        { "tag": "neon glow", "name_ru": "Неоновое свечение", "name_en": "Neon Glow" }
+        {
+          "tag": "golden hour",
+          "name_ru": "Золотой час",
+          "name_en": "Golden Hour"
+        },
+        {
+          "tag": "blue hour",
+          "name_ru": "Синий час",
+          "name_en": "Blue Hour"
+        },
+        {
+          "tag": "warm light",
+          "name_ru": "Теплый свет",
+          "name_en": "Warm Light"
+        },
+        {
+          "tag": "cool light",
+          "name_ru": "Холодный свет",
+          "name_en": "Cool Light"
+        },
+        {
+          "tag": "neon glow",
+          "name_ru": "Неоновое свечение",
+          "name_en": "Neon Glow"
+        }
       ]
     },
     {
@@ -46,13 +114,41 @@
       "name_ru": "Атмосфера и эффекты",
       "name_en": "Atmosphere & Effects",
       "tags": [
-        { "tag": "moody atmosphere", "name_ru": "Мрачная атмосфера", "name_en": "Moody Atmosphere" },
-        { "tag": "ethereal atmosphere", "name_ru": "Эфирная атмосфера", "name_en": "Ethereal Atmosphere" },
-        { "tag": "epic atmosphere", "name_ru": "Эпичная атмосфера", "name_en": "Epic Atmosphere" },
-        { "tag": "heavy rain", "name_ru": "Сильный дождь", "name_en": "Heavy Rain" },
-        { "tag": "fog", "name_ru": "Туман", "name_en": "Fog" },
-        { "tag": "mist", "name_ru": "Дымка", "name_en": "Mist" },
-        { "tag": "dramatic shadows", "name_ru": "Драматичные тени", "name_en": "Dramatic Shadows" }
+        {
+          "tag": "moody atmosphere",
+          "name_ru": "Мрачная атмосфера",
+          "name_en": "Moody Atmosphere"
+        },
+        {
+          "tag": "ethereal atmosphere",
+          "name_ru": "Эфирная атмосфера",
+          "name_en": "Ethereal Atmosphere"
+        },
+        {
+          "tag": "epic atmosphere",
+          "name_ru": "Эпичная атмосфера",
+          "name_en": "Epic Atmosphere"
+        },
+        {
+          "tag": "heavy rain",
+          "name_ru": "Сильный дождь",
+          "name_en": "Heavy Rain"
+        },
+        {
+          "tag": "fog",
+          "name_ru": "Туман",
+          "name_en": "Fog"
+        },
+        {
+          "tag": "mist",
+          "name_ru": "Дымка",
+          "name_en": "Mist"
+        },
+        {
+          "tag": "dramatic shadows",
+          "name_ru": "Драматичные тени",
+          "name_en": "Dramatic Shadows"
+        }
       ]
     }
   ]
