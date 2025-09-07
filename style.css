@@ -1,3 +1,6 @@
+/* ==========================================================================
+   1. CORE & LAYOUT
+   ========================================================================== */
 :root {
     --bg-color: #1a1a2e; 
     --container-bg: #16213e; 
@@ -11,6 +14,7 @@
     --manual-edit-border: #f9d71c;
     --delete-bg: #a83232; 
     --delete-hover: #802626;
+    --active-blue: #2980b9;
 }
 
 body {
@@ -22,105 +26,8 @@ body {
     font-size: 14px;
 }
 
-h1 {
-    font-family: 'Inter', sans-serif;
-    font-weight: 700;
-    color: var(--text-color); 
-    text-align: center; 
-    margin: 0;
-}
-
-h2 { 
-    font-family: 'Inter', sans-serif;
-    font-weight: 600;
-    text-align: left; 
-    border: none; 
-    padding-bottom: 10px; 
-    margin-top: 0; 
-    font-size: 1.3em; 
-    color: var(--text-color);
-    border-bottom: 1px solid var(--input-bg);
-    margin-bottom: 20px;
-}
-.prompt-card:first-child > .card-header > h2,
-.prompt-card:first-child > h2 {
-    margin-bottom: 8px; /* Уменьшаем отступ для H2 в первой карточке таба */
-}
-
-
-h3 { 
-    font-family: 'Inter', sans-serif;
-    font-weight: 600;
-    color: var(--light-text); 
-    margin: 0;
-    font-size: 1em; 
-    opacity: 0.85; 
-}
-
-.card-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 8px;
-    gap: 8px;
-}
-.card-header h2, .card-header h3 {
-    margin: 0;
-    padding: 0;
-    border: none;
-    flex-grow: 1;
-}
-.tag-browser-btn {
-    background: none; border: none; color: var(--light-text);
-    opacity: 0.4; font-size: 1.2em; padding: 0 5px; cursor: pointer;
-    transition: opacity 0.2s;
-    order: 2;
-}
-.tag-browser-btn:hover { opacity: 1; }
-
-.tooltip-icon {
-    position: relative;
-    cursor: help;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background-color: var(--input-bg);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    color: var(--light-text);
-    font-size: 14px;
-    font-weight: bold;
-    font-style: italic;
-    margin-left: auto;
-}
-.tooltip-text {
-    visibility: hidden; opacity: 0; width: 250px; background-color: var(--input-bg);
-    color: var(--light-text); text-align: center; border-radius: 6px; padding: 10px;
-    position: absolute; z-index: 1001; bottom: 135%; left: 50%; margin-left: -125px;
-    transition: opacity 0.3s; font-weight: 400; font-size: 0.95em; line-height: 1.4;
-    border: 1px solid var(--border-color);
-}
-.tooltip-icon:hover .tooltip-text { visibility: visible; opacity: 1; }
-
-.prompt-card .form-section:not(:first-of-type) {
-    margin-top: 16px;
-}
-
 textarea, input[type="text"], input[type="search"], select, button {
     font-family: 'Inter', sans-serif;
-}
-
-#output-positive, #output-negative { 
-    font-family: 'Fira Code', monospace;
-    font-weight: 500;
-    margin-bottom: 10px;
-    min-height: 80px;
-    resize: none;
-    overflow-y: hidden;
-    transition: height 0.1s ease-out;
 }
 
 .container {
@@ -132,6 +39,37 @@ textarea, input[type="text"], input[type="search"], select, button {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
+.main-content { 
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+footer {
+    text-align: center; 
+    margin-top: 40px; 
+    padding-top: 20px;
+    border-top: 1px solid var(--input-bg); 
+    color: var(--light-text);
+    opacity: 0.6; 
+    font-size: 0.9em;
+}
+
+/* ==========================================================================
+   2. TYPOGRAPHY
+   ========================================================================== */
+h1, h2, h3 {
+    text-align: left;
+    border: none;
+    margin: 0;
+}
+h1 { font-weight: 700; font-size: 1.8em; color: var(--text-color); text-align: center; }
+h2 { font-weight: 600; font-size: 1.3em; color: var(--text-color); padding-bottom: 10px; border-bottom: 1px solid var(--input-bg); margin-bottom: 20px; }
+h3 { font-weight: 600; font-size: 1em; color: var(--light-text); opacity: 0.85; }
+
+/* ==========================================================================
+   3. HEADER & CONTROLS
+   ========================================================================== */
 .header-main {
     display: flex;
     justify-content: center;
@@ -141,7 +79,6 @@ textarea, input[type="text"], input[type="search"], select, button {
     margin-bottom: 25px;
     padding-bottom: 10px; 
 }
-
 .header-controls {
     position: absolute;
     right: 0;
@@ -149,7 +86,6 @@ textarea, input[type="text"], input[type="search"], select, button {
     align-items: center;
     gap: 15px;
 }
-
 .lang-switch { display: flex; align-items: center; }
 #lang-toggle-checkbox { display: none; }
 .lang-switch-label { display: flex; align-items: center; justify-content: space-between; cursor: pointer; width: 60px; height: 28px; background: var(--input-bg); border: 1px solid var(--border-color); border-radius: 100px; position: relative; transition: background-color .2s; }
@@ -162,78 +98,85 @@ textarea, input[type="text"], input[type="search"], select, button {
 #lang-toggle-checkbox:checked + .lang-switch-label::after { opacity: 1; }
 #show-manual-btn { width: 35px; height: 35px; border-radius: 50%; font-size: 1.2em; font-weight: bold; padding: 0; line-height: 1; background-color: var(--input-bg); border: 1px solid var(--border-color); display: flex; align-items: center; justify-content: center; }
 
+/* ==========================================================================
+   4. FORM CARDS & INPUTS
+   ========================================================================== */
 .prompt-card { background-color: var(--card-bg); border: 1px solid var(--input-bg); border-radius: 8px; padding: 20px; margin-bottom: 20px; }
-.tab-content .prompt-card:last-child { margin-bottom: 0; }
+.main-content > form > .prompt-card:last-child { margin-bottom: 0; }
 .sidebar .prompt-card:not(:first-child) { margin-top: 20px; }
 .sidebar .prompt-card .form-section:not(:first-of-type) { margin-top: 20px; }
 .sidebar .form-section > label { display: block; margin-bottom: 8px; font-weight: 600; }
+.card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; gap: 8px; }
+.card-header h2, .card-header h3 { padding: 0; flex-grow: 1; border: none; }
+.prompt-card .form-section:not(:first-of-type) { margin-top: 16px; }
 
 .input-group { display: flex; align-items: center; gap: 5px; }
 textarea, input[type="text"], input[type="search"], select { width: 100%; background-color: var(--input-bg); border: 1px solid var(--border-color); border-radius: 5px; color: var(--light-text); padding: 10px 12px; font-size: 1em; box-sizing: border-box; line-height: 1.5; }
 textarea::placeholder, input::placeholder { color: var(--light-text); opacity: 0.5; }
 .input-group textarea { flex: 1; min-height: 42px; resize: none; overflow-y: hidden; transition: height 0.1s ease-out; }
+#output-positive, #output-negative {
+    font-family: 'Fira Code', monospace;
+    font-weight: 500;
+    margin-bottom: 10px;
+    min-height: 80px;
+    resize: none;
+    overflow-y: hidden;
+    transition: height 0.1s ease-out;
+}
+textarea.manual-edit { border-color: var(--manual-edit-border); }
+textarea.manual-edit:focus { box-shadow: 0 0 10px var(--manual-edit-border); }
 .weight-controls { display: flex; flex-direction: column; justify-content: center; gap: 3px; }
 .weight-btn { display: flex; justify-content: center; align-items: center; background-color: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2); color: var(--light-text); width: 22px; height: 20px; flex: none; border-radius: 4px; cursor: pointer; font-size: 0.7em; font-weight: bold; line-height: 1; transition: background-color 0.2s; user-select: none; }
 .weight-btn:hover { background-color: var(--button-bg); }
-textarea.manual-edit { border-color: var(--manual-edit-border); }
-textarea.manual-edit:focus { box-shadow: 0 0 10px var(--manual-edit-border); }
 
-.actions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 15px; }
-.actions button { width: 100%; }
-.quality-toggle-wrapper { display: flex; align-items: center; gap: 8px; padding: 10px; background-color: var(--input-bg); border-radius: 5px; }
-.quality-toggle-wrapper label { cursor: pointer; font-size: 0.95em; opacity: 0.9; }
-
+/* ==========================================================================
+   5. BUTTONS & ACTIONS
+   ========================================================================== */
 button { padding: 10px 15px; border: none; border-radius: 5px; background-color: var(--button-bg); color: white; font-size: 1em; cursor: pointer; transition: background-color 0.2s; }
 button:hover { background-color: var(--button-hover); }
-button#rebuild-prompt, button#clear-form { background-color: #555; }
-button#rebuild-prompt:hover, button#clear-form:hover { background-color: #777; }
+
+.actions-compact {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+.actions-compact button {
+    padding: 10px 5px;
+    background-color: #555;
+    font-size: 0.9em;
+}
+.actions-compact button:hover { background-color: #777; }
+
 button#delete-preset-btn { background-color: var(--delete-bg); }
 button#delete-preset-btn:hover { background-color: var(--delete-hover); }
 
+/* ==========================================================================
+   6. TOOLTIPS & ICONS
+   ========================================================================== */
+.tag-browser-btn { order: 2; background: none; border: none; color: var(--light-text); opacity: 0.4; font-size: 1.2em; padding: 0 5px; cursor: pointer; transition: opacity 0.2s; width: auto; height: auto; }
+.tag-browser-btn:hover { opacity: 1; }
+.tooltip-icon { position: relative; cursor: help; width: 20px; height: 20px; border-radius: 50%; background-color: var(--input-bg); border: 1px solid rgba(255, 255, 255, 0.3); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--light-text); font-size: 14px; font-weight: bold; font-style: italic; margin-left: auto; }
+.tooltip-text { visibility: hidden; opacity: 0; width: 250px; background-color: var(--input-bg); color: var(--light-text); text-align: center; border-radius: 6px; padding: 10px; position: absolute; z-index: 1001; bottom: 135%; left: 50%; margin-left: -125px; transition: opacity 0.3s; font-weight: 400; font-size: 0.95em; line-height: 1.4; border: 1px solid var(--border-color); }
+.tooltip-icon:hover .tooltip-text { visibility: visible; opacity: 1; }
+
+/* ==========================================================================
+   7. PRESET MANAGEMENT
+   ========================================================================== */
 .preset-selection-group { display: grid; grid-template-columns: 1fr auto; gap: 10px; align-items: center; }
 .preset-controls { display: flex; flex-direction: column; gap: 10px; }
 .preset-controls button, .preset-controls input, .preset-controls select { width: 100%; }
 .save-group { display: grid; grid-template-columns: 3fr 2fr; gap: 10px; }
-.preset-actions { margin-top: 10px; }
+.preset-actions { margin-top: 10px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px;}
 .divider { border: none; height: 1px; background-color: var(--input-bg); margin: 20px 0; }
-#preset-preview {
-    background-color: var(--input-bg); border: 1px dashed var(--border-color); border-radius: 5px;
-    padding: 15px; margin-top: 10px; min-height: 100px; font-size: 0.9em;
-    color: var(--light-text); transition: all 0.3s ease;
-}
+#preset-preview { background-color: var(--input-bg); border: 1px dashed var(--border-color); border-radius: 5px; padding: 15px; margin-top: 10px; min-height: 100px; font-size: 0.9em; color: var(--light-text); transition: all 0.3s ease; }
 #preset-preview[data-hidden="true"] { display: none; }
 #preset-preview .placeholder { color: rgba(255, 255, 255, 0.5); display: flex; align-items: center; justify-content: center; height: 100%; }
 #preset-preview ul { margin: 0; padding-left: 20px; list-style-type: disc; }
 #preset-preview li { margin-bottom: 5px; }
 
-/* Tabs */
-.tabs {
-    display: flex;
-    gap: 5px;
-    margin-bottom: 20px;
-}
-.tab-link {
-    background-color: var(--input-bg);
-    padding: 10px 20px;
-    border-radius: 8px 8px 0 0;
-    border: 1px solid var(--input-bg);
-    border-bottom: none;
-    opacity: 0.6;
-}
-.tab-link.active {
-    background-color: var(--container-bg);
-    border-color: var(--border-color);
-    opacity: 1;
-}
-.tab-link span { margin-left: 5px; }
-.tab-content { display: none; }
-.tab-content.active { display: block; }
-
-footer { text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--input-bg); color: var(--light-text); opacity: 0.6; font-size: 0.9em; }
-.main-content { display: grid; grid-template-columns: 1fr; gap: 20px; }
-@media (min-width: 992px) { .main-content { grid-template-columns: 3fr 2fr; align-items: start; } }
-@media (max-width: 600px) { body { padding: 10px; } .container { padding: 15px; } h1 { font-size: 1.9em; } .prompt-card { padding: 14px; } .tabs { flex-wrap: wrap; } .tab-link span { display: none; } }
-
+/* ==========================================================================
+   8. MODAL WINDOWS
+   ========================================================================== */
 .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.7); display: flex; justify-content: center; align-items: center; z-index: 1000; opacity: 0; pointer-events: none; transition: opacity 0.3s ease; }
 .modal-overlay[data-visible="true"] { opacity: 1; pointer-events: auto; }
 .modal-content { background-color: var(--container-bg); padding: 30px; border-radius: 10px; border: 1px solid var(--border-color); width: 90%; max-height: 85vh; display: flex; flex-direction: column; position: relative; transform: scale(0.95); transition: transform 0.3s ease; }
@@ -264,3 +207,38 @@ footer { text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1p
 }
 #tag-browser-selection-preview { font-size: 0.8em; opacity: 0.7; max-width: 70%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
 #add-selected-tags-btn:disabled { background-color: #555; cursor: not-allowed; }
+
+/* ==========================================================================
+   9. RESPONSIVE DESIGN
+   ========================================================================== */
+@media (min-width: 992px) { .main-content { grid-template-columns: 3fr 2fr; align-items: start; } }
+@media (max-width: 600px) { body { padding: 10px; } .container { padding: 15px; } h1 { font-size: 1.9em; } .prompt-card { padding: 14px; } .actions-compact { grid-template-columns: 1fr; } }
+
+/* ==========================================================================
+   10. CUSTOM SCROLLBARS
+   ========================================================================== */
+/* Стилизация для Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--button-bg) var(--input-bg);
+}
+/* Стилизация для WebKit-браузеров (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--input-bg);
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--button-bg);
+  border-radius: 5px;
+  border: 2px solid var(--input-bg);
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--button-hover);
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}

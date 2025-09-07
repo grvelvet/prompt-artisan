@@ -2,7 +2,7 @@
     'use strict';
 
     const config = {
-        APP_VERSION: '3.3.0',
+        APP_VERSION: '3.4.0',
         LANG_KEY: 'promptArtisanLang_v1',
         POSITIVE_QUALITY_TAGS: ['masterpiece', 'best quality', 'highres', 'ultra-detailed'],
         NEGATIVE_QUALITY_TAGS: ['worst quality', 'low quality', 'normal quality'],
@@ -12,13 +12,9 @@
     const i18n = {
         ru: {
             appTitle: "Prompt Artisan", helpTitle: "Помощь",
-            tabMain: "Основа",
-            tabNsfw: "NSFW (18+)",
-
             styleSection: "🎨 Стиль Изображения",
             stylePlaceholder: "Например: photograph, oil painting, anime style...",
             styleTooltip: "Опишите финальный вид работы. Это фотография (photograph), картина маслом (oil painting), аниме (anime style) или что-то еще?",
-
             subjectSection: "👤 Субъект и Персонаж",
             subjectActionHeader: "Основа и Действие",
             subjectActionPlaceholder: "Например: a knight riding a horse, 2 cats playing...",
@@ -29,7 +25,6 @@
             clothingHeader: "Одежда и Снаряжение",
             clothingPlaceholder: "Например: wearing heavy armor, elegant silk dress...",
             clothingTooltip: "Во что одет субъект и что держит в руках? Будьте конкретны в материалах и типах.",
-            
             sceneSection: "🏞️ Сцена и Композиция",
             locationHeader: "Локация и Окружение",
             locationPlaceholder: "Например: enchanted forest at night, on a spaceship bridge...",
@@ -40,38 +35,22 @@
             cameraHeader: "Камера и Ракурс",
             cameraPlaceholder: "Например: full body shot, from below, close-up...",
             cameraTooltip: "С какой точки мы смотрим на сцену? Используйте: full body shot (в полный рост), close-up (крупный план), from below (вид снизу).",
-            
-            nsfwSection: "🔞 NSFW (18+)",
-            eroticaHeader: "Эротика",
-            eroticaPlaceholder: "Например: sensual, intimate, boudoir photography...",
-            eroticaTooltip: "Теги для чувственности, настроения и художественной наготы.",
-            ecchiHeader: "Этти",
-            ecchiPlaceholder: "Например: panty shot, cleavage, see-through...",
-            ecchiTooltip: "Теги для игривых, провокационных сцен и 'фансервиса'.",
-            hentaiHeader: "Хентай (Explicit)",
-            hentaiPlaceholder: "Например: explicit, uncensored, sex...",
-            hentaiTooltip: "Теги для откровенных, явных сцен. Максимальный уровень NSFW.",
-
             finalPromptHeader: "Итоговый промпт и Управление", copyBtn: "Копировать",
-            rebuildBtn: "Пересобрать промпт", clearBtn: "Очистить форму", qualityToggle: "Добавлять теги качества",
-            presetsHeader: "Управление Пресетами", importBtn: "Импорт (.json)", exportBtn: "Экспорт (.json)",
-            presetNamePlaceholder: "Имя нового пресета", savePresetBtn: "Сохранить в сессию", presetSelectDefault: "--- Выберите пресет ---",
+            rebuildBtn: "Пересобрать", clearBtn: "Очистить",
+            presetsHeader: "Управление Пресетами", importBtn: "Импорт", exportBtn: "Экспорт",
+            presetNamePlaceholder: "Имя нового пресета", savePresetBtn: "Сохранить", presetSelectDefault: "--- Выберите пресет ---",
             presetPreviewPlaceholder: "Выберите пресет для просмотра", deletePresetBtn: "Удалить",
             footerText: "© 2025 Created by grvelvet", closeBtnTitle: "Закрыть", copiedAlert: "Скопировано!",
             alertNoPresets: "Нет пресетов для экспорта.", alertImportError: "Ошибка: не удалось прочитать файл. Убедитесь, что это корректный JSON.",
             rebuildBtnTitle: "Сбросить ручные правки и сгенерировать промпт заново",
-            tagBrowserSearchPlaceholder: "Поиск по тегам...",
-            addSelectedBtn: "Добавить выбранные"
+            tagBrowserSearchPlaceholder: "Поиск...",
+            addSelectedBtn: "Добавить"
         },
         en: {
             appTitle: "Prompt Artisan", helpTitle: "Help",
-            tabMain: "Main",
-            tabNsfw: "NSFW (18+)",
-
             styleSection: "🎨 Image Style",
             stylePlaceholder: "E.g., photograph, oil painting, anime style...",
             styleTooltip: "Describe the final look. Is it a photograph, an oil painting, an anime style, or something else?",
-
             subjectSection: "👤 Subject & Character",
             subjectActionHeader: "Core & Action",
             subjectActionPlaceholder: "E.g., a knight riding a horse, 2 cats playing...",
@@ -82,7 +61,6 @@
             clothingHeader: "Clothing & Gear",
             clothingPlaceholder: "E.g., wearing heavy armor, elegant silk dress...",
             clothingTooltip: "What is the subject wearing and holding? Be specific with materials and types.",
-
             sceneSection: "🏞️ Scene & Composition",
             locationHeader: "Location & Environment",
             locationPlaceholder: "E.g., enchanted forest at night, on a spaceship bridge...",
@@ -93,31 +71,19 @@
             cameraHeader: "Camera & Angle",
             cameraPlaceholder: "E.g., full body shot, from below, close-up...",
             cameraTooltip: "From what point of view are we seeing the scene? Use: full body shot, close-up, from below.",
-
-            nsfwSection: "🔞 NSFW (18+)",
-            eroticaHeader: "Erotica",
-            eroticaPlaceholder: "E.g., sensual, intimate, boudoir photography...",
-            eroticaTooltip: "Tags for sensuality, mood, and artistic nudity.",
-            ecchiHeader: "Ecchi",
-            ecchiPlaceholder: "E.g., panty shot, cleavage, see-through...",
-            ecchiTooltip: "Tags for playful, provocative scenes, and 'fanservice'.",
-            hentaiHeader: "Hentai (Explicit)",
-            hentaiPlaceholder: "E.g., explicit, uncensored, sex...",
-            hentaiTooltip: "Tags for explicit, uncensored scenes. Maximum NSFW level.",
-
             finalPromptHeader: "Final Prompt & Controls", copyBtn: "Copy",
-            rebuildBtn: "Rebuild Prompt", clearBtn: "Clear Form", qualityToggle: "Add quality tags",
-            presetsHeader: "Preset Management", importBtn: "Import (.json)", exportBtn: "Export (.json)",
-            presetNamePlaceholder: "New preset name", savePresetBtn: "Save to Session", presetSelectDefault: "--- Select a preset ---",
+            rebuildBtn: "Rebuild", clearBtn: "Clear",
+            presetsHeader: "Preset Management", importBtn: "Import", exportBtn: "Export",
+            presetNamePlaceholder: "New preset name", savePresetBtn: "Save", presetSelectDefault: "--- Select a preset ---",
             presetPreviewPlaceholder: "Select a preset to preview", deletePresetBtn: "Delete",
             footerText: "© 2025 Created by grvelvet", closeBtnTitle: "Close", copiedAlert: "Copied!",
             alertNoPresets: "No presets to export.", alertImportError: "Error: Could not read the file. Ensure it's a valid JSON.",
             rebuildBtnTitle: "Discard manual edits and regenerate the prompt",
-            tagBrowserSearchPlaceholder: "Search tags...",
-            addSelectedBtn: "Add Selected"
+            tagBrowserSearchPlaceholder: "Search...",
+            addSelectedBtn: "Add"
         }
     };
-
+    
     const state = {
         isManualEditMode: false,
         isManualLoaded: false,
@@ -140,7 +106,6 @@
         positiveOutput: document.getElementById('output-positive'),
         negativeOutput: document.getElementById('output-negative'),
         rebuildBtn: document.getElementById('rebuild-prompt'),
-        qualityToggle: document.getElementById('quality-toggle'),
         presetNameInput: document.getElementById('preset-name'),
         presetSelect: document.getElementById('preset-select'),
         savePresetBtn: document.getElementById('save-preset-btn'),
@@ -156,6 +121,7 @@
         appTitle: document.getElementById('app-title'),
         copyPositiveBtn: document.getElementById('copy-positive'),
         copyNegativeBtn: document.getElementById('copy-negative'),
+        clearFormBtn: document.getElementById('clear-form-btn'),
         tagBrowserModal: document.getElementById('tag-browser-modal'),
         closeTagBrowserBtn: document.getElementById('close-tag-browser-btn'),
         tagBrowserTitle: document.getElementById('tag-browser-title'),
@@ -163,9 +129,7 @@
         tagBrowserSearch: document.getElementById('tag-browser-search'),
         tagBrowserTagsList: document.getElementById('tag-browser-tags-list'),
         tagBrowserSelectionPreview: document.getElementById('tag-browser-selection-preview'),
-        addSelectedTagsBtn: document.getElementById('add-selected-tags-btn'),
-        tabs: document.querySelectorAll('.tab-link'),
-        tabContents: document.querySelectorAll('.tab-content')
+        addSelectedTagsBtn: document.getElementById('add-selected-tags-btn')
     };
 
     const utils = {
@@ -198,14 +162,14 @@
             if (state.isManualEditMode) return;
             let userTags = [];
             dom.promptParts.forEach(el => { userTags = userTags.concat(utils.splitTags(el.value)); });
-            const finalTags = dom.qualityToggle.checked ? [...config.POSITIVE_QUALITY_TAGS, ...userTags] : userTags;
+            const finalTags = [...config.POSITIVE_QUALITY_TAGS, ...userTags];
             dom.positiveOutput.value = utils.getUniqueTags(finalTags).join(', ');
             utils.autoResizeTextarea(dom.positiveOutput);
         },
         updateNegativeOutput: () => {
             let userNegativeTags = utils.splitTags(dom.negativeOutput.value);
             userNegativeTags = userNegativeTags.filter(tag => !config.NEGATIVE_QUALITY_TAGS.includes(tag));
-            const finalNegativeTags = dom.qualityToggle.checked ? [...config.NEGATIVE_QUALITY_TAGS, ...userNegativeTags] : userNegativeTags;
+            const finalNegativeTags = [...config.NEGATIVE_QUALITY_TAGS, ...userNegativeTags];
             dom.negativeOutput.value = utils.getUniqueTags(finalNegativeTags).join(', ');
             utils.autoResizeTextarea(dom.negativeOutput);
         },
@@ -213,10 +177,10 @@
             handlers.setManualEditMode(false);
             dom.form.reset();
             dom.negativeOutput.value = config.DEFAULT_NEGATIVE_PROMPT;
-            dom.qualityToggle.checked = true;
             handlers.generatePositiveOutput();
             handlers.updateNegativeOutput();
             dom.allTextareas.forEach(utils.autoResizeTextarea);
+            dom.presetSelect.value = '';
             handlers.renderPresetPreview();
         },
         setManualEditMode: (isManual) => {
@@ -276,7 +240,7 @@
             dom.savableFields.forEach(el => {
                 el.value = presetData[el.id] || (el.id === 'output-negative' ? config.DEFAULT_NEGATIVE_PROMPT : '');
             });
-            dom.savableFields.forEach(utils.autoResizeTextarea);
+            dom.allTextareas.forEach(utils.autoResizeTextarea);
             handlers.setManualEditMode(false);
             handlers.generatePositiveOutput();
             handlers.updateNegativeOutput();
@@ -312,8 +276,9 @@
             const ul = document.createElement('ul');
             for (const [key, value] of Object.entries(presetData)) {
                 if (value.trim()) {
-                    const header = document.querySelector(`label[for="${key}"], [data-i18n-placeholder="${key}Placeholder"]`)?.closest('.prompt-card')?.querySelector('h2, h3');
-                    const label = header ? header.textContent.replace(/🎨|👤|🏞️|🔞/g, '').trim() : key;
+                    const i18nKey = document.querySelector(`#${key}`)?.closest('.prompt-card')?.querySelector('[data-i18n]')?.dataset.i18n;
+                    const labelEl = document.querySelector(`[data-i18n="${i18nKey}"]`);
+                    const label = labelEl ? labelEl.textContent.replace(/🎨|👤|🏞️|🔞/g, '').trim() : key;
                     const li = document.createElement('li');
                     const strong = document.createElement('strong');
                     strong.textContent = `${label}: `;
@@ -508,13 +473,6 @@
             utils.autoResizeTextarea(textarea);
             handlers.generatePositiveOutput();
             handlers.closeTagBrowser();
-        },
-        handleTabClick: (e) => {
-            const tab = e.currentTarget;
-            dom.tabs.forEach(t => t.classList.remove('active'));
-            dom.tabContents.forEach(c => c.classList.remove('active'));
-            tab.classList.add('active');
-            document.getElementById(tab.dataset.tab).classList.add('active');
         }
     };
 
@@ -522,13 +480,9 @@
         const savedLang = utils.isLocalStorageAvailable() ? localStorage.getItem(config.LANG_KEY) : 'ru';
         handlers.setLanguage(savedLang || 'ru');
 
-        dom.tabs.forEach(tab => tab.addEventListener('click', handlers.handleTabClick));
         dom.form.addEventListener('input', handlers.generatePositiveOutput);
         dom.form.addEventListener('mousedown', handlers.handleWeightControl);
-        dom.qualityToggle.addEventListener('change', () => {
-            handlers.generatePositiveOutput();
-            handlers.updateNegativeOutput();
-        });
+        
         dom.positiveOutput.addEventListener('input', () => {
             handlers.setManualEditMode(true);
             utils.autoResizeTextarea(dom.positiveOutput);
@@ -538,10 +492,7 @@
             handlers.setManualEditMode(false);
             handlers.generatePositiveOutput();
         });
-        dom.form.addEventListener('reset', (e) => {
-            e.preventDefault();
-            handlers.resetToDefaultState();
-        });
+        dom.clearFormBtn.addEventListener('click', handlers.resetToDefaultState);
         dom.langToggleCheckbox.addEventListener('change', () => {
             const newLang = dom.langToggleCheckbox.checked ? 'en' : 'ru';
             handlers.setLanguage(newLang);
