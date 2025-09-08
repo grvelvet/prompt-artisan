@@ -4,9 +4,9 @@
   "name_en": "Location & Environment",
   "subcategories": [
     {
-      "id": "natural",
-      "name_ru": "Природа",
-      "name_en": "Nature",
+      "id": "natural_landscapes",
+      "name_ru": "Пейзажи",
+      "name_en": "Landscapes",
       "tags": [
         {
           "tag": "forest",
@@ -14,19 +14,64 @@
           "name_en": "Forest"
         },
         {
+          "tag": "dark forest",
+          "name_ru": "Темный лес",
+          "name_en": "Dark Forest"
+        },
+        {
+          "tag": "enchanted forest",
+          "name_ru": "Зачарованный лес",
+          "name_en": "Enchanted Forest"
+        },
+        {
+          "tag": "bamboo forest",
+          "name_ru": "Бамбуковый лес",
+          "name_en": "Bamboo Forest"
+        },
+        {
+          "tag": "pine forest",
+          "name_ru": "Сосновый бор",
+          "name_en": "Pine Forest"
+        },
+        {
+          "tag": "swamp",
+          "name_ru": "Болото",
+          "name_en": "Swamp"
+        },
+        {
+          "tag": "jungle",
+          "name_ru": "Джунгли",
+          "name_en": "Jungle"
+        },
+        {
           "tag": "mountains",
           "name_ru": "Горы",
           "name_en": "Mountains"
         },
         {
-          "tag": "beach",
-          "name_ru": "Пляж",
-          "name_en": "Beach"
+          "tag": "snowy mountains",
+          "name_ru": "Снежные горы",
+          "name_en": "Snowy Mountains"
         },
         {
-          "tag": "ocean",
-          "name_ru": "Океан",
-          "name_en": "Ocean"
+          "tag": "volcano",
+          "name_ru": "Вулкан",
+          "name_en": "Volcano"
+        },
+        {
+          "tag": "mountain peak",
+          "name_ru": "Горная вершина",
+          "name_en": "Mountain Peak"
+        },
+        {
+          "tag": "cliff",
+          "name_ru": "Утес / Скала",
+          "name_en": "Cliff"
+        },
+        {
+          "tag": "canyon",
+          "name_ru": "Каньон",
+          "name_en": "Canyon"
         },
         {
           "tag": "desert",
@@ -34,16 +79,225 @@
           "name_en": "Desert"
         },
         {
-          "tag": "jungle",
-          "name_ru": "Джунгли",
-          "name_en": "Jungle"
+          "tag": "sand dunes",
+          "name_ru": "Песчаные дюны",
+          "name_en": "Sand Dunes"
+        },
+        {
+          "tag": "oasis",
+          "name_ru": "Оазис",
+          "name_en": "Oasis"
+        },
+        {
+          "tag": "plains",
+          "name_ru": "Равнины",
+          "name_en": "Plains"
+        },
+        {
+          "tag": "grasslands",
+          "name_ru": "Луга",
+          "name_en": "Grasslands"
+        },
+        {
+          "tag": "savanna",
+          "name_ru": "Саванна",
+          "name_en": "Savanna"
+        },
+        {
+          "tag": "field",
+          "name_ru": "Поле",
+          "name_en": "Field"
+        },
+        {
+          "tag": "flower field",
+          "name_ru": "Цветочное поле",
+          "name_en": "Flower Field"
+        },
+        {
+          "tag": "wheat field",
+          "name_ru": "Пшеничное поле",
+          "name_en": "Wheat Field"
+        },
+        {
+          "tag": "cave",
+          "name_ru": "Пещера",
+          "name_en": "Cave"
+        },
+        {
+          "tag": "ice cave",
+          "name_ru": "Ледяная пещера",
+          "name_en": "Ice Cave"
+        },
+        {
+          "tag": "island",
+          "name_ru": "Остров",
+          "name_en": "Island"
+        },
+        {
+          "tag": "meadow",
+          "name_ru": "Поляна",
+          "name_en": "Meadow"
         }
       ]
     },
     {
-      "id": "man_made",
-      "name_ru": "Город и здания",
-      "name_en": "City & Buildings",
+      "id": "water_ice",
+      "name_ru": "Вода и Лёд",
+      "name_en": "Water & Ice",
+      "tags": [
+        {
+          "tag": "ocean",
+          "name_ru": "Океан",
+          "name_en": "Ocean"
+        },
+        {
+          "tag": "sea",
+          "name_ru": "Море",
+          "name_en": "Sea"
+        },
+        {
+          "tag": "beach",
+          "name_ru": "Пляж",
+          "name_en": "Beach"
+        },
+        {
+          "tag": "underwater",
+          "name_ru": "Под водой",
+          "name_en": "Underwater"
+        },
+        {
+          "tag": "coral reef",
+          "name_ru": "Коралловый риф",
+          "name_en": "Coral Reef"
+        },
+        {
+          "tag": "lake",
+          "name_ru": "Озеро",
+          "name_en": "Lake"
+        },
+        {
+          "tag": "river",
+          "name_ru": "Река",
+          "name_en": "River"
+        },
+        {
+          "tag": "waterfall",
+          "name_ru": "Водопад",
+          "name_en": "Waterfall"
+        },
+        {
+          "tag": "hot spring",
+          "name_ru": "Горячий источник",
+          "name_en": "Hot Spring"
+        },
+        {
+          "tag": "geyser",
+          "name_ru": "Гейзер",
+          "name_en": "Geyser"
+        },
+        {
+          "tag": "glacier",
+          "name_ru": "Ледник",
+          "name_en": "Glacier"
+        },
+        {
+          "tag": "ice floe",
+          "name_ru": "Льдина",
+          "name_en": "Ice Floe"
+        },
+        {
+          "tag": "frozen lake",
+          "name_ru": "Замерзшее озеро",
+          "name_en": "Frozen Lake"
+        },
+        {
+          "tag": "pond",
+          "name_ru": "Пруд",
+          "name_en": "Pond"
+        }
+      ]
+    },
+    {
+      "id": "celestial",
+      "name_ru": "Небо и Космос",
+      "name_en": "Sky & Space",
+      "tags": [
+        {
+          "tag": "sky",
+          "name_ru": "Небо",
+          "name_en": "Sky"
+        },
+        {
+          "tag": "clouds",
+          "name_ru": "Облака",
+          "name_en": "Clouds"
+        },
+        {
+          "tag": "starry sky",
+          "name_ru": "Звездное небо",
+          "name_en": "Starry Sky"
+        },
+        {
+          "tag": "aurora",
+          "name_ru": "Северное сияние",
+          "name_en": "Aurora"
+        },
+        {
+          "tag": "moon",
+          "name_ru": "Луна",
+          "name_en": "Moon"
+        },
+        {
+          "tag": "full moon",
+          "name_ru": "Полная луна",
+          "name_en": "Full Moon"
+        },
+        {
+          "tag": "crescent moon",
+          "name_ru": "Полумесяц",
+          "name_en": "Crescent Moon"
+        },
+        {
+          "tag": "blood moon",
+          "name_ru": "Кровавая луна",
+          "name_en": "Blood Moon"
+        },
+        {
+          "tag": "sun",
+          "name_ru": "Солнце",
+          "name_en": "Sun"
+        },
+        {
+          "tag": "space",
+          "name_ru": "Космос",
+          "name_en": "Space"
+        },
+        {
+          "tag": "galaxy",
+          "name_ru": "Галактика",
+          "name_en": "Galaxy"
+        },
+        {
+          "tag": "nebula",
+          "name_ru": "Туманность",
+          "name_en": "Nebula"
+        },
+        {
+          "tag": "planets",
+          "name_ru": "Планеты",
+          "name_en": "Planets"
+        },
+        {
+          "tag": "asteroid field",
+          "name_ru": "Астероидное поле",
+          "name_en": "Asteroid Field"
+        }
+      ]
+    },
+    {
+      "id": "urban_city",
+      "name_ru": "Город",
+      "name_en": "City",
       "tags": [
         {
           "tag": "cityscape",
@@ -51,24 +305,350 @@
           "name_en": "Cityscape"
         },
         {
-          "tag": "rooftop",
-          "name_ru": "На крыше",
-          "name_en": "Rooftop"
+          "tag": "megacity",
+          "name_ru": "Мегаполис",
+          "name_en": "Megacity"
+        },
+        {
+          "tag": "cyberpunk city",
+          "name_ru": "Киберпанк-город",
+          "name_en": "Cyberpunk City"
+        },
+        {
+          "tag": "steampunk city",
+          "name_ru": "Стимпанк-город",
+          "name_en": "Steampunk City"
+        },
+        {
+          "tag": "fantasy town",
+          "name_ru": "Фэнтезийный город",
+          "name_en": "Fantasy Town"
+        },
+        {
+          "tag": "village",
+          "name_ru": "Деревня",
+          "name_en": "Village"
         },
         {
           "tag": "street",
-          "name_ru": "На улице",
+          "name_ru": "Улица",
           "name_en": "Street"
         },
         {
-          "tag": "cafe",
-          "name_ru": "В кафе",
-          "name_en": "Cafe"
+          "tag": "alley",
+          "name_ru": "Переулок",
+          "name_en": "Alley"
+        },
+        {
+          "tag": "rooftop",
+          "name_ru": "Крыша",
+          "name_en": "Rooftop"
+        },
+        {
+          "tag": "suburbs",
+          "name_ru": "Пригород",
+          "name_en": "Suburbs"
+        },
+        {
+          "tag": "slums",
+          "name_ru": "Трущобы",
+          "name_en": "Slums"
+        },
+        {
+          "tag": "market",
+          "name_ru": "Рынок",
+          "name_en": "Market"
+        },
+        {
+          "tag": "plaza",
+          "name_ru": "Площадь",
+          "name_en": "Plaza"
+        },
+        {
+          "tag": "park",
+          "name_ru": "Парк",
+          "name_en": "Park"
+        },
+        {
+          "tag": "bridge",
+          "name_ru": "Мост",
+          "name_en": "Bridge"
+        },
+        {
+          "tag": "neon lights",
+          "name_ru": "Неоновые огни",
+          "name_en": "Neon Lights"
+        },
+        {
+          "tag": "skyscraper",
+          "name_ru": "Небоскреб",
+          "name_en": "Skyscraper"
+        },
+        {
+          "tag": "fountain",
+          "name_ru": "Фонтан",
+          "name_en": "Fountain"
+        },
+        {
+          "tag": "ruins",
+          "name_ru": "Руины",
+          "name_en": "Ruins"
+        },
+        {
+          "tag": "dystopian city",
+          "name_ru": "Город-антиутопия",
+          "name_en": "Dystopian City"
+        }
+      ]
+    },
+    {
+      "id": "interiors_residential",
+      "name_ru": "Жилые интерьеры",
+      "name_en": "Residential Interiors",
+      "tags": [
+        {
+          "tag": "indoors",
+          "name_ru": "В помещении",
+          "name_en": "Indoors"
+        },
+        {
+          "tag": "bedroom",
+          "name_ru": "Спальня",
+          "name_en": "Bedroom"
+        },
+        {
+          "tag": "living room",
+          "name_ru": "Гостиная",
+          "name_en": "Living Room"
+        },
+        {
+          "tag": "kitchen",
+          "name_ru": "Кухня",
+          "name_en": "Kitchen"
+        },
+        {
+          "tag": "bathroom",
+          "name_ru": "Ванная комната",
+          "name_en": "Bathroom"
+        },
+        {
+          "tag": "shower",
+          "name_ru": "Душ",
+          "name_en": "Shower"
         },
         {
           "tag": "library",
-          "name_ru": "В библиотеке",
-          "name_en": "Library"
+          "name_ru": "Библиотека (домашняя)",
+          "name_en": "Library (home)"
+        },
+        {
+          "tag": "office",
+          "name_ru": "Кабинет (домашний)",
+          "name_en": "Office (home)"
+        },
+        {
+          "tag": "basement",
+          "name_ru": "Подвал",
+          "name_en": "Basement"
+        },
+        {
+          "tag": "attic",
+          "name_ru": "Чердак",
+          "name_en": "Attic"
+        },
+        {
+          "tag": "balcony",
+          "name_ru": "Балкон",
+          "name_en": "Balcony"
+        },
+        {
+          "tag": "mansion",
+          "name_ru": "Особняк",
+          "name_en": "Mansion"
+        },
+        {
+          "tag": "apartment",
+          "name_ru": "Квартира",
+          "name_en": "Apartment"
+        },
+        {
+          "tag": "cabin",
+          "name_ru": "Хижина",
+          "name_en": "Cabin"
+        },
+        {
+          "tag": "house",
+          "name_ru": "Дом",
+          "name_en": "House"
+        }
+      ]
+    },
+    {
+      "id": "interiors_public",
+      "name_ru": "Общественные места",
+      "name_en": "Public Interiors",
+      "tags": [
+        {
+          "tag": "cafe",
+          "name_ru": "Кафе",
+          "name_en": "Cafe"
+        },
+        {
+          "tag": "restaurant",
+          "name_ru": "Ресторан",
+          "name_en": "Restaurant"
+        },
+        {
+          "tag": "bar",
+          "name_ru": "Бар",
+          "name_en": "Bar"
+        },
+        {
+          "tag": "nightclub",
+          "name_ru": "Ночной клуб",
+          "name_en": "Nightclub"
+        },
+        {
+          "tag": "school",
+          "name_ru": "Школа",
+          "name_en": "School"
+        },
+        {
+          "tag": "classroom",
+          "name_ru": "Классная комната",
+          "name_en": "Classroom"
+        },
+        {
+          "tag": "hallway",
+          "name_ru": "Коридор",
+          "name_en": "Hallway"
+        },
+        {
+          "tag": "gym",
+          "name_ru": "Спортзал",
+          "name_en": "Gym"
+        },
+        {
+          "tag": "hospital",
+          "name_ru": "Больница",
+          "name_en": "Hospital"
+        },
+        {
+          "tag": "shop",
+          "name_ru": "Магазин",
+          "name_en": "Shop"
+        },
+        {
+          "tag": "shopping mall",
+          "name_ru": "Торговый центр",
+          "name_en": "Shopping Mall"
+        },
+        {
+          "tag": "museum",
+          "name_ru": "Музей",
+          "name_en": "Museum"
+        },
+        {
+          "tag": "art gallery",
+          "name_ru": "Арт-галерея",
+          "name_en": "Art Gallery"
+        },
+        {
+          "tag": "theater",
+          "name_ru": "Театр",
+          "name_en": "Theater"
+        },
+        {
+          "tag": "concert hall",
+          "name_ru": "Концертный зал",
+          "name_en": "Concert Hall"
+        },
+        {
+          "tag": "airport",
+          "name_ru": "Аэропорт",
+          "name_en": "Airport"
+        },
+        {
+          "tag": "train station",
+          "name_ru": "Вокзал",
+          "name_en": "Train Station"
+        },
+        {
+          "tag": "subway",
+          "name_ru": "Метро",
+          "name_en": "Subway"
+        },
+        {
+          "tag": "hotel room",
+          "name_ru": "Номер в отеле",
+          "name_en": "Hotel Room"
+        },
+        {
+          "tag": "swimming pool",
+          "name_ru": "Бассейн",
+          "name_en": "Swimming Pool"
+        },
+        {
+          "tag": "onsen",
+          "name_ru": "Онсэн",
+          "name_en": "Onsen"
+        }
+      ]
+    },
+    {
+      "id": "fantasy_scifi_locations",
+      "name_ru": "Фэнтези и НФ",
+      "name_en": "Fantasy & Sci-Fi",
+      "tags": [
+        {
+          "tag": "castle",
+          "name_ru": "Замок",
+          "name_en": "Castle"
+        },
+        {
+          "tag": "throne room",
+          "name_ru": "Тронный зал",
+          "name_en": "Throne Room"
+        },
+        {
+          "tag": "dungeon",
+          "name_ru": "Подземелье",
+          "name_en": "Dungeon"
+        },
+        {
+          "tag": "wizard's tower",
+          "name_ru": "Башня волшебника",
+          "name_en": "Wizard's Tower"
+        },
+        {
+          "tag": "temple",
+          "name_ru": "Храм",
+          "name_en": "Temple"
+        },
+        {
+          "tag": "shrine",
+          "name_ru": "Святилище",
+          "name_en": "Shrine"
+        },
+        {
+          "tag": "church",
+          "name_ru": "Церковь",
+          "name_en": "Church"
+        },
+        {
+          "tag": "cathedral",
+          "name_ru": "Собор",
+          "name_en": "Cathedral"
+        },
+        {
+          "tag": "ancient ruins",
+          "name_ru": "Древние руины",
+          "name_en": "Ancient Ruins"
+        },
+        {
+          "tag": "floating island",
+          "name_ru": "Летающий остров",
+          "name_en": "Floating Island"
         },
         {
           "tag": "spaceship interior",
@@ -76,16 +656,61 @@
           "name_en": "Spaceship Interior"
         },
         {
-          "tag": "castle",
-          "name_ru": "Замок",
-          "name_en": "Castle"
+          "tag": "spaceship bridge",
+          "name_ru": "Капитанский мостик",
+          "name_en": "Spaceship Bridge"
+        },
+        {
+          "tag": "cockpit",
+          "name_ru": "Кабина пилота",
+          "name_en": "Cockpit"
+        },
+        {
+          "tag": "hangar",
+          "name_ru": "Ангар",
+          "name_en": "Hangar"
+        },
+        {
+          "tag": "laboratory",
+          "name_ru": "Лаборатория",
+          "name_en": "Laboratory"
+        },
+        {
+          "tag": "factory",
+          "name_ru": "Завод",
+          "name_en": "Factory"
+        },
+        {
+          "tag": "power plant",
+          "name_ru": "Электростанция",
+          "name_en": "Power Plant"
+        },
+        {
+          "tag": "bunker",
+          "name_ru": "Бункер",
+          "name_en": "Bunker"
+        },
+        {
+          "tag": "alien world",
+          "name_ru": "Инопланетный мир",
+          "name_en": "Alien World"
+        },
+        {
+          "tag": "hell",
+          "name_ru": "Ад",
+          "name_en": "Hell"
+        },
+        {
+          "tag": "heaven",
+          "name_ru": "Рай",
+          "name_en": "Heaven"
         }
       ]
     },
     {
-      "id": "time_weather",
-      "name_ru": "Время и Погода",
-      "name_en": "Time & Weather",
+      "id": "time_of_day",
+      "name_ru": "Время суток",
+      "name_en": "Time of Day",
       "tags": [
         {
           "tag": "day",
@@ -98,9 +723,66 @@
           "name_en": "Night"
         },
         {
+          "tag": "sunrise",
+          "name_ru": "Рассвет",
+          "name_en": "Sunrise"
+        },
+        {
+          "tag": "sunset",
+          "name_ru": "Закат",
+          "name_en": "Sunset"
+        },
+        {
+          "tag": "dawn",
+          "name_ru": "Утренняя заря",
+          "name_en": "Dawn"
+        },
+        {
+          "tag": "dusk",
+          "name_ru": "Сумерки",
+          "name_en": "Dusk"
+        },
+        {
           "tag": "golden hour",
           "name_ru": "Золотой час",
           "name_en": "Golden Hour"
+        },
+        {
+          "tag": "blue hour",
+          "name_ru": "Синий час",
+          "name_en": "Blue Hour"
+        },
+        {
+          "tag": "midday",
+          "name_ru": "Полдень",
+          "name_en": "Midday"
+        },
+        {
+          "tag": "midnight",
+          "name_ru": "Полночь",
+          "name_en": "Midnight"
+        }
+      ]
+    },
+    {
+      "id": "weather",
+      "name_ru": "Погода",
+      "name_en": "Weather",
+      "tags": [
+        {
+          "tag": "sunny",
+          "name_ru": "Солнечно",
+          "name_en": "Sunny"
+        },
+        {
+          "tag": "cloudy",
+          "name_ru": "Облачно",
+          "name_en": "Cloudy"
+        },
+        {
+          "tag": "overcast",
+          "name_ru": "Пасмурно",
+          "name_en": "Overcast"
         },
         {
           "tag": "rain",
@@ -108,9 +790,14 @@
           "name_en": "Rain"
         },
         {
-          "tag": "snow",
-          "name_ru": "Снег",
-          "name_en": "Snow"
+          "tag": "heavy rain",
+          "name_ru": "Ливень",
+          "name_en": "Heavy Rain"
+        },
+        {
+          "tag": "drizzle",
+          "name_ru": "Морось",
+          "name_en": "Drizzle"
         },
         {
           "tag": "storm",
@@ -118,26 +805,81 @@
           "name_en": "Storm"
         },
         {
-          "tag": "sunny",
-          "name_ru": "Солнечно",
-          "name_en": "Sunny"
+          "tag": "thunderstorm",
+          "name_ru": "Гроза",
+          "name_en": "Thunderstorm"
+        },
+        {
+          "tag": "lightning",
+          "name_ru": "Молния",
+          "name_en": "Lightning"
+        },
+        {
+          "tag": "snow",
+          "name_ru": "Снег",
+          "name_en": "Snow"
+        },
+        {
+          "tag": "blizzard",
+          "name_ru": "Метель",
+          "name_en": "Blizzard"
+        },
+        {
+          "tag": "fog",
+          "name_ru": "Туман",
+          "name_en": "Fog"
+        },
+        {
+          "tag": "mist",
+          "name_ru": "Дымка",
+          "name_en": "Mist"
+        },
+        {
+          "tag": "windy",
+          "name_ru": "Ветрено",
+          "name_en": "Windy"
+        },
+        {
+          "tag": "hail",
+          "name_ru": "Град",
+          "name_en": "Hail"
+        },
+        {
+          "tag": "rainbow",
+          "name_ru": "Радуга",
+          "name_en": "Rainbow"
         }
       ]
     },
     {
-      "id": "background",
-      "name_ru": "Детали фона",
-      "name_en": "Background Details",
+      "id": "background_effects",
+      "name_ru": "Фон и Эффекты",
+      "name_en": "Background & Effects",
       "tags": [
-        {
-          "tag": "blurry background",
-          "name_ru": "Размытый фон",
-          "name_en": "Blurry Background"
-        },
         {
           "tag": "simple background",
           "name_ru": "Простой фон",
           "name_en": "Simple Background"
+        },
+        {
+          "tag": "white background",
+          "name_ru": "Белый фон",
+          "name_en": "White Background"
+        },
+        {
+          "tag": "black background",
+          "name_ru": "Черный фон",
+          "name_en": "Black Background"
+        },
+        {
+          "tag": "gray background",
+          "name_ru": "Серый фон",
+          "name_en": "Gray Background"
+        },
+        {
+          "tag": "blurry background",
+          "name_ru": "Размытый фон",
+          "name_en": "Blurry Background"
         },
         {
           "tag": "detailed background",
@@ -148,6 +890,138 @@
           "tag": "out of focus",
           "name_ru": "Не в фокусе",
           "name_en": "Out of Focus"
+        },
+        {
+          "tag": "bokeh",
+          "name_ru": "Боке",
+          "name_en": "Bokeh"
+        },
+        {
+          "tag": "fire",
+          "name_ru": "Огонь",
+          "name_en": "Fire"
+        },
+        {
+          "tag": "fireworks",
+          "name_ru": "Фейерверк",
+          "name_en": "Fireworks"
+        },
+        {
+          "tag": "smoke",
+          "name_ru": "Дым",
+          "name_en": "Smoke"
+        },
+        {
+          "tag": "embers",
+          "name_ru": "Угли / Искры",
+          "name_en": "Embers"
+        },
+        {
+          "tag": "falling leaves",
+          "name_ru": "Падающие листья",
+          "name_en": "Falling Leaves"
+        },
+        {
+          "tag": "falling petals",
+          "name_ru": "Падающие лепестки",
+          "name_en": "Falling Petals"
+        },
+        {
+          "tag": "cherry blossoms",
+          "name_ru": "Цветы сакуры",
+          "name_en": "Cherry Blossoms"
+        }
+      ]
+    },
+    {
+      "id": "locations_nsfw",
+      "name_ru": "Локации (18+)",
+      "name_en": "Locations (18+)",
+      "tags": [
+        {
+          "tag": "on a bed",
+          "name_ru": "На кровати",
+          "name_en": "On a Bed"
+        },
+        {
+          "tag": "in a shower",
+          "name_ru": "В душе",
+          "name_en": "In a Shower"
+        },
+        {
+          "tag": "on a couch",
+          "name_ru": "На диване",
+          "name_en": "On a Couch"
+        },
+        {
+          "tag": "on the floor",
+          "name_ru": "На полу",
+          "name_en": "On the Floor"
+        },
+        {
+          "tag": "against a wall",
+          "name_ru": "У стены",
+          "name_en": "Against a Wall"
+        },
+        {
+          "tag": "on a table",
+          "name_ru": "На столе",
+          "name_en": "On a Table"
+        },
+        {
+          "tag": "love hotel",
+          "name_ru": "Лав-отель",
+          "name_en": "Love Hotel"
+        },
+        {
+          "tag": "brothel",
+          "name_ru": "Бордель",
+          "name_en": "Brothel"
+        },
+        {
+          "tag": "dungeon (bdsm)",
+          "name_ru": "Подземелье (БДСМ)",
+          "name_en": "Dungeon (BDSM)"
+        },
+        {
+          "tag": "glory hole",
+          "name_ru": "Glory Hole",
+          "name_en": "Glory Hole"
+        },
+        {
+          "tag": "sex club",
+          "name_ru": "Секс-клуб",
+          "name_en": "Sex Club"
+        },
+        {
+          "tag": "public bathroom",
+          "name_ru": "Общественный туалет",
+          "name_en": "Public Bathroom"
+        },
+        {
+          "tag": "changing room",
+          "name_ru": "Примерочная",
+          "name_en": "Changing Room"
+        },
+        {
+          "tag": "locker room",
+          "name_ru": "Раздевалка",
+          "name_en": "Locker Room"
+        },
+        {
+          "tag": "in a car",
+          "name_ru": "В машине",
+          "name_en": "In a Car"
+        },
+        {
+          "tag": "public",
+          "name_ru": "В общественном месте",
+          "name_en": "Public"
+        },
+        {
+          "tag": "exhibitionism",
+          "name_ru": "Эксгибиционизм",
+          "name_en": "Exhibitionism"
         }
       ]
     }

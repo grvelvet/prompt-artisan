@@ -5,8 +5,8 @@
   "subcategories": [
     {
       "id": "full_outfits",
-      "name_ru": "Костюмы",
-      "name_en": "Outfits",
+      "name_ru": "Костюмы и Униформа",
+      "name_en": "Outfits & Uniforms",
       "tags": [
         {
           "tag": "fantasy armor",
@@ -19,14 +19,49 @@
           "name_en": "Sci-fi Suit"
         },
         {
+          "tag": "cyberpunk outfit",
+          "name_ru": "Киберпанк-наряд",
+          "name_en": "Cyberpunk Outfit"
+        },
+        {
+          "tag": "steampunk outfit",
+          "name_ru": "Стимпанк-наряд",
+          "name_en": "Steampunk Outfit"
+        },
+        {
+          "tag": "post-apocalyptic gear",
+          "name_ru": "Постапокалиптическая одежда",
+          "name_en": "Post-apocalyptic Gear"
+        },
+        {
           "tag": "school uniform",
           "name_ru": "Школьная форма",
           "name_en": "School Uniform"
         },
         {
-          "tag": "wedding dress",
-          "name_ru": "Свадебное платье",
-          "name_en": "Wedding Dress"
+          "tag": "sailor uniform",
+          "name_ru": "Матроска",
+          "name_en": "Sailor Uniform"
+        },
+        {
+          "tag": "cheerleader uniform",
+          "name_ru": "Форма чирлидерши",
+          "name_en": "Cheerleader Uniform"
+        },
+        {
+          "tag": "military uniform",
+          "name_ru": "Военная форма",
+          "name_en": "Military Uniform"
+        },
+        {
+          "tag": "nurse uniform",
+          "name_ru": "Форма медсестры",
+          "name_en": "Nurse Uniform"
+        },
+        {
+          "tag": "maid outfit",
+          "name_ru": "Наряд горничной",
+          "name_en": "Maid Outfit"
         },
         {
           "tag": "business suit",
@@ -34,26 +69,171 @@
           "name_en": "Business Suit"
         },
         {
+          "tag": "wedding dress",
+          "name_ru": "Свадебное платье",
+          "name_en": "Wedding Dress"
+        },
+        {
+          "tag": "ball gown",
+          "name_ru": "Бальное платье",
+          "name_en": "Ball Gown"
+        },
+        {
+          "tag": "cocktail dress",
+          "name_ru": "Коктейльное платье",
+          "name_en": "Cocktail Dress"
+        },
+        {
           "tag": "kimono",
           "name_ru": "Кимоно",
           "name_en": "Kimono"
         },
         {
+          "tag": "yukata",
+          "name_ru": "Юката",
+          "name_en": "Yukata"
+        },
+        {
+          "tag": "qipao",
+          "name_ru": "Ципао",
+          "name_en": "Qipao (Cheongsam)"
+        },
+        {
+          "tag": "hanfu",
+          "name_ru": "Ханьфу",
+          "name_en": "Hanfu"
+        },
+        {
+          "tag": "sari",
+          "name_ru": "Сари",
+          "name_en": "Sari"
+        },
+        {
           "tag": "gothic lolita",
           "name_ru": "Готическая лолита",
           "name_en": "Gothic Lolita"
+        },
+        {
+          "tag": "sweet lolita",
+          "name_ru": "Сладкая лолита",
+          "name_en": "Sweet Lolita"
+        },
+        {
+          "tag": "witch outfit",
+          "name_ru": "Наряд ведьмы",
+          "name_en": "Witch Outfit"
+        },
+        {
+          "tag": "vampire attire",
+          "name_ru": "Одежда вампира",
+          "name_en": "Vampire Attire"
+        },
+        {
+          "tag": "priestess outfit",
+          "name_ru": "Одеяние жрицы",
+          "name_en": "Priestess Outfit"
+        },
+        {
+          "tag": "gym uniform",
+          "name_ru": "Спортивная форма",
+          "name_en": "Gym Uniform"
+        },
+        {
+          "tag": "tracksuit",
+          "name_ru": "Спортивный костюм",
+          "name_en": "Tracksuit"
+        },
+        {
+          "tag": "leotard",
+          "name_ru": "Купальник (гимнастический)",
+          "name_en": "Leotard"
+        },
+        {
+          "tag": "bodysuit",
+          "name_ru": "Боди",
+          "name_en": "Bodysuit"
+        },
+        {
+          "tag": "catsuit",
+          "name_ru": "Кэтсьют",
+          "name_en": "Catsuit"
+        },
+        {
+          "tag": "jumpsuit",
+          "name_ru": "Комбинезон",
+          "name_en": "Jumpsuit"
+        },
+        {
+          "tag": "wetsuit",
+          "name_ru": "Гидрокостюм",
+          "name_en": "Wetsuit"
+        },
+        {
+          "tag": "pilot suit",
+          "name_ru": "Костюм пилота",
+          "name_en": "Pilot Suit"
+        },
+        {
+          "tag": "astronaut suit",
+          "name_ru": "Скафандр",
+          "name_en": "Astronaut Suit"
         }
       ]
     },
     {
-      "id": "clothing_items",
-      "name_ru": "Предметы одежды",
-      "name_en": "Clothing Items",
+      "id": "clothing_upper",
+      "name_ru": "Верхняя одежда",
+      "name_en": "Tops & Upper Body",
       "tags": [
+        {
+          "tag": "shirt",
+          "name_ru": "Рубашка",
+          "name_en": "Shirt"
+        },
+        {
+          "tag": "t-shirt",
+          "name_ru": "Футболка",
+          "name_en": "T-shirt"
+        },
+        {
+          "tag": "blouse",
+          "name_ru": "Блузка",
+          "name_en": "Blouse"
+        },
         {
           "tag": "hoodie",
           "name_ru": "Толстовка (худи)",
           "name_en": "Hoodie"
+        },
+        {
+          "tag": "sweater",
+          "name_ru": "Свитер",
+          "name_en": "Sweater"
+        },
+        {
+          "tag": "turtleneck",
+          "name_ru": "Водолазка",
+          "name_en": "Turtleneck"
+        },
+        {
+          "tag": "tank top",
+          "name_ru": "Майка",
+          "name_en": "Tank Top"
+        },
+        {
+          "tag": "crop top",
+          "name_ru": "Кроп-топ",
+          "name_en": "Crop Top"
+        },
+        {
+          "tag": "corset",
+          "name_ru": "Корсет",
+          "name_en": "Corset"
+        },
+        {
+          "tag": "bustier",
+          "name_ru": "Бюстье",
+          "name_en": "Bustier"
         },
         {
           "tag": "jacket",
@@ -61,9 +241,101 @@
           "name_en": "Jacket"
         },
         {
+          "tag": "leather jacket",
+          "name_ru": "Кожаная куртка",
+          "name_en": "Leather Jacket"
+        },
+        {
+          "tag": "denim jacket",
+          "name_ru": "Джинсовая куртка",
+          "name_en": "Denim Jacket"
+        },
+        {
+          "tag": "bomber jacket",
+          "name_ru": "Бомбер",
+          "name_en": "Bomber Jacket"
+        },
+        {
+          "tag": "coat",
+          "name_ru": "Пальто",
+          "name_en": "Coat"
+        },
+        {
+          "tag": "trench coat",
+          "name_ru": "Тренч",
+          "name_en": "Trench Coat"
+        },
+        {
+          "tag": "cape",
+          "name_ru": "Накидка / Плащ",
+          "name_en": "Cape"
+        },
+        {
+          "tag": "cloak",
+          "name_ru": "Плащ с капюшоном",
+          "name_en": "Cloak"
+        },
+        {
+          "tag": "poncho",
+          "name_ru": "Пончо",
+          "name_en": "Poncho"
+        },
+        {
+          "tag": "vest",
+          "name_ru": "Жилет",
+          "name_en": "Vest"
+        },
+        {
+          "tag": "cardigan",
+          "name_ru": "Кардиган",
+          "name_en": "Cardigan"
+        },
+        {
+          "tag": "open shirt",
+          "name_ru": "Расстегнутая рубашка",
+          "name_en": "Open Shirt"
+        },
+        {
+          "tag": "off-shoulder",
+          "name_ru": "С открытыми плечами",
+          "name_en": "Off-shoulder"
+        },
+        {
+          "tag": "strapless",
+          "name_ru": "Без бретелек",
+          "name_en": "Strapless"
+        }
+      ]
+    },
+    {
+      "id": "clothing_lower",
+      "name_ru": "Нижняя часть тела",
+      "name_en": "Bottoms & Lower Body",
+      "tags": [
+        {
+          "tag": "pants",
+          "name_ru": "Штаны",
+          "name_en": "Pants"
+        },
+        {
           "tag": "jeans",
           "name_ru": "Джинсы",
           "name_en": "Jeans"
+        },
+        {
+          "tag": "shorts",
+          "name_ru": "Шорты",
+          "name_en": "Shorts"
+        },
+        {
+          "tag": "bike shorts",
+          "name_ru": "Велосипедки",
+          "name_en": "Bike Shorts"
+        },
+        {
+          "tag": "short shorts",
+          "name_ru": "Короткие шорты",
+          "name_en": "Short Shorts"
         },
         {
           "tag": "skirt",
@@ -71,9 +343,196 @@
           "name_en": "Skirt"
         },
         {
+          "tag": "miniskirt",
+          "name_ru": "Мини-юбка",
+          "name_en": "Miniskirt"
+        },
+        {
+          "tag": "pleated skirt",
+          "name_ru": "Плиссированная юбка",
+          "name_en": "Pleated Skirt"
+        },
+        {
+          "tag": "pencil skirt",
+          "name_ru": "Юбка-карандаш",
+          "name_en": "Pencil Skirt"
+        },
+        {
+          "tag": "long skirt",
+          "name_ru": "Длинная юбка",
+          "name_en": "Long Skirt"
+        },
+        {
           "tag": "dress",
           "name_ru": "Платье",
           "name_en": "Dress"
+        },
+        {
+          "tag": "sundress",
+          "name_ru": "Сарафан",
+          "name_en": "Sundress"
+        },
+        {
+          "tag": "backless dress",
+          "name_ru": "Платье с открытой спиной",
+          "name_en": "Backless Dress"
+        },
+        {
+          "tag": "leggings",
+          "name_ru": "Леггинсы",
+          "name_en": "Leggings"
+        },
+        {
+          "tag": "yoga pants",
+          "name_ru": "Штаны для йоги",
+          "name_en": "Yoga Pants"
+        },
+        {
+          "tag": "trousers",
+          "name_ru": "Брюки",
+          "name_en": "Trousers"
+        },
+        {
+          "tag": "cargo pants",
+          "name_ru": "Штаны карго",
+          "name_en": "Cargo Pants"
+        },
+        {
+          "tag": "hakama",
+          "name_ru": "Хакама",
+          "name_en": "Hakama"
+        },
+        {
+          "tag": "sarong",
+          "name_ru": "Саронг",
+          "name_en": "Sarong"
+        }
+      ]
+    },
+    {
+      "id": "footwear_headwear",
+      "name_ru": "Обувь и Головные уборы",
+      "name_en": "Footwear & Headwear",
+      "tags": [
+        {
+          "tag": "boots",
+          "name_ru": "Ботинки / Сапоги",
+          "name_en": "Boots"
+        },
+        {
+          "tag": "knee-high boots",
+          "name_ru": "Сапоги до колен",
+          "name_en": "Knee-high Boots"
+        },
+        {
+          "tag": "thigh-high boots",
+          "name_ru": "Ботфорты",
+          "name_en": "Thigh-high Boots"
+        },
+        {
+          "tag": "combat boots",
+          "name_ru": "Армейские ботинки",
+          "name_en": "Combat Boots"
+        },
+        {
+          "tag": "high heels",
+          "name_ru": "Высокие каблуки",
+          "name_en": "High Heels"
+        },
+        {
+          "tag": "sneakers",
+          "name_ru": "Кроссовки",
+          "name_en": "Sneakers"
+        },
+        {
+          "tag": "sandals",
+          "name_ru": "Сандалии",
+          "name_en": "Sandals"
+        },
+        {
+          "tag": "slippers",
+          "name_ru": "Тапочки",
+          "name_en": "Slippers"
+        },
+        {
+          "tag": "loafers",
+          "name_ru": "Лоферы",
+          "name_en": "Loafers"
+        },
+        {
+          "tag": "geta",
+          "name_ru": "Гэта (японские сандалии)",
+          "name_en": "Geta"
+        },
+        {
+          "tag": "hat",
+          "name_ru": "Шляпа",
+          "name_en": "Hat"
+        },
+        {
+          "tag": "wide-brimmed hat",
+          "name_ru": "Широкополая шляпа",
+          "name_en": "Wide-brimmed Hat"
+        },
+        {
+          "tag": "cap",
+          "name_ru": "Кепка",
+          "name_en": "Cap"
+        },
+        {
+          "tag": "baseball cap",
+          "name_ru": "Бейсболка",
+          "name_en": "Baseball Cap"
+        },
+        {
+          "tag": "beanie",
+          "name_ru": "Шапка-бини",
+          "name_en": "Beanie"
+        },
+        {
+          "tag": "beret",
+          "name_ru": "Берет",
+          "name_en": "Beret"
+        },
+        {
+          "tag": "helmet",
+          "name_ru": "Шлем",
+          "name_en": "Helmet"
+        },
+        {
+          "tag": "crown",
+          "name_ru": "Корона",
+          "name_en": "Crown"
+        },
+        {
+          "tag": "tiara",
+          "name_ru": "Тиара",
+          "name_en": "Tiara"
+        },
+        {
+          "tag": "hood",
+          "name_ru": "Капюшон",
+          "name_en": "Hood"
+        },
+        {
+          "tag": "veil",
+          "name_ru": "Вуаль",
+          "name_en": "Veil"
+        },
+        {
+          "tag": "headband",
+          "name_ru": "Повязка на голову",
+          "name_en": "Headband"
+        },
+        {
+          "tag": "hair ornament",
+          "name_ru": "Украшение для волос",
+          "name_en": "Hair Ornament"
+        },
+        {
+          "tag": "hair ribbon",
+          "name_ru": "Лента в волосах",
+          "name_en": "Hair Ribbon"
         }
       ]
     },
@@ -86,6 +545,31 @@
           "tag": "glasses",
           "name_ru": "Очки",
           "name_en": "Glasses"
+        },
+        {
+          "tag": "sunglasses",
+          "name_ru": "Солнцезащитные очки",
+          "name_en": "Sunglasses"
+        },
+        {
+          "tag": "eyepatch",
+          "name_ru": "Повязка на глаз",
+          "name_en": "Eyepatch"
+        },
+        {
+          "tag": "mask",
+          "name_ru": "Маска",
+          "name_en": "Mask"
+        },
+        {
+          "tag": "fox mask",
+          "name_ru": "Маска лисы (кицунэ)",
+          "name_en": "Fox Mask"
+        },
+        {
+          "tag": "gas mask",
+          "name_ru": "Противогаз",
+          "name_en": "Gas Mask"
         },
         {
           "tag": "necklace",
@@ -103,16 +587,126 @@
           "name_en": "Earrings"
         },
         {
+          "tag": "bracelet",
+          "name_ru": "Браслет",
+          "name_en": "Bracelet"
+        },
+        {
+          "tag": "ring",
+          "name_ru": "Кольцо",
+          "name_en": "Ring"
+        },
+        {
+          "tag": "gloves",
+          "name_ru": "Перчатки",
+          "name_en": "Gloves"
+        },
+        {
+          "tag": "fingerless gloves",
+          "name_ru": "Перчатки без пальцев",
+          "name_en": "Fingerless Gloves"
+        },
+        {
+          "tag": "scarf",
+          "name_ru": "Шарф",
+          "name_en": "Scarf"
+        },
+        {
+          "tag": "tie",
+          "name_ru": "Галстук",
+          "name_en": "Tie"
+        },
+        {
+          "tag": "bowtie",
+          "name_ru": "Галстук-бабочка",
+          "name_en": "Bowtie"
+        },
+        {
+          "tag": "belt",
+          "name_ru": "Ремень",
+          "name_en": "Belt"
+        },
+        {
+          "tag": "sash",
+          "name_ru": "Пояс / Кушак",
+          "name_en": "Sash"
+        },
+        {
+          "tag": "obi",
+          "name_ru": "Оби (пояс для кимоно)",
+          "name_en": "Obi"
+        },
+        {
+          "tag": "backpack",
+          "name_ru": "Рюкзак",
+          "name_en": "Backpack"
+        },
+        {
+          "tag": "handbag",
+          "name_ru": "Сумка",
+          "name_en": "Handbag"
+        },
+        {
           "tag": "headphones",
           "name_ru": "Наушники",
           "name_en": "Headphones"
+        },
+        {
+          "tag": "wings",
+          "name_ru": "Крылья",
+          "name_en": "Wings"
+        },
+        {
+          "tag": "angel wings",
+          "name_ru": "Ангельские крылья",
+          "name_en": "Angel Wings"
+        },
+        {
+          "tag": "demon wings",
+          "name_ru": "Демонические крылья",
+          "name_en": "Demon Wings"
+        },
+        {
+          "tag": "halo",
+          "name_ru": "Нимб",
+          "name_en": "Halo"
+        },
+        {
+          "tag": "sword",
+          "name_ru": "Меч",
+          "name_en": "Sword"
+        },
+        {
+          "tag": "katana",
+          "name_ru": "Катана",
+          "name_en": "Katana"
+        },
+        {
+          "tag": "gun",
+          "name_ru": "Пистолет",
+          "name_en": "Gun"
+        },
+        {
+          "tag": "rifle",
+          "name_ru": "Винтовка",
+          "name_en": "Rifle"
+        },
+        {
+          "tag": "staff",
+          "name_ru": "Посох",
+          "name_en": "Staff"
+        },
+        {
+          "tag": "book",
+          "name_ru": "Книга",
+          "name_en": "Book"
         }
       ]
     },
     {
-      "id": "clothing_nsfw",
-      "name_ru": "Одежда (18+)",
-      "name_en": "Clothing (18+)",
+      "id": "lingerie_nsfw",
+      "name_ru": "Нижнее белье (18+)",
+      "name_en": "Lingerie (18+)",
       "tags": [
         {
           "tag": "lingerie",
@@ -120,8 +714,88 @@
           "name_en": "Lingerie"
         },
         {
-          "tag": "thighhighs",
+          "tag": "bra",
+          "name_ru": "Бюстгальтер",
+          "name_en": "Bra"
+        },
+        {
+          "tag": "panties",
+          "name_ru": "Трусики",
+          "name_en": "Panties"
+        },
+        {
+          "tag": "thong",
+          "name_ru": "Стринги",
+          "name_en": "Thong"
+        },
+        {
+          "tag": "g-string",
+          "name_ru": "G-стринги",
+          "name_en": "G-string"
+        },
+        {
+          "tag": "micro bikini",
+          "name_ru": "Микро-бикини",
+          "name_en": "Micro Bikini"
+        },
+        {
+          "tag": "slingshot bikini",
+          "name_ru": "Бикини-катапульта",
+          "name_en": "Slingshot Bikini"
+        },
+        {
+          "tag": "bikini",
+          "name_ru": "Бикини",
+          "name_en": "Bikini"
+        },
+        {
+          "tag": "swimsuit",
+          "name_ru": "Купальник",
+          "name_en": "Swimsuit"
+        },
+        {
+          "tag": "one-piece swimsuit",
+          "name_ru": "Слитный купальник",
+          "name_en": "One-piece Swimsuit"
+        },
+        {
+          "tag": "babydoll",
+          "name_ru": "Пеньюар",
+          "name_en": "Babydoll"
+        },
+        {
+          "tag": "chemise",
+          "name_ru": "Комбинация",
+          "name_en": "Chemise"
+        },
+        {
+          "tag": "teddy",
+          "name_ru": "Тедди (белье)",
+          "name_en": "Teddy Lingerie"
+        },
+        {
+          "tag": "negligee",
+          "name_ru": "Неглиже",
+          "name_en": "Negligee"
+        },
+        {
+          "tag": "garter belt",
+          "name_ru": "Пояс для чулок",
+          "name_en": "Garter Belt"
+        },
+        {
+          "tag": "garters",
+          "name_ru": "Подвязки",
+          "name_en": "Garters"
+        },
+        {
+          "tag": "stockings",
           "name_ru": "Чулки",
+          "name_en": "Stockings"
+        },
+        {
+          "tag": "thighhighs",
+          "name_ru": "Чулки выше колена",
           "name_en": "Thighhighs"
         },
         {
@@ -130,9 +804,41 @@
           "name_en": "Pantyhose"
         },
         {
-          "tag": "see-through clothes",
-          "name_ru": "Просвечивающая одежда",
-          "name_en": "See-through Clothes"
+          "tag": "fishnet stockings",
+          "name_ru": "Чулки в сетку",
+          "name_en": "Fishnet Stockings"
+        },
+        {
+          "tag": "fishnet pantyhose",
+          "name_ru": "Колготки в сетку",
+          "name_en": "Fishnet Pantyhose"
+        },
+        {
+          "tag": "fundoshi",
+          "name_ru": "Фундоси",
+          "name_en": "Fundoshi"
+        },
+        {
+          "tag": "sarashi",
+          "name_ru": "Сараси (обмотка груди)",
+          "name_en": "Sarashi"
+        }
+      ]
+    },
+    {
+      "id": "revealing_nsfw",
+      "name_ru": "Откровенная одежда (18+)",
+      "name_en": "Revealing Clothing (18+)",
+      "tags": [
+        {
+          "tag": "see-through",
+          "name_ru": "Просвечивающее",
+          "name_en": "See-through"
+        },
+        {
+          "tag": "sheer clothes",
+          "name_ru": "Прозрачная одежда",
+          "name_en": "Sheer Clothes"
         },
         {
           "tag": "wet clothes",
@@ -140,16 +846,178 @@
           "name_en": "Wet Clothes"
         },
         {
+          "tag": "shirt lift",
+          "name_ru": "Задранная рубашка",
+          "name_en": "Shirt Lift"
+        },
+        {
+          "tag": "skirt lift",
+          "name_ru": "Задранная юбка",
+          "name_en": "Skirt Lift"
+        },
+        {
           "tag": "panty shot",
           "name_ru": "Панцушот",
           "name_en": "Panty Shot"
+        },
+        {
+          "tag": "cleavage",
+          "name_ru": "Декольте",
+          "name_en": "Cleavage"
+        },
+        {
+          "tag": "deep cleavage",
+          "name_ru": "Глубокое декольте",
+          "name_en": "Deep Cleavage"
+        },
+        {
+          "tag": "sideboob",
+          "name_ru": "Грудь сбоку",
+          "name_en": "Sideboob"
+        },
+        {
+          "tag": "underboob",
+          "name_ru": "Грудь снизу",
+          "name_en": "Underboob"
+        },
+        {
+          "tag": "cleavage cutout",
+          "name_ru": "Вырез на груди",
+          "name_en": "Cleavage Cutout"
+        },
+        {
+          "tag": "torn clothes",
+          "name_ru": "Рваная одежда",
+          "name_en": "Torn Clothes"
+        },
+        {
+          "tag": "strategically torn clothes",
+          "name_ru": "Стратегически рваная одежда",
+          "name_en": "Strategically Torn Clothes"
+        },
+        {
+          "tag": "undressing",
+          "name_ru": "Раздевание",
+          "name_en": "Undressing"
+        },
+        {
+          "tag": "partially clothed",
+          "name_ru": "Частично одетая",
+          "name_en": "Partially Clothed"
+        },
+        {
+          "tag": "bra lift",
+          "name_ru": "Приподнятый бюстгальтер",
+          "name_en": "Bra Lift"
+        },
+        {
+          "tag": "pasties",
+          "name_ru": "Наклейки на соски",
+          "name_en": "Pasties"
+        },
+        {
+          "tag": "bare shoulders",
+          "name_ru": "Обнаженные плечи",
+          "name_en": "Bare Shoulders"
+        },
+        {
+          "tag": "bare back",
+          "name_ru": "Обнаженная спина",
+          "name_en": "Bare Back"
+        },
+        {
+          "tag": "bare midriff",
+          "name_ru": "Обнаженный живот",
+          "name_en": "Bare Midriff"
+        },
+        {
+          "tag": "cameltoe",
+          "name_ru": "Камелто",
+          "name_en": "Cameltoe"
+        },
+        {
+          "tag": "zettai ryouiki",
+          "name_ru": "Дзэттай рёики",
+          "name_en": "Zettai Ryouiki"
         }
       ]
     },
     {
-      "id": "fetish_nsfw",
-      "name_ru": "Фетиши (18+)",
-      "name_en": "Fetishes (18+)",
+      "id": "materials_nsfw",
+      "name_ru": "Материалы (18+)",
+      "name_en": "Materials (18+)",
+      "tags": [
+        {
+          "tag": "latex",
+          "name_ru": "Латекс",
+          "name_en": "Latex"
+        },
+        {
+          "tag": "pvc",
+          "name_ru": "ПВХ (винил)",
+          "name_en": "PVC (Vinyl)"
+        },
+        {
+          "tag": "leather",
+          "name_ru": "Кожа",
+          "name_en": "Leather"
+        },
+        {
+          "tag": "wetlook",
+          "name_ru": "Эффект мокрой ткани",
+          "name_en": "Wetlook"
+        },
+        {
+          "tag": "rubber",
+          "name_ru": "Резина",
+          "name_en": "Rubber"
+        },
+        {
+          "tag": "fishnet",
+          "name_ru": "Сетка",
+          "name_en": "Fishnet"
+        },
+        {
+          "tag": "mesh",
+          "name_ru": "Мелкая сетка",
+          "name_en": "Mesh"
+        },
+        {
+          "tag": "lace",
+          "name_ru": "Кружево",
+          "name_en": "Lace"
+        },
+        {
+          "tag": "silk",
+          "name_ru": "Шелк",
+          "name_en": "Silk"
+        },
+        {
+          "tag": "satin",
+          "name_ru": "Сатин / Атлас",
+          "name_en": "Satin"
+        },
+        {
+          "tag": "spandex",
+          "name_ru": "Спандекс",
+          "name_en": "Spandex"
+        },
+        {
+          "tag": "lycra",
+          "name_ru": "Лайкра",
+          "name_en": "Lycra"
+        },
+        {
+          "tag": "shiny clothes",
+          "name_ru": "Блестящая одежда",
+          "name_en": "Shiny Clothes"
+        }
+      ]
+    },
+    {
+      "id": "restraints_nsfw",
+      "name_ru": "Бондаж и Ограничения (18+)",
+      "name_en": "Bondage & Restraints (18+)",
       "tags": [
         {
           "tag": "bondage",
@@ -162,19 +1030,216 @@
           "name_en": "Shibari"
         },
         {
+          "tag": "rope bondage",
+          "name_ru": "Веревочный бондаж",
+          "name_en": "Rope Bondage"
+        },
+        {
+          "tag": "tied up",
+          "name_ru": "Связанная",
+          "name_en": "Tied Up"
+        },
+        {
           "tag": "gagged",
           "name_ru": "С кляпом",
           "name_en": "Gagged"
         },
+        {
+          "tag": "ball gag",
+          "name_ru": "Шариковый кляп",
+          "name_en": "Ball Gag"
+        },
+        {
+          "tag": "tape gag",
+          "name_ru": "Кляп из скотча",
+          "name_en": "Tape Gag"
+        },
+        {
+          "tag": "blindfolded",
+          "name_ru": "С завязанными глазами",
+          "name_en": "Blindfolded"
+        },
+        {
+          "tag": "handcuffs",
+          "name_ru": "Наручники",
+          "name_en": "Handcuffs"
+        },
+        {
+          "tag": "cuffs",
+          "name_ru": "Оковы",
+          "name_en": "Cuffs"
+        },
+        {
+          "tag": "wrist cuffs",
+          "name_ru": "Оковы на запястьях",
+          "name_en": "Wrist Cuffs"
+        },
+        {
+          "tag": "ankle cuffs",
+          "name_ru": "Оковы на лодыжках",
+          "name_en": "Ankle Cuffs"
+        },
+        {
+          "tag": "collar",
+          "name_ru": "Ошейник",
+          "name_en": "Collar"
+        },
+        {
+          "tag": "leash",
+          "name_ru": "Поводок",
+          "name_en": "Leash"
+        },
+        {
+          "tag": "harness",
+          "name_ru": "Портупея / Сбруя",
+          "name_en": "Harness"
+        },
+        {
+          "tag": "bondage harness",
+          "name_ru": "Бондажная портупея",
+          "name_en": "Bondage Harness"
+        },
+        {
+          "tag": "straitjacket",
+          "name_ru": "Смирительная рубашка",
+          "name_en": "Straitjacket"
+        },
+        {
+          "tag": "suspended",
+          "name_ru": "Подвешенная",
+          "name_en": "Suspended"
+        },
+        {
+          "tag": "chains",
+          "name_ru": "Цепи",
+          "name_en": "Chains"
+        },
+        {
+          "tag": "yoke",
+          "name_ru": "Колодки (на шею)",
+          "name_en": "Yoke"
+        },
+        {
+          "tag": "pillory",
+          "name_ru": "Колодки (на шею и руки)",
+          "name_en": "Pillory"
+        },
+        {
+          "tag": "spiderweb bondage",
+          "name_ru": "Бондаж-паутина",
+          "name_en": "Spiderweb Bondage"
+        },
+        {
+          "tag": "hogtied",
+          "name_ru": "Связанная (Хогтай)",
+          "name_en": "Hogtied"
+        }
+      ]
+    },
+    {
+      "id": "fetish_gear_nsfw",
+      "name_ru": "Фетиш-атрибутика (18+)",
+      "name_en": "Fetish Gear (18+)",
+      "tags": [
         {
           "tag": "tentacles",
           "name_ru": "Тентакли",
           "name_en": "Tentacles"
         },
         {
-          "tag": "bondage harness",
-          "name_ru": "Портупея",
-          "name_en": "Bondage Harness"
+          "tag": "tail plug",
+          "name_ru": "Анальная пробка с хвостом",
+          "name_en": "Tail Plug"
+        },
+        {
+          "tag": "anal hook",
+          "name_ru": "Анальный крюк",
+          "name_en": "Anal Hook"
+        },
+        {
+          "tag": "vibrator",
+          "name_ru": "Вибратор",
+          "name_en": "Vibrator"
+        },
+        {
+          "tag": "dildo",
+          "name_ru": "Дилдо",
+          "name_en": "Dildo"
+        },
+        {
+          "tag": "butt plug",
+          "name_ru": "Анальная пробка",
+          "name_en": "Butt Plug"
+        },
+        {
+          "tag": "whip",
+          "name_ru": "Кнут / Плеть",
+          "name_en": "Whip"
+        },
+        {
+          "tag": "riding crop",
+          "name_ru": "Стек",
+          "name_en": "Riding Crop"
+        },
+        {
+          "tag": "paddle",
+          "name_ru": "Шлепалка (паддл)",
+          "name_en": "Paddle"
+        },
+        {
+          "tag": "chastity belt",
+          "name_ru": "Пояс верности",
+          "name_en": "Chastity Belt"
+        },
+        {
+          "tag": "speculum",
+          "name_ru": "Расширитель (спекулум)",
+          "name_en": "Speculum"
+        },
+        {
+          "tag": "syringe",
+          "name_ru": "Шприц",
+          "name_en": "Syringe"
+        },
+        {
+          "tag": "nipple clamps",
+          "name_ru": "Зажимы для сосков",
+          "name_en": "Nipple Clamps"
+        },
+        {
+          "tag": "piercing",
+          "name_ru": "Пирсинг",
+          "name_en": "Piercing"
+        },
+        {
+          "tag": "nipple piercing",
+          "name_ru": "Пирсинг сосков",
+          "name_en": "Nipple Piercing"
+        },
+        {
+          "tag": "navel piercing",
+          "name_ru": "Пирсинг пупка",
+          "name_en": "Navel Piercing"
+        },
+        {
+          "tag": "genital piercing",
+          "name_ru": "Генитальный пирсинг",
+          "name_en": "Genital Piercing"
+        },
+        {
+          "tag": "pet play",
+          "name_ru": "Пет-плей",
+          "name_en": "Pet Play"
+        },
+        {
+          "tag": "cat ears",
+          "name_ru": "Кошачьи ушки",
+          "name_en": "Cat Ears"
+        },
+        {
+          "tag": "cat tail",
+          "name_ru": "Кошачий хвост",
+          "name_en": "Cat Tail"
         }
       ]
     }

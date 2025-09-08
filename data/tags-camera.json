@@ -14,19 +14,29 @@
           "name_en": "Full Body Shot"
         },
         {
+          "tag": "wide shot",
+          "name_ru": "Широкий план",
+          "name_en": "Wide Shot"
+        },
+        {
+          "tag": "long shot",
+          "name_ru": "Общий план",
+          "name_en": "Long Shot"
+        },
+        {
+          "tag": "establishing shot",
+          "name_ru": "Установочный кадр",
+          "name_en": "Establishing Shot"
+        },
+        {
+          "tag": "upper body shot",
+          "name_ru": "По пояс",
+          "name_en": "Upper Body Shot"
+        },
+        {
           "tag": "medium shot",
           "name_ru": "Средний план",
           "name_en": "Medium Shot"
-        },
-        {
-          "tag": "close-up shot",
-          "name_ru": "Крупный план",
-          "name_en": "Close-up Shot"
-        },
-        {
-          "tag": "extreme close-up",
-          "name_ru": "Сверхкрупный план",
-          "name_en": "Extreme Close-up"
         },
         {
           "tag": "cowboy shot",
@@ -34,31 +44,106 @@
           "name_en": "Cowboy Shot"
         },
         {
-          "tag": "wide shot",
-          "name_ru": "Широкий план",
-          "name_en": "Wide Shot"
+          "tag": "portrait shot",
+          "name_ru": "Портрет",
+          "name_en": "Portrait Shot"
+        },
+        {
+          "tag": "close-up shot",
+          "name_ru": "Крупный план",
+          "name_en": "Close-up Shot"
+        },
+        {
+          "tag": "face shot",
+          "name_ru": "План лица",
+          "name_en": "Face Shot"
+        },
+        {
+          "tag": "extreme close-up",
+          "name_ru": "Сверхкрупный план",
+          "name_en": "Extreme Close-up"
+        },
+        {
+          "tag": "detail shot",
+          "name_ru": "Детальный кадр",
+          "name_en": "Detail Shot"
+        },
+        {
+          "tag": "two-shot",
+          "name_ru": "Кадр на двоих",
+          "name_en": "Two-shot"
+        },
+        {
+          "tag": "group shot",
+          "name_ru": "Групповой снимок",
+          "name_en": "Group Shot"
+        },
+        {
+          "tag": "over-the-shoulder shot",
+          "name_ru": "Съемка из-за плеча",
+          "name_en": "Over-the-shoulder Shot"
         }
       ]
     },
     {
       "id": "camera_angle",
-      "name_ru": "Угол камеры (Ракурс)",
+      "name_ru": "Ракурс (Угол камеры)",
       "name_en": "Camera Angle",
       "tags": [
-        {
-          "tag": "from below",
-          "name_ru": "Вид снизу",
-          "name_en": "From Below"
-        },
-        {
-          "tag": "from above",
-          "name_ru": "Вид сверху",
-          "name_en": "From Above"
-        },
         {
           "tag": "eye-level shot",
           "name_ru": "На уровне глаз",
           "name_en": "Eye-level Shot"
+        },
+        {
+          "tag": "front view",
+          "name_ru": "Вид спереди",
+          "name_en": "Front View"
+        },
+        {
+          "tag": "profile view",
+          "name_ru": "Вид в профиль",
+          "name_en": "Profile View"
+        },
+        {
+          "tag": "side view",
+          "name_ru": "Вид сбоку",
+          "name_en": "Side View"
+        },
+        {
+          "tag": "three-quarter view",
+          "name_ru": "Вид в три четверти",
+          "name_en": "Three-quarter View"
+        },
+        {
+          "tag": "from behind",
+          "name_ru": "Вид сзади",
+          "name_en": "From Behind"
+        },
+        {
+          "tag": "from below",
+          "name_ru": "Вид снизу (низкий угол)",
+          "name_en": "From Below (Low Angle)"
+        },
+        {
+          "tag": "from above",
+          "name_ru": "Вид сверху (высокий угол)",
+          "name_en": "From Above (High Angle)"
+        },
+        {
+          "tag": "bird's-eye view",
+          "name_ru": "С высоты птичьего полета",
+          "name_en": "Bird's-eye View"
+        },
+        {
+          "tag": "top-down shot",
+          "name_ru": "Строго сверху вниз",
+          "name_en": "Top-down Shot"
+        },
+        {
+          "tag": "worm's-eye view",
+          "name_ru": "С уровня земли (червяка)",
+          "name_en": "Worm's-eye View"
         },
         {
           "tag": "dutch angle",
@@ -66,21 +151,123 @@
           "name_en": "Dutch Angle"
         },
         {
-          "tag": "bird's-eye view",
-          "name_ru": "С высоты птичьего полета",
-          "name_en": "Bird's-eye View"
+          "tag": "canted angle",
+          "name_ru": "Заваленный горизонт",
+          "name_en": "Canted Angle"
+        },
+        {
+          "tag": "point of view",
+          "name_ru": "От первого лица (POV)",
+          "name_en": "Point of View (POV)"
+        },
+        {
+          "tag": "selfie",
+          "name_ru": "Селфи",
+          "name_en": "Selfie"
         }
       ]
     },
     {
-      "id": "lens_effects",
-      "name_ru": "Объектив и Эффекты",
-      "name_en": "Lens & Effects",
+      "id": "composition",
+      "name_ru": "Композиция",
+      "name_en": "Composition",
       "tags": [
+        {
+          "tag": "centered composition",
+          "name_ru": "Центрированная композиция",
+          "name_en": "Centered Composition"
+        },
+        {
+          "tag": "symmetrical composition",
+          "name_ru": "Симметричная композиция",
+          "name_en": "Symmetrical Composition"
+        },
+        {
+          "tag": "asymmetrical composition",
+          "name_ru": "Асимметричная композиция",
+          "name_en": "Asymmetrical Composition"
+        },
+        {
+          "tag": "rule of thirds",
+          "name_ru": "Правило третей",
+          "name_en": "Rule of Thirds"
+        },
+        {
+          "tag": "golden ratio",
+          "name_ru": "Золотое сечение",
+          "name_en": "Golden Ratio"
+        },
+        {
+          "tag": "leading lines",
+          "name_ru": "Ведущие линии",
+          "name_en": "Leading Lines"
+        },
+        {
+          "tag": "framing",
+          "name_ru": "Обрамление",
+          "name_en": "Framing"
+        },
+        {
+          "tag": "negative space",
+          "name_ru": "Негативное пространство",
+          "name_en": "Negative Space"
+        },
+        {
+          "tag": "diagonal composition",
+          "name_ru": "Диагональная композиция",
+          "name_en": "Diagonal Composition"
+        },
+        {
+          "tag": "dynamic composition",
+          "name_ru": "Динамичная композиция",
+          "name_en": "Dynamic Composition"
+        },
+        {
+          "tag": "static composition",
+          "name_ru": "Статичная композиция",
+          "name_en": "Static Composition"
+        },
+        {
+          "tag": "head-on shot",
+          "name_ru": "Кадр в лоб",
+          "name_en": "Head-on Shot"
+        }
+      ]
+    },
+    {
+      "id": "lens_focus",
+      "name_ru": "Объектив и Фокус",
+      "name_en": "Lens & Focus",
+      "tags": [
+        {
+          "tag": "sharp focus",
+          "name_ru": "Резкий фокус",
+          "name_en": "Sharp Focus"
+        },
+        {
+          "tag": "soft focus",
+          "name_ru": "Мягкий фокус",
+          "name_en": "Soft Focus"
+        },
+        {
+          "tag": "out of focus",
+          "name_ru": "Вне фокуса",
+          "name_en": "Out of Focus"
+        },
+        {
+          "tag": "deep focus",
+          "name_ru": "Глубокий фокус",
+          "name_en": "Deep Focus"
+        },
         {
           "tag": "depth of field",
           "name_ru": "Глубина резкости",
           "name_en": "Depth of Field"
+        },
+        {
+          "tag": "shallow depth of field",
+          "name_ru": "Малая глубина резкости",
+          "name_en": "Shallow Depth of Field"
         },
         {
           "tag": "bokeh",
@@ -88,14 +275,9 @@
           "name_en": "Bokeh"
         },
         {
-          "tag": "blurry background",
-          "name_ru": "Размытый фон",
-          "name_en": "Blurry Background"
-        },
-        {
-          "tag": "lens flare",
-          "name_ru": "Блик объектива",
-          "name_en": "Lens Flare"
+          "tag": "wide-angle lens",
+          "name_ru": "Широкоугольный объектив",
+          "name_en": "Wide-angle Lens"
         },
         {
           "tag": "fisheye lens",
@@ -103,9 +285,163 @@
           "name_en": "Fisheye Lens"
         },
         {
-          "tag": "sharp focus",
-          "name_ru": "Резкий фокус",
-          "name_en": "Sharp Focus"
+          "tag": "telephoto lens",
+          "name_ru": "Телеобъектив",
+          "name_en": "Telephoto Lens"
+        },
+        {
+          "tag": "macro lens",
+          "name_ru": "Макрообъектив",
+          "name_en": "Macro Lens"
+        },
+        {
+          "tag": "tilt-shift",
+          "name_ru": "Тилт-шифт",
+          "name_en": "Tilt-shift"
+        }
+      ]
+    },
+    {
+      "id": "visual_effects",
+      "name_ru": "Визуальные Эффекты",
+      "name_en": "Visual Effects",
+      "tags": [
+        {
+          "tag": "lens flare",
+          "name_ru": "Блик объектива",
+          "name_en": "Lens Flare"
+        },
+        {
+          "tag": "anamorphic lens flare",
+          "name_ru": "Анаморфный блик",
+          "name_en": "Anamorphic Lens Flare"
+        },
+        {
+          "tag": "light leak",
+          "name_ru": "Засветка",
+          "name_en": "Light Leak"
+        },
+        {
+          "tag": "film grain",
+          "name_ru": "Зернистость пленки",
+          "name_en": "Film Grain"
+        },
+        {
+          "tag": "motion blur",
+          "name_ru": "Размытие в движении",
+          "name_en": "Motion Blur"
+        },
+        {
+          "tag": "zoom blur",
+          "name_ru": "Размытие при зуме",
+          "name_en": "Zoom Blur"
+        },
+        {
+          "tag": "vignette",
+          "name_ru": "Виньетка",
+          "name_en": "Vignette"
+        },
+        {
+          "tag": "chromatic aberration",
+          "name_ru": "Хроматическая аберрация",
+          "name_en": "Chromatic Aberration"
+        },
+        {
+          "tag": "light trails",
+          "name_ru": "Световые шлейфы",
+          "name_en": "Light Trails"
+        },
+        {
+          "tag": "cinematic",
+          "name_ru": "Кинематографичный",
+          "name_en": "Cinematic"
+        }
+      ]
+    },
+    {
+      "id": "framing_nsfw",
+      "name_ru": "Кадрирование (18+)",
+      "name_en": "Framing (18+)",
+      "tags": [
+        {
+          "tag": "focus on breasts",
+          "name_ru": "Фокус на груди",
+          "name_en": "Focus on Breasts"
+        },
+        {
+          "tag": "focus on ass",
+          "name_ru": "Фокус на ягодицах",
+          "name_en": "Focus on Ass"
+        },
+        {
+          "tag": "focus on legs",
+          "name_ru": "Фокус на ногах",
+          "name_en": "Focus on Legs"
+        },
+        {
+          "tag": "focus on feet",
+          "name_ru": "Фокус на ступнях",
+          "name_en": "Focus on Feet"
+        },
+        {
+          "tag": "focus on pussy",
+          "name_ru": "Фокус на вагине",
+          "name_en": "Focus on Pussy"
+        },
+        {
+          "tag": "focus on penis",
+          "name_ru": "Фокус на пенисе",
+          "name_en": "Focus on Penis"
+        },
+        {
+          "tag": "crotch shot",
+          "name_ru": "Кадр промежности",
+          "name_en": "Crotch Shot"
+        },
+        {
+          "tag": "upskirt",
+          "name_ru": "Апскерт (под юбкой)",
+          "name_en": "Upskirt"
+        },
+        {
+          "tag": "downblouse",
+          "name_ru": "Даунблауз (в вырезе)",
+          "name_en": "Downblouse"
+        },
+        {
+          "tag": "panty shot",
+          "name_ru": "Панцушот",
+          "name_en": "Panty Shot"
+        },
+        {
+          "tag": "ass focus",
+          "name_ru": "Фокус на анусе",
+          "name_en": "Ass Focus"
+        },
+        {
+          "tag": "cleavage shot",
+          "name_ru": "Кадр декольте",
+          "name_en": "Cleavage Shot"
+        },
+        {
+          "tag": "underboob shot",
+          "name_ru": "Кадр груди снизу",
+          "name_en": "Underboob Shot"
+        },
+        {
+          "tag": "sideboob shot",
+          "name_ru": "Кадр груди сбоку",
+          "name_en": "Sideboob Shot"
+        },
+        {
+          "tag": "thighs focus",
+          "name_ru": "Фокус на бёдрах",
+          "name_en": "Thighs Focus"
+        },
+        {
+          "tag": "navel focus",
+          "name_ru": "Фокус на пупке",
+          "name_en": "Navel Focus"
         }
       ]
     }

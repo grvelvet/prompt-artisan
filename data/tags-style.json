@@ -4,191 +4,200 @@
   "name_en": "Image Style",
   "subcategories": [
     {
-      "id": "mediums",
+      "id": "mediums_techniques",
       "name_ru": "Материалы и Техники",
       "name_en": "Mediums & Techniques",
       "tags": [
-        {
-          "tag": "photograph",
-          "name_ru": "Фотография",
-          "name_en": "Photograph"
-        },
-        {
-          "tag": "oil painting",
-          "name_ru": "Живопись маслом",
-          "name_en": "Oil Painting"
-        },
-        {
-          "tag": "watercolor",
-          "name_ru": "Акварель",
-          "name_en": "Watercolor"
-        },
-        {
-          "tag": "sketch",
-          "name_ru": "Набросок (скетч)",
-          "name_en": "Sketch"
-        },
-        {
-          "tag": "pencil drawing",
-          "name_ru": "Карандашный рисунок",
-          "name_en": "Pencil Drawing"
-        },
-        {
-          "tag": "charcoal drawing",
-          "name_ru": "Рисунок углем",
-          "name_en": "Charcoal Drawing"
-        },
-        {
-          "tag": "illustration",
-          "name_ru": "Иллюстрация",
-          "name_en": "Illustration"
-        },
-        {
-          "tag": "3d render",
-          "name_ru": "3D-рендер",
-          "name_en": "3D Render"
-        },
-        {
-          "tag": "vector art",
-          "name_ru": "Векторная графика",
-          "name_en": "Vector Art"
-        },
-        {
-          "tag": "sculpture",
-          "name_ru": "Скульптура",
-          "name_en": "Sculpture"
-        }
+        { "tag": "illustration", "name_ru": "Иллюстрация", "name_en": "Illustration" },
+        { "tag": "painting", "name_ru": "Живопись", "name_en": "Painting" },
+        { "tag": "oil painting", "name_ru": "Живопись маслом", "name_en": "Oil Painting" },
+        { "tag": "watercolor", "name_ru": "Акварель", "name_en": "Watercolor" },
+        { "tag": "acrylic painting", "name_ru": "Живопись акрилом", "name_en": "Acrylic Painting" },
+        { "tag": "gouache", "name_ru": "Гуашь", "name_en": "Gouache" },
+        { "tag": "impasto", "name_ru": "Импасто", "name_en": "Impasto" },
+        { "tag": "sketch", "name_ru": "Набросок (скетч)", "name_en": "Sketch" },
+        { "tag": "drawing", "name_ru": "Рисунок", "name_en": "Drawing" },
+        { "tag": "pencil drawing", "name_ru": "Карандашный рисунок", "name_en": "Pencil Drawing" },
+        { "tag": "colored pencil", "name_ru": "Цветные карандаши", "name_en": "Colored Pencil" },
+        { "tag": "charcoal drawing", "name_ru": "Рисунок углем", "name_en": "Charcoal Drawing" },
+        { "tag": "ink drawing", "name_ru": "Рисунок тушью", "name_en": "Ink Drawing" },
+        { "tag": "pen and ink", "name_ru": "Перо и тушь", "name_en": "Pen and Ink" },
+        { "tag": "ballpoint pen drawing", "name_ru": "Рисунок шариковой ручкой", "name_en": "Ballpoint Pen Drawing" },
+        { "tag": "line art", "name_ru": "Линейный рисунок", "name_en": "Line Art" },
+        { "tag": "cross-hatching", "name_ru": "Перекрестная штриховка", "name_en": "Cross-hatching" },
+        { "tag": "stippling", "name_ru": "Пуантилизм (точками)", "name_en": "Stippling" },
+        { "tag": "digital art", "name_ru": "Цифровое искусство", "name_en": "Digital Art" },
+        { "tag": "digital painting", "name_ru": "Цифровая живопись", "name_en": "Digital Painting" },
+        { "tag": "2d", "name_ru": "2D", "name_en": "2D" },
+        { "tag": "3d render", "name_ru": "3D-рендер", "name_en": "3D Render" },
+        { "tag": "vector art", "name_ru": "Векторная графика", "name_en": "Vector Art" },
+        { "tag": "pixel art", "name_ru": "Пиксель-арт", "name_en": "Pixel Art" },
+        { "tag": "matte painting", "name_ru": "Мэт-пейнтинг", "name_en": "Matte Painting" },
+        { "tag": "photobashing", "name_ru": "Фотобашинг", "name_en": "Photobashing" },
+        { "tag": "sculpture", "name_ru": "Скульптура", "name_en": "Sculpture" },
+        { "tag": "clay sculpture", "name_ru": "Глиняная скульптура", "name_en": "Clay Sculpture" },
+        { "tag": "marble sculpture", "name_ru": "Мраморная скульптура", "name_en": "Marble Sculpture" },
+        { "tag": "woodcut", "name_ru": "Гравюра на дереве", "name_en": "Woodcut" },
+        { "tag": "engraving", "name_ru": "Гравюра", "name_en": "Engraving" },
+        { "tag": "etching", "name_ru": "Офорт", "name_en": "Etching" },
+        { "tag": "collage", "name_ru": "Коллаж", "name_en": "Collage" },
+        { "tag": "mosaic", "name_ru": "Мозаика", "name_en": "Mosaic" },
+        { "tag": "stained glass", "name_ru": "Витраж", "name_en": "Stained Glass" },
+        { "tag": "airbrush", "name_ru": "Аэрография", "name_en": "Airbrush" },
+        { "tag": "graffiti", "name_ru": "Граффити", "name_en": "Graffiti" },
+        { "tag": "calligraphy", "name_ru": "Каллиграфия", "name_en": "Calligraphy" }
       ]
     },
     {
-      "id": "photo_types",
-      "name_ru": "Типы Фотографии",
-      "name_en": "Photography Types",
+      "id": "photography",
+      "name_ru": "Фотография",
+      "name_en": "Photography",
       "tags": [
-        {
-          "tag": "photorealistic",
-          "name_ru": "Фотореализм",
-          "name_en": "Photorealistic"
-        },
-        {
-          "tag": "macro photography",
-          "name_ru": "Макросъемка",
-          "name_en": "Macro Photography"
-        },
-        {
-          "tag": "long exposure",
-          "name_ru": "Длинная выдержка",
-          "name_en": "Long Exposure"
-        },
-        {
-          "tag": "black and white",
-          "name_ru": "Черно-белое",
-          "name_en": "Black and White"
-        },
-        {
-          "tag": "polaroid",
-          "name_ru": "Полароид",
-          "name_en": "Polaroid"
-        },
-        {
-          "tag": "lomography",
-          "name_ru": "Ломография",
-          "name_en": "Lomography"
-        }
+        { "tag": "photograph", "name_ru": "Фотография", "name_en": "Photograph" },
+        { "tag": "photorealistic", "name_ru": "Фотореализм", "name_en": "Photorealistic" },
+        { "tag": "DSLR", "name_ru": "DSLR", "name_en": "DSLR" },
+        { "tag": "film photography", "name_ru": "Пленочная фотография", "name_en": "Film Photography" },
+        { "tag": "vintage photograph", "name_ru": "Винтажное фото", "name_en": "Vintage Photograph" },
+        { "tag": "black and white", "name_ru": "Черно-белое", "name_en": "Black and White" },
+        { "tag": "sepia", "name_ru": "Сепия", "name_en": "Sepia" },
+        { "tag": "monochrome", "name_ru": "Монохром", "name_en": "Monochrome" },
+        { "tag": "polaroid", "name_ru": "Полароид", "name_en": "Polaroid" },
+        { "tag": "lomography", "name_ru": "Ломография", "name_en": "Lomography" },
+        { "tag": "daguerreotype", "name_ru": "Дагерротип", "name_en": "Daguerreotype" },
+        { "tag": "macro photography", "name_ru": "Макросъемка", "name_en": "Macro Photography" },
+        { "tag": "long exposure", "name_ru": "Длинная выдержка", "name_en": "Long Exposure" },
+        { "tag": "double exposure", "name_ru": "Двойная экспозиция", "name_en": "Double Exposure" },
+        { "tag": "depth of field", "name_ru": "Глубина резкости", "name_en": "Depth of Field" },
+        { "tag": "shallow depth of field", "name_ru": "Малая глубина резкости", "name_en": "Shallow Depth of Field" },
+        { "tag": "bokeh", "name_ru": "Боке", "name_en": "Bokeh" },
+        { "tag": "motion blur", "name_ru": "Размытие в движении", "name_en": "Motion Blur" },
+        { "tag": "lens flare", "name_ru": "Блик от линзы", "name_en": "Lens Flare" },
+        { "tag": "film grain", "name_ru": "Зернистость пленки", "name_en": "Film Grain" },
+        { "tag": "color grading", "name_ru": "Цветокоррекция", "name_en": "Color Grading" },
+        { "tag": "vignette", "name_ru": "Виньетка", "name_en": "Vignette" },
+        { "tag": "portrait photography", "name_ru": "Портретная съемка", "name_en": "Portrait Photography" },
+        { "tag": "landscape photography", "name_ru": "Пейзажная съемка", "name_en": "Landscape Photography" },
+        { "tag": "street photography", "name_ru": "Уличная фотография", "name_en": "Street Photography" },
+        { "tag": "fashion photography", "name_ru": "Фэшн-фотография", "name_en": "Fashion Photography" },
+        { "tag": "wildlife photography", "name_ru": "Фотография дикой природы", "name_en": "Wildlife Photography" },
+        { "tag": "aerial photography", "name_ru": "Аэросъемка", "name_en": "Aerial Photography" },
+        { "tag": "fisheye lens", "name_ru": "Объектив 'рыбий глаз'", "name_en": "Fisheye Lens" },
+        { "tag": "telephoto lens", "name_ru": "Телеобъектив", "name_en": "Telephoto Lens" },
+        { "tag": "wide-angle", "name_ru": "Широкоугольный", "name_en": "Wide-angle" }
       ]
     },
     {
-      "id": "art_styles",
-      "name_ru": "Художественные стили",
-      "name_en": "Art Styles",
+      "id": "art_movements",
+      "name_ru": "Художественные движения",
+      "name_en": "Art Movements",
       "tags": [
-        {
-          "tag": "concept art",
-          "name_ru": "Концепт-арт",
-          "name_en": "Concept Art"
-        },
-        {
-          "tag": "anime style",
-          "name_ru": "В стиле аниме",
-          "name_en": "Anime Style"
-        },
-        {
-          "tag": "manga",
-          "name_ru": "Манга",
-          "name_en": "Manga"
-        },
-        {
-          "tag": "comic book style",
-          "name_ru": "В стиле комиксов",
-          "name_en": "Comic Book Style"
-        },
-        {
-          "tag": "impressionism",
-          "name_ru": "Импрессионизм",
-          "name_en": "Impressionism"
-        },
-        {
-          "tag": "surrealism",
-          "name_ru": "Сюрреализм",
-          "name_en": "Surrealism"
-        },
-        {
-          "tag": "pop art",
-          "name_ru": "Поп-арт",
-          "name_en": "Pop Art"
-        },
-        {
-          "tag": "art nouveau",
-          "name_ru": "Ар-нуво",
-          "name_en": "Art Nouveau"
-        }
+        { "tag": "impressionism", "name_ru": "Импрессионизм", "name_en": "Impressionism" },
+        { "tag": "post-impressionism", "name_ru": "Постимпрессионизм", "name_en": "Post-Impressionism" },
+        { "tag": "expressionism", "name_ru": "Экспрессионизм", "name_en": "Expressionism" },
+        { "tag": "cubism", "name_ru": "Кубизм", "name_en": "Cubism" },
+        { "tag": "surrealism", "name_ru": "Сюрреализм", "name_en": "Surrealism" },
+        { "tag": "dadaism", "name_ru": "Дадаизм", "name_en": "Dadaism" },
+        { "tag": "pop art", "name_ru": "Поп-арт", "name_en": "Pop Art" },
+        { "tag": "art nouveau", "name_ru": "Ар-нуво", "name_en": "Art Nouveau" },
+        { "tag": "art deco", "name_ru": "Ар-деко", "name_en": "Art Deco" },
+        { "tag": "realism", "name_ru": "Реализм", "name_en": "Realism" },
+        { "tag": "hyperrealism", "name_ru": "Гиперреализм", "name_en": "Hyperrealism" },
+        { "tag": "minimalism", "name_ru": "Минимализм", "name_en": "Minimalism" },
+        { "tag": "abstract art", "name_ru": "Абстракционизм", "name_en": "Abstract Art" },
+        { "tag": "renaissance", "name_ru": "Ренессанс", "name_en": "Renaissance" },
+        { "tag": "baroque", "name_ru": "Барокко", "name_en": "Baroque" },
+        { "tag": "rococo", "name_ru": "Рококо", "name_en": "Rococo" },
+        { "tag": "neoclassicism", "name_ru": "Неоклассицизм", "name_en": "Neoclassicism" },
+        { "tag": "romanticism", "name_ru": "Романтизм", "name_en": "Romanticism" },
+        { "tag": "fauvism", "name_ru": "Фовизм", "name_en": "Fauvism" },
+        { "tag": "ukiyo-e", "name_ru": "Укиё-э", "name_en": "Ukiyo-e" },
+        { "tag": "sumi-e", "name_ru": "Суми-э", "name_en": "Sumi-e" },
+        { "tag": "bauhaus", "name_ru": "Баухаус", "name_en": "Bauhaus" },
+        { "tag": "constructivism", "name_ru": "Конструктивизм", "name_en": "Constructivism" },
+        { "tag": "psychedelic art", "name_ru": "Психоделическое искусство", "name_en": "Psychedelic Art" }
       ]
     },
     {
-      "id": "aesthetics",
-      "name_ru": "Эстетика и Темы",
-      "name_en": "Aesthetics & Themes",
+      "id": "illustration_comics",
+      "name_ru": "Иллюстрация и Комиксы",
+      "name_en": "Illustration & Comics",
       "tags": [
-        {
-          "tag": "cyberpunk",
-          "name_ru": "Киберпанк",
-          "name_en": "Cyberpunk"
-        },
-        {
-          "tag": "steampunk",
-          "name_ru": "Стимпанк",
-          "name_en": "Steampunk"
-        },
-        {
-          "tag": "fantasy",
-          "name_ru": "Фэнтези",
-          "name_en": "Fantasy"
-        },
-        {
-          "tag": "dark fantasy",
-          "name_ru": "Темное фэнтези",
-          "name_en": "Dark Fantasy"
-        },
-        {
-          "tag": "sci-fi",
-          "name_ru": "Научная фантастика",
-          "name_en": "Sci-fi"
-        },
-        {
-          "tag": "gothic",
-          "name_ru": "Готика",
-          "name_en": "Gothic"
-        },
-        {
-          "tag": "post-apocalyptic",
-          "name_ru": "Постапокалипсис",
-          "name_en": "Post-apocalyptic"
-        },
-        {
-          "tag": "vaporwave",
-          "name_ru": "Вейпорвейв",
-          "name_en": "Vaporwave"
-        }
+        { "tag": "concept art", "name_ru": "Концепт-арт", "name_en": "Concept Art" },
+        { "tag": "character design", "name_ru": "Дизайн персонажа", "name_en": "Character Design" },
+        { "tag": "storybook illustration", "name_ru": "Книжная иллюстрация", "name_en": "Storybook Illustration" },
+        { "tag": "technical illustration", "name_ru": "Техническая иллюстрация", "name_en": "Technical Illustration" },
+        { "tag": "anime style", "name_ru": "Стиль аниме", "name_en": "Anime Style" },
+        { "tag": "90s anime style", "name_ru": "Стиль аниме 90-х", "name_en": "90s Anime Style" },
+        { "tag": "manga", "name_ru": "Манга", "name_en": "Manga" },
+        { "tag": "comic book style", "name_ru": "Стиль комиксов", "name_en": "Comic Book Style" },
+        { "tag": "western comic style", "name_ru": "Стиль западных комиксов", "name_en": "Western Comic Style" },
+        { "tag": "graphic novel", "name_ru": "Графический роман", "name_en": "Graphic Novel" },
+        { "tag": "cartoon", "name_ru": "Мультфильм", "name_en": "Cartoon" },
+        { "tag": "cel shading", "name_ru": "Сел-шейдинг", "name_en": "Cel Shading" },
+        { "tag": "chibi", "name_ru": "Чиби", "name_en": "Chibi" },
+        { "tag": "caricature", "name_ru": "Карикатура", "name_en": "Caricature" }
+      ]
+    },
+    {
+      "id": "thematic_genres",
+      "name_ru": "Тематические жанры",
+      "name_en": "Thematic Genres",
+      "tags": [
+        { "tag": "fantasy", "name_ru": "Фэнтези", "name_en": "Fantasy" },
+        { "tag": "high fantasy", "name_ru": "Высокое фэнтези", "name_en": "High Fantasy" },
+        { "tag": "dark fantasy", "name_ru": "Темное фэнтези", "name_en": "Dark Fantasy" },
+        { "tag": "urban fantasy", "name_ru": "Городское фэнтези", "name_en": "Urban Fantasy" },
+        { "tag": "sci-fi", "name_ru": "Научная фантастика", "name_en": "Sci-fi" },
+        { "tag": "space opera", "name_ru": "Космическая опера", "name_en": "Space Opera" },
+        { "tag": "hard sci-fi", "name_ru": "Твердая НФ", "name_en": "Hard Sci-fi" },
+        { "tag": "horror", "name_ru": "Хоррор", "name_en": "Horror" },
+        { "tag": "cosmic horror", "name_ru": "Космический ужас", "name_en": "Cosmic Horror" },
+        { "tag": "body horror", "name_ru": "Боди-хоррор", "name_en": "Body Horror" },
+        { "tag": "gothic", "name_ru": "Готика", "name_en": "Gothic" },
+        { "tag": "post-apocalyptic", "name_ru": "Постапокалипсис", "name_en": "Post-apocalyptic" },
+        { "tag": "dystopian", "name_ru": "Антиутопия", "name_en": "Dystopian" },
+        { "tag": "utopian", "name_ru": "Утопия", "name_en": "Utopian" },
+        { "tag": "film noir", "name_ru": "Фильм-нуар", "name_en": "Film Noir" },
+        { "tag": "western", "name_ru": "Вестерн", "name_en": "Western" },
+        { "tag": "historical", "name_ru": "Исторический", "name_en": "Historical" },
+        { "tag": "mythology", "name_ru": "Мифология", "name_en": "Mythology" },
+        { "tag": "folklore", "name_ru": "Фольклор", "name_en": "Folklore" },
+        { "tag": "adventure", "name_ru": "Приключения", "name_en": "Adventure" }
+      ]
+    },
+    {
+      "id": "visual_aesthetics",
+      "name_ru": "Визуальные эстетики",
+      "name_en": "Visual Aesthetics",
+      "tags": [
+        { "tag": "cyberpunk", "name_ru": "Киберпанк", "name_en": "Cyberpunk" },
+        { "tag": "steampunk", "name_ru": "Стимпанк", "name_en": "Steampunk" },
+        { "tag": "dieselpunk", "name_ru": "Дизельпанк", "name_en": "Dieselpunk" },
+        { "tag": "solarpunk", "name_ru": "Соларпанк", "name_en": "Solarpunk" },
+        { "tag": "vaporwave", "name_ru": "Вейпорвейв", "name_en": "Vaporwave" },
+        { "tag": "synthwave", "name_ru": "Синтвейв", "name_en": "Synthwave" },
+        { "tag": "retrowave", "name_ru": "Ретровейв", "name_en": "Retrowave" },
+        { "tag": "lo-fi", "name_ru": "Лоу-фай", "name_en": "Lo-fi" },
+        { "tag": "glitch art", "name_ru": "Глитч-арт", "name_en": "Glitch Art" },
+        { "tag": "trippy", "name_ru": "Триповый", "name_en": "Trippy" },
+        { "tag": "grunge", "name_ru": "Гранж", "name_en": "Grunge" },
+        { "tag": "kawaii", "name_ru": "Каваии", "name_en": "Kawaii" },
+        { "tag": "yami kawaii", "name_ru": "Ями-каваии", "name_en": "Yami Kawaii" },
+        { "tag": "cottagecore", "name_ru": "Коттеджкор", "name_en": "Cottagecore" },
+        { "tag": "goblincore", "name_ru": "Гоблинкор", "name_en": "Goblincore" },
+        { "tag": "dark academia", "name_ru": "Темная академия", "name_en": "Dark Academia" },
+        { "tag": "light academia", "name_ru": "Светлая академия", "name_en": "Light Academia" },
+        { "tag": "y2k aesthetic", "name_ru": "Эстетика Y2K", "name_en": "Y2K Aesthetic" },
+        { "tag": "whimsical", "name_ru": "Причудливый", "name_en": "Whimsical" },
+        { "tag": "ethereal", "name_ru": "Эфирный / Неземной", "name_en": "Ethereal" },
+        { "tag": "dreamlike", "name_ru": "Как во сне", "name_en": "Dreamlike" },
+        { "tag": "cinematic", "name_ru": "Кинематографичный", "name_en": "Cinematic" },
+        { "tag": "dramatic", "name_ru": "Драматичный", "name_en": "Dramatic" },
+        { "tag": "epic", "name_ru": "Эпичный", "name_en": "Epic" },
+        { "tag": "moody", "name_ru": "Атмосферный / Мрачный", "name_en": "Moody" },
+        { "tag": "serene", "name_ru": "Безмятежный", "name_en": "Serene" },
+        { "tag": "vibrant", "name_ru": "Яркий / Насыщенный", "name_en": "Vibrant" },
+        { "tag": "monochromatic", "name_ru": "Монохромный", "name_en": "Monochromatic" }
       ]
     },
     {
@@ -196,26 +205,23 @@
       "name_ru": "Стили (18+)",
       "name_en": "Styles (18+)",
       "tags": [
-        {
-          "tag": "hentai",
-          "name_ru": "Хентай",
-          "name_en": "Hentai"
-        },
-        {
-          "tag": "ecchi",
-          "name_ru": "Этти",
-          "name_en": "Ecchi"
-        },
-        {
-          "tag": "erotic art",
-          "name_ru": "Эротическое искусство",
-          "name_en": "Erotic Art"
-        },
-        {
-          "tag": "boudoir photography",
-          "name_ru": "Будуарная фотография",
-          "name_en": "Boudoir Photography"
-        }
+        { "tag": "hentai", "name_ru": "Хентай", "name_en": "Hentai" },
+        { "tag": "ecchi", "name_ru": "Этти", "name_en": "Ecchi" },
+        { "tag": "erotic art", "name_ru": "Эротическое искусство", "name_en": "Erotic Art" },
+        { "tag": "pornographic", "name_ru": "Порнографический", "name_en": "Pornographic" },
+        { "tag": "boudoir photography", "name_ru": "Будуарная фотография", "name_en": "Boudoir Photography" },
+        { "tag": "pin-up", "name_ru": "Пин-ап", "name_en": "Pin-up" },
+        { "tag": "classic pin-up", "name_ru": "Классический пин-ап", "name_en": "Classic Pin-up" },
+        { "tag": "shunga", "name_ru": "Сюнга", "name_en": "Shunga" },
+        { "tag": "ero guro", "name_ru": "Эро гуро", "name_en": "Ero Guro" },
+        { "tag": "adult comic style", "name_ru": "Стиль взрослых комиксов", "name_en": "Adult Comic Style" },
+        { "tag": "erotic caricature", "name_ru": "Эротическая карикатура", "name_en": "Erotic Caricature" },
+        { "tag": "softcore", "name_ru": "Мягкая эротика (софткор)", "name_en": "Softcore" },
+        { "tag": "hardcore", "name_ru": "Жесткое порно (хардкор)", "name_en": "Hardcore" },
+        { "tag": "explicit", "name_ru": "Явный / Откровенный", "name_en": "Explicit" },
+        { "tag": "suggestive", "name_ru": "Намекающий / Возбуждающий", "name_en": "Suggestive" },
+        { "tag": "lewd", "name_ru": "Пошлый", "name_en": "Lewd" },
+        { "tag": "voluptuous art style", "name_ru": "Пышный стиль", "name_en": "Voluptuous Art Style" }
       ]
     }
   ]

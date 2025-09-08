@@ -19,14 +19,34 @@
           "name_en": "Short Hair"
         },
         {
-          "tag": "messy hair",
-          "name_ru": "Небрежные волосы",
-          "name_en": "Messy Hair"
+          "tag": "medium hair",
+          "name_ru": "Волосы средней длины",
+          "name_en": "Medium Hair"
+        },
+        {
+          "tag": "very long hair",
+          "name_ru": "Очень длинные волосы",
+          "name_en": "Very Long Hair"
+        },
+        {
+          "tag": "straight hair",
+          "name_ru": "Прямые волосы",
+          "name_en": "Straight Hair"
         },
         {
           "tag": "wavy hair",
           "name_ru": "Волнистые волосы",
           "name_en": "Wavy Hair"
+        },
+        {
+          "tag": "curly hair",
+          "name_ru": "Кудрявые волосы",
+          "name_en": "Curly Hair"
+        },
+        {
+          "tag": "messy hair",
+          "name_ru": "Небрежные волосы",
+          "name_en": "Messy Hair"
         },
         {
           "tag": "braid",
@@ -42,50 +62,237 @@
           "tag": "twintails",
           "name_ru": "Два хвостика",
           "name_en": "Twintails"
+        },
+        {
+          "tag": "bob cut",
+          "name_ru": "Каре",
+          "name_en": "Bob Cut"
+        },
+        {
+          "tag": "hime cut",
+          "name_ru": "Химэ кат",
+          "name_en": "Hime Cut"
+        },
+        {
+          "tag": "pixie cut",
+          "name_ru": "Пикси",
+          "name_en": "Pixie Cut"
+        },
+        {
+          "tag": "bun",
+          "name_ru": "Пучок",
+          "name_en": "Bun"
+        },
+        {
+          "tag": "double bun",
+          "name_ru": "Два пучка",
+          "name_en": "Double Bun"
+        },
+        {
+          "tag": "afro",
+          "name_ru": "Афро",
+          "name_en": "Afro"
+        },
+        {
+          "tag": "dreadlocks",
+          "name_ru": "Дреды",
+          "name_en": "Dreadlocks"
+        },
+        {
+          "tag": "mohawk",
+          "name_ru": "Ирокез",
+          "name_en": "Mohawk"
+        },
+        {
+          "tag": "undercut",
+          "name_ru": "Андеркат",
+          "name_en": "Undercut"
+        },
+        {
+          "tag": "sidecut",
+          "name_ru": "Выбритый висок",
+          "name_en": "Sidecut"
+        },
+        {
+          "tag": "shaved head",
+          "name_ru": "Бритая голова",
+          "name_en": "Shaved Head"
+        },
+        {
+          "tag": "wet hair",
+          "name_ru": "Мокрые волосы",
+          "name_en": "Wet Hair"
+        },
+        {
+          "tag": "hair between eyes",
+          "name_ru": "Прядь между глаз",
+          "name_en": "Hair Between Eyes"
+        },
+        {
+          "tag": "hair over one eye",
+          "name_ru": "Волосы закрывают один глаз",
+          "name_en": "Hair Over One Eye"
+        },
+        {
+          "tag": "ahoge",
+          "name_ru": "Ахогэ (торчащая прядь)",
+          "name_en": "Ahoge"
+        },
+        {
+          "tag": "sidelocks",
+          "name_ru": "Пряди у висков",
+          "name_en": "Sidelocks"
         }
       ]
     },
     {
-      "id": "body_type",
-      "name_ru": "Телосложение",
-      "name_en": "Body Type",
+      "id": "hair_color",
+      "name_ru": "Цвет волос",
+      "name_en": "Hair Color",
       "tags": [
         {
-          "tag": "muscular",
-          "name_ru": "Мускулистый",
-          "name_en": "Muscular"
+          "tag": "blonde hair",
+          "name_ru": "Блонд",
+          "name_en": "Blonde Hair"
         },
         {
-          "tag": "curvy",
-          "name_ru": "Пышный",
-          "name_en": "Curvy"
+          "tag": "brown hair",
+          "name_ru": "Каштановые",
+          "name_en": "Brown Hair"
         },
         {
-          "tag": "petite",
-          "name_ru": "Миниатюрный",
-          "name_en": "Petite"
+          "tag": "black hair",
+          "name_ru": "Черные",
+          "name_en": "Black Hair"
         },
         {
-          "tag": "slim",
-          "name_ru": "Стройный",
-          "name_en": "Slim"
+          "tag": "red hair",
+          "name_ru": "Рыжие",
+          "name_en": "Red Hair"
         },
         {
-          "tag": "athletic",
-          "name_ru": "Атлетичный",
-          "name_en": "Athletic"
+          "tag": "white hair",
+          "name_ru": "Белые / Седые",
+          "name_en": "White Hair"
+        },
+        {
+          "tag": "silver hair",
+          "name_ru": "Серебряные",
+          "name_en": "Silver Hair"
+        },
+        {
+          "tag": "gray hair",
+          "name_ru": "Серые",
+          "name_en": "Gray Hair"
+        },
+        {
+          "tag": "blue hair",
+          "name_ru": "Синие",
+          "name_en": "Blue Hair"
+        },
+        {
+          "tag": "green hair",
+          "name_ru": "Зеленые",
+          "name_en": "Green Hair"
+        },
+        {
+          "tag": "pink hair",
+          "name_ru": "Розовые",
+          "name_en": "Pink Hair"
+        },
+        {
+          "tag": "purple hair",
+          "name_ru": "Фиолетовые",
+          "name_en": "Purple Hair"
+        },
+        {
+          "tag": "orange hair",
+          "name_ru": "Оранжевые",
+          "name_en": "Orange Hair"
+        },
+        {
+          "tag": "yellow hair",
+          "name_ru": "Желтые",
+          "name_en": "Yellow Hair"
+        },
+        {
+          "tag": "multicolored hair",
+          "name_ru": "Разноцветные",
+          "name_en": "Multicolored Hair"
+        },
+        {
+          "tag": "gradient hair",
+          "name_ru": "Градиент",
+          "name_en": "Gradient Hair"
+        },
+        {
+          "tag": "split-color hair",
+          "name_ru": "Двухцветные",
+          "name_en": "Split-color Hair"
+        },
+        {
+          "tag": "streaked hair",
+          "name_ru": "С прядями",
+          "name_en": "Streaked Hair"
+        }
+      ]
+    },
+    {
+      "id": "bangs",
+      "name_ru": "Чёлка",
+      "name_en": "Bangs",
+      "tags": [
+        {
+          "tag": "bangs",
+          "name_ru": "Чёлка",
+          "name_en": "Bangs"
+        },
+        {
+          "tag": "blunt bangs",
+          "name_ru": "Прямая чёлка",
+          "name_en": "Blunt Bangs"
+        },
+        {
+          "tag": "swept bangs",
+          "name_ru": "Чёлка набок",
+          "name_en": "Swept Bangs"
+        },
+        {
+          "tag": "parted bangs",
+          "name_ru": "Чёлка с пробором",
+          "name_en": "Parted Bangs"
+        },
+        {
+          "tag": "short bangs",
+          "name_ru": "Короткая чёлка",
+          "name_en": "Short Bangs"
+        },
+        {
+          "tag": "asymmetrical bangs",
+          "name_ru": "Асимметричная чёлка",
+          "name_en": "Asymmetrical Bangs"
+        },
+        {
+          "tag": "see-through bangs",
+          "name_ru": "Прозрачная чёлка",
+          "name_en": "See-through Bangs"
         }
       ]
     },
     {
       "id": "face",
-      "name_ru": "Лицо",
-      "name_en": "Face",
+      "name_ru": "Лицо и Глаза",
+      "name_en": "Face & Eyes",
       "tags": [
         {
           "tag": "beautiful face",
           "name_ru": "Красивое лицо",
           "name_en": "Beautiful Face"
+        },
+        {
+          "tag": "cute face",
+          "name_ru": "Милое лицо",
+          "name_en": "Cute Face"
         },
         {
           "tag": "blue eyes",
@@ -96,6 +303,31 @@
           "tag": "green eyes",
           "name_ru": "Зеленые глаза",
           "name_en": "Green Eyes"
+        },
+        {
+          "tag": "brown eyes",
+          "name_ru": "Карие глаза",
+          "name_en": "Brown Eyes"
+        },
+        {
+          "tag": "red eyes",
+          "name_ru": "Красные глаза",
+          "name_en": "Red Eyes"
+        },
+        {
+          "tag": "purple eyes",
+          "name_ru": "Фиолетовые глаза",
+          "name_en": "Purple Eyes"
+        },
+        {
+          "tag": "yellow eyes",
+          "name_ru": "Желтые глаза",
+          "name_en": "Yellow Eyes"
+        },
+        {
+          "tag": "black eyes",
+          "name_ru": "Черные глаза",
+          "name_en": "Black Eyes"
         },
         {
           "tag": "glowing eyes",
@@ -116,45 +348,289 @@
           "tag": "scar",
           "name_ru": "Шрам",
           "name_en": "Scar"
+        },
+        {
+          "tag": "face scar",
+          "name_ru": "Шрам на лице",
+          "name_en": "Face Scar"
+        },
+        {
+          "tag": "mole",
+          "name_ru": "Родинка",
+          "name_en": "Mole"
+        },
+        {
+          "tag": "dimples",
+          "name_ru": "Ямочки на щеках",
+          "name_en": "Dimples"
+        },
+        {
+          "tag": "makeup",
+          "name_ru": "Макияж",
+          "name_en": "Makeup"
+        },
+        {
+          "tag": "lipstick",
+          "name_ru": "Помада",
+          "name_en": "Lipstick"
+        },
+        {
+          "tag": "eyeliner",
+          "name_ru": "Подводка",
+          "name_en": "Eyeliner"
+        },
+        {
+          "tag": "eyeshadow",
+          "name_ru": "Тени для век",
+          "name_en": "Eyeshadow"
+        },
+        {
+          "tag": "fangs",
+          "name_ru": "Клыки",
+          "name_en": "Fangs"
+        },
+        {
+          "tag": "elf ears",
+          "name_ru": "Эльфийские уши",
+          "name_en": "Elf Ears"
+        },
+        {
+          "tag": "pointed ears",
+          "name_ru": "Острые уши",
+          "name_en": "Pointed Ears"
         }
       ]
     },
     {
-      "id": "nudity_nsfw",
-      "name_ru": "Нагота (18+)",
-      "name_en": "Nudity (18+)",
+      "id": "body_type",
+      "name_ru": "Телосложение",
+      "name_en": "Body Type",
       "tags": [
         {
-          "tag": "nude",
-          "name_ru": "Обнаженный(-ая)",
-          "name_en": "Nude"
+          "tag": "muscular",
+          "name_ru": "Мускулистый(-ая)",
+          "name_en": "Muscular"
         },
         {
-          "tag": "artistic nudity",
-          "name_ru": "Художественная нагота",
-          "name_en": "Artistic Nudity"
+          "tag": "curvy",
+          "name_ru": "Пышная",
+          "name_en": "Curvy"
         },
         {
-          "tag": "topless",
-          "name_ru": "Топлесс",
-          "name_en": "Topless"
+          "tag": "petite",
+          "name_ru": "Миниатюрная",
+          "name_en": "Petite"
         },
         {
-          "tag": "bottomless",
-          "name_ru": "Без низа",
-          "name_en": "Bottomless"
+          "tag": "slim",
+          "name_ru": "Стройный(-ая)",
+          "name_en": "Slim"
         },
         {
-          "tag": "implied nudity",
-          "name_ru": "Подразумеваемая нагота",
-          "name_en": "Implied Nudity"
+          "tag": "skinny",
+          "name_ru": "Худой(-ая)",
+          "name_en": "Skinny"
+        },
+        {
+          "tag": "athletic",
+          "name_ru": "Атлетичный(-ая)",
+          "name_en": "Athletic"
+        },
+        {
+          "tag": "toned",
+          "name_ru": "Подтянутый(-ая)",
+          "name_en": "Toned"
+        },
+        {
+          "tag": "chubby",
+          "name_ru": "Полный(-ая)",
+          "name_en": "Chubby"
+        },
+        {
+          "tag": "plus size",
+          "name_ru": "Плюс-сайз",
+          "name_en": "Plus Size"
+        },
+        {
+          "tag": "loli",
+          "name_ru": "Лоли",
+          "name_en": "Loli"
+        },
+        {
+          "tag": "shota",
+          "name_ru": "Сёта",
+          "name_en": "Shota"
+        },
+        {
+          "tag": "femboy",
+          "name_ru": "Фембой",
+          "name_en": "Femboy"
+        },
+        {
+          "tag": "hunk",
+          "name_ru": "Качок",
+          "name_en": "Hunk"
+        },
+        {
+          "tag": "abs",
+          "name_ru": "Пресс",
+          "name_en": "Abs"
+        },
+        {
+          "tag": "six-pack",
+          "name_ru": "Кубики пресса",
+          "name_en": "Six-pack"
         }
       ]
     },
     {
-      "id": "anatomy_nsfw",
-      "name_ru": "Анатомия (Explicit 18+)",
-      "name_en": "Anatomy (Explicit 18+)",
+      "id": "skin_details",
+      "name_ru": "Кожа и Детали",
+      "name_en": "Skin & Details",
+      "tags": [
+        {
+          "tag": "pale skin",
+          "name_ru": "Бледная кожа",
+          "name_en": "Pale Skin"
+        },
+        {
+          "tag": "tan",
+          "name_ru": "Загар",
+          "name_en": "Tan"
+        },
+        {
+          "tag": "dark skin",
+          "name_ru": "Темная кожа",
+          "name_en": "Dark Skin"
+        },
+        {
+          "tag": "tattoo",
+          "name_ru": "Татуировка",
+          "name_en": "Tattoo"
+        },
+        {
+          "tag": "full body tattoo",
+          "name_ru": "Тату на все тело",
+          "name_en": "Full Body Tattoo"
+        },
+        {
+          "tag": "sleeve tattoo",
+          "name_ru": "Рукав (тату)",
+          "name_en": "Sleeve Tattoo"
+        },
+        {
+          "tag": "birthmark",
+          "name_ru": "Родимое пятно",
+          "name_en": "Birthmark"
+        },
+        {
+          "tag": "stretch marks",
+          "name_ru": "Растяжки",
+          "name_en": "Stretch Marks"
+        },
+        {
+          "tag": "vitiligo",
+          "name_ru": "Витилиго",
+          "name_en": "Vitiligo"
+        },
+        {
+          "tag": "oiled body",
+          "name_ru": "Тело в масле",
+          "name_en": "Oiled Body"
+        },
+        {
+          "tag": "sweat",
+          "name_ru": "Пот",
+          "name_en": "Sweat"
+        },
+        {
+          "tag": "wet body",
+          "name_ru": "Мокрое тело",
+          "name_en": "Wet Body"
+        },
+        {
+          "tag": "tan lines",
+          "name_ru": "Следы от загара",
+          "name_en": "Tan Lines"
+        }
+      ]
+    },
+    {
+      "id": "non_human",
+      "name_ru": "Нечеловеческие черты",
+      "name_en": "Non-human Features",
+      "tags": [
+        {
+          "tag": "horns",
+          "name_ru": "Рога",
+          "name_en": "Horns"
+        },
+        {
+          "tag": "tail",
+          "name_ru": "Хвост",
+          "name_en": "Tail"
+        },
+        {
+          "tag": "wings",
+          "name_ru": "Крылья",
+          "name_en": "Wings"
+        },
+        {
+          "tag": "animal ears",
+          "name_ru": "Животные уши",
+          "name_en": "Animal Ears"
+        },
+        {
+          "tag": "cat ears",
+          "name_ru": "Кошачьи уши",
+          "name_en": "Cat Ears"
+        },
+        {
+          "tag": "fox ears",
+          "name_ru": "Лисьи уши",
+          "name_en": "Fox Ears"
+        },
+        {
+          "tag": "bunny ears",
+          "name_ru": "Кроличьи уши",
+          "name_en": "Bunny Ears"
+        },
+        {
+          "tag": "gills",
+          "name_ru": "Жабры",
+          "name_en": "Gills"
+        },
+        {
+          "tag": "scales",
+          "name_ru": "Чешуя",
+          "name_en": "Scales"
+        },
+        {
+          "tag": "fur",
+          "name_ru": "Мех",
+          "name_en": "Fur"
+        },
+        {
+          "tag": "claws",
+          "name_ru": "Когти",
+          "name_en": "Claws"
+        },
+        {
+          "tag": "third eye",
+          "name_ru": "Третий глаз",
+          "name_en": "Third Eye"
+        },
+        {
+          "tag": "halo",
+          "name_ru": "Нимб",
+          "name_en": "Halo"
+        }
+      ]
+    },
+    {
+      "id": "breasts_nsfw",
+      "name_ru": "Грудь (18+)",
+      "name_en": "Breasts (18+)",
       "tags": [
         {
           "tag": "breasts",
@@ -162,9 +638,9 @@
           "name_en": "Breasts"
         },
         {
-          "tag": "large breasts",
-          "name_ru": "Большая грудь",
-          "name_en": "Large Breasts"
+          "tag": "flat chest",
+          "name_ru": "Плоская грудь",
+          "name_en": "Flat Chest"
         },
         {
           "tag": "small breasts",
@@ -172,51 +648,307 @@
           "name_en": "Small Breasts"
         },
         {
+          "tag": "medium breasts",
+          "name_ru": "Средняя грудь",
+          "name_en": "Medium Breasts"
+        },
+        {
+          "tag": "large breasts",
+          "name_ru": "Большая грудь",
+          "name_en": "Large Breasts"
+        },
+        {
+          "tag": "huge breasts",
+          "name_ru": "Огромная грудь",
+          "name_en": "Huge Breasts"
+        },
+        {
+          "tag": "gigantic breasts",
+          "name_ru": "Гигантская грудь",
+          "name_en": "Gigantic Breasts"
+        },
+        {
+          "tag": "perky breasts",
+          "name_ru": "Упругая грудь",
+          "name_en": "Perky Breasts"
+        },
+        {
+          "tag": "natural breasts",
+          "name_ru": "Натуральная грудь",
+          "name_en": "Natural Breasts"
+        },
+        {
+          "tag": "sagging breasts",
+          "name_ru": "Обвисшая грудь",
+          "name_en": "Sagging Breasts"
+        },
+        {
+          "tag": "bouncing breasts",
+          "name_ru": "Прыгающая грудь",
+          "name_en": "Bouncing Breasts"
+        },
+        {
+          "tag": "squished breasts",
+          "name_ru": "Сжатая грудь",
+          "name_en": "Squished Breasts"
+        },
+        {
+          "tag": "cleavage",
+          "name_ru": "Декольте",
+          "name_en": "Cleavage"
+        },
+        {
           "tag": "nipples",
           "name_ru": "Соски",
           "name_en": "Nipples"
         },
+        {
+          "tag": "puffy nipples",
+          "name_ru": "Припухшие соски",
+          "name_en": "Puffy Nipples"
+        },
+        {
+          "tag": "erect nipples",
+          "name_ru": "Эрегированные соски",
+          "name_en": "Erect Nipples"
+        },
+        {
+          "tag": "inverted nipples",
+          "name_ru": "Втянутые соски",
+          "name_en": "Inverted Nipples"
+        },
+        {
+          "tag": "areolae",
+          "name_ru": "Ареолы",
+          "name_en": "Areolae"
+        },
+        {
+          "tag": "large areolae",
+          "name_ru": "Большие ареолы",
+          "name_en": "Large Areolae"
+        },
+        {
+          "tag": "small areolae",
+          "name_ru": "Маленькие ареолы",
+          "name_en": "Small Areolae"
+        }
+      ]
+    },
+    {
+      "id": "ass_hips_nsfw",
+      "name_ru": "Ягодицы и Бёдра (18+)",
+      "name_en": "Ass & Hips (18+)",
+      "tags": [
         {
           "tag": "ass",
           "name_ru": "Ягодицы",
           "name_en": "Ass"
         },
         {
+          "tag": "small ass",
+          "name_ru": "Маленькая попа",
+          "name_en": "Small Ass"
+        },
+        {
+          "tag": "big ass",
+          "name_ru": "Большая попа",
+          "name_en": "Big Ass"
+        },
+        {
+          "tag": "bubble butt",
+          "name_ru": "Круглая попа",
+          "name_en": "Bubble Butt"
+        },
+        {
+          "tag": "wide hips",
+          "name_ru": "Широкие бёдра",
+          "name_en": "Wide Hips"
+        },
+        {
+          "tag": "narrow hips",
+          "name_ru": "Узкие бёдра",
+          "name_en": "Narrow Hips"
+        },
+        {
+          "tag": "thighs",
+          "name_ru": "Бёдра (ляжки)",
+          "name_en": "Thighs"
+        },
+        {
+          "tag": "thick thighs",
+          "name_ru": "Полные бёдра",
+          "name_en": "Thick Thighs"
+        },
+        {
+          "tag": "thigh gap",
+          "name_ru": "Просвет между бёдер",
+          "name_en": "Thigh Gap"
+        },
+        {
+          "tag": "hip dips",
+          "name_ru": "Ямочки на бёдрах",
+          "name_en": "Hip Dips"
+        },
+        {
+          "tag": "anus",
+          "name_ru": "Анус",
+          "name_en": "Anus"
+        }
+      ]
+    },
+    {
+      "id": "pussy_nsfw",
+      "name_ru": "Вагина (Explicit 18+)",
+      "name_en": "Pussy (Explicit 18+)",
+      "tags": [
+        {
           "tag": "pussy",
           "name_ru": "Вагина",
           "name_en": "Pussy"
         },
+        {
+          "tag": "vagina",
+          "name_ru": "Вагина (анатом.)",
+          "name_en": "Vagina"
+        },
+        {
+          "tag": "labia",
+          "name_ru": "Половые губы",
+          "name_en": "Labia"
+        },
+        {
+          "tag": "puffy pussy",
+          "name_ru": "Припухшая вагина",
+          "name_en": "Puffy Pussy"
+        },
+        {
+          "tag": "clitoris",
+          "name_ru": "Клитор",
+          "name_en": "Clitoris"
+        },
+        {
+          "tag": "mound of venus",
+          "name_ru": "Лобковый бугорок",
+          "name_en": "Mound of Venus"
+        }
+      ]
+    },
+    {
+      "id": "penis_nsfw",
+      "name_ru": "Пенис (Explicit 18+)",
+      "name_en": "Penis (Explicit 18+)",
+      "tags": [
         {
           "tag": "penis",
           "name_ru": "Пенис",
           "name_en": "Penis"
         },
         {
-          "tag": "cleavage",
-          "name_ru": "Декольте",
-          "name_en": "Cleavage"
+          "tag": "small penis",
+          "name_ru": "Маленький пенис",
+          "name_en": "Small Penis"
+        },
+        {
+          "tag": "average penis",
+          "name_ru": "Средний пенис",
+          "name_en": "Average Penis"
+        },
+        {
+          "tag": "large penis",
+          "name_ru": "Большой пенис",
+          "name_en": "Large Penis"
+        },
+        {
+          "tag": "huge penis",
+          "name_ru": "Огромный пенис",
+          "name_en": "Huge Penis"
+        },
+        {
+          "tag": "erection",
+          "name_ru": "Эрекция",
+          "name_en": "Erection"
+        },
+        {
+          "tag": "flaccid",
+          "name_ru": "Неэрегированный",
+          "name_en": "Flaccid"
+        },
+        {
+          "tag": "semi-erect",
+          "name_ru": "Полуэрегированный",
+          "name_en": "Semi-erect"
+        },
+        {
+          "tag": "veiny penis",
+          "name_ru": "Венозный пенис",
+          "name_en": "Veiny Penis"
+        },
+        {
+          "tag": "circumcised",
+          "name_ru": "Обрезанный",
+          "name_en": "Circumcised"
+        },
+        {
+          "tag": "uncircumcised",
+          "name_ru": "Необрезанный",
+          "name_en": "Uncircumcised"
+        },
+        {
+          "tag": "foreskin",
+          "name_ru": "Крайняя плоть",
+          "name_en": "Foreskin"
+        },
+        {
+          "tag": "testicles",
+          "name_ru": "Яички",
+          "name_en": "Testicles"
+        },
+        {
+          "tag": "scrotum",
+          "name_ru": "Мошонка",
+          "name_en": "Scrotum"
         }
       ]
     },
     {
-      "id": "fluids_nsfw",
-      "name_ru": "Жидкости (Explicit 18+)",
-      "name_en": "Fluids (Explicit 18+)",
+      "id": "body_hair_nsfw",
+      "name_ru": "Волосы на теле (18+)",
+      "name_en": "Body Hair (18+)",
       "tags": [
         {
-          "tag": "semen",
-          "name_ru": "Сперма",
-          "name_en": "Semen"
+          "tag": "pubic hair",
+          "name_ru": "Лобковые волосы",
+          "name_en": "Pubic Hair"
         },
         {
-          "tag": "pussy juice",
-          "name_ru": "Вагинальная смазка",
-          "name_en": "Pussy Juice"
+          "tag": "shaved",
+          "name_ru": "Бритая",
+          "name_en": "Shaved"
         },
         {
-          "tag": "cum on body",
-          "name_ru": "Сперма на теле",
-          "name_en": "Cum on body"
+          "tag": "trimmed",
+          "name_ru": "Подстриженные",
+          "name_en": "Trimmed"
+        },
+        {
+          "tag": "bush",
+          "name_ru": "Густые (куст)",
+          "name_en": "Bush"
+        },
+        {
+          "tag": "armpit hair",
+          "name_ru": "Волосы в подмышках",
+          "name_en": "Armpit Hair"
+        },
+        {
+          "tag": "chest hair",
+          "name_ru": "Волосы на груди",
+          "name_en": "Chest Hair"
+        },
+        {
+          "tag": "happy trail",
+          "name_ru": "Дорожка на животе",
+          "name_en": "Happy Trail"
         }
       ]
     }
