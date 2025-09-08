@@ -640,13 +640,6 @@ button#delete-preset-btn:hover {
         transform: rotate(360deg);
     }
 }
-#manual-modal .modal-content {
-    max-width: 800px;
-}
-
-.tag-browser-content {
-    max-width: 900px;
-}
 
 .tag-browser-content {
     max-width: 900px;
