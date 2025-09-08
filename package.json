@@ -1,0 +1,14 @@
+{
+  "name": "prompt-artisan-main",
+  "scripts": {
+    "update-version-in-js": "node update-version.js",
+    "postversion": "npm run update-version-in-js",
+    "version:patch": "npm version patch -m \"chore(release): v%s\"",
+    "version:minor": "npm version minor -m \"chore(release): v%s\"",
+    "version:major": "npm version major -m \"chore(release): v%s\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "version": "0.10.0"
+}

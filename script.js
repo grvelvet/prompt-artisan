@@ -2,7 +2,8 @@
     'use strict';
 
     const config = {
-        APP_VERSION: '3.4.0',
+        // --- ИЗМЕНЕНИЕ 1: Версия изменена на 0.9 ---
+        APP_VERSION: '0.10.0',
         LANG_KEY: 'promptArtisanLang_v1',
         POSITIVE_QUALITY_TAGS: ['masterpiece', 'best quality', 'highres', 'ultra-detailed'],
         NEGATIVE_QUALITY_TAGS: ['worst quality', 'low quality', 'normal quality'],
@@ -223,7 +224,13 @@
                 textToModify = textarea.value.substring(startIndex, selectionEnd);
             }
             if (!textToModify.trim()) return;
-            const weightRegex = /^KATEX_INLINE_OPEN(.*):(-?[\d.]+)KATEX_INLINE_CLOSE$/;
+
+            // --- НАЧАЛО ИСПРАВЛЕНИЯ ---
+            // Старое, некорректное выражение было здесь.
+            // Новое выражение ищет текст в скобках с двоеточием и числом в конце.
+            const weightRegex = /^\s*\((.+?):([\d.]+)\)\s*$/;
+            // --- КОНЕЦ ИСПРАВЛЕНИЯ ---
+
             const match = textToModify.trim().match(weightRegex);
             const cleanText = match ? match[1].trim() : textToModify.trim();
             const currentWeight = match ? parseFloat(match[2]) : 1.0;
@@ -368,6 +375,8 @@
             }
         },
         hideManual: () => { dom.manualModal.dataset.visible = 'false'; },
+
+        // --- ИЗМЕНЕНИЕ 2: Функция полностью переписана ---
         setLanguage: (lang) => {
             state.currentLang = lang;
             if (utils.isLocalStorageAvailable()) { localStorage.setItem(config.LANG_KEY, lang); }
@@ -375,9 +384,14 @@
             if (dom.langToggleCheckbox) dom.langToggleCheckbox.checked = lang === 'en';
             const translations = i18n[lang];
 
-            if (dom.appTitle) dom.appTitle.textContent = `${translations.appTitle} v${config.APP_VERSION}`;
+            // Устанавливаем заголовок БЕЗ версии
+            if (dom.appTitle) dom.appTitle.textContent = translations.appTitle;
+
+            // Обновляем все тексты по data-атрибутам
             document.querySelectorAll('[data-i18n]').forEach(el => {
-                if (el.id !== 'app-title' && translations[el.dataset.i18n]) { el.textContent = translations[el.dataset.i18n]; }
+                if (el.id !== 'app-title' && translations[el.dataset.i18n]) {
+                    el.textContent = translations[el.dataset.i18n];
+                }
             });
             document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
                 if (translations[el.dataset.i18nPlaceholder]) { el.placeholder = translations[el.dataset.i18nPlaceholder]; }
@@ -389,9 +403,16 @@
                 if (translations[el.dataset.i18n]) { el.textContent = translations[el.dataset.i18n]; }
             });
 
+            // Находим элемент в футере и ДОБАВЛЯЕМ к его тексту версию
+            const footerTextElement = document.querySelector('footer span[data-i18n="footerText"]');
+            if (footerTextElement) {
+                footerTextElement.textContent += ` | v${config.APP_VERSION}`;
+            }
+
             handlers.populatePresetDropdown();
             state.isManualLoaded = false;
         },
+
         openTagBrowser: async (targetId, libraryFile) => {
             state.tagBrowserState = {
                 isOpen: true, targetId: targetId, library: null,

@@ -441,7 +441,6 @@ button#delete-preset-btn:hover {
     bottom: 135%;
     left: 50%;
     transform: translateX(-50%);
-    /* --- ИСПРАВЛЕНИЕ 2: Используем transform для центрирования --- */
     transition: opacity 0.3s;
     font-weight: 400;
     font-size: 0.95em;
@@ -449,7 +448,6 @@ button#delete-preset-btn:hover {
     border: 1px solid var(--border-color);
 }
 
-/* --- ИСПРАВЛЕНИЕ 2: Сдвигаем тултип влево, если он у правого края экрана --- */
 .sidebar .tooltip-icon .tooltip-text,
 .header-controls .tooltip-icon .tooltip-text {
     left: auto;
@@ -567,13 +565,15 @@ button#delete-preset-btn:hover {
     padding: 30px;
     border-radius: 10px;
     border: 1px solid var(--border-color);
-    width: 90%;
+    width: 85%;
+    max-width: 1000px;
     max-height: 85vh;
     display: flex;
     flex-direction: column;
     position: relative;
     transform: scale(0.95);
     transition: transform 0.3s ease;
+    box-sizing: border-box;
 }
 
 .modal-overlay[data-visible="true"] .modal-content {
@@ -642,7 +642,8 @@ button#delete-preset-btn:hover {
 }
 
 .tag-browser-content {
-    max-width: 900px;
+    width: 90%;
+    max-width: 750px;
 }
 
 .tag-browser-body {
@@ -739,6 +740,43 @@ button#delete-preset-btn:hover {
 
     .container {
         padding: 15px;
+    }
+
+    .modal-content {
+        width: 95%;
+        padding: 20px 15px;
+    }
+
+    .manual-body {
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    .manual-body::-webkit-scrollbar {
+        display: none;
+    }
+
+    .tag-browser-body {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    #tag-browser-subcategories {
+        flex-direction: row;
+        overflow-x: auto;
+        padding-bottom: 10px;
+    }
+
+    #tag-browser-subcategories button {
+        flex-shrink: 0;
+    }
+
+    .header-main h1 {
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        transform: none;
+        max-width: calc(100% - 150px);
     }
 
     h1 {
