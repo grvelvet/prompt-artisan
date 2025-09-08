@@ -20,3 +20,8 @@ It allows you to assemble prompts from ready-made blocks: style, character, scen
 5. Save your settings as a **preset** if needed.  
 
 ## 📂 Project Structure
+prompt-artisan/
+├── index.html # Main page
+├── style.css # Styles
+├── script.js # Logic
+└── presets.json # (optional) user
