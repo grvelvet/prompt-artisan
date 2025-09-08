@@ -1,22 +1,35 @@
-# Prompt Artisan v0.9
-
 # Prompt Artisan
 
-**Prompt Artisan** is a tool for building prompts for image generation models (Stable Diffusion, SDXL, etc.).  
-It allows you to assemble prompts from ready-made blocks: style, character, scene, camera, and more.  
+A structured tool for building and managing prompts for generative Text-to-Image AI, such as **Stable Diffusion**.
 
-## 🔧 Features
-- Build final positive/negative prompt
-- Quality tags toggle (on/off)
-- Edit and save prompt parts
-- Preset management (save, import, export)
-- Tooltips for each section
-- Language switch (RU/EN)
-- Pure frontend — works directly in the browser, no server required
+## ✨ Core Features
+- **Structured Input**: The form is segmented into logical blocks (style, subject, scene, camera, etc.) for step-by-step prompt construction.  
+- **Tag Browser**: A built-in tag dictionary loaded from JSON libraries, featuring search and categories for quickly adding complex details.  
+- **Weight Control**: Incrementally increase or decrease the weight of individual tags `((tag:1.1))` directly within the UI.  
+- **Preset Management**: Save, load, import, and export sets of populated fields in JSON format.  
+- **Internationalization (i18n)**: Supports Russian and English with a language toggle.  
+- **Responsive UI**: Renders correctly on both desktop and mobile devices.  
 
-## 🚀 Usage
-1. Open [Prompt Artisan](https://grvelvet.github.io/prompt-artisan/) in your browser.  
-2. Fill in the blocks (style, subject, scene, camera).  
-3. The final prompt will be automatically assembled in the right panel.  
-4. Copy the **Positive Prompt** or **Negative Prompt** using the `Copy` button.  
-5. Save your settings as a **preset** if needed.
+## 🛠 Tech Stack
+- HTML5  
+- CSS3 (vanilla)  
+- JavaScript (ES6+, vanilla)  
+- JSON (tags, presets, localization)  
+
+## 📂 Project Structure
+```text
+.
+├── data/
+│   ├── tags-appearance.json
+│   ├── tags-camera.json
+│   ├── tags-clothing.json
+│   ├── tags-lighting.json
+│   ├── tags-location.json
+│   ├── tags-style.json
+│   └── tags-subject.json
+├── index.html              # Main application structure
+├── script.js               # All application logic
+├── style.css               # All styles
+├── package.json            # Project metadata and scripts
+├── update-version.js       # Script for automatic version updates
+└── README.md
