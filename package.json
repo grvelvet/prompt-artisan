@@ -1,6 +1,10 @@
 {
-  "name": "prompt-artisan-main",
+  "name": "prompt-artisan",
+  "version": "0.12.2",
+  "description": "",
+  "main": "script.js",
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "update-version-in-js": "node update-version.js",
     "postversion": "npm run update-version-in-js",
     "version:patch": "npm version patch -m \"chore(release): v%s\"",
@@ -9,6 +13,5 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "version": "0.10.0"
+  "license": "ISC"
 }

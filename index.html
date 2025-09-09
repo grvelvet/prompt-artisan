@@ -218,14 +218,16 @@
                     <div id="tag-browser-tags-list"></div>
                 </main>
             </div>
-            <footer class="tag-browser-footer">
+           <footer class="tag-browser-footer">
                 <div id="tag-browser-selection-preview"></div>
-                <button type="button" id="add-selected-tags-btn" disabled></button>
+                <div class="tag-browser-actions">
+                    <button type="button" id="reset-selected-tags-btn" data-i18n="resetSelectionBtn"></button>
+                    <button type="button" id="add-selected-tags-btn" disabled></button>
+                </div>
             </footer>
         </div>
     </div>
 
     <script src="script.js" defer></script>
 </body>
-
 </html>

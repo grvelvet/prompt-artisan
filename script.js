@@ -2,8 +2,7 @@
     'use strict';
 
     const config = {
-        // --- ИЗМЕНЕНИЕ 1: Версия изменена на 0.9 ---
-        APP_VERSION: '0.10.0',
+        APP_VERSION: '0.12.2', // This will be updated by update-version.js
         LANG_KEY: 'promptArtisanLang_v1',
         POSITIVE_QUALITY_TAGS: ['masterpiece', 'best quality', 'highres', 'ultra-detailed'],
         NEGATIVE_QUALITY_TAGS: ['worst quality', 'low quality', 'normal quality'],
@@ -45,7 +44,8 @@
             alertNoPresets: "Нет пресетов для экспорта.", alertImportError: "Ошибка: не удалось прочитать файл. Убедитесь, что это корректный JSON.",
             rebuildBtnTitle: "Сбросить ручные правки и сгенерировать промпт заново",
             tagBrowserSearchPlaceholder: "Поиск...",
-            addSelectedBtn: "Добавить"
+            addSelectedBtn: "Добавить",
+            resetSelectionBtn: "Сбросить"
         },
         en: {
             appTitle: "Prompt Artisan", helpTitle: "Help",
@@ -81,7 +81,8 @@
             alertNoPresets: "No presets to export.", alertImportError: "Error: Could not read the file. Ensure it's a valid JSON.",
             rebuildBtnTitle: "Discard manual edits and regenerate the prompt",
             tagBrowserSearchPlaceholder: "Search...",
-            addSelectedBtn: "Add"
+            addSelectedBtn: "Add",
+            resetSelectionBtn: "Reset"
         }
     };
 
@@ -92,12 +93,14 @@
         isManualLoaded: false,
         savedPresets: {},
         currentLang: 'ru',
+        history: [],
+        historyIndex: -1,
+        isUndoing: false,
         tagBrowserState: {
             isOpen: false,
             targetId: null,
             library: null,
-            selectedTags: new Set(),
-            currentSubcategoryId: null
+            selectedTags: new Set()
         }
     };
 
@@ -130,9 +133,9 @@
         tagBrowserTitle: document.getElementById('tag-browser-title'),
         tagBrowserSubcategories: document.getElementById('tag-browser-subcategories'),
         tagBrowserSearch: document.getElementById('tag-browser-search'),
-        tagBrowserTagsList: document.getElementById('tag-browser-tags-list'),
         tagBrowserSelectionPreview: document.getElementById('tag-browser-selection-preview'),
-        addSelectedTagsBtn: document.getElementById('add-selected-tags-btn')
+        addSelectedTagsBtn: document.getElementById('add-selected-tags-btn'),
+        resetSelectedTagsBtn: document.getElementById('reset-selected-tags-btn')
     };
 
     const utils = {
@@ -200,7 +203,53 @@
             dom.allTextareas.forEach(utils.autoResizeTextarea);
             dom.presetSelect.value = '';
             handlers.renderPresetPreview();
+            handlers.captureState();
         },
+
+        captureState: () => {
+            if (state.isUndoing) return;
+            const currentState = {};
+            dom.savableFields.forEach(el => {
+                currentState[el.id] = el.value;
+            });
+            if (state.historyIndex < state.history.length - 1) {
+                state.history = state.history.slice(0, state.historyIndex + 1);
+            }
+            state.history.push(currentState);
+            state.historyIndex = state.history.length - 1;
+            if (state.history.length > 50) {
+                state.history.shift();
+                state.historyIndex--;
+            }
+        },
+        restoreState: (historyEntry) => {
+            state.isUndoing = true;
+            for (const [id, value] of Object.entries(historyEntry)) {
+                const element = document.getElementById(id);
+                if (element) {
+                    element.value = value;
+                }
+            }
+            dom.allTextareas.forEach(utils.autoResizeTextarea);
+            handlers.generatePositiveOutput();
+            handlers.updateNegativeOutput();
+            setTimeout(() => { state.isUndoing = false; }, 0);
+        },
+        undo: () => {
+            if (state.historyIndex > 0) {
+                state.historyIndex--;
+                const prevState = state.history[state.historyIndex];
+                handlers.restoreState(prevState);
+            }
+        },
+        redo: () => {
+            if (state.historyIndex < state.history.length - 1) {
+                state.historyIndex++;
+                const nextState = state.history[state.historyIndex];
+                handlers.restoreState(nextState);
+            }
+        },
+
         setManualEditMode: (isManual) => {
             state.isManualEditMode = isManual;
             dom.positiveOutput.classList.toggle('manual-edit', isManual);
@@ -224,13 +273,7 @@
                 textToModify = textarea.value.substring(startIndex, selectionEnd);
             }
             if (!textToModify.trim()) return;
-
-            // --- НАЧАЛО ИСПРАВЛЕНИЯ ---
-            // Старое, некорректное выражение было здесь.
-            // Новое выражение ищет текст в скобках с двоеточием и числом в конце.
             const weightRegex = /^\s*\((.+?):([\d.]+)\)\s*$/;
-            // --- КОНЕЦ ИСПРАВЛЕНИЯ ---
-
             const match = textToModify.trim().match(weightRegex);
             const cleanText = match ? match[1].trim() : textToModify.trim();
             const currentWeight = match ? parseFloat(match[2]) : 1.0;
@@ -242,6 +285,7 @@
             textarea.setRangeText(newText, replacementStartIndex, replacementEndIndex, 'select');
             textarea.focus();
             handlers.generatePositiveOutput();
+            handlers.captureState();
         },
         handleSavePreset: () => {
             const name = dom.presetNameInput.value.trim();
@@ -268,6 +312,7 @@
             handlers.setManualEditMode(false);
             handlers.generatePositiveOutput();
             handlers.updateNegativeOutput();
+            handlers.captureState();
         },
         handleDeletePreset: () => {
             const name = dom.presetSelect.value;
@@ -363,35 +408,24 @@
                 if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
                 const contentHTML = await response.text();
                 setTimeout(() => {
-                    dom.manualBody.textContent = ''; // Очистка перед вставкой
-                    // Безопасная вставка (если нужно, можно использовать DOMPurify)
                     dom.manualBody.innerHTML = contentHTML;
                     state.isManualLoaded = true;
                 }, 300);
             } catch (error) {
                 console.error("Failed to load manual:", error);
-                dom.manualBody.textContent = i18n[state.currentLang].alertImportError;
-                state.isManualLoaded = false;
+                dom.manualBody.innerHTML = i18n[state.currentLang].alertImportError;
             }
         },
         hideManual: () => { dom.manualModal.dataset.visible = 'false'; },
-
-        // --- ИЗМЕНЕНИЕ 2: Функция полностью переписана ---
         setLanguage: (lang) => {
             state.currentLang = lang;
             if (utils.isLocalStorageAvailable()) { localStorage.setItem(config.LANG_KEY, lang); }
             document.documentElement.lang = lang;
             if (dom.langToggleCheckbox) dom.langToggleCheckbox.checked = lang === 'en';
             const translations = i18n[lang];
-
-            // Устанавливаем заголовок БЕЗ версии
             if (dom.appTitle) dom.appTitle.textContent = translations.appTitle;
-
-            // Обновляем все тексты по data-атрибутам
             document.querySelectorAll('[data-i18n]').forEach(el => {
-                if (el.id !== 'app-title' && translations[el.dataset.i18n]) {
-                    el.textContent = translations[el.dataset.i18n];
-                }
+                if (el.id !== 'app-title' && translations[el.dataset.i18n]) { el.textContent = translations[el.dataset.i18n]; }
             });
             document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
                 if (translations[el.dataset.i18nPlaceholder]) { el.placeholder = translations[el.dataset.i18nPlaceholder]; }
@@ -399,32 +433,23 @@
             document.querySelectorAll('[data-i18n-title]').forEach(el => {
                 if (translations[el.dataset.i18nTitle]) { el.title = translations[el.dataset.i18nTitle]; }
             });
-            document.querySelectorAll('.tooltip-text[data-i18n]').forEach(el => {
-                if (translations[el.dataset.i18n]) { el.textContent = translations[el.dataset.i18n]; }
-            });
-
-            // Находим элемент в футере и ДОБАВЛЯЕМ к его тексту версию
             const footerTextElement = document.querySelector('footer span[data-i18n="footerText"]');
             if (footerTextElement) {
-                footerTextElement.textContent += ` | v${config.APP_VERSION}`;
+                footerTextElement.textContent = `${translations.footerText} | v${config.APP_VERSION}`;
             }
-
             handlers.populatePresetDropdown();
             state.isManualLoaded = false;
         },
-
         openTagBrowser: async (targetId, libraryFile) => {
-            state.tagBrowserState = {
-                isOpen: true, targetId: targetId, library: null,
-                selectedTags: new Set(utils.splitTags(document.getElementById(targetId)?.value || '')),
-                currentSubcategoryId: null
-            };
+            if (state.tagBrowserState.targetId !== targetId) {
+                state.tagBrowserState.selectedTags.clear();
+            }
+            state.tagBrowserState.isOpen = true;
+            state.tagBrowserState.targetId = targetId;
             dom.tagBrowserSearch.value = '';
             dom.tagBrowserModal.dataset.visible = 'true';
-            dom.tagBrowserTagsList.innerHTML = '<div class="spinner"></div>';
-            dom.tagBrowserSubcategories.innerHTML = '';
+            dom.tagBrowserSubcategories.innerHTML = '<div class="spinner"></div>';
             dom.tagBrowserTitle.textContent = 'Loading...';
-
             try {
                 const response = await fetch(`./data/${libraryFile}`);
                 if (!response.ok) throw new Error(`Network response was not ok`);
@@ -433,12 +458,17 @@
                 handlers.renderTagBrowser();
             } catch (error) {
                 console.error('Failed to load tag library:', error);
-                dom.tagBrowserTagsList.textContent = 'Error loading tags.';
+                dom.tagBrowserSubcategories.textContent = 'Error loading tags.';
             }
         },
         closeTagBrowser: () => {
             dom.tagBrowserModal.dataset.visible = 'false';
             state.tagBrowserState.isOpen = false;
+        },
+        handleResetSelection: () => {
+            state.tagBrowserState.selectedTags.clear();
+            handlers.filterTagsBySearch();
+            handlers.updateTagBrowserFooter();
         },
         renderTagBrowser: () => {
             const { library } = state.tagBrowserState;
@@ -446,63 +476,116 @@
             const lang = state.currentLang;
             dom.tagBrowserTitle.textContent = library[`name_${lang}`] || library.name_ru;
             dom.tagBrowserSearch.placeholder = i18n[lang].tagBrowserSearchPlaceholder;
-            dom.addSelectedTagsBtn.textContent = i18n[lang].addSelectedBtn;
             dom.tagBrowserSubcategories.innerHTML = '';
+            const accordionContainer = document.createElement('div');
+            accordionContainer.className = 'subcategory-accordion';
             library.subcategories.forEach(subcat => {
-                const btn = document.createElement('button');
-                btn.textContent = subcat[`name_${lang}`] || subcat.name_ru;
-                btn.dataset.subcatId = subcat.id;
-                btn.addEventListener('click', () => handlers.handleSubcategoryClick(subcat.id));
-                dom.tagBrowserSubcategories.appendChild(btn);
+                const details = document.createElement('details');
+                const summary = document.createElement('summary');
+                const categoryName = document.createElement('span');
+                categoryName.className = 'category-name';
+                const nameText = document.createElement('span');
+                nameText.textContent = subcat[`name_${lang}`] || subcat.name_ru;
+                const tagCount = document.createElement('span');
+                tagCount.className = 'tag-count';
+                tagCount.textContent = `(${subcat.tags.length})`;
+                categoryName.appendChild(nameText);
+                categoryName.appendChild(tagCount);
+                summary.appendChild(categoryName);
+                const tagListContainer = document.createElement('div');
+                tagListContainer.className = 'tag-browser-tags-list-new';
+                tagListContainer.dataset.subcatId = subcat.id;
+                details.appendChild(summary);
+                details.appendChild(tagListContainer);
+                accordionContainer.appendChild(details);
+                details.addEventListener('toggle', () => {
+                    if (details.open && !tagListContainer.hasChildNodes()) {
+                        handlers.renderTagsForSubcategory(subcat, tagListContainer);
+                    }
+                });
             });
-            if (library.subcategories.length > 0) {
-                handlers.handleSubcategoryClick(library.subcategories[0].id);
-            }
+            dom.tagBrowserSubcategories.appendChild(accordionContainer);
             handlers.updateTagBrowserFooter();
         },
-        handleSubcategoryClick: (subcatId) => {
-            state.tagBrowserState.currentSubcategoryId = subcatId;
-            const allBtns = dom.tagBrowserSubcategories.querySelectorAll('button');
-            allBtns.forEach(btn => btn.classList.toggle('active', btn.dataset.subcatId === subcatId));
-            handlers.renderTagsForSubcategory(dom.tagBrowserSearch.value);
-        },
-        renderTagsForSubcategory: (searchTerm = '') => {
-            const { library, currentSubcategoryId, selectedTags } = state.tagBrowserState;
+        renderTagsForSubcategory: (subcategory, container) => {
+            const { selectedTags } = state.tagBrowserState;
             const lang = state.currentLang;
-            const subcategory = library.subcategories.find(s => s.id === currentSubcategoryId);
-            if (!subcategory) return;
-            dom.tagBrowserTagsList.innerHTML = '';
-            const normalizedSearchTerm = searchTerm.toLowerCase();
+            const searchTerm = dom.tagBrowserSearch.value.toLowerCase();
             const filteredTags = subcategory.tags.filter(tag =>
-                (tag[`name_${lang}`] || tag.name_ru).toLowerCase().includes(normalizedSearchTerm) ||
-                tag.tag.toLowerCase().includes(normalizedSearchTerm)
+                (tag[`name_${lang}`] || tag.name_ru).toLowerCase().includes(searchTerm) ||
+                tag.tag.toLowerCase().includes(searchTerm) ||
+                (tag[`desc_${lang}`] || '').toLowerCase().includes(searchTerm)
             );
             const fragment = document.createDocumentFragment();
             filteredTags.forEach(tag => {
                 const item = document.createElement('div');
-                item.className = 'tag-item';
-                item.textContent = tag[`name_${lang}`] || tag.name_ru;
+                item.className = 'tag-item-new';
                 item.dataset.tag = tag.tag;
-                if (selectedTags.has(tag.tag)) { item.classList.add('selected'); }
-                item.addEventListener('click', () => handlers.handleTagClick(tag.tag));
+                if (subcategory.id.includes('_nsfw')) {
+                    item.classList.add('nsfw');
+                }
+                if (selectedTags.has(tag.tag)) {
+                    item.classList.add('selected');
+                }
+                const tagInfo = document.createElement('div');
+                tagInfo.className = 'tag-info';
+                const tagName = document.createElement('span');
+                tagName.className = 'tag-name';
+                tagName.textContent = tag[`name_${lang}`] || tag.name_ru;
+                const tagCode = document.createElement('span');
+                tagCode.className = 'tag-code';
+                tagCode.textContent = tag.tag;
+                tagInfo.appendChild(tagName);
+                tagInfo.appendChild(tagCode);
+                const descKey = `desc_${lang}`;
+                if (tag[descKey] && tag[descKey].trim() !== '') {
+                    const tagDesc = document.createElement('div');
+                    tagDesc.className = 'tag-desc';
+                    tagDesc.textContent = tag[descKey];
+                    tagInfo.appendChild(tagDesc);
+                }
+                const quickAddBtn = document.createElement('button');
+                quickAddBtn.className = 'quick-add-btn';
+                quickAddBtn.innerHTML = '&#43;';
+                quickAddBtn.title = `Quick add "${tag.tag}"`;
+                item.appendChild(tagInfo);
+                item.appendChild(quickAddBtn);
+                item.addEventListener('click', () => handlers.handleTagClick(tag.tag, item));
+                quickAddBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    handlers.handleQuickAdd(tag.tag);
+                });
                 fragment.appendChild(item);
             });
-            dom.tagBrowserTagsList.appendChild(fragment);
+            container.innerHTML = '';
+            container.appendChild(fragment);
         },
-        handleTagClick: (tag) => {
+        handleTagClick: (tag, itemElement) => {
             const { selectedTags } = state.tagBrowserState;
             if (selectedTags.has(tag)) {
                 selectedTags.delete(tag);
             } else {
                 selectedTags.add(tag);
             }
-            const item = dom.tagBrowserTagsList.querySelector(`[data-tag="${tag}"]`);
-            if (item) { item.classList.toggle('selected'); }
+            itemElement.classList.toggle('selected');
             handlers.updateTagBrowserFooter();
+        },
+        handleQuickAdd: (tag) => {
+            const { targetId } = state.tagBrowserState;
+            const textarea = document.getElementById(targetId);
+            if (!textarea) return;
+            const existingTags = new Set(utils.splitTags(textarea.value));
+            existingTags.add(tag);
+            textarea.value = Array.from(existingTags).join(', ');
+            utils.autoResizeTextarea(textarea);
+            handlers.generatePositiveOutput();
+            handlers.captureState();
+            handlers.closeTagBrowser();
         },
         updateTagBrowserFooter: () => {
             const { selectedTags } = state.tagBrowserState;
             dom.addSelectedTagsBtn.disabled = selectedTags.size === 0;
+            dom.addSelectedTagsBtn.textContent = `${i18n[state.currentLang].addSelectedBtn} (${selectedTags.size})`;
             dom.tagBrowserSelectionPreview.textContent = Array.from(selectedTags).join(', ');
         },
         addSelectedTagsToTextarea: () => {
@@ -514,7 +597,20 @@
             textarea.value = Array.from(existingTags).join(', ');
             utils.autoResizeTextarea(textarea);
             handlers.generatePositiveOutput();
+            handlers.captureState();
+            selectedTags.clear();
             handlers.closeTagBrowser();
+        },
+        filterTagsBySearch: () => {
+            const openAccordions = document.querySelectorAll('.subcategory-accordion details[open]');
+            openAccordions.forEach(details => {
+                const container = details.querySelector('.tag-browser-tags-list-new');
+                const subcatId = container.dataset.subcatId;
+                const subcategory = state.tagBrowserState.library.subcategories.find(s => s.id === subcatId);
+                if (subcategory) {
+                    handlers.renderTagsForSubcategory(subcategory, container);
+                }
+            });
         }
     };
 
@@ -527,7 +623,6 @@
     }
 
     function init() {
-        // Проверка критических элементов
         const criticalElements = ['prompt-form', 'output-positive', 'output-negative'];
         const missingElements = criticalElements.filter(id => !document.getElementById(id));
         if (missingElements.length > 0) {
@@ -538,8 +633,21 @@
         const savedLang = utils.isLocalStorageAvailable() ? localStorage.getItem(config.LANG_KEY) : 'ru';
         handlers.setLanguage(savedLang || 'ru');
 
-        dom.form.addEventListener('input', handlers.generatePositiveOutput);
+        dom.form.addEventListener('input', debounce(() => {
+            handlers.generatePositiveOutput();
+            handlers.captureState();
+        }, 500));
+
         dom.form.addEventListener('mousedown', handlers.handleWeightControl);
+
+        document.addEventListener('keydown', (e) => {
+            if (e.ctrlKey && e.key === 'z') { e.preventDefault(); handlers.undo(); }
+            if ((e.ctrlKey && e.key === 'y') || (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'z')) { e.preventDefault(); handlers.redo(); }
+            if (e.key === 'Escape') {
+                if (dom.manualModal.dataset.visible === 'true') handlers.hideManual();
+                if (dom.tagBrowserModal.dataset.visible === 'true') handlers.closeTagBrowser();
+            }
+        });
 
         dom.positiveOutput.addEventListener('input', () => {
             handlers.setManualEditMode(true);
@@ -549,6 +657,7 @@
         dom.rebuildBtn.addEventListener('click', () => {
             handlers.setManualEditMode(false);
             handlers.generatePositiveOutput();
+            handlers.captureState();
         });
         dom.clearFormBtn.addEventListener('click', handlers.resetToDefaultState);
         dom.langToggleCheckbox.addEventListener('change', () => {
@@ -567,7 +676,6 @@
         dom.deletePresetBtn.addEventListener('click', handlers.handleDeletePreset);
         dom.showManualBtn.addEventListener('click', handlers.showManual);
         dom.closeManualBtn.addEventListener('click', handlers.hideManual);
-
         document.querySelectorAll('.tag-browser-btn').forEach(btn => {
             btn.addEventListener('click', () => {
                 const { targetId, library } = btn.dataset;
@@ -575,26 +683,16 @@
             });
         });
         dom.closeTagBrowserBtn.addEventListener('click', handlers.closeTagBrowser);
-
-        // Добавляем debounce для поиска
-        dom.tagBrowserSearch.addEventListener('input', debounce((e) => handlers.renderTagsForSubcategory(e.target.value), DEBOUNCE_DELAY));
-
+        dom.resetSelectedTagsBtn.addEventListener('click', handlers.handleResetSelection);
+        dom.tagBrowserSearch.addEventListener('input', debounce(handlers.filterTagsBySearch, DEBOUNCE_DELAY));
         dom.addSelectedTagsBtn.addEventListener('click', handlers.addSelectedTagsToTextarea);
-
         dom.manualModal.addEventListener('click', (e) => { if (e.target === dom.manualModal) handlers.hideManual(); });
         dom.tagBrowserModal.addEventListener('click', (e) => { if (e.target === dom.tagBrowserModal) handlers.closeTagBrowser(); });
-
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') {
-                if (dom.manualModal.dataset.visible === 'true') handlers.hideManual();
-                if (dom.tagBrowserModal.dataset.visible === 'true') handlers.closeTagBrowser();
-            }
-        });
-
         dom.allTextareas.forEach(textarea => {
             textarea.addEventListener('input', () => utils.autoResizeTextarea(textarea));
         });
 
+        handlers.captureState();
         setTimeout(handlers.resetToDefaultState, 0);
     }
 
