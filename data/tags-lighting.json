@@ -11,27 +11,23 @@
         {
           "tag": "soft lighting",
           "name_ru": "Мягкий свет",
-          "name_en": "Soft Lighting"
+          "name_en": "Soft Lighting",
+          "desc_ru": "Рассеянный свет с мягкими, плавными тенями. Создает нежную и спокойную атмосферу.",
+          "desc_en": "Diffused light with soft, gentle shadows. Creates a gentle and calm atmosphere."
         },
         {
           "tag": "hard lighting",
           "name_ru": "Жесткий свет",
-          "name_en": "Hard Lighting"
-        },
-        {
-          "tag": "diffused lighting",
-          "name_ru": "Рассеянный свет",
-          "name_en": "Diffused Lighting"
-        },
-        {
-          "tag": "direct lighting",
-          "name_ru": "Прямой свет",
-          "name_en": "Direct Lighting"
+          "name_en": "Hard Lighting",
+          "desc_ru": "Прямой свет от точечного источника, создающий резкие, четкие тени и высокий контраст.",
+          "desc_en": "Direct light from a point source, creating sharp, defined shadows and high contrast."
         },
         {
           "tag": "cinematic lighting",
           "name_ru": "Кинематографическое",
-          "name_en": "Cinematic Lighting"
+          "name_en": "Cinematic Lighting",
+          "desc_ru": "Драматическое, контрастное освещение, как в кино. Часто использует цветной свет и тени.",
+          "desc_en": "Dramatic, high-contrast lighting, as seen in movies. Often uses colored light and shadows."
         },
         {
           "tag": "dramatic lighting",
@@ -41,62 +37,51 @@
         {
           "tag": "studio lighting",
           "name_ru": "Студийное",
-          "name_en": "Studio Lighting"
+          "name_en": "Studio Lighting",
+          "desc_ru": "Чистое, контролируемое освещение, как в фотостудии. Часто с простым фоном.",
+          "desc_en": "Clean, controlled lighting, as in a photo studio. Often with a simple background."
         },
         {
           "tag": "high-key lighting",
           "name_ru": "Высокий ключ",
-          "name_en": "High-key Lighting"
+          "name_en": "High-key Lighting",
+          "desc_ru": "Очень светлая сцена с минимальными тенями. Создает позитивное, воздушное настроение.",
+          "desc_en": "A very bright scene with minimal shadows. Creates a positive, airy mood."
         },
         {
           "tag": "low-key lighting",
           "name_ru": "Низкий ключ",
-          "name_en": "Low-key Lighting"
+          "name_en": "Low-key Lighting",
+          "desc_ru": "Темная сцена, где освещены только ключевые детали. Создает таинственную или мрачную атмосферу.",
+          "desc_en": "A dark scene where only key details are illuminated. Creates a mysterious or somber mood."
         },
         {
           "tag": "chiaroscuro",
           "name_ru": "Кьяроскуро (Светотень)",
-          "name_en": "Chiaroscuro"
+          "name_en": "Chiaroscuro",
+          "desc_ru": "Экстремальный контраст между светом и тьмой, как на картинах Караваджо.",
+          "desc_en": "Extreme contrast between light and dark, reminiscent of Caravaggio's paintings."
         },
         {
           "tag": "rembrandt lighting",
           "name_ru": "Рембрандтовский свет",
-          "name_en": "Rembrandt Lighting"
+          "name_en": "Rembrandt Lighting",
+          "desc_ru": "Портретная техника, создающая светлый треугольник на затененной щеке.",
+          "desc_en": "A portrait technique that creates a triangle of light on the shadowed cheek."
         },
         {
           "tag": "butterfly lighting",
           "name_ru": "Бабочка",
-          "name_en": "Butterfly Lighting"
-        },
-        {
-          "tag": "loop lighting",
-          "name_ru": "Петля",
-          "name_en": "Loop Lighting"
-        },
-        {
-          "tag": "split lighting",
-          "name_ru": "Разделяющий свет",
-          "name_en": "Split Lighting"
-        },
-        {
-          "tag": "natural lighting",
-          "name_ru": "Естественное освещение",
-          "name_en": "Natural Lighting"
-        },
-        {
-          "tag": "artificial lighting",
-          "name_ru": "Искусственное освещение",
-          "name_en": "Artificial Lighting"
-        },
-        {
-          "tag": "ambient light",
-          "name_ru": "Окружающий свет",
-          "name_en": "Ambient Light"
+          "name_en": "Butterfly Lighting",
+          "desc_ru": "Свет сверху, создающий тень в форме бабочки под носом. Часто используется в гламурных портретах.",
+          "desc_en": "Light from above, creating a butterfly-shaped shadow under the nose. Often used in glamour portraits."
         },
         {
           "tag": "global illumination",
           "name_ru": "Глобальное освещение",
-          "name_en": "Global Illumination"
+          "name_en": "Global Illumination",
+          "desc_ru": "Реалистичная симуляция света, где свет отражается от поверхностей и освещает другие объекты.",
+          "desc_en": "Realistic light simulation where light bounces off surfaces to illuminate other objects."
         },
         {
           "tag": "flat lighting",
@@ -133,17 +118,23 @@
         {
           "tag": "backlight",
           "name_ru": "Контровой свет (сзади)",
-          "name_en": "Backlight"
+          "name_en": "Backlight",
+          "desc_ru": "Источник света находится позади объекта, создавая светлый контур.",
+          "desc_en": "The light source is behind the subject, creating a bright outline."
         },
         {
           "tag": "silhouette",
           "name_ru": "Силуэт",
-          "name_en": "Silhouette"
+          "name_en": "Silhouette",
+          "desc_ru": "Эффект, при котором объект становится темным на ярком фоне.",
+          "desc_en": "An effect where the subject becomes a dark shape against a bright background."
         },
         {
           "tag": "rim lighting",
           "name_ru": "Контурный свет",
-          "name_en": "Rim Lighting"
+          "name_en": "Rim Lighting",
+          "desc_ru": "Тонкая светлая линия по контуру объекта, отделяющая его от фона.",
+          "desc_en": "A thin line of light around the edge of the subject, separating it from the background."
         },
         {
           "tag": "side lighting",
@@ -158,37 +149,37 @@
         {
           "tag": "underlighting",
           "name_ru": "Нижний свет",
-          "name_en": "Underlighting"
+          "name_en": "Underlighting",
+          "desc_ru": "Свет снизу, часто создает зловещий или неестественный вид.",
+          "desc_en": "Light from below, often creating a sinister or unnatural look."
         },
         {
           "tag": "key light",
           "name_ru": "Рисующий свет",
-          "name_en": "Key Light"
+          "name_en": "Key Light",
+          "desc_ru": "Основной и самый яркий источник света в сцене.",
+          "desc_en": "The main and brightest light source in a scene."
         },
         {
           "tag": "fill light",
           "name_ru": "Заполняющий свет",
-          "name_en": "Fill Light"
-        },
-        {
-          "tag": "kicker light",
-          "name_ru": "Контрэффектный свет",
-          "name_en": "Kicker Light"
+          "name_en": "Fill Light",
+          "desc_ru": "Вторичный свет, который смягчает тени, созданные рисующим светом.",
+          "desc_en": "A secondary light that softens shadows created by the key light."
         },
         {
           "tag": "three-point lighting",
           "name_ru": "Трехточечное освещение",
-          "name_en": "Three-point Lighting"
+          "name_en": "Three-point Lighting",
+          "desc_ru": "Классическая схема из рисующего, заполняющего и контрового света.",
+          "desc_en": "A classic setup using a key light, fill light, and backlight."
         },
         {
           "tag": "dappled light",
           "name_ru": "Пятнистый свет",
-          "name_en": "Dappled Light"
-        },
-        {
-          "tag": "shaft of light",
-          "name_ru": "Столп света",
-          "name_en": "Shaft of Light"
+          "name_en": "Dappled Light",
+          "desc_ru": "Свет, пробивающийся сквозь листву, создающий пятна света и тени.",
+          "desc_en": "Light filtering through foliage, creating spots of light and shadow."
         }
       ]
     },
@@ -241,11 +232,6 @@
           "tag": "low contrast",
           "name_ru": "Низкий контраст",
           "name_en": "Low Contrast"
-        },
-        {
-          "tag": "deep shadows",
-          "name_ru": "Глубокие тени",
-          "name_en": "Deep Shadows"
         }
       ]
     },
@@ -265,19 +251,18 @@
           "name_en": "Cool Lighting"
         },
         {
-          "tag": "neutral lighting",
-          "name_ru": "Нейтральный свет",
-          "name_en": "Neutral Lighting"
-        },
-        {
           "tag": "golden hour lighting",
           "name_ru": "Свет золотого часа",
-          "name_en": "Golden Hour Lighting"
+          "name_en": "Golden Hour Lighting",
+          "desc_ru": "Мягкий, теплый свет во время рассвета или заката.",
+          "desc_en": "Soft, warm light during sunrise or sunset."
         },
         {
           "tag": "blue hour lighting",
           "name_ru": "Свет синего часа",
-          "name_en": "Blue Hour Lighting"
+          "name_en": "Blue Hour Lighting",
+          "desc_ru": "Холодный, синий свет сразу после заката или перед рассветом.",
+          "desc_en": "Cold, blue light just after sunset or before sunrise."
         },
         {
           "tag": "colored light",
@@ -285,59 +270,14 @@
           "name_en": "Colored Light"
         },
         {
-          "tag": "red light",
-          "name_ru": "Красный свет",
-          "name_en": "Red Light"
-        },
-        {
-          "tag": "blue light",
-          "name_ru": "Синий свет",
-          "name_en": "Blue Light"
-        },
-        {
-          "tag": "green light",
-          "name_ru": "Зеленый свет",
-          "name_en": "Green Light"
-        },
-        {
-          "tag": "purple light",
-          "name_ru": "Фиолетовый свет",
-          "name_en": "Purple Light"
-        },
-        {
-          "tag": "pink light",
-          "name_ru": "Розовый свет",
-          "name_en": "Pink Light"
-        },
-        {
-          "tag": "yellow light",
-          "name_ru": "Желтый свет",
-          "name_en": "Yellow Light"
-        },
-        {
-          "tag": "orange light",
-          "name_ru": "Оранжевый свет",
-          "name_en": "Orange Light"
-        },
-        {
-          "tag": "multicolored lighting",
-          "name_ru": "Разноцветное освещение",
-          "name_en": "Multicolored Lighting"
-        },
-        {
           "tag": "neon lighting",
           "name_ru": "Неоновое освещение",
           "name_en": "Neon Lighting"
         },
         {
-          "tag": "pastel colors",
-          "name_ru": "Пастельные цвета",
-          "name_en": "Pastel Colors"
-        },
-        {
-          "tag": "vibrant colors",
-          "name_ru": "Яркие цвета",
-          "name_en": "Vibrant Colors"
+          "tag": "multicolored lighting",
+          "name_ru": "Разноцветное освещение",
+          "name_en": "Multicolored Lighting"
         },
         {
           "tag": "monochromatic color scheme",
@@ -347,17 +287,14 @@
         {
           "tag": "complementary colors",
           "name_ru": "Комплементарные цвета",
-          "name_en": "Complementary Colors"
+          "name_en": "Complementary Colors",
+          "desc_ru": "Использование противоположных цветов (напр. синий и оранжевый) для создания контраста.",
+          "desc_en": "Using opposite colors (e.g., blue and orange) to create high contrast."
         },
         {
           "tag": "iridescent light",
           "name_ru": "Радужный свет",
           "name_en": "Iridescent Light"
-        },
-        {
-          "tag": "opalescent",
-          "name_ru": "Опалесцирующий",
-          "name_en": "Opalescent"
         },
         {
           "tag": "fluorescent",
@@ -372,7 +309,9 @@
         {
           "tag": "blacklight",
           "name_ru": "УФ-лампа",
-          "name_en": "Blacklight"
+          "name_en": "Blacklight",
+          "desc_ru": "Ультрафиолетовый свет, заставляющий белые и флуоресцентные объекты светиться.",
+          "desc_en": "Ultraviolet light that makes white and fluorescent objects glow."
         }
       ]
     },
@@ -390,11 +329,6 @@
           "tag": "moonlight",
           "name_ru": "Лунный свет",
           "name_en": "Moonlight"
-        },
-        {
-          "tag": "full moon light",
-          "name_ru": "Свет полной луны",
-          "name_en": "Full Moon Light"
         },
         {
           "tag": "starlight",
@@ -419,7 +353,9 @@
         {
           "tag": "bioluminescence",
           "name_ru": "Биолюминесценция",
-          "name_en": "Bioluminescence"
+          "name_en": "Bioluminescence",
+          "desc_ru": "Свечение живых организмов, например, светлячков или глубоководных рыб.",
+          "desc_en": "Light emitted by living organisms, like fireflies or deep-sea fish."
         }
       ]
     },
@@ -489,21 +425,6 @@
           "name_en": "Screen Glow"
         },
         {
-          "tag": "computer screen",
-          "name_ru": "Экран компьютера",
-          "name_en": "Computer Screen"
-        },
-        {
-          "tag": "phone screen",
-          "name_ru": "Экран телефона",
-          "name_en": "Phone Screen"
-        },
-        {
-          "tag": "television screen",
-          "name_ru": "Экран телевизора",
-          "name_en": "Television Screen"
-        },
-        {
           "tag": "hologram",
           "name_ru": "Голограмма",
           "name_en": "Hologram"
@@ -528,22 +449,21 @@
         {
           "tag": "volumetric lighting",
           "name_ru": "Объемный свет",
-          "name_en": "Volumetric Lighting"
+          "name_en": "Volumetric Lighting",
+          "desc_ru": "Видимые лучи света в тумане или дыму.",
+          "desc_en": "Visible beams of light in fog or smoke."
         },
         {
           "tag": "god rays",
           "name_ru": "Божественные лучи",
-          "name_en": "God Rays"
+          "name_en": "God Rays",
+          "desc_ru": "Лучи солнца, пробивающиеся сквозь облака.",
+          "desc_en": "Rays of sunlight streaming through clouds."
         },
         {
           "tag": "crepuscular rays",
           "name_ru": "Сумеречные лучи",
           "name_en": "Crepuscular Rays"
-        },
-        {
-          "tag": "light beam",
-          "name_ru": "Луч света",
-          "name_en": "Light Beam"
         },
         {
           "tag": "fog",
@@ -571,29 +491,9 @@
           "name_en": "Steam"
         },
         {
-          "tag": "dust",
-          "name_ru": "Пыль",
-          "name_en": "Dust"
-        },
-        {
-          "tag": "airborne particles",
-          "name_ru": "Частицы в воздухе",
-          "name_en": "Airborne Particles"
-        },
-        {
-          "tag": "rain",
-          "name_ru": "Дождь",
-          "name_en": "Rain"
-        },
-        {
-          "tag": "snow",
-          "name_ru": "Снег",
-          "name_en": "Snow"
-        },
-        {
-          "tag": "falling embers",
-          "name_ru": "Падающие угли",
-          "name_en": "Falling Embers"
+          "tag": "dust particles",
+          "name_ru": "Частицы пыли",
+          "name_en": "Dust Particles"
         },
         {
           "tag": "sparks",
@@ -611,19 +511,11 @@
           "name_en": "Magic Aura"
         },
         {
-          "tag": "energy field",
-          "name_ru": "Энергетическое поле",
-          "name_en": "Energy Field"
-        },
-        {
-          "tag": "lens flare",
-          "name_ru": "Блик объектива",
-          "name_en": "Lens Flare"
-        },
-        {
           "tag": "caustics",
-          "name_ru": "Каустика (водные блики)",
-          "name_en": "Caustics"
+          "name_ru": "Каустика",
+          "name_en": "Caustics",
+          "desc_ru": "Световые узоры, создаваемые светом, проходящим через воду.",
+          "desc_en": "Light patterns created by light passing through water."
         }
       ]
     },
@@ -635,12 +527,9 @@
         {
           "tag": "moody",
           "name_ru": "Мрачное",
-          "name_en": "Moody"
-        },
-        {
-          "tag": "serene",
-          "name_ru": "Безмятежное",
-          "name_en": "Serene"
+          "name_en": "Moody",
+          "desc_ru": "Атмосферное, с глубокими тенями и приглушенными цветами.",
+          "desc_en": "Atmospheric, with deep shadows and muted colors."
         },
         {
           "tag": "eerie",
@@ -660,7 +549,9 @@
         {
           "tag": "ethereal",
           "name_ru": "Эфирное",
-          "name_en": "Ethereal"
+          "name_en": "Ethereal",
+          "desc_ru": "Неземное, воздушное и деликатное.",
+          "desc_en": "Otherworldly, airy, and delicate."
         },
         {
           "tag": "dreamlike",
@@ -703,44 +594,16 @@
           "name_en": "Nostalgic"
         },
         {
-          "tag": "lonely",
-          "name_ru": "Одинокое",
-          "name_en": "Lonely"
-        },
-        {
-          "tag": "peaceful",
-          "name_ru": "Мирное",
-          "name_en": "Peaceful"
-        },
-        {
-          "tag": "chaotic",
-          "name_ru": "Хаотичное",
-          "name_en": "Chaotic"
-        },
-        {
-          "tag": "intense",
-          "name_ru": "Напряженное",
-          "name_en": "Intense"
-        },
-        {
-          "tag": "foreboding",
-          "name_ru": "Предчувствие беды",
-          "name_en": "Foreboding"
-        },
-        {
-          "tag": "claustrophobic",
-          "name_ru": "Клаустрофобное",
-          "name_en": "Claustrophobic"
-        },
-        {
-          "tag": "uplifting",
-          "name_ru": "Воодушевляющее",
-          "name_en": "Uplifting"
+          "tag": "serene",
+          "name_ru": "Безмятежное",
+          "name_en": "Serene"
         },
         {
           "tag": "somber",
           "name_ru": "Скорбное",
-          "name_en": "Somber"
+          "name_en": "Somber",
+          "desc_ru": "Темное, серьезное и мрачное настроение.",
+          "desc_en": "A dark, serious, and gloomy mood."
         }
       ]
     }
