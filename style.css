@@ -149,10 +149,10 @@ h3 {
     transition: background-color .2s;
 }
 
-.lang-switch-label .lang-switch-knob {
+ .lang-switch-label .lang-switch-knob {
     content: '';
     position: absolute;
-    top: 50%;
+    top: 50%; /* 1. Ставим верхний край на середину */
     left: 2px;
     width: 22px;
     height: 22px;
@@ -160,12 +160,12 @@ h3 {
     transition: 0.3s;
     background: var(--text-color);
     box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.5);
-    transform: translateY(-50%);
+    transform: translateY(-50%); /* 2. Смещаем на половину своей высоты вверх */
 }
 
 #lang-toggle-checkbox:checked+.lang-switch-label .lang-switch-knob {
     left: calc(100% - 2px);
-    transform: translateX(-100%) translateY(-50%);
+    transform: translateX(-100%) translateY(-50%); /* 3. Совмещаем оба смещения */
 }
 
 .lang-switch-label::before,
@@ -379,6 +379,14 @@ button:hover {
     background-color: #777;
 }
 
+button#delete-preset-btn {
+    background-color: var(--delete-bg);
+}
+
+button#delete-preset-btn:hover {
+    background-color: var(--delete-hover);
+}
+
 /* ==========================================================================
    6. TOOLTIPS & ICONS
    ========================================================================== */
@@ -455,6 +463,13 @@ button:hover {
 /* ==========================================================================
    7. PRESET MANAGEMENT
    ========================================================================== */
+.preset-selection-group {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 10px;
+    align-items: center;
+}
+
 .preset-controls {
     display: flex;
     flex-direction: column;
@@ -462,7 +477,8 @@ button:hover {
 }
 
 .preset-controls button,
-.preset-controls input {
+.preset-controls input,
+.preset-controls select {
     width: 100%;
 }
 
@@ -518,64 +534,6 @@ button:hover {
 
 #preset-preview li {
     margin-bottom: 5px;
-}
-
-/* ==========================================================================
-   NEW PRESET MANAGER UI STYLES
-   ========================================================================== */
-#preset-list-container {
-    max-height: 200px;
-    overflow-y: auto;
-    border: 1px solid var(--input-bg);
-    border-radius: 5px;
-    padding: 5px;
-    background-color: rgba(0, 0, 0, 0.2);
-}
-
-.preset-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 12px;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.2s;
-    border: 1px solid transparent;
-}
-
-.preset-item:not(:last-child) {
-    margin-bottom: 5px;
-}
-
-.preset-item:hover {
-    background-color: var(--input-bg);
-}
-
-.preset-item.selected {
-    background-color: var(--active-blue);
-    border-color: var(--light-text);
-    font-weight: 600;
-}
-
-.preset-item-delete-btn {
-    background: none;
-    color: var(--light-text);
-    opacity: 0.5;
-    padding: 0 5px;
-    font-size: 1.2em;
-    min-width: 30px;
-}
-.preset-item-delete-btn:hover {
-    background: none;
-    opacity: 1;
-    color: var(--delete-bg);
-}
-
-.preset-list-empty {
-    text-align: center;
-    padding: 20px;
-    opacity: 0.6;
-    font-style: italic;
 }
 
 /* ==========================================================================
@@ -709,7 +667,7 @@ button:hover {
 #tag-browser-tags {
     order: 1;
     position: sticky;
-    top: -31px;
+    top: -31px; /* stick to the top of the modal content, not the viewport */
     padding-top: 15px;
     background: var(--container-bg);
     z-index: 10;
@@ -798,8 +756,8 @@ button:hover {
 .tag-item-new .tag-info {
     display: flex;
     flex-direction: column;
-    flex: 1;
-    min-width: 0;
+    flex: 1; /* Allow text to take up space */
+    min-width: 0; /* Important for flex text wrapping */
 }
 
 .tag-item-new .tag-name {
@@ -846,7 +804,7 @@ button:hover {
 }
 
 .tag-browser-footer {
-    margin-top: auto; /* Push footer to the bottom */
+    margin-top: 20px;
     padding-top: 15px;
     border-top: 1px solid var(--input-bg);
     display: flex;
@@ -871,11 +829,12 @@ button:hover {
 #tag-browser-selection-preview {
     font-size: 0.8em;
     opacity: 0.7;
-    flex: 1;
-    min-width: 0;
+    max-width: 70%;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+    flex: 1; /* Allow preview to take up space */
+    min-width: 0; /* Important for flex text wrapping */
 }
 
 #add-selected-tags-btn:disabled {
