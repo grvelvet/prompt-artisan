@@ -14,22 +14,19 @@ A structured tool for building and managing prompts for generative Text-to-Image
 - HTML5  
 - CSS3 (vanilla)  
 - JavaScript (ES6+, vanilla)  
-- JSON (tags, presets, localization)  
+- JSON (tags, presets, localization)
+- ## Installation and Setup
 
-## 📂 Project Structure
-```text
-.
-├── data/
-│   ├── tags-appearance.json
-│   ├── tags-camera.json
-│   ├── tags-clothing.json
-│   ├── tags-lighting.json
-│   ├── tags-location.json
-│   ├── tags-style.json
-│   └── tags-subject.json
-├── index.html              # Main application structure
-├── script.js               # All application logic
-├── style.css               # All styles
-├── package.json            # Project metadata and scripts
-├── update-version.js       # Script for automatic version updates
-└── README.md
+1. Clone the repository:
+   git clone https://github.com/grvelvet/prompt-artisan.git
+
+2. Navigate to the project directory:
+   cd prompt-artisan
+
+3. Install dependencies:
+   npm install
+
+4. Run in development mode:
+   npm run dev
+
+The project will then be available at http://localhost:5173.
