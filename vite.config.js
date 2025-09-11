@@ -2,5 +2,5 @@
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-  base: '/prompt-artisan/',
+    base: '/prompt-artisan/', // <-- ЭТО САМАЯ ВАЖНАЯ СТРОКА
 })
