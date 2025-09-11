@@ -1,9 +1,18 @@
-// vite.config.js
-
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-  // Эта строка говорит Vite, что на GitHub Pages проект будет лежать
-  // в папке /prompt-artisan/, и все пути нужно строить относительно неё.
   base: '/prompt-artisan/',
+  
+  // --- НАЧАЛО НОВОЙ СЕКЦИИ ---
+  // Эта секция явно говорит Vite, как называть файлы в папке dist
+  build: {
+    rollupOptions: {
+      output: {
+        entryFileNames: `assets/[name]-[hash].js`,
+        chunkFileNames: `assets/[name]-[hash].js`,
+        assetFileNames: `assets/[name]-[hash].[ext]`
+      }
+    }
+  }
+  // --- КОНЕЦ НОВОЙ СЕКЦИИ ---
 })
