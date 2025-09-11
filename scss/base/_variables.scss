@@ -1,0 +1,36 @@
+// scss/base/_variables.scss
+
+:root {
+    /* Общие переменные */
+    --manual-edit-border: #f9d71c;
+    --delete-bg: #a83232;
+    --delete-hover: #802626;
+    --active-blue: #2980b9;
+    --scrollbar-thumb-color: #6c757d;
+    --tooltip-bg: rgba(22, 22, 32, 0.9);
+
+    /* Тёмная тема (по умолчанию) */
+    --bg-color: #1a1a2e;
+    --container-bg: #16213e;
+    --input-bg: #0f3460;
+    --text-color: #e94560;
+    --light-text: #dcdcdc;
+    --border-color: #e94560;
+    --card-bg: rgba(15, 52, 96, 0.3);
+    --button-bg: #e94560;
+    --button-hover: #c43751;
+}
+
+body[data-theme="light"] {
+    /* Светлая тема */
+    --bg-color: #f4f7fc;
+    --container-bg: #ffffff;
+    --input-bg: #eef2f9;
+    --text-color: #c2185b;
+    --light-text: #2c3e50;
+    --border-color: #c2185b;
+    --card-bg: rgba(238, 242, 249, 0.6);
+    --button-bg: #c2185b;
+    --button-hover: #a3154c;
+    --scrollbar-thumb-color: #a0aec0;
+}
