@@ -29,6 +29,10 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Build project
+# --- НАЧАЛО НОВОГО ШАГА ДЛЯ ДИАГНОСТИКИ ---
+          - name: List files in the directory
+            run: ls -R
+          # --- КОНЕЦ НОВОГО ШАГА ДЛЯ ДИАГНОСТИКИ ---
         run: npm run build
       - name: Setup Pages
         uses: actions/configure-pages@v4
