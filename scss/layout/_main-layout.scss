@@ -1,0 +1,40 @@
+// scss/layout/_main-layout.scss
+
+body {
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 20px;
+
+    @media (max-width: 600px) {
+        padding: 10px;
+    }
+}
+
+.container {
+    max-width: 1600px;
+    margin: 0 auto;
+    background-color: var(--container-bg);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+
+    body[data-theme="light"] & {
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    @media (max-width: 600px) {
+        padding: 15px;
+    }
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+
+    @media (min-width: 1200px) {
+        grid-template-columns: 3fr 2fr;
+        align-items: start;
+    }
+}

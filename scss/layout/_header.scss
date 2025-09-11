@@ -1,0 +1,39 @@
+// scss/layout/_header.scss
+
+.header-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    border-bottom: 2px solid var(--border-color);
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+
+    h1 {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        max-width: calc(100% - 240px);
+        padding: 0 20px;
+        box-sizing: border-box;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        @media (max-width: 600px) {
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            transform: none;
+            max-width: calc(100% - 150px);
+        }
+    }
+}
+
+.header-controls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-left: auto;
+}

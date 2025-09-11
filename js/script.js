@@ -2,7 +2,7 @@
     'use strict';
 
     const config = {
-        APP_VERSION: '0.12.2',
+        APP_VERSION: '0.14.0',
         LANG_KEY: 'promptArtisanLang_v1',
         THEME_KEY: 'promptArtisanTheme_v1',
         DATA_PATH: './data/',
