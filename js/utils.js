@@ -1,5 +1,5 @@
 // js/utils.js
-import { i18n } from './i18n.js';
+import { i18n } from './I18n.js';
 import { state } from './state.js';
 
 export function debounce(fn, delay) {
