@@ -30,4 +30,3 @@ A structured tool for building and managing prompts for generative Text-to-Image
    npm run dev
 
 The project will then be available at http://localhost:5173
---
