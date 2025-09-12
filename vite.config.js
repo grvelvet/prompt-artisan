@@ -1,6 +1,12 @@
+// vite.config.js
+import { defineConfig } from 'vite'
+
+// БЫЛО:
+// export default defineConfig({
+ base: '/prompt-artisan/',
+// })
+
+// СТАЛО:
 export default defineConfig({
-  base: '/prompt-artisan/',
+  // base теперь нет
 })
-```2.  **Шаг 2:** Запустите в терминале команду сборки:
-```bash
-npm run build
