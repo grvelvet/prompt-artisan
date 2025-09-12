@@ -42,6 +42,7 @@ export const handlers = {
         }
     },
     renderHistory: () => {
+        if (!dom.historyList) return; // Защита от ошибки, если элемент не найден
         if (state.generationHistory.length === 0) {
             dom.historyList.innerHTML = `<p class="placeholder" data-i18n="historyPlaceholder">Здесь будет история ваших промптов.</p>`;
             return;
@@ -264,8 +265,8 @@ export const handlers = {
         if (state.isManualLoaded) return;
         dom.manualBody.innerHTML = '<div class="spinner"></div>';
         
-        // ИЗМЕНЕНИЕ: Используем абсолютный путь
-        const manualFile = state.currentLang === 'ru' ? '/assets/manual-content.html' : '/assets/manual-content-en.html';
+        // ИСПРАВЛЕНИЕ: Используем относительный путь
+        const manualFile = state.currentLang === 'ru' ? 'assets/manual-content.html' : 'assets/manual-content-en.html';
 
         try {
             const response = await fetch(manualFile);
@@ -324,8 +325,8 @@ export const handlers = {
         }
 
         try {
-            // ИЗМЕНЕНИЕ: Используем абсолютный путь
-            const response = await fetch(`/data/${libraryFile}`);
+            // ИСПРАВЛЕНИЕ: Используем относительный путь
+            const response = await fetch(`data/${libraryFile}`);
             if (!response.ok) throw new Error(`Network response was not ok: ${response.statusText}`);
             const libraryData = await response.json();
 
