@@ -1,0 +1,563 @@
+{
+  "id": "style",
+  "name_ru": "Стиль Изображения",
+  "name_en": "Image Style",
+  "subcategories": [
+    {
+      "id": "mediums_techniques",
+      "name_ru": "Материалы и Техники",
+      "name_en": "Mediums & Techniques",
+      "tags": [
+        {
+          "tag": "illustration",
+          "name_ru": "Иллюстрация",
+          "name_en": "Illustration"
+        },
+        {
+          "tag": "painting",
+          "name_ru": "Живопись",
+          "name_en": "Painting"
+        },
+        {
+          "tag": "oil painting",
+          "name_ru": "Живопись маслом",
+          "name_en": "Oil Painting"
+        },
+        {
+          "tag": "watercolor",
+          "name_ru": "Акварель",
+          "name_en": "Watercolor"
+        },
+        {
+          "tag": "sketch",
+          "name_ru": "Набросок (скетч)",
+          "name_en": "Sketch"
+        },
+        {
+          "tag": "line art",
+          "name_ru": "Линейный рисунок",
+          "name_en": "Line Art"
+        },
+        {
+          "tag": "impasto",
+          "name_ru": "Импасто",
+          "name_en": "Impasto",
+          "desc_ru": "Техника живописи с использованием густых, рельефных мазков.",
+          "desc_en": "A painting technique using thick, textured brushstrokes."
+        },
+        {
+          "tag": "digital art",
+          "name_ru": "Цифровое искусство",
+          "name_en": "Digital Art"
+        },
+        {
+          "tag": "digital painting",
+          "name_ru": "Цифровая живопись",
+          "name_en": "Digital Painting"
+        },
+        {
+          "tag": "pixel art",
+          "name_ru": "Пиксель-арт",
+          "name_en": "Pixel Art"
+        },
+        {
+          "tag": "matte painting",
+          "name_ru": "Мэт-пейнтинг",
+          "name_en": "Matte Painting",
+          "desc_ru": "Создание фотореалистичных фонов для кино и игр.",
+          "desc_en": "Creating photorealistic backgrounds for films and games."
+        },
+        {
+          "tag": "photobashing",
+          "name_ru": "Фотобашинг",
+          "name_en": "Photobashing",
+          "desc_ru": "Техника коллажирования фотографий для создания концепт-арта.",
+          "desc_en": "A technique of collaging photos to create concept art."
+        },
+        {
+          "tag": "stained glass",
+          "name_ru": "Витраж",
+          "name_en": "Stained Glass"
+        },
+        {
+          "tag": "graffiti",
+          "name_ru": "Граффити",
+          "name_en": "Graffiti"
+        }
+      ]
+    },
+    {
+      "id": "photography",
+      "name_ru": "Фотография",
+      "name_en": "Photography",
+      "tags": [
+        {
+          "tag": "photograph",
+          "name_ru": "Фотография",
+          "name_en": "Photograph"
+        },
+        {
+          "tag": "photorealistic",
+          "name_ru": "Фотореализм",
+          "name_en": "Photorealistic"
+        },
+        {
+          "tag": "DSLR",
+          "name_ru": "DSLR",
+          "name_en": "DSLR",
+          "desc_ru": "Стиль цифровой зеркальной фотокамеры с высоким качеством.",
+          "desc_en": "Style of a high-quality digital single-lens reflex camera."
+        },
+        {
+          "tag": "film photography",
+          "name_ru": "Пленочная фотография",
+          "name_en": "Film Photography"
+        },
+        {
+          "tag": "black and white",
+          "name_ru": "Черно-белое",
+          "name_en": "Black and White"
+        },
+        {
+          "tag": "sepia",
+          "name_ru": "Сепия",
+          "name_en": "Sepia"
+        },
+        {
+          "tag": "polaroid",
+          "name_ru": "Полароид",
+          "name_en": "Polaroid"
+        },
+        {
+          "tag": "lomography",
+          "name_ru": "Ломография",
+          "name_en": "Lomography",
+          "desc_ru": "Стиль с насыщенными цветами, виньетированием и случайными эффектами.",
+          "desc_en": "A style with saturated colors, vignetting, and random effects."
+        },
+        {
+          "tag": "daguerreotype",
+          "name_ru": "Дагерротип",
+          "name_en": "Daguerreotype",
+          "desc_ru": "Стиль очень старой фотографии (середина 19 века).",
+          "desc_en": "The style of a very old photograph (mid-19th century)."
+        },
+        {
+          "tag": "long exposure",
+          "name_ru": "Длинная выдержка",
+          "name_en": "Long Exposure",
+          "desc_ru": "Смазывает движущиеся объекты (вода, свет) в плавные линии.",
+          "desc_en": "Blurs moving objects (water, light) into smooth lines."
+        },
+        {
+          "tag": "double exposure",
+          "name_ru": "Двойная экспозиция",
+          "name_en": "Double Exposure"
+        },
+        {
+          "tag": "color grading",
+          "name_ru": "Цветокоррекция",
+          "name_en": "Color Grading",
+          "desc_ru": "Изменение цветовой палитры изображения для создания настроения.",
+          "desc_en": "Altering the color palette of an image to create a specific mood."
+        },
+        {
+          "tag": "fashion photography",
+          "name_ru": "Фэшн-фотография",
+          "name_en": "Fashion Photography"
+        }
+      ]
+    },
+    {
+      "id": "art_movements",
+      "name_ru": "Художественные движения",
+      "name_en": "Art Movements",
+      "tags": [
+        {
+          "tag": "impressionism",
+          "name_ru": "Импрессионизм",
+          "name_en": "Impressionism",
+          "desc_ru": "Стиль с видимыми мазками, акцент на свете и движении (Моне, Ренуар).",
+          "desc_en": "Visible brushstrokes, focus on light and movement (Monet, Renoir)."
+        },
+        {
+          "tag": "expressionism",
+          "name_ru": "Экспрессионизм",
+          "name_en": "Expressionism",
+          "desc_ru": "Искажение реальности для выражения сильных эмоций (Мунк, Кирхнер).",
+          "desc_en": "Distorting reality to express strong emotions (Munch, Kirchner)."
+        },
+        {
+          "tag": "cubism",
+          "name_ru": "Кубизм",
+          "name_en": "Cubism",
+          "desc_ru": "Изображение объектов с нескольких точек зрения одновременно (Пикассо, Брак).",
+          "desc_en": "Depicting objects from multiple viewpoints simultaneously (Picasso, Braque)."
+        },
+        {
+          "tag": "surrealism",
+          "name_ru": "Сюрреализм",
+          "name_en": "Surrealism",
+          "desc_ru": "Странные, сновидческие и иррациональные образы (Дали, Магритт).",
+          "desc_en": "Strange, dreamlike, and irrational imagery (Dalí, Magritte)."
+        },
+        {
+          "tag": "pop art",
+          "name_ru": "Поп-арт",
+          "name_en": "Pop Art",
+          "desc_ru": "Стиль, основанный на массовой культуре и рекламе (Уорхол, Лихтенштейн).",
+          "desc_en": "Style based on mass culture and advertising (Warhol, Lichtenstein)."
+        },
+        {
+          "tag": "art nouveau",
+          "name_ru": "Ар-нуво",
+          "name_en": "Art Nouveau",
+          "desc_ru": "Декоративный стиль с плавными, природными линиями (Муха, Климт).",
+          "desc_en": "A decorative style with flowing, natural lines (Mucha, Klimt)."
+        },
+        {
+          "tag": "art deco",
+          "name_ru": "Ар-деко",
+          "name_en": "Art Deco",
+          "desc_ru": "Геометрический, гламурный и симметричный стиль 1920-30-х годов.",
+          "desc_en": "A geometric, glamorous, and symmetrical style of the 1920s-30s."
+        },
+        {
+          "tag": "hyperrealism",
+          "name_ru": "Гиперреализм",
+          "name_en": "Hyperrealism",
+          "desc_ru": "Создание картин, неотличимых от фотографий высокого разрешения.",
+          "desc_en": "Creating paintings that are indistinguishable from high-resolution photos."
+        },
+        {
+          "tag": "minimalism",
+          "name_ru": "Минимализм",
+          "name_en": "Minimalism"
+        },
+        {
+          "tag": "abstract art",
+          "name_ru": "Абстракционизм",
+          "name_en": "Abstract Art"
+        },
+        {
+          "tag": "baroque",
+          "name_ru": "Барокко",
+          "name_en": "Baroque",
+          "desc_ru": "Пышный, драматичный и эмоциональный стиль (Караваджо, Рубенс).",
+          "desc_en": "An ornate, dramatic, and emotional style (Caravaggio, Rubens)."
+        },
+        {
+          "tag": "romanticism",
+          "name_ru": "Романтизм",
+          "name_en": "Romanticism",
+          "desc_ru": "Акцент на эмоциях, природе и индивидуализме (Тернер, Делакруа).",
+          "desc_en": "Emphasis on emotion, nature, and individualism (Turner, Delacroix)."
+        },
+        {
+          "tag": "ukiyo-e",
+          "name_ru": "Укиё-э",
+          "name_en": "Ukiyo-e",
+          "desc_ru": "Традиционная японская гравюра на дереве (Хокусай, Хиросигэ).",
+          "desc_en": "Traditional Japanese woodblock prints (Hokusai, Hiroshige)."
+        },
+        {
+          "tag": "psychedelic art",
+          "name_ru": "Психоделическое искусство",
+          "name_en": "Psychedelic Art"
+        }
+      ]
+    },
+    {
+      "id": "illustration_comics",
+      "name_ru": "Иллюстрация и Комиксы",
+      "name_en": "Illustration & Comics",
+      "tags": [
+        {
+          "tag": "concept art",
+          "name_ru": "Концепт-арт",
+          "name_en": "Concept Art"
+        },
+        {
+          "tag": "character design",
+          "name_ru": "Дизайн персонажа",
+          "name_en": "Character Design"
+        },
+        {
+          "tag": "anime style",
+          "name_ru": "Стиль аниме",
+          "name_en": "Anime Style"
+        },
+        {
+          "tag": "90s anime style",
+          "name_ru": "Стиль аниме 90-х",
+          "name_en": "90s Anime Style"
+        },
+        {
+          "tag": "manga",
+          "name_ru": "Манга",
+          "name_en": "Manga"
+        },
+        {
+          "tag": "comic book style",
+          "name_ru": "Стиль комиксов",
+          "name_en": "Comic Book Style"
+        },
+        {
+          "tag": "graphic novel",
+          "name_ru": "Графический роман",
+          "name_en": "Graphic Novel"
+        },
+        {
+          "tag": "cartoon",
+          "name_ru": "Мультфильм",
+          "name_en": "Cartoon"
+        },
+        {
+          "tag": "cel shading",
+          "name_ru": "Сел-шейдинг",
+          "name_en": "Cel Shading",
+          "desc_ru": "Стиль заливки с резкими тенями, имитирующий классическую анимацию.",
+          "desc_en": "A rendering style with sharp shadows that mimics classic animation."
+        },
+        {
+          "tag": "chibi",
+          "name_ru": "Чиби",
+          "name_en": "Chibi",
+          "desc_ru": "Стиль с маленьким телом и большой головой.",
+          "desc_en": "A style featuring a small body and a large head."
+        }
+      ]
+    },
+    {
+      "id": "thematic_genres",
+      "name_ru": "Тематические жанры",
+      "name_en": "Thematic Genres",
+      "tags": [
+        {
+          "tag": "fantasy",
+          "name_ru": "Фэнтези",
+          "name_en": "Fantasy"
+        },
+        {
+          "tag": "dark fantasy",
+          "name_ru": "Темное фэнтези",
+          "name_en": "Dark Fantasy"
+        },
+        {
+          "tag": "sci-fi",
+          "name_ru": "Научная фантастика",
+          "name_en": "Sci-fi"
+        },
+        {
+          "tag": "horror",
+          "name_ru": "Хоррор",
+          "name_en": "Horror"
+        },
+        {
+          "tag": "cosmic horror",
+          "name_ru": "Космический ужас",
+          "name_en": "Cosmic Horror",
+          "desc_ru": "Ужас, связанный с непостижимыми космическими сущностями (стиль Лавкрафта).",
+          "desc_en": "Horror related to incomprehensible cosmic entities (Lovecraftian style)."
+        },
+        {
+          "tag": "gothic",
+          "name_ru": "Готика",
+          "name_en": "Gothic",
+          "desc_ru": "Мрачная, таинственная атмосфера, замки, руины.",
+          "desc_en": "A dark, mysterious atmosphere, castles, ruins."
+        },
+        {
+          "tag": "post-apocalyptic",
+          "name_ru": "Постапокалипсис",
+          "name_en": "Post-apocalyptic"
+        },
+        {
+          "tag": "dystopian",
+          "name_ru": "Антиутопия",
+          "name_en": "Dystopian"
+        },
+        {
+          "tag": "film noir",
+          "name_ru": "Фильм-нуар",
+          "name_en": "Film Noir",
+          "desc_ru": "Стиль криминальных драм 40-50-х: контрастные тени, цинизм, дождь.",
+          "desc_en": "Style of 40s-50s crime dramas: high-contrast shadows, cynicism, rain."
+        },
+        {
+          "tag": "mythology",
+          "name_ru": "Мифология",
+          "name_en": "Mythology"
+        }
+      ]
+    },
+    {
+      "id": "visual_aesthetics",
+      "name_ru": "Визуальные эстетики",
+      "name_en": "Visual Aesthetics",
+      "tags": [
+        {
+          "tag": "cyberpunk",
+          "name_ru": "Киберпанк",
+          "name_en": "Cyberpunk",
+          "desc_ru": "Высокие технологии, низкий уровень жизни, неон, киборги.",
+          "desc_en": "High tech, low life, neon, cyborgs."
+        },
+        {
+          "tag": "steampunk",
+          "name_ru": "Стимпанк",
+          "name_en": "Steampunk",
+          "desc_ru": "Технологии на основе паровых машин, викторианская эпоха.",
+          "desc_en": "Technology based on steam engines, Victorian era."
+        },
+        {
+          "tag": "solarpunk",
+          "name_ru": "Соларпанк",
+          "name_en": "Solarpunk",
+          "desc_ru": "Оптимистичное будущее с возобновляемой энергией и гармонией с природой.",
+          "desc_en": "An optimistic future with renewable energy and harmony with nature."
+        },
+        {
+          "tag": "vaporwave",
+          "name_ru": "Вейпорвейв",
+          "name_en": "Vaporwave",
+          "desc_ru": "Ностальгия по 80-90-м, глитч-арт, античные статуи, пастельные тона.",
+          "desc_en": "Nostalgia for the 80s-90s, glitch art, classical statues, pastel colors."
+        },
+        {
+          "tag": "synthwave",
+          "name_ru": "Синтвейв",
+          "name_en": "Synthwave",
+          "desc_ru": "Неоновые сетки, закаты, спорткары 80-х, киберпанк-элементы.",
+          "desc_en": "Neon grids, sunsets, 80s sports cars, cyberpunk elements."
+        },
+        {
+          "tag": "lo-fi",
+          "name_ru": "Лоу-фай",
+          "name_en": "Lo-fi"
+        },
+        {
+          "tag": "glitch art",
+          "name_ru": "Глитч-арт",
+          "name_en": "Glitch Art"
+        },
+        {
+          "tag": "kawaii",
+          "name_ru": "Каваии",
+          "name_en": "Kawaii",
+          "desc_ru": "Японская эстетика милоты, пастельные цвета, аниме.",
+          "desc_en": "Japanese aesthetic of cuteness, pastel colors, anime."
+        },
+        {
+          "tag": "yami kawaii",
+          "name_ru": "Ями-каваии",
+          "name_en": "Yami Kawaii",
+          "desc_ru": "Милая эстетика с мрачными или жуткими элементами (шприцы, бинты).",
+          "desc_en": "A cute aesthetic with dark or creepy elements (syringes, bandages)."
+        },
+        {
+          "tag": "cottagecore",
+          "name_ru": "Коттеджкор",
+          "name_en": "Cottagecore",
+          "desc_ru": "Идеализированная сельская жизнь, уют, природа, выпечка.",
+          "desc_en": "Idealized rural life, coziness, nature, baking."
+        },
+        {
+          "tag": "dark academia",
+          "name_ru": "Темная академия",
+          "name_en": "Dark Academia",
+          "desc_ru": "Классическая литература, готическая архитектура, учеба, твид.",
+          "desc_en": "Classic literature, Gothic architecture, studying, tweed."
+        },
+        {
+          "tag": "ethereal",
+          "name_ru": "Эфирный / Неземной",
+          "name_en": "Ethereal"
+        },
+        {
+          "tag": "dreamlike",
+          "name_ru": "Как во сне",
+          "name_en": "Dreamlike"
+        },
+        {
+          "tag": "vibrant",
+          "name_ru": "Яркий / Насыщенный",
+          "name_en": "Vibrant"
+        }
+      ]
+    },
+    {
+      "id": "nsfw_styles",
+      "name_ru": "Стили (18+)",
+      "name_en": "Styles (18+)",
+      "tags": [
+        {
+          "tag": "hentai",
+          "name_ru": "Хентай",
+          "name_en": "Hentai"
+        },
+        {
+          "tag": "ecchi",
+          "name_ru": "Этти",
+          "name_en": "Ecchi",
+          "desc_ru": "Легкая эротика без откровенных сцен, намеки.",
+          "desc_en": "Light erotica without explicit scenes, suggestive."
+        },
+        {
+          "tag": "erotic art",
+          "name_ru": "Эротическое искусство",
+          "name_en": "Erotic Art"
+        },
+        {
+          "tag": "pornographic",
+          "name_ru": "Порнографический",
+          "name_en": "Pornographic"
+        },
+        {
+          "tag": "boudoir photography",
+          "name_ru": "Будуарная фотография",
+          "name_en": "Boudoir Photography"
+        },
+        {
+          "tag": "pin-up",
+          "name_ru": "Пин-ап",
+          "name_en": "Pin-up"
+        },
+        {
+          "tag": "shunga",
+          "name_ru": "Сюнга",
+          "name_en": "Shunga",
+          "desc_ru": "Традиционная японская эротическая гравюра.",
+          "desc_en": "Traditional Japanese erotic woodblock prints."
+        },
+        {
+          "tag": "ero guro",
+          "name_ru": "Эро гуро",
+          "name_en": "Ero Guro",
+          "desc_ru": "Эротика в сочетании с гротескными или жуткими элементами.",
+          "desc_en": "Erotica combined with grotesque or bizarre elements."
+        },
+        {
+          "tag": "softcore",
+          "name_ru": "Мягкая эротика",
+          "name_en": "Softcore"
+        },
+        {
+          "tag": "hardcore",
+          "name_ru": "Жесткое порно",
+          "name_en": "Hardcore"
+        },
+        {
+          "tag": "explicit",
+          "name_ru": "Явный / Откровенный",
+          "name_en": "Explicit"
+        },
+        {
+          "tag": "lewd",
+          "name_ru": "Пошлый",
+          "name_en": "Lewd"
+        }
+      ]
+    }
+  ]
+}
