@@ -4,22 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- SEO & Metadata -->
     <title data-i18n="appTitle">Prompt Artisan</title>
     <meta name="description" content="A powerful tool for creating and managing detailed prompts for AI image generation.">
-    
-    <!-- Favicons (рекомендуется сгенерировать свои на realfavicongenerator.net) -->
     <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-
-    <!-- Font Optimization -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Fira+Code:wght@500&display=swap"
         rel="stylesheet">
-    
-    <!-- Styles -->
     <link rel="stylesheet" href="/scss/main.scss" />
 </head>
 
@@ -28,34 +21,28 @@
         <header class="header-main">
             <h1 id="app-title">Prompt Artisan</h1>
             <div class="header-controls">
-                <div class="theme-switch">
-                    <input type="checkbox" id="theme-toggle-checkbox">
-                    <label class="theme-switch-label" for="theme-toggle-checkbox">
-                        <span class="theme-switch-knob"></span>
-                    </label>
-                </div>
-                <div class="lang-switch">
-                    <input type="checkbox" id="lang-toggle-checkbox">
-                    <label class="lang-switch-label" for="lang-toggle-checkbox">
-                        <span class="lang-switch-knob"></span>
-                    </label>
-                </div>
-                <button id="show-manual-btn" title="Помощь" data-i18n-title="helpTitle" aria-label="Помощь">?</button>
+                <div class="theme-switch"><input type="checkbox" id="theme-toggle-checkbox"><label
+                        class="theme-switch-label" for="theme-toggle-checkbox"><span
+                            class="theme-switch-knob"></span></label></div>
+                <div class="lang-switch"><input type="checkbox" id="lang-toggle-checkbox"><label
+                        class="lang-switch-label" for="lang-toggle-checkbox"><span
+                            class="lang-switch-knob"></span></label></div>
+                <button id="show-manual-btn" title="Помощь" data-i18n-title="helpTitle"
+                    aria-label="Помощь">?</button>
             </div>
         </header>
-        
         <main class="main-content">
             <form id="prompt-form">
+                <!-- ... (все ваши карточки с prompt-part остаются без изменений) ... -->
                 <div class="prompt-card">
                     <div class="card-header">
-                        <h2 data-i18n="styleSection">🎨 Стиль изображения</h2>
-                        <span class="tooltip-icon">i<span class="tooltip-text" data-i18n="styleTooltip"></span></span>
-                        <button type="button" class="tag-browser-btn" data-target-id="style"
-                            data-library="tags-style.json" aria-label="Открыть браузер тегов">📖</button>
+                        <h2 data-i18n="styleSection">🎨 Стиль изображения</h2><span class="tooltip-icon">i<span
+                                class="tooltip-text" data-i18n="styleTooltip"></span></span><button type="button"
+                            class="tag-browser-btn" data-target-id="style" data-library="tags-style.json"
+                            aria-label="Открыть браузер тегов">📖</button>
                     </div>
                     <section class="form-section">
-                        <div class="input-group">
-                            <textarea class="prompt-part savable-field" id="style"
+                        <div class="input-group"><textarea class="prompt-part savable-field" id="style"
                                 data-i18n-placeholder="stylePlaceholder"></textarea>
                             <div class="weight-controls"><button type="button" class="weight-btn"
                                     data-action="increase">▲</button><button type="button" class="weight-btn"
@@ -63,15 +50,13 @@
                         </div>
                     </section>
                 </div>
-
                 <div class="prompt-card">
                     <h2 data-i18n="subjectSection">👤 Обьект и персонаж</h2>
                     <section class="form-section">
                         <div class="card-header">
-                            <h3 data-i18n="subjectActionHeader">Основа и Действие</h3>
-                            <span class="tooltip-icon">i<span class="tooltip-text"
-                                    data-i18n="subjectActionTooltip"></span></span>
-                            <button type="button" class="tag-browser-btn" data-target-id="subject_action"
+                            <h3 data-i18n="subjectActionHeader">Основа и Действие</h3><span class="tooltip-icon">i<span
+                                    class="tooltip-text" data-i18n="subjectActionTooltip"></span></span><button
+                                type="button" class="tag-browser-btn" data-target-id="subject_action"
                                 data-library="tags-subject.json" aria-label="Открыть браузер тегов">📖</button>
                         </div>
                         <div class="input-group"><textarea class="prompt-part savable-field" id="subject_action"
@@ -83,10 +68,9 @@
                     </section>
                     <section class="form-section">
                         <div class="card-header">
-                            <h3 data-i18n="appearanceHeader">Внешность и детали</h3>
-                            <span class="tooltip-icon">i<span class="tooltip-text"
-                                    data-i18n="appearanceTooltip"></span></span>
-                            <button type="button" class="tag-browser-btn" data-target-id="appearance_details"
+                            <h3 data-i18n="appearanceHeader">Внешность и детали</h3><span class="tooltip-icon">i<span
+                                    class="tooltip-text" data-i18n="appearanceTooltip"></span></span><button
+                                type="button" class="tag-browser-btn" data-target-id="appearance_details"
                                 data-library="tags-appearance.json" aria-label="Открыть браузер тегов">📖</button>
                         </div>
                         <div class="input-group"><textarea class="prompt-part savable-field" id="appearance_details"
@@ -98,10 +82,9 @@
                     </section>
                     <section class="form-section">
                         <div class="card-header">
-                            <h3 data-i18n="clothingHeader">Одежда и снаряжение</h3>
-                            <span class="tooltip-icon">i<span class="tooltip-text"
-                                    data-i18n="clothingTooltip"></span></span>
-                            <button type="button" class="tag-browser-btn" data-target-id="clothing_gear"
+                            <h3 data-i18n="clothingHeader">Одежда и снаряжение</h3><span class="tooltip-icon">i<span
+                                    class="tooltip-text" data-i18n="clothingTooltip"></span></span><button type="button"
+                                class="tag-browser-btn" data-target-id="clothing_gear"
                                 data-library="tags-clothing.json" aria-label="Открыть браузер тегов">📖</button>
                         </div>
                         <div class="input-group"><textarea class="prompt-part savable-field" id="clothing_gear"
@@ -112,15 +95,13 @@
                         </div>
                     </section>
                 </div>
-
                 <div class="prompt-card">
                     <h2 data-i18n="sceneSection">🏞️ Сцена и композиция</h2>
                     <section class="form-section">
                         <div class="card-header">
-                            <h3 data-i18n="locationHeader">Локация и окружение</h3>
-                            <span class="tooltip-icon">i<span class="tooltip-text"
-                                    data-i18n="locationTooltip"></span></span>
-                            <button type="button" class="tag-browser-btn" data-target-id="location_env"
+                            <h3 data-i18n="locationHeader">Локация и окружение</h3><span class="tooltip-icon">i<span
+                                    class="tooltip-text" data-i18n="locationTooltip"></span></span><button type="button"
+                                class="tag-browser-btn" data-target-id="location_env"
                                 data-library="tags-location.json" aria-label="Открыть браузер тегов">📖</button>
                         </div>
                         <div class="input-group"><textarea class="prompt-part savable-field" id="location_env"
@@ -132,10 +113,9 @@
                     </section>
                     <section class="form-section">
                         <div class="card-header">
-                            <h3 data-i18n="lightingHeader">Освещение и Атмосфера</h3>
-                            <span class="tooltip-icon">i<span class="tooltip-text"
-                                    data-i18n="lightingTooltip"></span></span>
-                            <button type="button" class="tag-browser-btn" data-target-id="lighting_atmosphere"
+                            <h3 data-i18n="lightingHeader">Освещение и Атмосфера</h3><span class="tooltip-icon">i<span
+                                    class="tooltip-text" data-i18n="lightingTooltip"></span></span><button type="button"
+                                class="tag-browser-btn" data-target-id="lighting_atmosphere"
                                 data-library="tags-lighting.json" aria-label="Открыть браузер тегов">📖</button>
                         </div>
                         <div class="input-group"><textarea class="prompt-part savable-field" id="lighting_atmosphere"
@@ -147,10 +127,9 @@
                     </section>
                     <section class="form-section">
                         <div class="card-header">
-                            <h3 data-i18n="cameraHeader">Камера и ракурс</h3>
-                            <span class="tooltip-icon">i<span class="tooltip-text"
-                                    data-i18n="cameraTooltip"></span></span>
-                            <button type="button" class="tag-browser-btn" data-target-id="camera_composition"
+                            <h3 data-i18n="cameraHeader">Камера и ракурс</h3><span class="tooltip-icon">i<span
+                                    class="tooltip-text" data-i18n="cameraTooltip"></span></span><button type="button"
+                                class="tag-browser-btn" data-target-id="camera_composition"
                                 data-library="tags-camera.json" aria-label="Открыть браузер тегов">📖</button>
                         </div>
                         <div class="input-group"><textarea class="prompt-part savable-field" id="camera_composition"
@@ -162,92 +141,83 @@
                     </section>
                 </div>
             </form>
-
             <aside class="sidebar">
                 <div class="prompt-card">
                     <h2 data-i18n="finalPromptHeader">Итоговый промпт и управление</h2>
-                    <section class="form-section">
-                        <label for="output-positive">Positive Prompt:</label>
-                        <textarea id="output-positive"></textarea>
-                        <button type="button" id="copy-positive" data-i18n="copyBtn">Копировать</button>
-                    </section>
-                    <section class="form-section">
-                        <label for="output-negative">Negative Prompt:</label>
-                        <textarea class="savable-field" id="output-negative"></textarea>
-                        <button type="button" id="copy-negative" data-i18n="copyBtn">Копировать</button>
-                    </section>
+                    <section class="form-section"><label for="output-positive">Positive Prompt:</label><textarea
+                            id="output-positive"></textarea><button type="button" id="copy-positive"
+                            data-i18n="copyBtn">Копировать</button></section>
+                    <section class="form-section"><label for="output-negative">Negative Prompt:</label><textarea
+                            class="savable-field" id="output-negative"></textarea><button type="button"
+                            id="copy-negative" data-i18n="copyBtn">Копировать</button></section>
                     <hr class="divider">
-                    <section class="form-section actions-compact">
-                        <button type="button" id="rebuild-prompt" data-i18n="rebuildBtn"
-                            data-i18n-title="rebuildBtnTitle"
-                            title="Сбросить ручные правки и сгенерировать промпт заново">Пересобрать</button>
-                        <button type="button" id="clear-form-btn" data-i18n="clearBtn">Очистить</button>
-                    </section>
+                    <section class="form-section actions-compact"><button type="button" id="rebuild-prompt"
+                            data-i18n="rebuildBtn" data-i18n-title="rebuildBtnTitle"
+                            title="Сбросить ручные правки и сгенерировать промпт заново">Пересобрать</button><button
+                            type="button" id="clear-form-btn" data-i18n="clearBtn">Очистить</button></section>
                 </div>
-
                 <div class="prompt-card">
                     <h2 data-i18n="presetsHeader">Управление Пресетами</h2>
-                    <section class="form-section preset-selection-group">
-                        <select id="preset-select"></select>
-                        <button type="button" id="delete-preset-btn" data-i18n="deletePresetBtn">Удалить</button>
+                    <section class="form-section preset-selection-group"><select id="preset-select"></select><button
+                            type="button" id="delete-preset-btn" data-i18n="deletePresetBtn">Удалить</button>
                     </section>
                     <section class="form-section">
-                        <div id="preset-preview" data-hidden="true">
-                            <span class="placeholder" data-i18n="presetPreviewPlaceholder"></span>
-                        </div>
+                        <div id="preset-preview" data-hidden="true"><span class="placeholder"
+                                data-i18n="presetPreviewPlaceholder"></span></div>
                     </section>
                     <hr class="divider">
                     <section class="form-section">
-                        <div class="preset-controls save-group">
-                            <input type="text" id="preset-name" data-i18n-placeholder="presetNamePlaceholder"
-                                placeholder="Имя нового пресета">
-                            <button type="button" id="save-preset-btn" data-i18n="savePresetBtn">Сохранить</button>
-                        </div>
+                        <div class="preset-controls save-group"><input type="text" id="preset-name"
+                                data-i18n-placeholder="presetNamePlaceholder"
+                                placeholder="Имя нового пресета"><button type="button" id="save-preset-btn"
+                                data-i18n="savePresetBtn">Сохранить</button></div>
                     </section>
-                    <section class="form-section preset-actions">
-                        <button type="button" id="import-presets-btn" data-i18n="importBtn">Импорт</button>
-                        <button type="button" id="export-presets-btn" data-i18n="exportBtn">Экспорт</button>
-                    </section>
+                    <section class="form-section preset-actions"><button type="button" id="import-presets-btn"
+                            data-i18n="importBtn">Импорт</button><button type="button" id="export-presets-btn"
+                            data-i18n="exportBtn">Экспорт</button></section>
                 </div>
+
+                <!-- БЛОК ИСТОРИИ, КОТОРОГО НЕ ХВАТАЕТ -->
+                <div class="prompt-card history-card">
+                    <h2 data-i18n="historyHeader">История генераций</h2>
+                    <div id="history-list">
+                        <p class="placeholder" data-i18n="historyPlaceholder">Здесь будет история ваших промптов.</p>
+                    </div>
+                </div>
+
             </aside>
         </main>
-        
-        <footer>
-            <span data-i18n="footerText">&copy; 2025 Created by grvelvet</span>
-        </footer>
+        <footer><span data-i18n="footerText">&copy; 2025 Created by grvelvet</span></footer>
     </div>
-
     <div id="manual-modal" class="modal-overlay" aria-hidden="true">
-        <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="manual-title">
-            <button id="close-manual-btn" class="modal-close-btn" data-i18n-title="closeBtnTitle" title="Закрыть" aria-label="Закрыть">&times;</button>
+        <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="manual-title"><button
+                id="close-manual-btn" class="modal-close-btn" data-i18n-title="closeBtnTitle" title="Закрыть"
+                aria-label="Закрыть">&times;</button>
             <div class="manual-body">
                 <h2 id="manual-title" class="visually-hidden" data-i18n="helpTitle">Помощь</h2>
                 <div class="spinner"></div>
             </div>
         </div>
     </div>
-
     <div id="tag-browser-modal" class="modal-overlay" aria-hidden="true">
-        <div class="modal-content tag-browser-content" role="dialog" aria-modal="true" aria-labelledby="tag-browser-title">
-            <button id="close-tag-browser-btn" class="modal-close-btn" data-i18n-title="closeBtnTitle" title="Закрыть" aria-label="Закрыть">&times;</button>
+        <div class="modal-content tag-browser-content" role="dialog" aria-modal="true"
+            aria-labelledby="tag-browser-title"><button id="close-tag-browser-btn" class="modal-close-btn"
+                data-i18n-title="closeBtnTitle" title="Закрыть" aria-label="Закрыть">&times;</button>
             <h2 id="tag-browser-title"></h2>
             <div class="tag-browser-body">
                 <aside id="tag-browser-subcategories"></aside>
-                <main id="tag-browser-tags">
-                    <input type="search" id="tag-browser-search">
+                <main id="tag-browser-tags"><input type="search" id="tag-browser-search">
                     <div id="tag-browser-tags-list"></div>
                 </main>
             </div>
-           <footer class="tag-browser-footer">
+            <footer class="tag-browser-footer">
                 <div id="tag-browser-selection-preview"></div>
-                <div class="tag-browser-actions">
-                    <button type="button" id="reset-selected-tags-btn" data-i18n="resetSelectionBtn"></button>
-                    <button type="button" id="add-selected-tags-btn" disabled></button>
-                </div>
+                <div class="tag-browser-actions"><button type="button" id="reset-selected-tags-btn"
+                        data-i18n="resetSelectionBtn"></button><button type="button" id="add-selected-tags-btn"
+                        disabled></button></div>
             </footer>
         </div>
     </div>
-
     <script type="module" src="js/main.js"></script>
 </body>
 </html>

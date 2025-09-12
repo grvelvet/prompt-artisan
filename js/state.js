@@ -6,6 +6,9 @@ export const state = {
     currentLang: 'ru',
     history: [],
     historyIndex: -1,
+    // --- ДОБАВЛЕНО ЭТО СВОЙСТВО ДЛЯ ИСПРАВЛЕНИЯ ОШИБКИ ---
+    generationHistory: [], 
+    // ---------------------------------------------------
     isUndoing: false,
     activeModal: null,
     lastFocusedElement: null,

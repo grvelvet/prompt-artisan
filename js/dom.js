@@ -31,5 +31,7 @@ export const dom = {
     tagBrowserSearch: document.getElementById('tag-browser-search'),
     tagBrowserSelectionPreview: document.getElementById('tag-browser-selection-preview'),
     addSelectedTagsBtn: document.getElementById('add-selected-tags-btn'),
-    resetSelectedTagsBtn: document.getElementById('reset-selected-tags-btn')
+    resetSelectedTagsBtn: document.getElementById('reset-selected-tags-btn'),
+    // ЭЛЕМЕНТ, КОТОРОГО НЕ ХВАТАЛО
+    historyList: document.getElementById('history-list')
 };

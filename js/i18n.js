@@ -37,7 +37,10 @@ export const i18n = {
         addSelectedBtn: "Добавить",
         resetSelectionBtn: "Сбросить",
         tagBrowserLoading: "Загрузка словаря...",
-        tagBrowserError: "Ошибка загрузки словаря. Убедитесь, что файлы находятся в папке /data."
+        tagBrowserError: "Ошибка загрузки словаря. Убедитесь, что файлы находятся в папке /data.",
+        // --- Добавленные переводы ---
+        historyHeader: "История генераций",
+        historyPlaceholder: "Здесь будет история ваших промптов."
     },
     en: {
         appTitle: "Prompt Artisan", helpTitle: "Help",
@@ -76,6 +79,9 @@ export const i18n = {
         addSelectedBtn: "Add",
         resetSelectionBtn: "Reset",
         tagBrowserLoading: "Loading library...",
-        tagBrowserError: "Error loading library. Ensure files are in the /data folder."
+        tagBrowserError: "Error loading library. Ensure files are in the /data folder.",
+        // --- Added translations ---
+        historyHeader: "Generation History",
+        historyPlaceholder: "Your prompt history will appear here."
     }
 };

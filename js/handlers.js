@@ -28,8 +28,31 @@ export const handlers = {
         let userTags = [];
         dom.promptParts.forEach(el => { userTags = userTags.concat(utils.splitTags(el.value)); });
         const finalTags = [...config.POSITIVE_QUALITY_TAGS, ...userTags];
-        dom.positiveOutput.value = utils.getUniqueTags(finalTags).join(', ');
+        const newPrompt = utils.getUniqueTags(finalTags).join(', ');
+        
+        dom.positiveOutput.value = newPrompt;
         utils.autoResizeTextarea(dom.positiveOutput);
+
+        if (newPrompt.trim() && newPrompt !== state.generationHistory[0]) {
+            state.generationHistory.unshift(newPrompt);
+            if (state.generationHistory.length > 30) {
+                state.generationHistory.pop();
+            }
+            handlers.renderHistory();
+        }
+    },
+    renderHistory: () => {
+        if (state.generationHistory.length === 0) {
+            dom.historyList.innerHTML = `<p class="placeholder" data-i18n="historyPlaceholder">Здесь будет история ваших промптов.</p>`;
+            return;
+        }
+
+        const historyItems = state.generationHistory.map((promptText, index) => {
+            const shortText = promptText.length > 70 ? promptText.substring(0, 70) + '...' : promptText;
+            return `<div class="history-item" data-index="${index}" title="${promptText}">${shortText}</div>`;
+        }).join('');
+
+        dom.historyList.innerHTML = historyItems;
     },
     updateNegativeOutput: () => {
         let userNegativeTags = utils.splitTags(dom.negativeOutput.value);
@@ -240,7 +263,10 @@ export const handlers = {
         handlers.openModal(dom.manualModal);
         if (state.isManualLoaded) return;
         dom.manualBody.innerHTML = '<div class="spinner"></div>';
-        const manualFile = state.currentLang === 'ru' ? 'assets/manual-content.html' : 'assets/manual-content-en.html';
+        
+        // ИЗМЕНЕНИЕ: Используем абсолютный путь
+        const manualFile = state.currentLang === 'ru' ? '/assets/manual-content.html' : '/assets/manual-content-en.html';
+
         try {
             const response = await fetch(manualFile);
             if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
@@ -298,9 +324,11 @@ export const handlers = {
         }
 
         try {
-            const response = await fetch(`${config.DATA_PATH}${libraryFile}`);
+            // ИЗМЕНЕНИЕ: Используем абсолютный путь
+            const response = await fetch(`/data/${libraryFile}`);
             if (!response.ok) throw new Error(`Network response was not ok: ${response.statusText}`);
             const libraryData = await response.json();
+
             state.tagLibraryCache.set(libraryFile, libraryData);
             state.tagBrowserState.library = libraryData;
             handlers.renderTagBrowser();
